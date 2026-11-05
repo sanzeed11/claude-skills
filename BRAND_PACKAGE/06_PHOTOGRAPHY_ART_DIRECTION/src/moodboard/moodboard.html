@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — Photography moodboard (A3 landscape)</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  @page { size: 420mm 297mm; margin: 0; }
+  html, body { background: #000; }
+  .page { position: relative; width: 420mm; height: 297mm; overflow: hidden; background: var(--bg); color: var(--fg);
+          padding: 16mm 18mm 14mm; display: grid; grid-template-rows: auto 1fr auto; page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .hdr { display: flex; justify-content: space-between; align-items: center; height: 10mm; }
+  .hdr .eyebrow { font-size: 11px; }
+  .hdr img { height: 5mm; }
+  .body { display: grid; grid-template-columns: 112mm 1fr; gap: 14mm; margin-top: 10mm; min-height: 0; }
+  .col h1 { font-size: 58px; line-height: 1.02; margin-bottom: 9mm; }
+  .col .note { font-size: 15.5px; line-height: 1.55; color: var(--fg-2); max-width: 100%; margin-bottom: 8mm; }
+  .cues { list-style: none; padding: 0; margin: 0; border-top: var(--hairline); }
+  .cues li { display: flex; gap: 10px; padding: 7px 0; border-bottom: var(--hairline); font-size: 13.5px; line-height: 1.4; color: var(--fg); }
+  .cues li .counter { padding-top: 2px; min-width: 26px; }
+  .palette { display: flex; gap: 6px; margin-top: 10mm; }
+  .sw { flex: 1; height: 16mm; border-radius: 8px; border: var(--hairline); display: flex; align-items: flex-end; padding: 6px; font: 500 9.5px/1.2 var(--font-text); color: var(--fg-3); }
+  .sw b { display: block; color: var(--fg-2); font-weight: 500; }
+  .sw.gold b { color: #000; } .sw.gold { color: rgba(0,0,0,.65); }
+  .sw.white b, .sw.white { color: #1A1816; }
+  .grid { display: grid; gap: 6mm; min-height: 0; }
+  .grid.six { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; }
+  .grid.hero { grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .grid.hero .cell:first-child { grid-column: 1 / 3; grid-row: 1 / 3; }
+  .grid.portrait { grid-template-columns: 0.74fr 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .grid.portrait .cell:first-child { grid-row: 1 / 3; }
+  .cell { display: flex; flex-direction: column; min-height: 0; }
+  .cell .pic { flex: 1; min-height: 0; border-radius: 20px; overflow: hidden; border: var(--hairline); background: var(--card); }
+  .cell img { width: 100%; height: 100%; object-fit: cover; }
+  .wl { display: flex; gap: 10px; align-items: baseline; margin-top: 7px; font-size: 12.5px; line-height: 1.35; color: var(--fg-3); }
+  .wl b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); margin-right: 6px; }
+  .wl .counter { font-size: 11px; }
+  .ftr { display: flex; justify-content: space-between; align-items: flex-end; padding-top: 6mm; margin-top: 6mm; position: relative; font-size: 12px; color: var(--fg-3); }
+  .ftr .beam { position: absolute; top: 0; left: 0; right: 0; }
+  .ftr img { height: 4.2mm; }
+</style>
+</head>
+<body>
+  <section class="page grain">
+    <header class="hdr">
+      <div class="eyebrow">Moodboard · 001 — Overview</div>
+      <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    </header>
+    <div class="body">
+      <div class="col">
+        <h1 class="t-display-2">The lit <span class='lit'>room.</span></h1>
+        <p class="note">One dominant light source. Blacks that hold detail, never crushed. Highlights that lean warm, toward the lamp. A person for scale, walking in. Everything the camera sees is a room someone can enter.</p>
+        <ul class="cues">
+          <li><span class="counter">01</span><span>Expose for the light, let the rest fall to Night.</span></li>
+          <li><span class="counter">02</span><span>Warm over cool. Never both at full strength.</span></li>
+          <li><span class="counter">03</span><span>Backs to camera are allowed. Posed groups are not.</span></li>
+          <li><span class="counter">04</span><span>One accent in the frame: the thing that is lit.</span></li>
+        </ul>
+        <div class="palette">
+          <div class="sw" style="background:#000"><span><b>Gallery Black</b>#000000</span></div>
+          <div class="sw" style="background:#0D0D0F"><span><b>Night</b>#0D0D0F</span></div>
+          <div class="sw" style="background:#1C1C1E"><span><b>Charcoal</b>#1C1C1E</span></div>
+          <div class="sw gold" style="background:#E9B25A"><span><b>Lamp Gold</b>#E9B25A</span></div>
+          <div class="sw white" style="background:#F5F5F7"><span><b>Gallery White</b>#F5F5F7</span></div>
+        </div>
+      </div>
+      <div class="grid hero">
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-mountain-projection--projection.jpg" alt="Mountain Projection — Uttarakhand" style="object-position: 46% 63%"></div>
+          <figcaption class="wl"><span class="counter">001</span><span><b>Mountain Projection</b>Uttarakhand</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-prime-minister-museum--museum.jpg" alt="Prime Minister Museum — New Delhi" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">002</span><span><b>Prime Minister Museum</b>New Delhi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show-diyas--projection.jpg" alt="Ram Katha Show — Ayodhya" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">003</span><span><b>Ram Katha Show</b>Ayodhya</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-maharishi-valmiki-museum--museum.jpg" alt="Maharishi Valmiki Museum — Punjab" style="object-position: 50% 45%"></div>
+          <figcaption class="wl"><span class="counter">004</span><span><b>Maharishi Valmiki Museum</b>Punjab</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-yuge-yugeen-bharat-museum--museum.jpg" alt="Yuge Yugeen Bharat Museum — New Delhi" style="object-position: 50% 58%"></div>
+          <figcaption class="wl"><span class="counter">005</span><span><b>Yuge Yugeen Bharat Museum</b>New Delhi</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <footer class="ftr">
+      <div class="beam"></div>
+      <span>Sanzeed Mirza · Experiential Design Consultant · Photography &amp; art direction</span>
+      <span class="tnum">Moodboard · 01 / 04</span>
+    </footer>
+  </section>
+  <section class="page grain">
+    <header class="hdr">
+      <div class="eyebrow">Moodboard · 002 — Museums & experience centres</div>
+      <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    </header>
+    <div class="body">
+      <div class="col">
+        <h1 class="t-display-2">Galleries planned as a route, not a floor&nbsp;plan.</h1>
+        <p class="note">Shoot along the route. Stand on the visitor's line and look where they look: the threshold, the long corridor, the one object at the centre of the room. The exhibit is the key light; the architecture is the frame.</p>
+        <ul class="cues">
+          <li><span class="counter">01</span><span>One-point perspective down the route.</span></li>
+          <li><span class="counter">02</span><span>Symmetry when the room is symmetrical; thirds when it is not.</span></li>
+          <li><span class="counter">03</span><span>The lit object at the centre, the dark around it kept dark.</span></li>
+          <li><span class="counter">04</span><span>Wall labels and screens in focus; they carry the story.</span></li>
+        </ul>
+
+      </div>
+      <div class="grid six">
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-freedom-fighter-museum--museum.jpg" alt="Freedom Fighter Museum — New Delhi" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">001</span><span><b>Freedom Fighter Museum</b>New Delhi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-army-museum-abu-dhabi--museum.jpg" alt="Army Museum Abu Dhabi — Abu Dhabi" style="object-position: 52% 50%"></div>
+          <figcaption class="wl"><span class="counter">002</span><span><b>Army Museum Abu Dhabi</b>Abu Dhabi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-tribal-museum--museum.jpg" alt="Tribal Museum — New Delhi" style="object-position: 50% 55%"></div>
+          <figcaption class="wl"><span class="counter">003</span><span><b>Tribal Museum</b>New Delhi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-rbi-museum-interior--museum.jpg" alt="RBI Museum — Mumbai" style="object-position: 50% 55%"></div>
+          <figcaption class="wl"><span class="counter">004</span><span><b>RBI Museum</b>Mumbai</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-space-museum--museum.jpg" alt="Space Museum — Bengaluru" style="object-position: 40% 50%"></div>
+          <figcaption class="wl"><span class="counter">005</span><span><b>Space Museum</b>Bengaluru</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-sant-ravi-das-museum--museum.jpg" alt="Sant Ravi Das Museum — Uttar Pradesh" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">006</span><span><b>Sant Ravi Das Museum</b>Uttar Pradesh</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <footer class="ftr">
+      <div class="beam"></div>
+      <span>Sanzeed Mirza · Experiential Design Consultant · Photography &amp; art direction</span>
+      <span class="tnum">Moodboard · 02 / 04</span>
+    </footer>
+  </section>
+  <section class="page grain">
+    <header class="hdr">
+      <div class="eyebrow">Moodboard · 003 — Projection & shows</div>
+      <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    </header>
+    <div class="body">
+      <div class="col">
+        <h1 class="t-display-2">The building is the screen. The night is the <span class='lit'>room.</span></h1>
+        <p class="note">Expose for the projection and let the sky and the ground fall to black. No flash, ever: it kills the show. Tripod, low ISO, long exposure. Points of light — lamps, LEDs, embers — are the brand's own vocabulary; keep them sharp.</p>
+        <ul class="cues">
+          <li><span class="counter">01</span><span>Shoot from the audience, at eye level or lower.</span></li>
+          <li><span class="counter">02</span><span>Façade square-on for symmetry, or from the corner for depth.</span></li>
+          <li><span class="counter">03</span><span>Let colour come from the show; add none in the grade.</span></li>
+          <li><span class="counter">04</span><span>Keep the beam: light paths and reflections stay in frame.</span></li>
+        </ul>
+
+      </div>
+      <div class="grid six">
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show--projection.jpg" alt="Ram Katha Show — Ayodhya" style="object-position: 50% 45%"></div>
+          <figcaption class="wl"><span class="counter">001</span><span><b>Ram Katha Show</b>Ayodhya</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-albert-hall-projection-show--projection.jpg" alt="Albert Hall Projection Show — Jaipur" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">002</span><span><b>Albert Hall Projection Show</b>Jaipur</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-g20-tree-show--projection.jpg" alt="G20 Tree Show — New Delhi" style="object-position: 50% 45%"></div>
+          <figcaption class="wl"><span class="counter">003</span><span><b>G20 Tree Show</b>New Delhi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-light-and-sound-show-ayodhya--projection.jpg" alt="Light and Sound Show — Ayodhya" style="object-position: 50% 45%"></div>
+          <figcaption class="wl"><span class="counter">004</span><span><b>Light and Sound Show</b>Ayodhya</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show-ram-in-light--projection.jpg" alt="Ram Katha Show — Ayodhya" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">005</span><span><b>Ram Katha Show</b>Ayodhya</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-postal-museum-projection-show--projection.jpg" alt="Postal Museum Projection Show — New Delhi" style="object-position: 50% 45%"></div>
+          <figcaption class="wl"><span class="counter">006</span><span><b>Postal Museum Projection Show</b>New Delhi</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <footer class="ftr">
+      <div class="beam"></div>
+      <span>Sanzeed Mirza · Experiential Design Consultant · Photography &amp; art direction</span>
+      <span class="tnum">Moodboard · 03 / 04</span>
+    </footer>
+  </section>
+  <section class="page grain">
+    <header class="hdr">
+      <div class="eyebrow">Moodboard · 004 — Portrait & people</div>
+      <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    </header>
+    <div class="body">
+      <div class="col">
+        <h1 class="t-display-2">Visitors walk into the light.</h1>
+        <p class="note">People give the room its scale. They are seen from behind or in profile, moving toward the lit thing, never posing for the camera. The portrait standard is the existing one: a warm key, soft bokeh, a black garment, the eye line on the upper third, no retouching beyond the grade.</p>
+        <ul class="cues">
+          <li><span class="counter">01</span><span>Backs to camera allowed; eye contact only in portraits.</span></li>
+          <li><span class="counter">02</span><span>One or two figures, never a posed group.</span></li>
+          <li><span class="counter">03</span><span>Walking, looking, reading — in motion or absorbed.</span></li>
+          <li><span class="counter">04</span><span>Portrait: warm key from one side, Night behind, 85–105 mm.</span></li>
+        </ul>
+
+      </div>
+      <div class="grid portrait">
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/Portrait/sanzeed-portrait--4x5-2000.jpg" alt="Sanzeed Mirza — portrait" style="object-position: 50% 30%"></div>
+          <figcaption class="wl"><span class="counter">001</span><span><b>Sanzeed Mirza</b>New Delhi · the portrait standard</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-mahatma-gandhi-event--event.jpg" alt="Mahatma Gandhi Event — National" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">002</span><span><b>Mahatma Gandhi Event</b>National</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-buddha-park-stupa-path--museum.jpg" alt="Buddha Park — Uttarakhand" style="object-position: 55% 50%"></div>
+          <figcaption class="wl"><span class="counter">003</span><span><b>Buddha Park</b>Uttarakhand</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-prime-minister-museum--museum.jpg" alt="Prime Minister Museum — New Delhi" style="object-position: 50% 50%"></div>
+          <figcaption class="wl"><span class="counter">004</span><span><b>Prime Minister Museum</b>New Delhi</span></figcaption>
+        </figure>
+        <figure class="cell">
+          <div class="pic"><img src="../../Approved_Images/JPG/sanzeed-img-mountain-projection--projection.jpg" alt="Mountain Projection — Uttarakhand" style="object-position: 46% 63%"></div>
+          <figcaption class="wl"><span class="counter">005</span><span><b>Mountain Projection</b>Uttarakhand</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <footer class="ftr">
+      <div class="beam"></div>
+      <span>Sanzeed Mirza · Experiential Design Consultant · Photography &amp; art direction</span>
+      <span class="tnum">Moodboard · 04 / 04</span>
+    </footer>
+  </section>
+</body>
+</html>

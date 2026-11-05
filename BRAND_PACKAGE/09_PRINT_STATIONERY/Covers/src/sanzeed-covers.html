@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — document covers (HTML master): company profile + report, dark + light</title>
+<!-- Four A4 covers on four pages. Page = trim 210×297 + 3 mm bleed = 216×303 mm; margins 20 mm from trim.
+     Render: node ../../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in sanzeed-covers.html --out covers.pdf --pdf --size 216x303
+     Then split/crop/print with ../../_build/build_covers.py. Tokens, fonts and components come from brand.css. -->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  @page { size: 216mm 303mm; margin: 0; }
+  html, body { margin: 0; background: #444; }
+  .page { position: relative; width: 216mm; height: 303mm; overflow: hidden; page-break-after: always; break-after: page; box-sizing: border-box; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .dark { background: #000; color: #F5F5F7; }
+  .light { background: #F5F0E7; color: #1A1816; }
+  .lamp { position: absolute; inset: 0; background: radial-gradient(52% 40% at 50% 44%, rgba(233,178,90,.42) 0%, rgba(233,178,90,.10) 32%, rgba(0,0,0,0) 72%); }
+  .logo { position: absolute; left: 23mm; top: 23mm; display: block; }
+  .logo-wordmark { width: 62mm; }
+  .logo-lockup { width: 62mm; }
+  .eyebrow { position: absolute; left: 23mm; font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; }
+  .dark .eyebrow { color: #E9B25A; }
+  .light .eyebrow { color: #8A6124; }
+  .title { position: absolute; left: 23mm; right: 23mm; font-family: "Fraunces", serif; font-weight: 300; line-height: 1.02; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; text-wrap: balance; }
+  .title.big { font-size: 54pt; max-width: 150mm; }
+  .title.mid { font-size: 44pt; max-width: 160mm; }
+  .dark .lit { color: #E9B25A; }
+  .light .lit { color: #B8863B; }
+  .label { position: absolute; left: 23mm; right: 23mm; bottom: 23mm; display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-size: 8.5pt; line-height: 1.5; }
+  .label .t { font-family: "Inter Tight", sans-serif; font-weight: 600; }
+  .dark .label { color: #A1A1A6; } .dark .label .t { color: #F5F5F7; }
+  .light .label { color: #665F55; } .light .label .t { color: #1A1816; }
+  .rule { position: absolute; left: 23mm; right: 23mm; height: 1px; }
+  .dark .rule { background: rgba(255,255,255,.10); } .light .rule { background: rgba(26,24,22,.10); }
+  /* the room — image plate */
+  .plate { position: absolute; left: 23mm; right: 23mm; border-radius: 7.4mm; overflow: hidden; border: 1px solid rgba(255,255,255,.10); background: #1C1C1E; }
+  .light .plate { border-color: rgba(26,24,22,.10); background: #FBF8F2; }
+  .plate img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .wall { position: absolute; left: 23mm; font-family: "Inter", sans-serif; font-size: 8.5pt; line-height: 1.5; }
+  .wall .t { font-family: "Inter Tight", sans-serif; font-weight: 600; }
+  .dark .wall { color: #808086; } .dark .wall .t { color: #F5F5F7; }
+  .light .wall { color: #6D665C; } .light .wall .t { color: #1A1816; }
+</style>
+</head>
+<body>
+
+<!-- 1 · Company profile — dark -->
+<section class="page dark grain">
+  <div class="lamp"></div>
+  <img class="logo logo-wordmark" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="SANZEED">
+  <div class="eyebrow" style="top: 196mm">Company profile · 2026</div>
+  <h1 class="title big" style="top: 204mm">Experiential design you can walk <span class="lit">into.</span></h1>
+  <div class="label"><span><span class="t">Sanzeed Mirza</span> · Experiential Design Consultant · New Delhi</span><span>sanzeed.com</span></div>
+</section>
+
+<!-- 2 · Company profile — light -->
+<section class="page light">
+  <img class="logo logo-lockup" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg" alt="Sanzeed — Experiential Design Consultant">
+  <div class="rule" style="top: 150mm"></div>
+  <div class="eyebrow" style="top: 160mm">Company profile · 2026</div>
+  <h1 class="title big" style="top: 168mm">Experiential design you can walk <span class="lit">into.</span></h1>
+  <div class="label"><span><span class="t">Sanzeed Mirza</span> · Experiential Design Consultant · New Delhi</span><span>sanzeed.com</span></div>
+</section>
+
+<!-- 3 · Report cover — dark -->
+<section class="page dark grain">
+  <img class="logo logo-wordmark" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="SANZEED">
+  <div class="eyebrow" style="top: 48mm">Report · [Date]</div>
+  <div class="plate" style="top: 60mm; height: 118mm"><img src="../../../00_ORIGINAL_ASSETS_BACKUP/images/img/prime-minister-museum.webp" alt="Prime Minister Museum, New Delhi — the tricolour corridor"></div>
+  <div class="wall" style="top: 181mm"><span class="t">Prime Minister Museum</span> · New Delhi<br>One Prime Minister at a time, in order.</div>
+  <h1 class="title mid" style="top: 206mm">90 projects, one continuous <span class="lit">craft.</span></h1>
+  <div class="label"><span><span class="t">Prepared for [Client]</span> · [Project]</span><span>Sanzeed Mirza · sanzeed.com</span></div>
+</section>
+
+<!-- 4 · Report cover — light -->
+<section class="page light">
+  <img class="logo logo-lockup" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg" alt="Sanzeed — Experiential Design Consultant">
+  <div class="eyebrow" style="top: 48mm">Report · [Date]</div>
+  <div class="plate" style="top: 60mm; height: 118mm"><img src="../../../00_ORIGINAL_ASSETS_BACKUP/images/img/ram-katha-show.webp" alt="Ram Katha Show, Ayodhya — the hall lit as a court"></div>
+  <div class="wall" style="top: 181mm"><span class="t">Ram Katha Show</span> · Ayodhya<br>The building is the screen.</div>
+  <h1 class="title mid" style="top: 206mm">90 projects, one continuous <span class="lit">craft.</span></h1>
+  <div class="label"><span><span class="t">Prepared for [Client]</span> · [Project]</span><span>Sanzeed Mirza · sanzeed.com</span></div>
+</section>
+
+</body>
+</html>

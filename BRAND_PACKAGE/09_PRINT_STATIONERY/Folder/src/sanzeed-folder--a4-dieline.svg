@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="463mm" height="401mm" viewBox="0 0 463 401" version="1.1">
+  <title>Sanzeed A4 presentation folder — flat dieline and outside artwork</title>
+  <desc>Cut size 457 × 395 mm (+3 mm bleed). Layers: artwork (print), dieline (separate — supply as a spot/non-printing layer), guides. 1 unit = 1 mm.</desc>
+  <defs><radialGradient id="lamp" cx="50%" cy="46%" r="60%"><stop offset="0" stop-color="#E9B25A" stop-opacity="0.38"/><stop offset="0.28" stop-color="#E9B25A" stop-opacity="0.12"/><stop offset="0.7" stop-color="#E9B25A" stop-opacity="0"/></radialGradient></defs>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<rect x="0" y="0" width="463" height="401" fill="#000000" />
+<rect x="230" y="0" width="240" height="308" fill="url(#lamp)" />
+<g id="wm" inkscape:label="logo primary-wordmark full-colour-dark" transform="translate(290.0000 139.1435) scale(0.033426) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm-wordmark">
+      <g
+         id="wm-wordmark-ink"
+         fill="#F5F5F7">
+        <path
+           id="wm-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm-wordmark-dots"
+         fill="#E9B25A">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<text x="350.0000" y="177.5000" text-anchor="middle" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:2.8222px;fill:#A1A1A6;line-height:1;letter-spacing:0.3387px" >EXPERIENTIAL DESIGN CONSULTANT</text>
+<g id="sym" inkscape:label="logo symbol full-colour-dark" transform="translate(35.0000 279.6388) scale(0.016722) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="sym-symbol">
+      <g
+         id="sym-symbol-ink"
+         fill="#F5F5F7">
+        <path
+           id="sym-symbol-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z " />
+      </g>
+      <g
+         id="sym-symbol-dots"
+         fill="#E9B25A">
+        <circle
+           cx="553"
+           cy="455"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<text x="215.0000" y="283.5000" text-anchor="end" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.6458px;fill:#A1A1A6;line-height:1" >Sanzeed Mirza  ·  Experiential Design Consultant  ·  New Delhi, India</text>
+<text x="215.0000" y="287.5000" text-anchor="end" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.6458px;fill:#A1A1A6;line-height:1" >+91 7827051270  ·  sanzeed@gmail.com  ·  sanzeed.com  ·  linkedin.com/in/sanzeed</text>
+<g transform="rotate(180 125.000 353.000)">
+<text x="125.0000" y="356.0000" text-anchor="middle" xml:space="preserve" style="font-family:'Fraunces 72pt','Fraunces';font-weight:300;font-size:5.6444px;fill:#F5F5F7;line-height:1;font-variation-settings:'opsz' 72,'SOFT' 30,'WONK' 0" >Experiential design you can walk into<tspan style="fill:#E9B25A">.</tspan></text>
+</g>
+  </g>
+<!--DIELINE-->
+  <g inkscape:groupmode="layer" inkscape:label="dieline (spot — do not print)" id="layer-dieline">
+<path d="M15 3 H460 V308 H235 V398 H3 V316 L11 308 H15 Z" fill="none" stroke="#FF00FF" stroke-width="0.25" />
+<line x1="235" y1="3" x2="235" y2="308" stroke="#0066FF" stroke-width="0.25" stroke-dasharray="3 1.5" />
+<line x1="240" y1="3" x2="240" y2="308" stroke="#0066FF" stroke-width="0.25" stroke-dasharray="3 1.5" />
+<line x1="15" y1="308" x2="235" y2="308" stroke="#0066FF" stroke-width="0.25" stroke-dasharray="3 1.5" />
+<line x1="15" y1="308" x2="15" y2="398" stroke="#0066FF" stroke-width="0.25" stroke-dasharray="3 1.5" />
+<rect x="4.000" y="317.000" width="10.000" height="80.000" rx="0" fill="#2E6E48" stroke="none" stroke-width="0.12" fill-opacity="0.18"/>
+<text x="9.0000" y="353.0000" text-anchor="middle" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:1.7639px;fill:#2E6E48;line-height:1" transform="rotate(-90 9.0 353.0)">GLUE</text>
+<rect x="80.500" y="327.500" width="89.000" height="51.000" rx="0" fill="none" stroke="#808086" stroke-width="0.2" stroke-dasharray="1 1"/>
+<line x1="79.5" y1="341.0" x2="79.5" y2="365.0" stroke="#FF00FF" stroke-width="0.35" />
+<line x1="170.5" y1="341.0" x2="170.5" y2="365.0" stroke="#FF00FF" stroke-width="0.35" />
+<text x="5.0000" y="2.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.7639px;fill:#FF00FF;line-height:1" >FOLDER DIELINE · cut size 457 × 395 mm · panels 220 × 305 · spine 5 · pocket 90 high · glue tab 12 · bleed 3 · magenta = cut, blue dashed = crease, green = glue</text>
+<text x="125.0000" y="11.0000" text-anchor="middle" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:2.1167px;fill:#FF00FF;line-height:1;letter-spacing:0.2117px" >BACK COVER (outside)</text>
+<text x="350.0000" y="11.0000" text-anchor="middle" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:2.1167px;fill:#FF00FF;line-height:1;letter-spacing:0.2117px" >FRONT COVER (outside)</text>
+<text x="125.0000" y="395.0000" text-anchor="middle" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:1.7639px;fill:#FF00FF;line-height:1;letter-spacing:0.1058px" >POCKET — folds up inside the back cover; artwork rotated 180° · card slits for 89 × 51 mm</text>
+  </g>
+<!--/DIELINE-->
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides">
+<rect x="0.060" y="0.060" width="462.880" height="400.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="457.000" height="395.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="18.000" y="18.000" width="427.000" height="365.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="460" y1="3" x2="463" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="460" y1="3" x2="460" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="398" x2="0" y2="398" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="398" x2="3" y2="401" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="460" y1="398" x2="463" y2="398" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="460" y1="398" x2="460" y2="401" stroke="#2F62A0" stroke-width="0.12"/>
+  </g>
+<!--/GUIDES-->
+</svg>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="906mm" height="26mm" viewBox="0 0 906 26" version="1.1">
+  <title>Sanzeed lanyard — 20 mm strip artwork</title>
+  <desc>Repeat: white wordmark 60 mm + gold point, pitch 110 mm, on Gallery Black. Woven or dye-sublimation; supply as print PDF. Units: 1 user unit = 1 mm. Layers: paper, artwork, guides (non-printing). Fonts: Fraunces 300, Inter Tight 600, Inter 400 (04_TYPOGRAPHY/Font_Files). Logo paths embedded from 02_LOGO_SYSTEM/SVG.</desc>
+  <sodipodi:namedview inkscape:document-units="mm" showgrid="false" />
+  <defs></defs>
+  <g inkscape:groupmode="layer" inkscape:label="paper" id="layer-paper">
+<rect x="0.000" y="0.000" width="906.000" height="26.000" rx="0" fill="#000000" stroke="none" stroke-width="0.12" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<g id="wm18" inkscape:label="logo primary-wordmark white" transform="translate(18.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm18-wordmark">
+      <g
+         id="wm18-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm18-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm18-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="103.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm128" inkscape:label="logo primary-wordmark white" transform="translate(128.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm128-wordmark">
+      <g
+         id="wm128-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm128-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm128-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="213.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm238" inkscape:label="logo primary-wordmark white" transform="translate(238.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm238-wordmark">
+      <g
+         id="wm238-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm238-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm238-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="323.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm348" inkscape:label="logo primary-wordmark white" transform="translate(348.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm348-wordmark">
+      <g
+         id="wm348-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm348-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm348-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="433.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm458" inkscape:label="logo primary-wordmark white" transform="translate(458.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm458-wordmark">
+      <g
+         id="wm458-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm458-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm458-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="543.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm568" inkscape:label="logo primary-wordmark white" transform="translate(568.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm568-wordmark">
+      <g
+         id="wm568-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm568-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm568-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="653.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm678" inkscape:label="logo primary-wordmark white" transform="translate(678.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm678-wordmark">
+      <g
+         id="wm678-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm678-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm678-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="763.000" cy="13.000" r="0.9" fill="#E9B25A" />
+<g id="wm788" inkscape:label="logo primary-wordmark white" transform="translate(788.0000 8.8217) scale(0.016713) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm788-wordmark">
+      <g
+         id="wm788-wordmark-ink"
+         fill="#FFFFFF">
+        <path
+           id="wm788-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm788-wordmark-dots"
+         fill="#FFFFFF">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<circle cx="873.000" cy="13.000" r="0.9" fill="#E9B25A" />
+  </g>
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides" style="display:inline">
+<rect x="0.060" y="0.060" width="905.880" height="25.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="900.000" height="20.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="6.000" y="6.000" width="894.000" height="14.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="903" y1="3" x2="906" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="903" y1="3" x2="903" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="23" x2="0" y2="23" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="23" x2="3" y2="26" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="903" y1="23" x2="906" y2="23" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="903" y1="23" x2="903" y2="26" stroke="#2F62A0" stroke-width="0.12"/>
+  </g>
+<!--/GUIDES-->
+</svg>

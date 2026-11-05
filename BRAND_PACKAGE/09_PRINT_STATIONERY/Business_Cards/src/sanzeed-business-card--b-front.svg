@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="95mm" height="57mm" viewBox="0 0 95 57" version="1.1">
+  <title>Sanzeed business card — concept B, front</title>
+  <desc>Primary wordmark (full-colour-dark) on Gallery Black with the lamp glow. Clear space = ½ cap height (3.2 mm). Units: 1 user unit = 1 mm. Layers: paper, artwork, guides (non-printing). Fonts: Fraunces 300, Inter Tight 600, Inter 400 (04_TYPOGRAPHY/Font_Files). Logo paths embedded from 02_LOGO_SYSTEM/SVG.</desc>
+  <sodipodi:namedview inkscape:document-units="mm" showgrid="false" />
+  <defs><radialGradient id="lamp" cx="50%" cy="50%" r="58%"><stop offset="0" stop-color="#E9B25A" stop-opacity="0.34"/><stop offset="0.28" stop-color="#E9B25A" stop-opacity="0.12"/><stop offset="0.7" stop-color="#E9B25A" stop-opacity="0"/></radialGradient></defs>
+  <g inkscape:groupmode="layer" inkscape:label="paper" id="layer-paper">
+<rect x="0.000" y="0.000" width="95.000" height="57.000" rx="0" fill="#000000" stroke="none" stroke-width="0.12" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<rect x="0" y="0" width="95" height="57" fill="url(#lamp)" />
+<g id="wm" inkscape:label="logo primary-wordmark full-colour-dark" transform="translate(24.5000 25.2967) scale(0.012813) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="wm-wordmark">
+      <g
+         id="wm-wordmark-ink"
+         fill="#F5F5F7">
+        <path
+           id="wm-wordmark-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 816 0 L 536 500 L 609.34961 500 L 816 130.99023 L 1022.6504 500 L 1096 500 L 816 0 z M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z " />
+      </g>
+      <g
+         id="wm-wordmark-dots"
+         fill="#E9B25A">
+        <circle
+           cx="816"
+           cy="412"
+           r="45" />
+        <circle
+           cx="3242"
+           cy="250"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+  </g>
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides" style="display:inline">
+<rect x="0.060" y="0.060" width="94.880" height="56.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="89.000" height="51.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="7.000" y="7.000" width="81.000" height="43.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="3" x2="95" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="3" x2="92" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="54" x2="0" y2="54" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="54" x2="3" y2="57" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="54" x2="95" y2="54" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="54" x2="92" y2="57" stroke="#2F62A0" stroke-width="0.12"/>
+<text x="4.0000" y="53.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.4111px;fill:#2F62A0;line-height:1" >TRIM 89 × 51 mm · BLEED 3 mm · SAFE 4 mm</text>
+  </g>
+<!--/GUIDES-->
+</svg>

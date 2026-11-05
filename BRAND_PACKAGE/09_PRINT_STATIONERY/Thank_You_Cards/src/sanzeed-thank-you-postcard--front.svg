@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="154mm" height="111mm" viewBox="0 0 154 111" version="1.1">
+  <title>Sanzeed thank-you postcard — front</title>
+  <desc>"Thank you." Fraunces Light 34 pt with the gold point, centred. Units: 1 user unit = 1 mm. Layers: paper, artwork, guides (non-printing). Fonts: Fraunces 300, Inter Tight 600, Inter 400 (04_TYPOGRAPHY/Font_Files). Logo paths embedded from 02_LOGO_SYSTEM/SVG.</desc>
+  <sodipodi:namedview inkscape:document-units="mm" showgrid="false" />
+  <defs></defs>
+  <g inkscape:groupmode="layer" inkscape:label="paper" id="layer-paper">
+<rect x="0.000" y="0.000" width="154.000" height="111.000" rx="0" fill="#F5F0E7" stroke="none" stroke-width="0.12" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<text x="77.0000" y="59.5000" text-anchor="middle" xml:space="preserve" style="font-family:'Fraunces 72pt','Fraunces';font-weight:300;font-size:11.9945px;fill:#1A1816;line-height:1;font-variation-settings:'opsz' 72,'SOFT' 30,'WONK' 0" >Thank you<tspan style="fill:#B8863B">.</tspan></text>
+  </g>
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides" style="display:inline">
+<rect x="0.060" y="0.060" width="153.880" height="110.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="148.000" height="105.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="9.000" y="9.000" width="136.000" height="93.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="151" y1="3" x2="154" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="151" y1="3" x2="151" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="108" x2="0" y2="108" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="108" x2="3" y2="111" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="151" y1="108" x2="154" y2="108" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="151" y1="108" x2="151" y2="111" stroke="#2F62A0" stroke-width="0.12"/>
+<text x="4.0000" y="107.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.4111px;fill:#2F62A0;line-height:1" >TRIM 148 × 105 mm · BLEED 3 mm · SAFE 6 mm</text>
+  </g>
+<!--/GUIDES-->
+</svg>

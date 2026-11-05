@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzeed — About Sanzeed, one page</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../../_shared/collateral.css">
+<style>
+
+
+@page { size: 210mm 297mm; margin: 0; }
+body { background: #000; }
+.sheet { width: 210mm; height: 297mm; font-family: var(--font-text); }
+.sheet.light { background: #F5F0E7; }
+.pad { position: absolute; left: 18mm; right: 18mm; top: 18mm; bottom: 18mm; }
+.mark { position: absolute; display: block; }
+.hl { color: var(--fg); line-height: 1.04; }
+h2.hl { font-size: 24pt; margin: 1.5mm 0 5mm; }
+h3 { font-family: var(--font-heading); font-weight: 600; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); margin: 6mm 0 1.5mm; }
+.eyebrow, .eyebrow-quiet { font-size: 6.5pt; }
+p.body { font-size: 8.5pt; line-height: 1.6; color: var(--fg-2); margin-bottom: 3mm; max-width: 130mm; }
+p.lead { font-size: 10.5pt; line-height: 1.5; color: var(--fg-2); margin-bottom: 5mm; max-width: 130mm; }
+.folio { position: absolute; left: 18mm; right: 18mm; bottom: 10mm; display: flex; justify-content: space-between; font-size: 6.5pt; color: var(--fg-3); }
+table { width: 100%; }
+th, td { font-size: 8pt; padding: 1.8mm 3mm 1.8mm 0; line-height: 1.45; }
+th { font-size: 6.5pt; }
+td.k { width: 42mm; font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.wl { font-size: 6.5pt; }
+.contact { font-size: 8.5pt; line-height: 1.7; color: var(--fg-2); }
+.contact b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 4mm; }
+.cat { font-family: var(--font-heading); font-weight: 600; font-size: 5.8pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); border-bottom: 1px solid var(--line); padding-bottom: 1mm; margin-bottom: 1.2mm; }
+.item { font-size: 6pt; line-height: 1.45; color: var(--fg-3); display: grid; grid-template-columns: 6mm 1fr; }
+.item .c { font-family: var(--font-heading); font-weight: 500; color: var(--accent-text); font-size: 5.2pt; letter-spacing: .05em; padding-top: .3mm; font-variant-numeric: tabular-nums; }
+.item b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.stat .n { font-family: var(--font-display); font-weight: 300; font-size: 24pt; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 144; }
+.stat .n .plus { color: var(--accent); }
+.stat .l { font-size: 7pt; color: var(--fg-2); margin-top: 1mm; }
+
+.about .mark { left: 18mm; top: 18mm; width: 52mm; }
+.about .flow { position: absolute; left: 18mm; right: 18mm; top: 38mm; }
+.about .top { display: grid; grid-template-columns: 1fr 56mm; gap: 10mm; }
+.about .plate { width: 56mm; height: 70mm; border-radius: 5mm; }
+.about .wl { margin-top: 2mm; }
+.about .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 4mm; margin-top: 7mm; }
+.about .stat .n { font-size: 20pt; } .about .stat .l { font-size: 6.5pt; }
+.about p.body { max-width: none; }
+.about .career p { margin-bottom: 1mm; font-size: 7.6pt; }
+.about .career b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.about .svcs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm 8mm; font-size: 7.6pt; line-height: 1.45; color: var(--fg-2); }
+.about .svcs div { display: grid; grid-template-columns: 7mm 1fr; }
+.about .svcs .c { font-family: var(--font-heading); font-weight: 500; font-size: 6.5pt; letter-spacing: .08em; color: var(--accent-text); padding-top: .3mm; }
+.about .svcs b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.about .method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; }
+.about .method b { display: block; font-family: var(--font-display); font-weight: 300; font-size: 13pt; color: var(--fg); font-variation-settings: "opsz" 72; margin: .5mm 0 1mm; }
+.about .method .ey { font-family: var(--font-heading); font-weight: 600; font-size: 5.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); }
+.about .method span { font-size: 6.8pt; line-height: 1.4; color: var(--fg-2); }
+.about .contact { position: absolute; left: 18mm; right: 18mm; bottom: 18mm; border-top: 1px solid var(--line); padding-top: 3mm; font-size: 7.5pt; display: flex; justify-content: space-between; }
+
+</style>
+</head>
+<body>
+<section class="sheet theme-light light about" id="art"><img class="mark" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg" alt="Sanzeed — Experiential Design Consultant">
+  <div class="flow">
+  <div class="top"><div><div class="eyebrow">About Sanzeed</div><h2 class="hl">Strategy, craft and calm leadership, in one person<span class="pt">.</span></h2>
+  <p class="body">I’m an experiential design consultant based in New Delhi, working with institutions and brands wherever the project is. Fifteen years in: first as a concept artist and VFX lead on films and animation, then eight years directing museums, experience centres, pavilions and shows.</p><p class="body">I lead the whole room — story, space, graphics, media and the team that builds it. The work I want to make is calm to run and impossible to forget once you have walked through it.</p>
+  <p class="body" style="color:var(--fg-3)">Trusted by PwC, Microsoft, Discovery and National Museums, from concept to public unveiling.</p>
+  <h3>Career</h3><div class="career"><p class="body"><b>Experiential Design Consultant</b>, Independent · Aug 2026 — Present</p><p class="body"><b>Creative Director</b>, Tagbin · Jun 2018 — Jul 2026</p><p class="body"><b>Creative Head</b>, Digital Web Solutions · Apr 2018 — May 2018</p><p class="body"><b>Creative Director</b>, SocioPixels · Feb 2017 — Mar 2018</p><p class="body"><b>Lead Concept Artist</b>, Broadcast2world · Sep 2011 — Dec 2016</p><p class="body"><b>VFX Artist</b>, Prime Focus · Sep 2011 — Dec 2016 · in parallel</p></div></div>
+  <div><div class="plate"><img src="../../_shared/img/portrait--4x5-2000.jpg" alt="Sanzeed Mirza"></div><div class="wl"><b>Sanzeed Mirza</b><span class="sep">·</span>New Delhi</div>
+  <div class="stats"><div class="stat"><div class="n">15<span class="plus">+</span></div><div class="l">Years of experience</div></div><div class="stat"><div class="n">8<span class="plus">+</span></div><div class="l">Years experiential &amp; museum</div></div><div class="stat"><div class="n">90<span class="plus">+</span></div><div class="l">Projects directed</div></div><div class="stat"><div class="n">60<span class="plus">+</span></div><div class="l">Museums &amp; centres</div></div></div></div></div>
+  <h3>Seven services</h3><div class="svcs"><div><span class="c">01</span><span><b>Experiential Design &amp; Creative Direction</b> — One vision from brief to opening night: narrative, space, media and the team that builds it.</span></div><div><span class="c">02</span><span><b>Museum &amp; Cultural Exhibition Planning</b> — Galleries planned as a route, not a floor plan. Objects, stories and dwell time, in order.</span></div><div><span class="c">03</span><span><b>Immersive Storytelling &amp; Narrative Architecture</b> — The script comes first. Every room, screen and surface carries a line of it.</span></div><div><span class="c">04</span><span><b>Spatial Experience &amp; Environmental Branding</b> — Brands you can stand inside: pavilions, experience centres, thresholds and wayfinding.</span></div><div><span class="c">05</span><span><b>Event Production &amp; Brand Activation</b> — Shows, launches and tableaux where light and timing do the talking.</span></div><div><span class="c">06</span><span><b>Digital ↔ Physical Experience Integration</b> — Projection, AR and VR, sensors and data brought into real rooms and real crowds.</span></div><div><span class="c">07</span><span><b>Cross-Functional Leadership &amp; Mentorship</b> — Designers, writers, architects, producers and technologists moved toward one outcome, calmly.</span></div></div>
+  <h3>Method</h3><div class="method"><div><div class="ey">Step 01</div><b>Discover</b><span>You receive a research deck and the one central story.</span></div><div><div class="ey">Step 02</div><b>Direct</b><span>You receive a concept book and a walkthrough film.</span></div><div><div class="ey">Step 03</div><b>Craft</b><span>You receive detail drawings, media scripts and a prototype room.</span></div><div><div class="ey">Step 04</div><b>Deliver</b><span>You receive a built, tested and opened experience.</span></div></div>
+  </div>
+  <div class="contact"><span><b style="font-family:var(--font-heading);font-weight:600;color:var(--fg)">Tell me about the room.</b> sanzeed@gmail.com · +91 7827051270 (call / WhatsApp) · linkedin.com/in/sanzeed</span><span>sanzeed.com · New Delhi</span></div></section>
+</body>
+</html>

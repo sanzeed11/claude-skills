@@ -1,0 +1,2012 @@
+[
+ {
+  "path": "README.md",
+  "bytes": 2673,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Brochures/README.md",
+  "bytes": 3811,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Brochures/sanzeed-brochure--a4-trifold-bleed.pdf",
+  "bytes": 1803917,
+  "spec": "2 pages · 303.0×215.9 mm · fonts embedded"
+ },
+ {
+  "path": "Brochures/sanzeed-brochure--a4-trifold-inside.png",
+  "bytes": 1712701,
+  "spec": "2865×2043 px"
+ },
+ {
+  "path": "Brochures/sanzeed-brochure--a4-trifold-outside.png",
+  "bytes": 1296761,
+  "spec": "2865×2043 px"
+ },
+ {
+  "path": "Brochures/sanzeed-brochure--a4-trifold-print-ready-cmyk.pdf",
+  "bytes": 3040240,
+  "spec": "2 pages · 323.0×236.0 mm · fonts embedded"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-00-cover.png",
+  "bytes": 211325,
+  "spec": "909×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-01-p02-03.png",
+  "bytes": 487460,
+  "spec": "1818×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-02-p04-05.png",
+  "bytes": 200380,
+  "spec": "1818×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-03-p06-07.png",
+  "bytes": 849040,
+  "spec": "1818×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-04-p08-09.png",
+  "bytes": 1136309,
+  "spec": "1818×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-05-p10-11.png",
+  "bytes": 1619970,
+  "spec": "1818×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp--spread-06-back.png",
+  "bytes": 176724,
+  "spec": "909×1287 px"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp-bleed.pdf",
+  "bytes": 4216374,
+  "spec": "12 pages · 215.9×303.0 mm · fonts embedded"
+ },
+ {
+  "path": "Brochures/sanzeed-company-profile--a4-12pp-print-ready-cmyk.pdf",
+  "bytes": 9195636,
+  "spec": "12 pages · 236.0×323.0 mm · fonts embedded"
+ },
+ {
+  "path": "Brochures/src/sanzeed-brochure--a4-trifold.html",
+  "bytes": 13441,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Brochures/src/sanzeed-company-profile--a4-12pp.html",
+  "bytes": 38789,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/README.md",
+  "bytes": 7011,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--1080x1080.jpg",
+  "bytes": 78986,
+  "spec": "1080×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--1080x1080@2x.png",
+  "bytes": 545500,
+  "spec": "2160×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--160x600.jpg",
+  "bytes": 16213,
+  "spec": "160×600 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--160x600@2x.png",
+  "bytes": 102375,
+  "spec": "320×1200 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--300x250.jpg",
+  "bytes": 14132,
+  "spec": "300×250 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--300x250@2x.png",
+  "bytes": 78149,
+  "spec": "600×500 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--300x600.jpg",
+  "bytes": 27532,
+  "spec": "300×600 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--300x600@2x.png",
+  "bytes": 158758,
+  "spec": "600×1200 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--320x50.jpg",
+  "bytes": 3358,
+  "spec": "320×50 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--320x50@2x.png",
+  "bytes": 9445,
+  "spec": "640×100 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--728x90.jpg",
+  "bytes": 9607,
+  "spec": "728×90 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--728x90@2x.png",
+  "bytes": 23832,
+  "spec": "1456×180 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--970x250.jpg",
+  "bytes": 24802,
+  "spec": "970×250 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-ad--970x250@2x.png",
+  "bytes": 146466,
+  "spec": "1940×500 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-16x9-1920x1080.jpg",
+  "bytes": 96095,
+  "spec": "1920×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-16x9-3840x2160.png",
+  "bytes": 906150,
+  "spec": "3840×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-1x1-1080x1080.jpg",
+  "bytes": 78315,
+  "spec": "1080×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-1x1-2160x2160.png",
+  "bytes": 1037171,
+  "spec": "2160×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-9x16-1080x1920.jpg",
+  "bytes": 126229,
+  "spec": "1080×1920 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--carry-the-light-9x16-2160x3840.png",
+  "bytes": 1859231,
+  "spec": "2160×3840 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-16x9-1920x1080.jpg",
+  "bytes": 174273,
+  "spec": "1920×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-16x9-3840x2160.png",
+  "bytes": 2396662,
+  "spec": "3840×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-1x1-1080x1080.jpg",
+  "bytes": 130470,
+  "spec": "1080×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-1x1-2160x2160.png",
+  "bytes": 1972290,
+  "spec": "2160×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-9x16-1080x1920.jpg",
+  "bytes": 172714,
+  "spec": "1080×1920 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--tell-me-9x16-2160x3840.png",
+  "bytes": 2481398,
+  "spec": "2160×3840 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-16x9-1920x1080.jpg",
+  "bytes": 126792,
+  "spec": "1920×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-16x9-3840x2160.png",
+  "bytes": 1040711,
+  "spec": "3840×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-1x1-1080x1080.jpg",
+  "bytes": 107612,
+  "spec": "1080×1080 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-1x1-2160x2160.png",
+  "bytes": 1135710,
+  "spec": "2160×2160 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-9x16-1080x1920.jpg",
+  "bytes": 141251,
+  "spec": "1080×1920 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-key-visual--walk-into-9x16-2160x3840.png",
+  "bytes": 1545682,
+  "spec": "2160×3840 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--dark-1440x500.jpg",
+  "bytes": 64340,
+  "spec": "1440×500 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--dark-1440x500@2x.png",
+  "bytes": 510628,
+  "spec": "2880×1000 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--dark-1920x600.jpg",
+  "bytes": 84114,
+  "spec": "1920×600 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--dark-1920x600@2x.png",
+  "bytes": 753595,
+  "spec": "3840×1200 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--light-1440x500.jpg",
+  "bytes": 58824,
+  "spec": "1440×500 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--light-1440x500@2x.png",
+  "bytes": 271086,
+  "spec": "2880×1000 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--light-1920x600.jpg",
+  "bytes": 75586,
+  "spec": "1920×600 px"
+ },
+ {
+  "path": "Campaign_Templates/sanzeed-web-banner--light-1920x600@2x.png",
+  "bytes": 346467,
+  "spec": "3840×1200 px"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--1080x1080.html",
+  "bytes": 2018,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--160x600.html",
+  "bytes": 1906,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--300x250.html",
+  "bytes": 1749,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--300x600.html",
+  "bytes": 2092,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--320x50.html",
+  "bytes": 1525,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--728x90.html",
+  "bytes": 1518,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-ad--970x250.html",
+  "bytes": 1848,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--carry-the-light-16x9.html",
+  "bytes": 4170,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--carry-the-light-1x1.html",
+  "bytes": 4168,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--carry-the-light-9x16.html",
+  "bytes": 4174,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--tell-me-16x9.html",
+  "bytes": 4215,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--tell-me-1x1.html",
+  "bytes": 4213,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--tell-me-9x16.html",
+  "bytes": 4215,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--walk-into-16x9.html",
+  "bytes": 4241,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--walk-into-1x1.html",
+  "bytes": 4239,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-key-visual--walk-into-9x16.html",
+  "bytes": 4241,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-web-banner--dark-1440x500.html",
+  "bytes": 2255,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-web-banner--dark-1920x600.html",
+  "bytes": 2256,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-web-banner--light-1440x500.html",
+  "bytes": 2253,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Campaign_Templates/src/sanzeed-web-banner--light-1920x600.html",
+  "bytes": 2254,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/README.md",
+  "bytes": 5259,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Events/sanzeed-event-backdrop--3000x2400mm-1-10.pdf",
+  "bytes": 114579,
+  "spec": "1 page · 299.9×239.9 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-backdrop--3000x2400mm-1-10.png",
+  "bytes": 1688643,
+  "spec": "3402×2724 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--a5-back.png",
+  "bytes": 771881,
+  "spec": "1166×1634 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--a5-bleed.pdf",
+  "bytes": 380974,
+  "spec": "2 pages · 154.2×215.9 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--a5-front.png",
+  "bytes": 308258,
+  "spec": "1166×1634 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--a5-print-ready-cmyk.pdf",
+  "bytes": 520421,
+  "spec": "2 pages · 174.0×236.0 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--digital-1080x1350.jpg",
+  "bytes": 108555,
+  "spec": "1080×1350 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--digital-2160x2700.png",
+  "bytes": 1126136,
+  "spec": "2160×2700 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--email-1200x1600.png",
+  "bytes": 445650,
+  "spec": "1200×1600 px"
+ },
+ {
+  "path": "Events/sanzeed-event-invitation--email-600x800.jpg",
+  "bytes": 52300,
+  "spec": "600×800 px"
+ },
+ {
+  "path": "Events/sanzeed-event-lanyard--900x20mm.pdf",
+  "bytes": 8555,
+  "spec": "1 page · 899.9×20.1 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-lanyard--900x20mm.png",
+  "bytes": 32100,
+  "spec": "6804×152 px"
+ },
+ {
+  "path": "Events/sanzeed-event-name-badge--90x60mm-bleed.pdf",
+  "bytes": 36896,
+  "spec": "2 pages · 95.9×66.0 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-name-badge--90x60mm-print-ready-cmyk.pdf",
+  "bytes": 37714,
+  "spec": "2 pages · 116.0×86.0 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-name-badge--guest.png",
+  "bytes": 36568,
+  "spec": "1452×1000 px"
+ },
+ {
+  "path": "Events/sanzeed-event-name-badge--host.png",
+  "bytes": 49290,
+  "spec": "1452×1000 px"
+ },
+ {
+  "path": "Events/sanzeed-event-table-tent--a6-bleed.pdf",
+  "bytes": 44143,
+  "spec": "1 page · 154.2×215.9 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-table-tent--a6-flat.png",
+  "bytes": 85384,
+  "spec": "1166×1634 px"
+ },
+ {
+  "path": "Events/sanzeed-event-table-tent--a6-print-ready-cmyk.pdf",
+  "bytes": 42934,
+  "spec": "1 page · 174.0×236.0 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-welcome-board--900x1800mm-1-10.pdf",
+  "bytes": 300898,
+  "spec": "1 page · 90.0×179.9 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-event-welcome-board--900x1800mm-1-10.png",
+  "bytes": 1002736,
+  "spec": "1364×2724 px"
+ },
+ {
+  "path": "Events/sanzeed-exhibition-booth-wall--2400x2400mm-1-10.pdf",
+  "bytes": 330203,
+  "spec": "1 page · 239.9×239.9 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-exhibition-booth-wall--2400x2400mm-1-10.png",
+  "bytes": 1102319,
+  "spec": "2724×2724 px"
+ },
+ {
+  "path": "Events/sanzeed-exhibition-rollup--850x2000mm-1-5.pdf",
+  "bytes": 251052,
+  "spec": "1 page · 170.0×400.0 mm · fonts embedded"
+ },
+ {
+  "path": "Events/sanzeed-exhibition-rollup--850x2000mm-1-5.png",
+  "bytes": 924528,
+  "spec": "1929×4536 px"
+ },
+ {
+  "path": "Events/src/sanzeed-event-backdrop--3000x2400mm-1-10.html",
+  "bytes": 2400,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-invitation--a5-print.html",
+  "bytes": 3923,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-invitation--digital-1080x1350.html",
+  "bytes": 2249,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-invitation--email-600x800.html",
+  "bytes": 2243,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-lanyard--900x20mm.html",
+  "bytes": 2360,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-name-badge--90x60mm-print.html",
+  "bytes": 2438,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-table-tent--a6-print.html",
+  "bytes": 2775,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-event-welcome-board--900x1800mm-1-10.html",
+  "bytes": 2438,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-exhibition-booth-wall--2400x2400mm-1-10.html",
+  "bytes": 3077,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Events/src/sanzeed-exhibition-rollup--850x2000mm-1-5.html",
+  "bytes": 3778,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Flyers/README.md",
+  "bytes": 2442,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Flyers/sanzeed-flyer--a5-two-sided-back.png",
+  "bytes": 354480,
+  "spec": "1749×2451 px"
+ },
+ {
+  "path": "Flyers/sanzeed-flyer--a5-two-sided-bleed.pdf",
+  "bytes": 371722,
+  "spec": "2 pages · 154.2×215.9 mm · fonts embedded"
+ },
+ {
+  "path": "Flyers/sanzeed-flyer--a5-two-sided-front.png",
+  "bytes": 641766,
+  "spec": "1749×2451 px"
+ },
+ {
+  "path": "Flyers/sanzeed-flyer--a5-two-sided-print-ready-cmyk.pdf",
+  "bytes": 321503,
+  "spec": "2 pages · 174.0×236.0 mm · fonts embedded"
+ },
+ {
+  "path": "Flyers/sanzeed-leaflet--dl-two-sided-back.png",
+  "bytes": 307216,
+  "spec": "1191×2451 px"
+ },
+ {
+  "path": "Flyers/sanzeed-leaflet--dl-two-sided-bleed.pdf",
+  "bytes": 406018,
+  "spec": "2 pages · 105.2×215.9 mm · fonts embedded"
+ },
+ {
+  "path": "Flyers/sanzeed-leaflet--dl-two-sided-front.png",
+  "bytes": 731840,
+  "spec": "1191×2451 px"
+ },
+ {
+  "path": "Flyers/sanzeed-leaflet--dl-two-sided-print-ready-cmyk.pdf",
+  "bytes": 341614,
+  "spec": "2 pages · 125.0×236.0 mm · fonts embedded"
+ },
+ {
+  "path": "Flyers/src/sanzeed-flyer--a5-two-sided.html",
+  "bytes": 7529,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Flyers/src/sanzeed-leaflet--dl-two-sided.html",
+  "bytes": 7127,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Media_Kit/README.md",
+  "bytes": 1883,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Media_Kit/media-kit-contents.md",
+  "bytes": 2715,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-01.png",
+  "bytes": 382245,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-02.png",
+  "bytes": 118954,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-03.png",
+  "bytes": 234440,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-04.png",
+  "bytes": 124433,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-05.png",
+  "bytes": 80645,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-06.png",
+  "bytes": 309326,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4-page-07.png",
+  "bytes": 36193,
+  "spec": "744×1053 px"
+ },
+ {
+  "path": "Media_Kit/sanzeed-media-kit--a4.pdf",
+  "bytes": 3913849,
+  "spec": "7 pages · 209.9×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Media_Kit/src/sanzeed-media-kit--a4.html",
+  "bytes": 28036,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/README.md",
+  "bytes": 4193,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a2-bleed.pdf",
+  "bytes": 228448,
+  "spec": "1 page · 426.1×600.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a2-preview.png",
+  "bytes": 1263521,
+  "spec": "2417×3402 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a2-print-ready-cmyk.pdf",
+  "bytes": 415555,
+  "spec": "1 page · 446.0×620.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a3-bleed.pdf",
+  "bytes": 226918,
+  "spec": "1 page · 303.0×426.1 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a3-preview.png",
+  "bytes": 1144744,
+  "spec": "2292×3222 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--campaign-a3-print-ready-cmyk.pdf",
+  "bytes": 414498,
+  "spec": "1 page · 323.0×446.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a2-bleed.pdf",
+  "bytes": 114523,
+  "spec": "1 page · 426.1×600.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a2-preview.png",
+  "bytes": 376396,
+  "spec": "2417×3402 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a2-print-ready-cmyk.pdf",
+  "bytes": 100751,
+  "spec": "1 page · 446.0×620.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a3-bleed.pdf",
+  "bytes": 110061,
+  "spec": "1 page · 303.0×426.1 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a3-preview.png",
+  "bytes": 348260,
+  "spec": "2292×3222 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--method-a3-print-ready-cmyk.pdf",
+  "bytes": 100384,
+  "spec": "1 page · 323.0×446.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a2-bleed.pdf",
+  "bytes": 120532,
+  "spec": "1 page · 426.1×600.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a2-preview.png",
+  "bytes": 634624,
+  "spec": "2417×3402 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a2-print-ready-cmyk.pdf",
+  "bytes": 97714,
+  "spec": "1 page · 446.0×620.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a3-bleed.pdf",
+  "bytes": 119299,
+  "spec": "1 page · 303.0×426.1 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a3-preview.png",
+  "bytes": 605640,
+  "spec": "2292×3222 px"
+ },
+ {
+  "path": "Posters/sanzeed-poster--typographic-a3-print-ready-cmyk.pdf",
+  "bytes": 97581,
+  "spec": "1 page · 323.0×446.0 mm · fonts embedded"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--campaign-a2.html",
+  "bytes": 2391,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--campaign-a3.html",
+  "bytes": 2385,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--method-a2.html",
+  "bytes": 4681,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--method-a3.html",
+  "bytes": 4675,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--typographic-a2.html",
+  "bytes": 12482,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Posters/src/sanzeed-poster--typographic-a3.html",
+  "bytes": 12474,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Presentations/README.md",
+  "bytes": 9129,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--blank-a4--page-01.png",
+  "bytes": 25554,
+  "spec": "662×936 px"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--blank-a4--page-02.png",
+  "bytes": 32205,
+  "spec": "662×936 px"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--blank-a4.pdf",
+  "bytes": 125145,
+  "spec": "2 pages · 209.9×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--filled-prime-minister-museum-a4--page-01.png",
+  "bytes": 183740,
+  "spec": "662×936 px"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--filled-prime-minister-museum-a4--page-02.png",
+  "bytes": 297148,
+  "spec": "662×936 px"
+ },
+ {
+  "path": "Presentations/sanzeed-case-study-template--filled-prime-minister-museum-a4.pdf",
+  "bytes": 809058,
+  "spec": "2 pages · 209.9×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-01.png",
+  "bytes": 188595,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-02.png",
+  "bytes": 236142,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-03.png",
+  "bytes": 542894,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-04.png",
+  "bytes": 563705,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-05.png",
+  "bytes": 524945,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-06.png",
+  "bytes": 395673,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-07.png",
+  "bytes": 655719,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-08.png",
+  "bytes": 568679,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-09.png",
+  "bytes": 498865,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-10.png",
+  "bytes": 553029,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-11.png",
+  "bytes": 361342,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape--page-12.png",
+  "bytes": 37363,
+  "spec": "936×662 px"
+ },
+ {
+  "path": "Presentations/sanzeed-portfolio-template--a4-landscape.pdf",
+  "bytes": 1826523,
+  "spec": "12 pages · 297.0×209.9 mm · fonts embedded"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-01.png",
+  "bytes": 86559,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-02.png",
+  "bytes": 59519,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-03.png",
+  "bytes": 39184,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-04.png",
+  "bytes": 68997,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-05.png",
+  "bytes": 93134,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-06.png",
+  "bytes": 43933,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-07.png",
+  "bytes": 36115,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-08.png",
+  "bytes": 54106,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-09.png",
+  "bytes": 125825,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-10.png",
+  "bytes": 66560,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-11.png",
+  "bytes": 444551,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides--slide-12.png",
+  "bytes": 75066,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides.pdf",
+  "bytes": 870667,
+  "spec": "12 pages · 338.7×190.5 mm · fonts embedded"
+ },
+ {
+  "path": "Presentations/sanzeed-proposal-template--12-slides.pptx",
+  "bytes": 1014958,
+  "spec": "12 slides · 13.333×7.5 in (16:9)"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-01.png",
+  "bytes": 127492,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-02.png",
+  "bytes": 219857,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-03.png",
+  "bytes": 339503,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-04.png",
+  "bytes": 44233,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-05.png",
+  "bytes": 59607,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-06.png",
+  "bytes": 120533,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-07.png",
+  "bytes": 769142,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-08.png",
+  "bytes": 84176,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-09.png",
+  "bytes": 334728,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-10.png",
+  "bytes": 391447,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-11.png",
+  "bytes": 499101,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-12.png",
+  "bytes": 569838,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-13.png",
+  "bytes": 81400,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-14.png",
+  "bytes": 73012,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-15.png",
+  "bytes": 40746,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides--slide-16.png",
+  "bytes": 72600,
+  "spec": "1280×720 px"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides.pdf",
+  "bytes": 3452785,
+  "spec": "16 pages · 338.7×190.5 mm · fonts embedded"
+ },
+ {
+  "path": "Presentations/sanzeed-sales-presentation--16-slides.pptx",
+  "bytes": 4553339,
+  "spec": "16 slides · 13.333×7.5 in (16:9)"
+ },
+ {
+  "path": "Presentations/src/sanzeed-case-study-template--blank.html",
+  "bytes": 7048,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Presentations/src/sanzeed-case-study-template--filled-prime-minister-museum.html",
+  "bytes": 7642,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Presentations/src/sanzeed-portfolio-template--a4-landscape.html",
+  "bytes": 12139,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Presentations/src/assets/_hero-object--dark-2400.jpg",
+  "bytes": 56552,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/_hero-object--dark-4x5-1600.jpg",
+  "bytes": 142345,
+  "spec": "1400×1750 px"
+ },
+ {
+  "path": "Presentations/src/assets/_portrait--1x1-2000.jpg",
+  "bytes": 229914,
+  "spec": "1400×1400 px"
+ },
+ {
+  "path": "Presentations/src/assets/_portrait--4x5-2000.jpg",
+  "bytes": 265446,
+  "spec": "1400×1750 px"
+ },
+ {
+  "path": "Presentations/src/assets/buddha-park.jpg",
+  "bytes": 186430,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--buddha-park-02.jpg",
+  "bytes": 341906,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--buddha-park-05.jpg",
+  "bytes": 261313,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--buddha-park-06.jpg",
+  "bytes": 273869,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--buddha-park-08.jpg",
+  "bytes": 348108,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-01.jpg",
+  "bytes": 134575,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-02.jpg",
+  "bytes": 206081,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-03.jpg",
+  "bytes": 81582,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-04.jpg",
+  "bytes": 151391,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-05.jpg",
+  "bytes": 156120,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-06.jpg",
+  "bytes": 189570,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--prime-minister-museum-07.jpg",
+  "bytes": 144890,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--ram-katha-show-01.jpg",
+  "bytes": 114361,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--ram-katha-show-02.jpg",
+  "bytes": 84778,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--ram-katha-show-03.jpg",
+  "bytes": 76646,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/case--ram-katha-show-07.jpg",
+  "bytes": 288787,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "Presentations/src/assets/g20-tree-show.jpg",
+  "bytes": 142298,
+  "spec": "920×516 px"
+ },
+ {
+  "path": "Presentations/src/assets/india-pavilion-expo-2025.jpg",
+  "bytes": 93251,
+  "spec": "960×540 px"
+ },
+ {
+  "path": "Presentations/src/assets/prime-minister-museum.jpg",
+  "bytes": 110433,
+  "spec": "960×540 px"
+ },
+ {
+  "path": "Presentations/src/assets/ram-katha-show.jpg",
+  "bytes": 156080,
+  "spec": "920×514 px"
+ },
+ {
+  "path": "Presentations/src/assets/rbi-museum-interior.jpg",
+  "bytes": 159031,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "Presentations/src/assets/tribal-museum.jpg",
+  "bytes": 167750,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "Presentations/src/assets/yuge-yugin-bharat-museum.jpg",
+  "bytes": 137325,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "Press/README.md",
+  "bytes": 2941,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Press/logo-pack-note.md",
+  "bytes": 1401,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Press/sanzeed-about--one-page.pdf",
+  "bytes": 774418,
+  "spec": "1 page · 209.9×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Press/sanzeed-about--one-page.png",
+  "bytes": 706900,
+  "spec": "1588×2246 px"
+ },
+ {
+  "path": "Press/sanzeed-fact-sheet.docx",
+  "bytes": 72770,
+  "spec": "A4 · 6 paragraphs"
+ },
+ {
+  "path": "Press/sanzeed-fact-sheet.pdf",
+  "bytes": 58504,
+  "spec": "2 pages · 210.0×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Press/sanzeed-mirza-headshot--1x1-2000.jpg",
+  "bytes": 537084,
+  "spec": "2000×2000 px"
+ },
+ {
+  "path": "Press/sanzeed-mirza-headshot--3x4-2000.jpg",
+  "bytes": 653423,
+  "spec": "2000×2667 px"
+ },
+ {
+  "path": "Press/sanzeed-mirza-headshot--4x5-2000.jpg",
+  "bytes": 626082,
+  "spec": "2000×2500 px"
+ },
+ {
+  "path": "Press/sanzeed-press-release--2026-independent-practice.docx",
+  "bytes": 72581,
+  "spec": "A4 · 17 paragraphs"
+ },
+ {
+  "path": "Press/sanzeed-press-release--2026-independent-practice.pdf",
+  "bytes": 52687,
+  "spec": "2 pages · 210.0×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Press/sanzeed-press-release--template.docx",
+  "bytes": 72238,
+  "spec": "A4 · 17 paragraphs"
+ },
+ {
+  "path": "Press/sanzeed-press-release--template.pdf",
+  "bytes": 50161,
+  "spec": "1 page · 210.0×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Press/src/sanzeed-about--one-page.html",
+  "bytes": 9060,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/README.md",
+  "bytes": 7848,
+  "spec": "Markdown"
+ },
+ {
+  "path": "Signage/sanzeed-door-plate--300x100mm-print-ready-cmyk.pdf",
+  "bytes": 17200,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-door-plate--300x100mm.pdf",
+  "bytes": 14287,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-door-plate--300x100mm.png",
+  "bytes": 66194,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-door-plate--300x100mm.svg",
+  "bytes": 49082,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-signage-spec-sheet--a4.pdf",
+  "bytes": 91686,
+  "spec": "1 page · 209.9×297.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-signage-spec-sheet--a4.png",
+  "bytes": 468050,
+  "spec": "1588×2246 px"
+ },
+ {
+  "path": "Signage/sanzeed-totem--600x1800mm-1-10.pdf",
+  "bytes": 48960,
+  "spec": "1 page · 59.9×179.9 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-totem--600x1800mm-1-10.png",
+  "bytes": 94680,
+  "spec": "908×2724 px"
+ },
+ {
+  "path": "Signage/sanzeed-totem--600x1800mm-1-10.svg",
+  "bytes": 130156,
+  "spec": "SVG 169.92 × 510"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-ahead-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 8882,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-ahead-300x100mm.pdf",
+  "bytes": 4298,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-ahead-300x100mm.png",
+  "bytes": 26527,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-ahead-300x100mm.svg",
+  "bytes": 11113,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-down-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 8866,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-down-300x100mm.pdf",
+  "bytes": 4291,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-down-300x100mm.png",
+  "bytes": 26513,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-down-300x100mm.svg",
+  "bytes": 11070,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-left-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 8870,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-left-300x100mm.pdf",
+  "bytes": 4293,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-left-300x100mm.png",
+  "bytes": 26669,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-left-300x100mm.svg",
+  "bytes": 11133,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-right-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 8870,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-right-300x100mm.pdf",
+  "bytes": 4293,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-right-300x100mm.png",
+  "bytes": 26923,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--arrow-right-300x100mm.svg",
+  "bytes": 11072,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-001-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 10740,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-001-300x100mm.pdf",
+  "bytes": 7165,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-001-300x100mm.png",
+  "bytes": 48201,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-001-300x100mm.svg",
+  "bytes": 12695,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-002-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 11381,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-002-300x100mm.pdf",
+  "bytes": 7872,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-002-300x100mm.png",
+  "bytes": 60747,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-002-300x100mm.svg",
+  "bytes": 14357,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-003-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 11203,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-003-300x100mm.pdf",
+  "bytes": 7688,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-003-300x100mm.png",
+  "bytes": 58296,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-003-300x100mm.svg",
+  "bytes": 13951,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-004-300x100mm-print-ready-cmyk.pdf",
+  "bytes": 11146,
+  "spec": "1 page · 326.0×126.0 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-004-300x100mm.pdf",
+  "bytes": 7619,
+  "spec": "1 page · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-004-300x100mm.png",
+  "bytes": 54203,
+  "spec": "3471×1203 px"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding--room-004-300x100mm.svg",
+  "bytes": 13809,
+  "spec": "SVG 866.88 × 300"
+ },
+ {
+  "path": "Signage/sanzeed-wayfinding-set--8-plates-300x100mm.pdf",
+  "bytes": 42758,
+  "spec": "8 pages · 305.8×105.8 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-window-vinyl--preview-3000x2000mm-1-10.pdf",
+  "bytes": 122520,
+  "spec": "1 page · 299.9×200.1 mm · fonts embedded"
+ },
+ {
+  "path": "Signage/sanzeed-window-vinyl--preview-3000x2000mm-1-10.png",
+  "bytes": 1323923,
+  "spec": "3402×2268 px"
+ },
+ {
+  "path": "Signage/sanzeed-window-vinyl--preview-3000x2000mm-1-10.svg",
+  "bytes": 328946,
+  "spec": "SVG 850.07996 × 567.12"
+ },
+ {
+  "path": "Signage/sanzeed-window-vinyl--wordmark-cut-1200mm.svg",
+  "bytes": 2044,
+  "spec": "SVG 1200mm × 167.13mm"
+ },
+ {
+  "path": "Signage/src/sanzeed-door-plate--300x100mm.html",
+  "bytes": 1800,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-signage-spec-sheet--a4.html",
+  "bytes": 5954,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-totem--600x1800mm-1-10.html",
+  "bytes": 2362,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--arrow-ahead-300x100mm.html",
+  "bytes": 1828,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--arrow-down-300x100mm.html",
+  "bytes": 1828,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--arrow-left-300x100mm.html",
+  "bytes": 1828,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--arrow-right-300x100mm.html",
+  "bytes": 1831,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--room-001-300x100mm.html",
+  "bytes": 1800,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--room-002-300x100mm.html",
+  "bytes": 1800,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--room-003-300x100mm.html",
+  "bytes": 1800,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-wayfinding--room-004-300x100mm.html",
+  "bytes": 1800,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "Signage/src/sanzeed-window-vinyl--preview-3000x2000mm-1-10.html",
+  "bytes": 1830,
+  "spec": "HTML source (brand.css + collateral.css)"
+ },
+ {
+  "path": "_shared/README.md",
+  "bytes": 1437,
+  "spec": "Markdown"
+ },
+ {
+  "path": "_shared/collateral.css",
+  "bytes": 4504,
+  "spec": "CSS"
+ },
+ {
+  "path": "_shared/build/brandcopy.py",
+  "bytes": 14669,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_brochures.py",
+  "bytes": 26308,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_campaign.py",
+  "bytes": 15208,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_events.py",
+  "bytes": 22022,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_flyers.py",
+  "bytes": 10540,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_mediakit.py",
+  "bytes": 14436,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_posters.py",
+  "bytes": 10398,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_presentations.py",
+  "bytes": 32986,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_press.py",
+  "bytes": 17222,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/build_signage.py",
+  "bytes": 13698,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/common.py",
+  "bytes": 6688,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/docstyle.py",
+  "bytes": 3569,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/gallery.json",
+  "bytes": 12040,
+  "spec": "JSON"
+ },
+ {
+  "path": "_shared/build/manifest.json",
+  "bytes": 49622,
+  "spec": "JSON"
+ },
+ {
+  "path": "_shared/build/manifest.py",
+  "bytes": 2807,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/pptx_kit.py",
+  "bytes": 6797,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/render_batch.js",
+  "bytes": 2023,
+  "spec": "JS"
+ },
+ {
+  "path": "_shared/build/write_readmes.py",
+  "bytes": 19966,
+  "spec": "PY"
+ },
+ {
+  "path": "_shared/build/__pycache__/brandcopy.cpython-313.pyc",
+  "bytes": 14452,
+  "spec": ""
+ },
+ {
+  "path": "_shared/build/__pycache__/common.cpython-313.pyc",
+  "bytes": 13788,
+  "spec": ""
+ },
+ {
+  "path": "_shared/build/__pycache__/docstyle.cpython-313.pyc",
+  "bytes": 4703,
+  "spec": ""
+ },
+ {
+  "path": "_shared/build/__pycache__/pptx_kit.cpython-313.pyc",
+  "bytes": 14535,
+  "spec": ""
+ },
+ {
+  "path": "_shared/fonts-static/Fraunces-Light.ttf",
+  "bytes": 72820,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/Fraunces-LightItalic.ttf",
+  "bytes": 89028,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/Inter-Italic.ttf",
+  "bytes": 344848,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/Inter-Medium.ttf",
+  "bytes": 342048,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/Inter-Regular.ttf",
+  "bytes": 341384,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/InterTight-Medium.ttf",
+  "bytes": 309276,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/InterTight-SemiBold.ttf",
+  "bytes": 310004,
+  "spec": "TTF"
+ },
+ {
+  "path": "_shared/fonts-static/OFL-Fraunces.txt",
+  "bytes": 4391,
+  "spec": "TXT"
+ },
+ {
+  "path": "_shared/fonts-static/OFL-Inter.txt",
+  "bytes": 4377,
+  "spec": "TXT"
+ },
+ {
+  "path": "_shared/fonts-static/OFL-InterTight.txt",
+  "bytes": 4383,
+  "spec": "TXT"
+ },
+ {
+  "path": "_shared/icons/arrow-down--soot.svg",
+  "bytes": 698,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-down--white.svg",
+  "bytes": 698,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-down-right--soot.svg",
+  "bytes": 710,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-down-right--white.svg",
+  "bytes": 710,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-down-right.svg",
+  "bytes": 720,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-down.svg",
+  "bytes": 708,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-left--soot.svg",
+  "bytes": 699,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-left--white.svg",
+  "bytes": 699,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-left.svg",
+  "bytes": 709,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-right--soot.svg",
+  "bytes": 699,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-right--white.svg",
+  "bytes": 699,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-right.svg",
+  "bytes": 709,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up--soot.svg",
+  "bytes": 695,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up--white.svg",
+  "bytes": 695,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up-right--soot.svg",
+  "bytes": 707,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up-right--white.svg",
+  "bytes": 707,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up-right.svg",
+  "bytes": 717,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/arrow-up.svg",
+  "bytes": 705,
+  "spec": "SVG 500 × 500"
+ },
+ {
+  "path": "_shared/icons/point.svg",
+  "bytes": 173,
+  "spec": "SVG 90 × 90"
+ },
+ {
+  "path": "_shared/img/hero-object--dark-1x1-1600.jpg",
+  "bytes": 205227,
+  "spec": "1600×1600 px"
+ },
+ {
+  "path": "_shared/img/hero-object--dark-2400.jpg",
+  "bytes": 164004,
+  "spec": "2400×1350 px"
+ },
+ {
+  "path": "_shared/img/hero-object--dark-4x5-1600.jpg",
+  "bytes": 261461,
+  "spec": "1600×2000 px"
+ },
+ {
+  "path": "_shared/img/hero-object--light-2400.jpg",
+  "bytes": 107168,
+  "spec": "2400×1350 px"
+ },
+ {
+  "path": "_shared/img/hero-object--light-4x5-1600.jpg",
+  "bytes": 166608,
+  "spec": "1600×2000 px"
+ },
+ {
+  "path": "_shared/img/portrait--1x1-2000.jpg",
+  "bytes": 537084,
+  "spec": "2000×2000 px"
+ },
+ {
+  "path": "_shared/img/portrait--3x4-2000.jpg",
+  "bytes": 653423,
+  "spec": "2000×2667 px"
+ },
+ {
+  "path": "_shared/img/portrait--4x5-2000.jpg",
+  "bytes": 626082,
+  "spec": "2000×2500 px"
+ },
+ {
+  "path": "_shared/img/jpg/army-museum-abu-dhabi.jpg",
+  "bytes": 135967,
+  "spec": "960×540 px"
+ },
+ {
+  "path": "_shared/img/jpg/buddha-park.jpg",
+  "bytes": 186430,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--buddha-park-02.jpg",
+  "bytes": 341906,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--buddha-park-03.jpg",
+  "bytes": 222004,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--buddha-park-05.jpg",
+  "bytes": 261313,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--buddha-park-06.jpg",
+  "bytes": 273869,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--buddha-park-08.jpg",
+  "bytes": 348108,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--prime-minister-museum-01.jpg",
+  "bytes": 134575,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--prime-minister-museum-03.jpg",
+  "bytes": 81582,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--prime-minister-museum-04.jpg",
+  "bytes": 151391,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--prime-minister-museum-05.jpg",
+  "bytes": 156120,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--prime-minister-museum-07.jpg",
+  "bytes": 144890,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--ram-katha-show-01.jpg",
+  "bytes": 114361,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--ram-katha-show-02.jpg",
+  "bytes": 84778,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--ram-katha-show-03.jpg",
+  "bytes": 76646,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--ram-katha-show-05.jpg",
+  "bytes": 92223,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/case--ram-katha-show-07.jpg",
+  "bytes": 288787,
+  "spec": "1400×788 px"
+ },
+ {
+  "path": "_shared/img/jpg/dubai-police-control-center.jpg",
+  "bytes": 87622,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "_shared/img/jpg/g20-tree-show.jpg",
+  "bytes": 142298,
+  "spec": "920×516 px"
+ },
+ {
+  "path": "_shared/img/jpg/india-pavilion-expo-2025.jpg",
+  "bytes": 93251,
+  "spec": "960×540 px"
+ },
+ {
+  "path": "_shared/img/jpg/prime-minister-museum.jpg",
+  "bytes": 110433,
+  "spec": "960×540 px"
+ },
+ {
+  "path": "_shared/img/jpg/ram-katha-show.jpg",
+  "bytes": 156080,
+  "spec": "920×514 px"
+ },
+ {
+  "path": "_shared/img/jpg/rbi-museum-interior.jpg",
+  "bytes": 159031,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "_shared/img/jpg/tribal-museum.jpg",
+  "bytes": 167750,
+  "spec": "960×541 px"
+ },
+ {
+  "path": "_shared/img/jpg/yuge-yugin-bharat-museum.jpg",
+  "bytes": 137325,
+  "spec": "960×541 px"
+ }
+]

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — portrait plate</title>
+<!-- ===================== DATA BLOCK =====================
+     image      : the portrait (Approved_Images/Portrait/…); focal : object-position inside the right-hand panel
+     eyebrow    : small gold line above the headline (the name)
+     name       : the Fraunces 300 headline (sentence case, full stop; the last word is set in gold)
+     descriptor : Inter Tight 600 line;  line : one sentence;  contact : footer line
+     Render: node ../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in portrait-plate.html --out out.png --width 1920 --height 1080 --scale 2
+     ====================================================== -->
+<script type="application/json" id="data">
+{
+  "image": "../Approved_Images/Portrait/sanzeed-portrait--native-1100x1574.jpg",
+  "focal": "50% 30%",
+  "eyebrow": "Sanzeed Mirza",
+  "name": "Experiential design you can walk into.",
+  "descriptor": "Experiential Design Consultant · New Delhi",
+  "line": "Museums, experience centres, pavilions, memorials and projection shows — directed from the brief to opening night.",
+  "contact": "sanzeed@gmail.com · +91 7827051270 · sanzeed.com"
+}
+</script>
+<link rel="stylesheet" href="../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  .stage { position: relative; width: 1920px; height: 1080px; background: #000; overflow: hidden; display: grid; grid-template-columns: 1fr 760px; }
+  .lamp { position: absolute; right: -120px; top: -140px; width: 1100px; height: 1100px; background: radial-gradient(50% 50% at 50% 50%, rgba(233,178,90,.42) 0%, rgba(233,178,90,.10) 35%, rgba(0,0,0,0) 70%); }
+  .text { position: relative; padding: 110px 72px 96px 112px; display: flex; flex-direction: column; justify-content: space-between; }
+  .text .eyebrow { font-size: 15px; margin-bottom: 28px; }
+  .text h1 { font-family: var(--font-display); font-weight: 300; font-size: 84px; line-height: 1.0; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; color: #F5F5F7; max-width: 11ch; text-wrap: balance; }
+  .text h1 .lit { color: #E9B25A; }
+  .text .descriptor { font-family: var(--font-heading); font-weight: 600; font-size: 24px; color: #F5F5F7; margin-top: 36px; }
+  .text .line { font-size: 20px; line-height: 1.5; color: #A1A1A6; max-width: 46ch; margin-top: 14px; }
+  .text .bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
+  .text .bottom img { width: 300px; }
+  .text .contact { font-size: 16px; color: #808086; }
+  .figure { position: relative; height: 100%; }
+  .figure img { width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 30%); display: block; }
+  .figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #000 0%, rgba(0,0,0,.55) 18%, rgba(0,0,0,0) 45%), linear-gradient(180deg, rgba(0,0,0,0) 70%, rgba(0,0,0,.7) 100%); }
+</style>
+</head>
+<body>
+<div class="stage grain">
+  <div class="lamp"></div>
+  <div class="text">
+    <div>
+      <div class="eyebrow"></div>
+      <h1 class="name"></h1>
+      <div class="descriptor"></div>
+      <p class="line"></p>
+    </div>
+    <div class="bottom"><img src="../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="contact"></span></div>
+  </div>
+  <div class="figure"><img class="photo" src="" alt=""></div>
+</div>
+<script>
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const ph = document.querySelector('img.photo'); ph.src = D.image; ph.alt = D.eyebrow || 'Portrait';
+  document.documentElement.style.setProperty('--focal', D.focal || '50% 30%');
+  for (const k of ['eyebrow', 'descriptor', 'line', 'contact']) { const el = document.querySelector('.' + k); if (D[k]) el.textContent = D[k]; else el.remove(); }
+  const w = D.name.trim().split(' '); const last = w.pop();
+  document.querySelector('h1.name').innerHTML = (w.length ? w.join(' ') + ' ' : '') + '<span class="lit">' + last + '</span>';
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="95mm" height="57mm" viewBox="0 0 95 57" version="1.1">
+  <title>Sanzeed business card — concept B, back</title>
+  <desc>Name, descriptor, contacts and the master line ending on the gold point. Units: 1 user unit = 1 mm. Layers: paper, artwork, guides (non-printing). Fonts: Fraunces 300, Inter Tight 600, Inter 400 (04_TYPOGRAPHY/Font_Files). Logo paths embedded from 02_LOGO_SYSTEM/SVG.</desc>
+  <sodipodi:namedview inkscape:document-units="mm" showgrid="false" />
+  <defs></defs>
+  <g inkscape:groupmode="layer" inkscape:label="paper" id="layer-paper">
+<rect x="0.000" y="0.000" width="95.000" height="57.000" rx="0" fill="#F5F0E7" stroke="none" stroke-width="0.12" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<text x="11.0000" y="17.5000" text-anchor="start" xml:space="preserve" style="font-family:'Fraunces 36pt','Fraunces';font-weight:300;font-size:4.2333px;fill:#1A1816;line-height:1;font-variation-settings:'opsz' 36,'SOFT' 30,'WONK' 0" >Sanzeed Mirza</text>
+<text x="11.0000" y="22.6000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:600;font-size:1.9756px;fill:#665F55;line-height:1;letter-spacing:0.2371px" >EXPERIENTIAL DESIGN CONSULTANT</text>
+<line x1="11.000" y1="26.500" x2="84.000" y2="26.500" stroke="#1A1816" stroke-opacity="0.1" stroke-width="0.12" />
+<text x="11.0000" y="32.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.4694px;fill:#1A1816;line-height:1" >+91 7827051270  ·  sanzeed@gmail.com</text>
+<text x="11.0000" y="36.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.4694px;fill:#1A1816;line-height:1" >sanzeed.com  ·  linkedin.com/in/sanzeed</text>
+<text x="11.0000" y="40.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.4694px;fill:#665F55;line-height:1" >New Delhi, India</text>
+<text x="11.0000" y="48.2000" text-anchor="start" xml:space="preserve" style="font-family:'Fraunces 36pt','Fraunces';font-weight:300;font-size:3.3514px;fill:#1A1816;line-height:1;font-variation-settings:'opsz' 36,'SOFT' 30,'WONK' 0" >Experiential design you can walk into<tspan style="fill:#B8863B">.</tspan></text>
+  </g>
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides" style="display:inline">
+<rect x="0.060" y="0.060" width="94.880" height="56.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="89.000" height="51.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="7.000" y="7.000" width="81.000" height="43.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="3" x2="95" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="3" x2="92" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="54" x2="0" y2="54" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="54" x2="3" y2="57" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="54" x2="95" y2="54" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="92" y1="54" x2="92" y2="57" stroke="#2F62A0" stroke-width="0.12"/>
+<text x="4.0000" y="53.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.4111px;fill:#2F62A0;line-height:1" >TRIM 89 × 51 mm · BLEED 3 mm · SAFE 4 mm</text>
+  </g>
+<!--/GUIDES-->
+</svg>

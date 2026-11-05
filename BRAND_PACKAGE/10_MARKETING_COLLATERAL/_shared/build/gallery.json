@@ -1,0 +1,542 @@
+[
+ {
+  "img": "prime-minister-museum",
+  "title": "Prime Minister Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "mahatma-gandhi-event",
+  "title": "Mahatma Gandhi Event",
+  "place": "National",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "buddha-park",
+  "title": "Buddha Park",
+  "place": "Uttarakhand",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "army-museum-abu-dhabi",
+  "title": "Army Museum Abu Dhabi",
+  "place": "Abu Dhabi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "event-at-kashmir",
+  "title": "Event at Kashmir",
+  "place": "Kashmir",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "global-city-experience-center",
+  "title": "Global City Experience Center",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "albert-hall-museum",
+  "title": "Albert Hall Museum",
+  "place": "Jaipur",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "india-pavilion-expo-2025",
+  "title": "India Pavilion Expo 2025",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "tree-concept",
+  "title": "Tree Concept",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ambba-mega-city",
+  "title": "Amba Mega City",
+  "place": "Tamil Nadu",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "kumbh-event-2021",
+  "title": "Kumbh Event 2021",
+  "place": "Prayagraj",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "aravali-safari-park",
+  "title": "Aravalli Safari Park",
+  "place": "Aravalli",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "sant-ravi-das-museum",
+  "title": "Sant Ravi Das Museum",
+  "place": "Uttar Pradesh",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ram-katha-museum",
+  "title": "Ram Katha Museum",
+  "place": "Ayodhya",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ai-event",
+  "title": "AI Event",
+  "place": "Lucknow",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "be-experience-center",
+  "title": "BE Experience Center",
+  "place": "Bengaluru",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "tablue-concept",
+  "title": "Tableau Concept",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "bipard-ai-boadroom",
+  "title": "BIPARD AI Boardroom",
+  "place": "Bihar",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "maharishi-valmiki-museum",
+  "title": "Maharishi Valmiki Museum",
+  "place": "Punjab",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "akm-event",
+  "title": "AKM Event",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "br-ambedkar-museum",
+  "title": "BR Ambedkar Museum",
+  "place": "Punjab",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "yuge-yugin-bharat-museum",
+  "title": "Yuge Yugeen Bharat Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "1857-freedom-fighter-museum",
+  "title": "1857 Freedom Fighter Museum",
+  "place": "Ambala",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "baramati-museum",
+  "title": "Baramati Museum",
+  "place": "Maharashtra",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "namaste-watch-tower",
+  "title": "Namaste Watch Tower",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "bhagat-singh-museum",
+  "title": "Bhagat Singh Museum",
+  "place": "Punjab",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "mera-mati-mera-desh-memorial",
+  "title": "Mera Mati Mera Desh Memorial",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "tribal-museum",
+  "title": "Tribal Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "toy-museum",
+  "title": "Toy Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "air-force-museum",
+  "title": "Air Force Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "la-wine-amor-shop",
+  "title": "La Wine Amor Shop",
+  "place": "Gurugram",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "brain-mind-museum",
+  "title": "Brain & Mind Museum",
+  "place": "Bengaluru",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "signature-concept",
+  "title": "Signature Concept",
+  "place": "Punjab",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ici-experiance-center",
+  "title": "ICI Experience Center",
+  "place": "Bengaluru",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "aravali-bio-diversity-park",
+  "title": "Aravalli Biodiversity Park",
+  "place": "Haryana",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "vip-cabin",
+  "title": "VIP Cabin",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "music-museum",
+  "title": "Music Museum",
+  "place": "Gujarat",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "freedom-fighter-museum",
+  "title": "Freedom Fighter Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "raja-bhoj-museum",
+  "title": "Raja Bhoj Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "omkareshwar-mega-project",
+  "title": "Omkareshwar Mega Project",
+  "place": "Madhya Pradesh",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "vadnagar-archeological-museum",
+  "title": "Vadnagar Archaeological Museum",
+  "place": "Gujarat",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ongc-stall",
+  "title": "ONGC Stall",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "digital-forest",
+  "title": "Digital Forest",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "technology-museum",
+  "title": "Technology Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "rbi-museum-exterior",
+  "title": "RBI Museum Exterior",
+  "place": "Mumbai",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "gwalior-museum",
+  "title": "Gwalior Museum",
+  "place": "Gwalior",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "vadnagar-museum",
+  "title": "Vadnagar Museum",
+  "place": "Gujarat",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "postal-museum",
+  "title": "Postal Museum",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "meity-event-stall",
+  "title": "MeitY Event Stall",
+  "place": "Mumbai",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "dubai-police-control-center",
+  "title": "Dubai Police Control Center",
+  "place": "Dubai",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "dlf-experience-center",
+  "title": "DLF Experience Center",
+  "place": "New Delhi",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "digital-van",
+  "title": "Digital Van",
+  "place": "Touring",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "iffi-2019",
+  "title": "IFFI 2019",
+  "place": "Goa",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "pbd-2021",
+  "title": "PBD 2021",
+  "place": "Indore",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "space-museum",
+  "title": "Space Museum",
+  "place": "Bengaluru",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "rbi-museum-interior",
+  "title": "RBI Museum Interior",
+  "place": "Mumbai",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "kedarnath-museum",
+  "title": "Kedarnath Museum",
+  "place": "Uttarakhand",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "india-pavilion-expo-2025-2",
+  "title": "India Pavilion Expo 2025 — Night View",
+  "place": "Concept",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ami-kolkata",
+  "title": "Ami Kolkata",
+  "place": "Kolkata",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "vadhu-tulapur-museum",
+  "title": "Vadhu Tulapur Museum",
+  "place": "Maharashtra",
+  "cat": "Museums & Experience Centres"
+ },
+ {
+  "img": "ram-katha-show",
+  "title": "Ram Katha Show",
+  "place": "Ayodhya",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "albert-hall-projection-show",
+  "title": "Albert Hall Projection Show",
+  "place": "Jaipur",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "mountain-projection",
+  "title": "Mountain Projection",
+  "place": "Uttarakhand",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "republic-day-tableau",
+  "title": "Republic Day Tableau",
+  "place": "New Delhi",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "flyover-india",
+  "title": "FlyOver India",
+  "place": "Concept",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "g20-tree-show",
+  "title": "G20 Tree Show",
+  "place": "New Delhi",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "concept-mesh-led",
+  "title": "Concept Mesh LED",
+  "place": "New Delhi",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "g20-led-show",
+  "title": "G20 LED Show",
+  "place": "Gujarat",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "postal-museum-projection-show",
+  "title": "Postal Museum Projection Show",
+  "place": "New Delhi",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "mist-projection-show",
+  "title": "Mist Projection Show",
+  "place": "Madhya Pradesh",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "parli-projection-mapping",
+  "title": "Parli Projection Mapping",
+  "place": "Maharashtra",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "light-and-sound-show",
+  "title": "Light and Sound Show — Ayodhya",
+  "place": "Ayodhya",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "light-and-sound-show-2",
+  "title": "Light and Sound Show — Uttar Pradesh",
+  "place": "Uttar Pradesh",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "viratswaroop-kinetic-projection",
+  "title": "Viratswaroop Kinetic Projection",
+  "place": "Gujarat",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "toy-museum-projection",
+  "title": "Toy Museum Projection",
+  "place": "New Delhi",
+  "cat": "Projection Mapping & Shows"
+ },
+ {
+  "img": "motion-graphic-explainer",
+  "title": "Motion Graphic Explainer",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "motion-graphic-slideshow",
+  "title": "Motion Graphic Slideshow",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "motion-graphic-animation",
+  "title": "Motion Graphic Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "retro-animation",
+  "title": "Retro Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "green-screen-shoot",
+  "title": "Green Screen Shoot",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "isometric-2d-animation",
+  "title": "Isometric 2D Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "matte-painting-animation",
+  "title": "Matte Painting Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "white-board-animation",
+  "title": "White Board Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "2d-character-animation",
+  "title": "2D Character Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "comic-style-animation",
+  "title": "Comic Style Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "semi-realistic-animation",
+  "title": "Semi Realistic Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "2d-animation",
+  "title": "2D Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "3d-motion-graphic-video",
+  "title": "3D Motion Graphic Video",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "2d-animation-2",
+  "title": "2D Animation",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ },
+ {
+  "img": "mix-media",
+  "title": "Mix Media",
+  "place": "Film",
+  "cat": "Explainer Videos & Others"
+ }
+]

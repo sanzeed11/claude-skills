@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — before / after grade</title>
+<!-- ===================== DATA BLOCK =====================
+     before / after : the two image paths (same crop; make them with Approved_Images/grade.py)
+     focal          : CSS object-position for both halves
+     title / place  : wall label;  before_label / after_label : the tags;  note : one line under the pair
+     Render: node ../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in before-after-grade.html --out out.png --width 1920 --height 1080 --scale 2
+     ====================================================== -->
+<script type="application/json" id="data">
+{
+  "before": "../src/guidelines/assets/grade-before.jpg",
+  "after": "../src/guidelines/assets/grade-after.jpg",
+  "focal": "50% 45%",
+  "title": "Maharishi Valmiki Museum",
+  "place": "Punjab",
+  "before_label": "Before · camera file",
+  "after_label": "After · grade.py",
+  "note": "Contrast +0.18 sine-S · blacks to Night #0D0D0F · highlights warmed toward Lamp Gold #E9B25A · saturation unchanged"
+}
+</script>
+<link rel="stylesheet" href="../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  .stage { position: relative; width: 1920px; height: 1080px; background: #0D0D0F; padding: 72px 96px 0; box-sizing: border-box; }
+  .top { display: flex; justify-content: space-between; align-items: center; height: 40px; margin-bottom: 20px; }
+  .top .eyebrow { font-size: 15px; }
+  .top img { height: 22px; }
+  .pair { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; height: 780px; border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,.10); background: #1C1C1E; }
+  .pair .half { position: relative; overflow: hidden; }
+  .pair img { width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); display: block; }
+  .pair .half + .half { border-left: 1px solid rgba(255,255,255,.35); }
+  .tag { position: absolute; left: 28px; top: 28px; padding: 10px 16px; border-radius: 999px; font: 600 14px/1 var(--font-heading); letter-spacing: .08em; text-transform: uppercase; background: rgba(0,0,0,.72); color: #F5F5F7; border: 1px solid rgba(255,255,255,.14); }
+  .tag.gold { color: #E9B25A; }
+  .wl { display: flex; gap: 18px; align-items: baseline; margin-top: 22px; font-size: 20px; line-height: 1.4; color: #808086; }
+  .wl b { font-family: var(--font-heading); font-weight: 600; color: #F5F5F7; font-size: 22px; }
+  .wl .note { color: #A1A1A6; margin-left: auto; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="stage grain">
+  <div class="top"><span class="eyebrow">Colour grading · before / after</span><img src="../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"></div>
+  <div class="pair">
+    <div class="half"><img class="before" src="" alt="Before"><span class="tag before_label"></span></div>
+    <div class="half"><img class="after" src="" alt="After"><span class="tag gold after_label"></span></div>
+  </div>
+  <div class="wl"><b class="title"></b><span class="place"></span><span class="note"></span></div>
+</div>
+<script>
+  const D = JSON.parse(document.getElementById('data').textContent);
+  document.querySelector('img.before').src = D.before; document.querySelector('img.after').src = D.after;
+  document.documentElement.style.setProperty('--focal', D.focal || '50% 50%');
+  for (const k of ['title', 'place', 'note', 'before_label', 'after_label']) { const el = document.querySelector('.' + k); if (D[k]) el.textContent = D[k]; else el.remove(); }
+</script>
+</body>
+</html>

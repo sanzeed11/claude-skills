@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — room frame</title>
+<!-- ===================== DATA BLOCK =====================
+     image / focal / counter / title / place / note (one line, optional)
+     Render: node ../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in room-frame.html --out out.png --width 1920 --height 1080 --scale 2
+     ====================================================== -->
+<script type="application/json" id="data">
+{
+  "image": "../Approved_Images/JPG/sanzeed-img-army-museum-abu-dhabi--museum.jpg",
+  "focal": "52% 50%",
+  "counter": "003",
+  "title": "Army Museum Abu Dhabi",
+  "place": "Abu Dhabi",
+  "note": "A single chair at the centre of concentric rings of calligraphy, so the visitor circles the story before reaching its heart."
+}
+</script>
+<link rel="stylesheet" href="../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  .stage { position: relative; width: 1920px; height: 1080px; background: #0D0D0F; padding: 72px 96px 0; box-sizing: border-box; }
+  .top { display: flex; justify-content: space-between; align-items: center; height: 40px; margin-bottom: 20px; }
+  .top .counter { font-size: 17px; }
+  .top img { height: 22px; }
+  .room { position: relative; width: 100%; height: 800px; border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,.10); background: #1C1C1E; }
+  .room img { width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); display: block; }
+  .wl { display: flex; gap: 18px; align-items: baseline; margin-top: 22px; font-size: 20px; line-height: 1.4; color: #808086; }
+  .wl b { font-family: var(--font-heading); font-weight: 600; color: #F5F5F7; font-size: 22px; }
+  .wl .note { color: #A1A1A6; margin-left: auto; max-width: 70ch; text-align: right; }
+</style>
+</head>
+<body>
+<div class="stage grain">
+  <div class="top"><span class="counter"></span><img src="../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"></div>
+  <div class="room"><img class="photo" src="" alt=""></div>
+  <div class="wl"><b class="title"></b><span class="place"></span><span class="note"></span></div>
+</div>
+<script>
+  const D = JSON.parse(document.getElementById('data').textContent);
+  document.querySelector('img.photo').src = D.image; document.querySelector('img.photo').alt = D.title + ' — ' + D.place;
+  document.documentElement.style.setProperty('--focal', D.focal || '50% 50%');
+  for (const k of ['counter', 'title', 'place', 'note']) { const el = document.querySelector('.' + k); if (D[k]) el.textContent = D[k]; else el.remove(); }
+</script>
+</body>
+</html>

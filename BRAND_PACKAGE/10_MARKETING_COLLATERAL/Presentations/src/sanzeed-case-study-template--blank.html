@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzeed — case-study template (A4)</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../../_shared/collateral.css">
+<style>
+
+
+@page { size: 210mm 297mm; margin: 0; }
+body { background: #000; }
+.sheet { width: 210mm; height: 297mm; font-family: var(--font-text); }
+.sheet.light { background: #F5F0E7; }
+.pad { position: absolute; left: 18mm; right: 18mm; top: 18mm; bottom: 18mm; }
+.mark { position: absolute; display: block; }
+.hl { color: var(--fg); line-height: 1.04; }
+h2.hl { font-size: 24pt; margin: 1.5mm 0 5mm; }
+h3 { font-family: var(--font-heading); font-weight: 600; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); margin: 6mm 0 1.5mm; }
+.eyebrow, .eyebrow-quiet { font-size: 6.5pt; }
+p.body { font-size: 8.5pt; line-height: 1.6; color: var(--fg-2); margin-bottom: 3mm; max-width: 130mm; }
+p.lead { font-size: 10.5pt; line-height: 1.5; color: var(--fg-2); margin-bottom: 5mm; max-width: 130mm; }
+.folio { position: absolute; left: 18mm; right: 18mm; bottom: 10mm; display: flex; justify-content: space-between; font-size: 6.5pt; color: var(--fg-3); }
+table { width: 100%; }
+th, td { font-size: 8pt; padding: 1.8mm 3mm 1.8mm 0; line-height: 1.45; }
+th { font-size: 6.5pt; }
+td.k { width: 42mm; font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.wl { font-size: 6.5pt; }
+.contact { font-size: 8.5pt; line-height: 1.7; color: var(--fg-2); }
+.contact b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 4mm; }
+.cat { font-family: var(--font-heading); font-weight: 600; font-size: 5.8pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); border-bottom: 1px solid var(--line); padding-bottom: 1mm; margin-bottom: 1.2mm; }
+.item { font-size: 6pt; line-height: 1.45; color: var(--fg-3); display: grid; grid-template-columns: 6mm 1fr; }
+.item .c { font-family: var(--font-heading); font-weight: 500; color: var(--accent-text); font-size: 5.2pt; letter-spacing: .05em; padding-top: .3mm; font-variant-numeric: tabular-nums; }
+.item b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.stat .n { font-family: var(--font-display); font-weight: 300; font-size: 24pt; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 144; }
+.stat .n .plus { color: var(--accent); }
+.stat .l { font-size: 7pt; color: var(--fg-2); margin-top: 1mm; }
+
+.sheet .lock { left: 18mm; top: 18mm; width: 46mm; }
+.sheet .top { position: absolute; left: 18mm; right: 18mm; top: 40mm; bottom: 18mm; }
+.n { font-family: var(--font-heading); font-weight: 500; font-size: 6.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); }
+.title { font-size: 34pt; margin: 2mm 0 1mm; }
+.place { font-size: 9pt; color: var(--fg-2); margin-bottom: 6mm; }
+.idea-l { font-family: var(--font-display); font-weight: 300; font-size: 18pt; color: var(--fg); margin: 1mm 0 2mm; font-variation-settings: "opsz" 72; }
+.p1 .plate { position: absolute; left: 0; right: 0; bottom: 8mm; height: 108mm; border-radius: 6mm; }
+.p1 .wl { position: absolute; left: 0; bottom: 0; }
+.p2 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.p2 .plate { height: 56mm; border-radius: 4mm; }
+.p2 .cap { font-size: 6.5pt; color: var(--fg-3); margin-top: 1.5mm; line-height: 1.4; }
+.p2 .cap b { font-family: var(--font-heading); font-weight: 500; color: var(--accent-text); letter-spacing: .08em; margin-right: 1.5mm; }
+.meta { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; border-top: 1px solid var(--line); padding-top: 3mm; font-size: 7.5pt; color: var(--fg-2); }
+.meta b { display: block; font-family: var(--font-heading); font-weight: 600; font-size: 6.5pt; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-3); margin-bottom: 1mm; }
+.slot { display: flex; align-items: center; justify-content: center; font-size: 7pt; color: var(--fg-3); }
+
+</style>
+</head>
+<body>
+<section class="sheet grain p1" id="p1"><img class="mark lock" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg" alt="Sanzeed"><div class="top">
+    <div class="n">Case study · [001] · [Category]</div><h2 class="hl title">[Project title]<span class="pt">.</span></h2><div class="place">[City]</div>
+    <h3>The brief</h3><p class="body">[The brief — what the client asked for, where, for whom, by when. Two or three sentences.]</p><h3>The idea</h3><div class="idea-l">[The idea, in one line.]</div><p class="body">[How the idea works in the room: the route, the spine, the light, the sequence. Three sentences.]</p>
+    <div class="plate"><div class="slot" style="position:absolute;inset:0">[Hero image · 16:9 · 1600 × 900 px minimum]</div></div><div class="wl"><b>[Project title]</b><span class="sep">·</span>[City]<span class="sep">·</span>001 [Caption]</div></div>
+    <div class="folio"><span>Sanzeed Mirza · Experiential Design Consultant</span><span>01</span></div></section>
+<section class="sheet grain p2" id="p2"><img class="mark lock" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg" alt="Sanzeed"><div class="top">
+    <div class="grid"><div><div class="plate"><div class="slot" style="position:absolute;inset:0">[Image 001 · 16:9]</div></div><div class="cap"><b>001</b>[Caption: what the visitor sees]</div></div><div><div class="plate"><div class="slot" style="position:absolute;inset:0">[Image 002 · 16:9]</div></div><div class="cap"><b>002</b>[Caption: what the visitor sees]</div></div><div><div class="plate"><div class="slot" style="position:absolute;inset:0">[Image 003 · 16:9]</div></div><div class="cap"><b>003</b>[Caption: what the visitor sees]</div></div><div><div class="plate"><div class="slot" style="position:absolute;inset:0">[Image 004 · 16:9]</div></div><div class="cap"><b>004</b>[Caption: what the visitor sees]</div></div></div>
+    <h3>The walk</h3><p class="body">[The walk — what changes from room to room; who stands where; what the floor, the walls and the ceiling do.]</p>
+    <h3>What visitors do</h3><p class="body" style="font-family:var(--font-display);font-weight:300;font-size:13pt;line-height:1.3;color:var(--fg);font-variation-settings:'opsz' 72">[What visitors do — one sentence, ending on the image.]</p>
+    <div class="meta"><div><b>Type</b>[Museums &amp; Experience Centres / Projection Mapping &amp; Shows / Explainer Videos &amp; Others]</div><div><b>Location</b>[City]</div><div><b>Role</b>[Role: concept &amp; creative direction / show concept &amp; direction]</div></div></div>
+    <div class="folio"><span>[Project title] · [City]</span><span>02</span></div></section>
+</body>
+</html>

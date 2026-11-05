@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440" role="img" aria-label="Positioning map: Sanzeed sits story-led and whole-room">
+  <title>Positioning map — Sanzeed</title>
+  <desc>Two axes: spectacle-led to story-led (vertical) and part of the room to whole room (horizontal). Sanzeed sits bottom-right, story-led and whole-room, beside museum-design studios.</desc>
+  <style>
+    .ax{stroke:#1A1816;stroke-opacity:.18;stroke-width:1}
+    .axl{font-family:"Inter Tight",Arial,sans-serif;font-weight:600;font-size:9px;letter-spacing:1.3px;fill:#8A6124;text-transform:uppercase}
+    .q{font-family:"Inter",Arial,sans-serif;font-weight:400;font-size:12px;fill:#665F55}
+    .me{font-family:"Inter Tight",Arial,sans-serif;font-weight:600;font-size:13px;letter-spacing:1.6px;fill:#1A1816}
+    .grid{stroke:#1A1816;stroke-opacity:.06;stroke-width:1}
+  </style>
+  <rect x="0" y="0" width="640" height="440" fill="#FBF8F2" rx="20"/>
+  <!-- faint grid -->
+  <g class="grid">
+    <line x1="160" y1="60" x2="160" y2="380"/><line x1="480" y1="60" x2="480" y2="380"/>
+    <line x1="40" y1="140" x2="600" y2="140"/><line x1="40" y1="300" x2="600" y2="300"/>
+  </g>
+  <!-- axes -->
+  <line class="ax" x1="320" y1="60" x2="320" y2="380"/>
+  <line class="ax" x1="40" y1="220" x2="600" y2="220"/>
+  <!-- axis labels -->
+  <text class="axl" x="320" y="44" text-anchor="middle">SPECTACLE-LED</text>
+  <text class="axl" x="320" y="406" text-anchor="middle">STORY-LED</text>
+  <text class="axl" x="40" y="212" text-anchor="start">PART OF THE ROOM</text>
+  <text class="axl" x="600" y="212" text-anchor="end">WHOLE ROOM</text>
+  <!-- quadrants -->
+  <g>
+    <circle cx="150" cy="120" r="3" fill="#1A1816" fill-opacity=".35"/><text class="q" x="162" y="124">Event / AV integrators</text>
+    <circle cx="420" cy="120" r="3" fill="#1A1816" fill-opacity=".35"/><text class="q" x="432" y="124">Projection-show producers</text>
+    <circle cx="130" cy="300" r="3" fill="#1A1816" fill-opacity=".35"/><text class="q" x="142" y="304">Architecture practices</text>
+    <circle cx="150" cy="340" r="3" fill="#1A1816" fill-opacity=".35"/><text class="q" x="162" y="344">Exhibition fabricators</text>
+    <circle cx="430" cy="350" r="3" fill="#1A1816" fill-opacity=".35"/><text class="q" x="442" y="354">Museum-design studios</text>
+  </g>
+  <!-- Sanzeed: the point of light -->
+  <g>
+    <circle cx="500" cy="300" r="14" fill="#B8863B" fill-opacity=".14"/>
+    <circle cx="500" cy="300" r="5.5" fill="#B8863B"/>
+    <text class="me" x="516" y="305">SANZEED</text>
+  </g>
+</svg>

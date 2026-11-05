@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — Photography guidelines (A4)</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  /* ---------- A4 page frame ---------- */
+  @page { size: 210mm 297mm; margin: 0; }
+  html, body { background: #000; }
+  .page { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: var(--bg); color: var(--fg);
+          padding: 13mm 15mm 11mm; display: grid; grid-template-rows: auto 1fr auto; page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .page.light { background: var(--bg); }
+  .hdr { display: flex; justify-content: space-between; align-items: baseline; height: 7mm; }
+  .hdr .eyebrow { font-size: 9.5px; }
+  .hdr .pn { font: 500 10px/1 var(--font-heading); letter-spacing: .08em; color: var(--fg-3); font-variant-numeric: tabular-nums; }
+  .body { margin-top: 8mm; min-height: 0; }
+  .ftr { position: relative; display: flex; justify-content: space-between; padding-top: 4mm; margin-top: 5mm; font-size: 9.5px; color: var(--fg-3); }
+  .ftr .beam { position: absolute; top: 0; left: 0; right: 0; }
+  .ftr .beam::after { width: 6px; height: 6px; top: -3px; box-shadow: none; }
+
+  /* ---------- type ---------- */
+  .h { font-family: var(--font-display); font-weight: 300; letter-spacing: var(--ls-display); font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 0; font-size: 34px; line-height: 1.08; text-wrap: balance; margin-bottom: 5mm; }
+  .h-big { font-size: 64px; line-height: 1.0; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; }
+  .lead { font-size: 14px; line-height: 1.5; color: var(--fg-2); max-width: 64ch; }
+  p, li { font-size: 12.5px; line-height: 1.55; }
+  .small { font-size: 10.5px; line-height: 1.5; color: var(--fg-3); }
+  .h3 { font-family: var(--font-heading); font-weight: 600; font-size: 14px; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 2mm; }
+  .sig { font-family: var(--font-display); font-weight: 300; font-style: italic; font-size: 15px; color: var(--fg-2); font-variation-settings: "opsz" 36, "SOFT" 50; }
+  .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+  .cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; }
+  .cols-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; }
+  .cols-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; align-items: end; }
+  .stack-6 > * + * { margin-top: 6mm; }
+
+  /* ---------- rules ---------- */
+  .rules { list-style: none; margin: 0; padding: 0; border-top: var(--hairline); }
+  .rules li { display: grid; grid-template-columns: 9mm 1fr; gap: 2mm; padding: 2.6mm 0; border-bottom: var(--hairline); }
+  .rules li .counter { padding-top: 1.5px; }
+  .rules li b { font-family: var(--font-heading); font-weight: 600; }
+  .rules.tight li { padding: 1.8mm 0; }
+  .rules.tight li, .rules.tight p { font-size: 11.5px; line-height: 1.45; }
+  .donts li .counter { color: var(--error); }
+
+  /* ---------- the room (image plate) ---------- */
+  .room { position: relative; border-radius: 12px; overflow: hidden; border: var(--hairline); background: var(--card); }
+  .room img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .room.r169 { aspect-ratio: 16 / 9; } .room.r32 { aspect-ratio: 3 / 2; } .room.r45 { aspect-ratio: 4 / 5; } .room.r11 { aspect-ratio: 1 / 1; } .room.r916 { aspect-ratio: 9 / 16; } .room.r34 { aspect-ratio: 3 / 4; } .room.r21 { aspect-ratio: 2 / 1; }
+  .room .ov { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .wl { display: flex; gap: 6px; align-items: baseline; margin-top: 1.8mm; font-size: 10px; line-height: 1.35; color: var(--fg-3); }
+  .wl b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); margin-right: 4px; }
+  .wl .counter { font-size: 9px; }
+  .tag { position: absolute; left: 3mm; top: 3mm; padding: 4px 9px; border-radius: 999px; font: 600 9px/1 var(--font-heading); letter-spacing: .08em; text-transform: uppercase; background: rgba(0,0,0,.72); color: #F5F5F7; border: 1px solid rgba(255,255,255,.14); }
+  .tag.gold { color: #E9B25A; }
+  .tag.red { background: #D64540; color: #fff; border-color: transparent; }
+  .tag.plaster { background: rgba(245,240,231,.92); color: #1A1816; border-color: rgba(40,30,10,.12); }
+
+  /* ---------- tables ---------- */
+  table { width: 100%; border-collapse: collapse; font-size: 11px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+  th { text-align: left; font-family: var(--font-heading); font-weight: 600; font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-3); padding: 0 2mm 2mm 0; border-bottom: var(--hairline); }
+  td { padding: 2mm 2mm 2mm 0; border-bottom: var(--hairline); vertical-align: top; }
+  td.n { font-family: var(--font-heading); font-weight: 500; white-space: nowrap; }
+  code { font-family: var(--font-mono); font-size: 10px; background: var(--card-2); padding: 1px 4px; border-radius: 4px; word-break: break-all; }
+  .cols-2 > *, .cols-3 > *, .cols-4 > * { min-width: 0; }
+  table { table-layout: fixed; }
+  table.auto { table-layout: auto; }
+
+  /* ---------- checklist ---------- */
+  .check { list-style: none; padding: 0; margin: 0; border-top: var(--hairline); }
+  .check li { display: grid; grid-template-columns: 6mm 10mm 1fr; gap: 2mm; align-items: start; padding: 2.8mm 0; border-bottom: var(--hairline); }
+  .box { width: 4.6mm; height: 4.6mm; border: 1.5px solid var(--fg-3); border-radius: 3px; margin-top: 1px; }
+
+  /* ---------- cover ---------- */
+  .cover { padding: 0; }
+  .cover .bg { position: absolute; inset: 0; }
+  .cover .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 46% 62%; }
+  .cover .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 48%, rgba(0,0,0,.86) 78%, #000 100%); }
+  .cover .inner { position: absolute; inset: 0; padding: 14mm 15mm 12mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .cover .bottom img { width: 42mm; }
+  .cover .small { color: var(--fg-2); text-align: right; line-height: 1.5; }
+
+  /* ---------- special ---------- */
+  .toc { list-style: none; margin: 0; padding: 0; border-top: var(--hairline); }
+  .toc li { display: grid; grid-template-columns: 9mm 1fr auto; gap: 2mm; padding: 2.4mm 0; border-bottom: var(--hairline); font-size: 12px; }
+  .toc li span:last-child { color: var(--fg-3); font-variant-numeric: tabular-nums; font-family: var(--font-heading); font-weight: 500; }
+  .pipeline { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; position: relative; margin: 4mm 0 6mm; }
+  .pipeline::before { content: ""; position: absolute; left: 4mm; right: 4mm; top: 5px; height: 1px; background: var(--line); }
+  .pipeline .step { position: relative; padding-top: 6mm; }
+  .pipeline .step::before { content: ""; position: absolute; left: 0; top: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); }
+  .pipeline .step .h3 { margin-bottom: 1mm; }
+  .curve { display: grid; grid-template-columns: 56mm 1fr; gap: 6mm; align-items: start; }
+  .curve img { width: 100%; border-radius: 12px; }
+  .ratio-row { display: grid; grid-template-columns: 16fr 9fr 10fr 5.6fr 15fr; gap: 3mm; align-items: end; }
+  .ratio-row .room { width: 100%; }
+  .swatchline { display: flex; gap: 3mm; margin-top: 3mm; }
+  .swatchline div { flex: 1; height: 9mm; border-radius: 6px; border: var(--hairline); font: 500 8.5px/1.2 var(--font-text); padding: 4px 6px; display: flex; align-items: flex-end; color: #F5F5F7; }
+  .annot { position: absolute; font: 500 9px/1.3 var(--font-text); color: #F5F5F7; background: rgba(0,0,0,.72); padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); white-space: nowrap; }
+  .annot b { color: #E9B25A; font-weight: 500; }
+  .plate-text { position: absolute; left: 6mm; bottom: 6mm; right: 6mm; color: #F5F5F7; }
+  .plate-text .pt-h { font-family: var(--font-display); font-weight: 300; font-size: 26px; line-height: 1.05; font-variation-settings: "opsz" 72, "SOFT" 30; margin-bottom: 3mm; }
+  .plate-text .pt-h .lit { color: #E9B25A; }
+  .plate-text .wl { color: #A1A1A6; } .plate-text .wl b { color: #F5F5F7; } .plate-text .wl .counter { color: #E9B25A; }
+</style>
+</head>
+<body>
+
+<!-- ======================= 01 COVER ======================= -->
+<section class="page cover grain">
+  <div class="bg"><img src="../../Approved_Images/JPG/sanzeed-img-mountain-projection--projection.jpg" alt="Mountain Projection — Uttarakhand"><div class="veil"></div></div>
+  <div class="inner">
+    <div class="eyebrow">Photography &amp; art direction · Guidelines · November 2026</div>
+    <div>
+      <h1 class="h h-big">The lit <span class="lit">room.</span></h1>
+      <p class="lead" style="max-width:52ch">How my rooms are photographed, graded, cropped and delivered. Sixteen pages. One light source.</p>
+      <div class="bottom" style="margin-top:12mm">
+        <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+        <div class="small">Sanzeed Mirza · Experiential Design Consultant<br>New Delhi · sanzeed.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 02 CONTENTS ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · Contents</span><span class="pn">02 / 16</span></header>
+  <div class="body cols-2">
+    <div>
+      <h1 class="h">Sixteen pages, one light.</h1>
+      <ol class="toc">
+        <li><span class="counter">03</span><span>Photography style — the lit room</span><span>03</span></li>
+        <li><span class="counter">04</span><span>Lighting direction</span><span>04</span></li>
+        <li><span class="counter">05</span><span>Colour grading</span><span>05</span></li>
+        <li><span class="counter">06</span><span>Composition</span><span>06</span></li>
+        <li><span class="counter">07</span><span>Subject treatment</span><span>07</span></li>
+        <li><span class="counter">08</span><span>Background treatment</span><span>08</span></li>
+        <li><span class="counter">09</span><span>Portrait standards</span><span>09</span></li>
+        <li><span class="counter">10</span><span>Lifestyle · Product · Editorial</span><span>10</span></li>
+        <li><span class="counter">11</span><span>Environmental · Architectural</span><span>11</span></li>
+        <li><span class="counter">12</span><span>AI-generated imagery</span><span>12</span></li>
+        <li><span class="counter">13</span><span>Image selection criteria</span><span>13</span></li>
+        <li><span class="counter">14</span><span>Unacceptable imagery</span><span>14</span></li>
+        <li><span class="counter">15</span><span>Cropping standards and aspect ratios</span><span>15</span></li>
+        <li><span class="counter">16</span><span>File naming and delivery</span><span>16</span></li>
+      </ol>
+    </div>
+    <div class="stack-6">
+      <p class="lead">These are the rules I give every photographer who walks into one of my rooms. They are short because the rooms do the work.</p>
+      <p>Expose for the light. Keep the blacks. Let people walk in. Caption every picture like a wall label — title, place, one line — and deliver it in the four ratios the brand uses. Everything else on these pages is detail.</p>
+      <p class="sig">— Sanzeed Mirza</p>
+      <div class="cols-2" style="gap:4mm">
+        <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-prime-minister-museum--museum.jpg" alt="Prime Minister Museum — New Delhi"></div><figcaption class="wl"><b>Prime Minister Museum</b>New Delhi</figcaption></figure>
+        <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show--projection.jpg" alt="Ram Katha Show — Ayodhya" style="object-position:50% 45%"></div><figcaption class="wl"><b>Ram Katha Show</b>Ayodhya</figcaption></figure>
+        <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-army-museum-abu-dhabi--museum.jpg" alt="Army Museum Abu Dhabi"></div><figcaption class="wl"><b>Army Museum Abu Dhabi</b>Abu Dhabi</figcaption></figure>
+        <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-mera-mati-mera-desh-memorial--architecture.jpg" alt="Mera Mati Mera Desh Memorial — New Delhi"></div><figcaption class="wl"><b>Mera Mati Mera Desh Memorial</b>New Delhi</figcaption></figure>
+      </div>
+      <p class="small">All photographs in this document are the client's own project visuals. Employee work — rights remain with the commissioning studio; portfolio and credential use.</p>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 03 STYLE ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 03 — Photography style</span><span class="pn">03 / 16</span></header>
+  <div class="body">
+    <h1 class="h">The lit room, in four rules.</h1>
+    <p class="lead" style="margin-bottom:7mm">A brief on one side, a visitor on the other, and a point of light that travels across the dark room between them. Every photograph is that room.</p>
+    <div class="cols-2" style="row-gap:7mm">
+      <figure>
+        <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-vadhu-tulapur-museum--museum.jpg" alt="Vadhu Tulapur Museum — Maharashtra"><span class="tag gold">01 · One light source</span></div>
+        <figcaption class="wl"><b>Vadhu Tulapur Museum</b>Maharashtra</figcaption>
+        <p style="margin-top:2mm">Every frame has one lamp: the sun behind the fort wall, the projector, the spot on the chair. Everything else is lit by it, or not at all. If two sources compete, move until one wins.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-postal-museum-projection-show--projection.jpg" alt="Postal Museum Projection Show — New Delhi"><span class="tag gold">02 · Deep blacks</span></div>
+        <figcaption class="wl"><b>Postal Museum Projection Show</b>New Delhi</figcaption>
+        <p style="margin-top:2mm">Shadows go to Night, not to mud. Underexpose rather than lift. Detail held in the dark is a gift; noise in the dark is a fault. Never crush to pure black in camera — the grade lands black on Night.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show-diyas--projection.jpg" alt="Ram Katha Show — Ayodhya"><span class="tag gold">03 · Warm highlights</span></div>
+        <figcaption class="wl"><b>Ram Katha Show</b>Ayodhya</figcaption>
+        <p style="margin-top:2mm">Highlights lean toward Lamp Gold: tungsten, flame, brass, stone. Cool light may exist in the frame — a screen, a doorway of daylight — but it never leads and it is never corrected to neutral.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-mahatma-gandhi-event--event.jpg" alt="Mahatma Gandhi Event"><span class="tag gold">04 · People as scale</span></div>
+        <figcaption class="wl"><b>Mahatma Gandhi Event</b>National</figcaption>
+        <p style="margin-top:2mm">A figure tells the viewer how big the room is. One or two, moving, seen from behind. The room is the subject; the person is the ruler laid against it.</p>
+      </figure>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 04 LIGHTING ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 04 — Lighting direction</span><span class="pn">04 / 16</span></header>
+  <div class="body">
+    <h1 class="h">The key light is the exhibit.</h1>
+    <div class="cols-2" style="grid-template-columns: 78mm 1fr; gap: 9mm">
+      <div>
+        <div class="room" style="aspect-ratio: 78/96; background:#0D0D0F">
+          <svg class="ov" viewBox="0 0 390 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+            <defs><radialGradient id="lamp" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E9B25A" stop-opacity=".55"/><stop offset=".45" stop-color="#E9B25A" stop-opacity=".12"/><stop offset="1" stop-color="#E9B25A" stop-opacity="0"/></radialGradient></defs>
+            <rect x="34" y="40" width="322" height="330" rx="14" fill="#1C1C1E" stroke="rgba(255,255,255,.14)"/>
+            <rect x="34" y="40" width="322" height="330" rx="14" fill="none"/>
+            <!-- doorway -->
+            <rect x="170" y="364" width="50" height="8" fill="#0D0D0F"/>
+            <path d="M170 370 a25 25 0 0 1 50 0" fill="none" stroke="rgba(255,255,255,.35)"/>
+            <!-- exhibit = lamp -->
+            <circle cx="195" cy="150" r="120" fill="url(#lamp)"/>
+            <circle cx="195" cy="150" r="9" fill="#E9B25A"/>
+            <text x="195" y="128" fill="#F5F5F7" font-size="11" font-weight="600" text-anchor="middle">The exhibit</text>
+            <text x="195" y="178" fill="#A1A1A6" font-size="9.5" text-anchor="middle">key light · meter here</text>
+            <!-- route: dotted beam from door to exhibit -->
+            <line x1="195" y1="362" x2="195" y2="176" stroke="#E9B25A" stroke-width="1" stroke-dasharray="1 6" stroke-linecap="round"/>
+            <!-- camera -->
+            <rect x="183" y="300" width="24" height="16" rx="3" fill="#F5F5F7"/>
+            <circle cx="195" cy="308" r="4" fill="#0D0D0F"/>
+            <text x="195" y="334" fill="#A1A1A6" font-size="9.5" text-anchor="middle">camera on the route, eye height</text>
+            <!-- field of view -->
+            <path d="M195 300 L120 190 M195 300 L270 190" stroke="rgba(255,255,255,.22)" stroke-dasharray="3 4"/>
+            <!-- secondary cool source -->
+            <rect x="300" y="110" width="12" height="80" rx="2" fill="#4A86C8" opacity=".6"/>
+            <text x="294" y="206" fill="#A1A1A6" font-size="9" text-anchor="end">screen · cool fill</text>
+            <text x="294" y="218" fill="#A1A1A6" font-size="9" text-anchor="end">≤ 1 stop under</text>
+            <!-- no flash -->
+            <g transform="translate(60 300)">
+              <circle r="16" fill="none" stroke="#D64540" stroke-width="2"/>
+              <path d="M-3 -10 L5 -10 L1 -2 L7 -2 L-4 11 L-1 1 L-7 1 Z" fill="#D64540"/>
+              <line x1="-12" y1="-12" x2="12" y2="12" stroke="#D64540" stroke-width="2"/>
+              <text x="0" y="31" fill="#A1A1A6" font-size="9" text-anchor="middle">no on-camera flash</text>
+            </g>
+            <text x="34" y="26" fill="#E9B25A" font-size="9" font-weight="600" letter-spacing="1.2">PLAN · ONE ROOM, ONE KEY</text>
+            <text x="34" y="410" fill="#A1A1A6" font-size="9.5">Walk the visitor's line. Stop where the lit object fills a third of the frame.</text>
+            <text x="34" y="426" fill="#A1A1A6" font-size="9.5">Expose for the lamp; let the walls fall to Night.</text>
+            <text x="34" y="452" fill="#808086" font-size="9">Gold = key · blue = permitted secondary · red = never</text>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p><b>Key from the exhibit.</b> The lit object is the key light. Spot-meter the brightest part you need to hold and let the room fall away. Do not add light to make the room "readable" — the darkness is the room.</p></li>
+          <li><span class="counter">02</span><p><b>No flash.</b> On-camera flash flattens the space and kills projection. Off-camera light is allowed only to lift a visitor by at most one stop, gelled to the key's colour, never on the exhibit itself.</p></li>
+          <li><span class="counter">03</span><p><b>Mixed temperatures: one leads.</b> Set white balance to the key — typically 3200–4000 K in warm interiors, 5000–5600 K at dusk outside. Cool sources (screens, LEDs, daylight through a door) stay cool, as the secondary, up to one stop under the key. Never neutralise them; never let them exceed the key.</p></li>
+          <li><span class="counter">04</span><p><b>Projection and shows.</b> Let the show set the colour. Shoot RAW, white balance 4000 K as a start, tripod, low ISO, long exposure. Bracket ±1 stop; keep the frame where the projected image still holds highlight detail.</p></li>
+          <li><span class="counter">05</span><p><b>Hold the highlights.</b> The lamp, the screen, the flame may clip at their centre only. If a white wall clips, you are a stop over.</p></li>
+        </ul>
+        <table class="auto" style="margin-top:5mm">
+          <tr><th>Situation</th><th>ISO</th><th>Aperture</th><th>Shutter</th><th>Support</th></tr>
+          <tr><td>Interiors, galleries</td><td class="n">400 – 1600</td><td class="n">f/4 – f/8</td><td class="n">1/30 – 1/125</td><td>tripod below 1/60</td></tr>
+          <tr><td>Projection, light shows</td><td class="n">200 – 800</td><td class="n">f/2.8 – f/5.6</td><td class="n">1/15 – 1/60</td><td>tripod, cable release</td></tr>
+          <tr><td>Exteriors at dusk</td><td class="n">100 – 400</td><td class="n">f/8</td><td class="n">1 – 10 s</td><td>tripod</td></tr>
+          <tr><td>Portrait</td><td class="n">200 – 800</td><td class="n">f/1.8 – f/2.8</td><td class="n">1/125 – 1/250</td><td>85 – 105 mm, handheld</td></tr>
+        </table>
+        <p class="small" style="margin-top:3mm">Starting points, not limits. The rule that cannot be broken is the first one: the exhibit is the key.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 05 GRADING ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 05 — Colour grading</span><span class="pn">05 / 16</span></header>
+  <div class="body">
+    <h1 class="h">One grade. Subtle, repeatable.</h1>
+    <div class="curve">
+      <div>
+        <img src="assets/curve.svg" alt="The grade's reference curve: a gentle S with the black point lifted to Night">
+        <table class="auto" style="margin-top:3mm">
+          <tr><th>In</th><th>Out R · G · B</th><th>In</th><th>Out R · G · B</th></tr>
+          <tr><td class="n">0</td><td class="n">13 · 13 · 15</td><td class="n">128</td><td class="n">128 · 128 · 128</td></tr>
+          <tr><td class="n">16</td><td class="n">21 · 21 · 22</td><td class="n">192</td><td class="n">199 · 199 · 199</td></tr>
+          <tr><td class="n">32</td><td class="n">30 · 30 · 31</td><td class="n">224</td><td class="n">229 · 229 · 229</td></tr>
+          <tr><td class="n">64</td><td class="n">57 · 57 · 57</td><td class="n">255</td><td class="n">255 · 255 · 255</td></tr>
+        </table>
+        <p class="small" style="margin-top:2mm">Reference curve, 8-bit, before the warm shift. Gold line = the grade; dotted = identity.</p>
+      </div>
+      <div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p><b>Contrast.</b> A gentle sine S-curve, amount 0.18, pivoting on mid-grey. Midtones gain about 18 % slope; nothing clips.</p></li>
+          <li><span class="counter">02</span><p><b>Blacks to Night.</b> Pure black lands on Night <code>#0D0D0F</code> (13 · 13 · 15), with a toe that fades out by input 22 %. Shadows keep a trace of detail and never crush.</p></li>
+          <li><span class="counter">03</span><p><b>Warm highlights.</b> The brightest 45 % of the tonal range shifts toward Lamp Gold <code>#E9B25A</code>, from 0 % at 55 % luminance to a maximum tint of 10 % at pure white. Gains per channel at full strength: R 1.00 · G 0.976 · B 0.939.</p></li>
+          <li><span class="counter">04</span><p><b>No saturation boost.</b> Saturation stays at 1.00. Colour comes from the show and the materials, never from the grade.</p></li>
+          <li><span class="counter">05</span><p><b>Apply it with the script.</b> <code>Approved_Images/grade.py in.jpg out.jpg</code> — the same numbers every time. Approximate equivalents in Lightroom / Capture One: Contrast +10, Blacks +6, Highlights −5; Colour Grading → Highlights hue 40°, saturation 8; Saturation 0. Check against the reference pair below.</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cols-2" style="margin-top:6mm">
+      <figure><div class="room r169"><img src="assets/grade-before.jpg" alt="Before the grade"><span class="tag">Before · camera file</span></div><figcaption class="wl"><b>Maharishi Valmiki Museum</b>Punjab</figcaption></figure>
+      <figure><div class="room r169"><img src="assets/grade-after.jpg" alt="After the grade"><span class="tag gold">After · grade.py</span></div><figcaption class="wl"><b>Maharishi Valmiki Museum</b>Punjab · blacks to Night, stone warmed, dome untouched</figcaption></figure>
+      <figure><div class="room r169"><img src="assets/grade-before-2.jpg" alt="Before the grade"><span class="tag">Before · camera file</span></div><figcaption class="wl"><b>Postal Museum Projection Show</b>New Delhi</figcaption></figure>
+      <figure><div class="room r169"><img src="assets/grade-after-2.jpg" alt="After the grade"><span class="tag gold">After · grade.py</span></div><figcaption class="wl"><b>Postal Museum Projection Show</b>New Delhi · the room stays black, the stamps lean warm</figcaption></figure>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 06 COMPOSITION ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 06 — Composition</span><span class="pn">06 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Stand on the route. Look where the visitor looks.</h1>
+    <div class="stack-6">
+      <div class="cols-2" style="grid-template-columns: 1fr 62mm; gap:7mm; align-items:center">
+        <figure>
+          <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-freedom-fighter-museum--museum.jpg" alt="Freedom Fighter Museum — New Delhi">
+            <svg class="ov" viewBox="0 0 960 540" preserveAspectRatio="none"><g stroke="#E9B25A" stroke-width="1.2" opacity=".9"><line x1="0" y1="0" x2="480" y2="262"/><line x1="960" y1="0" x2="480" y2="262"/><line x1="0" y1="540" x2="480" y2="262"/><line x1="960" y1="540" x2="480" y2="262"/></g><circle cx="480" cy="262" r="7" fill="#E9B25A"/></svg>
+          </div>
+          <figcaption class="wl"><span class="counter">01</span><b>Freedom Fighter Museum</b>New Delhi</figcaption>
+        </figure>
+        <div><div class="h3">One-point perspective along the route</div><p>Put the vanishing point on the thing the visitor is walking toward. Camera at eye height, lens 24–35 mm, centred on the route. The corridor's lines do the composing; keep them straight.</p></div>
+      </div>
+      <div class="cols-2" style="grid-template-columns: 1fr 62mm; gap:7mm; align-items:center">
+        <figure>
+          <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-mahatma-gandhi-event--event.jpg" alt="Mahatma Gandhi Event">
+            <svg class="ov" viewBox="0 0 960 540" preserveAspectRatio="none"><g stroke="#E9B25A" stroke-width="1.2" opacity=".85"><line x1="320" y1="0" x2="320" y2="540"/><line x1="640" y1="0" x2="640" y2="540"/><line x1="0" y1="180" x2="960" y2="180"/><line x1="0" y1="360" x2="960" y2="360"/></g><g fill="#E9B25A"><circle cx="320" cy="360" r="7"/><circle cx="640" cy="360" r="7"/></g></svg>
+          </div>
+          <figcaption class="wl"><span class="counter">02</span><b>Mahatma Gandhi Event</b>National</figcaption>
+        </figure>
+        <div><div class="h3">Thirds for people</div><p>Figures sit on the vertical thirds, feet on the lower third, facing into the frame and toward the light. Leave the centre to the room. Never cut a person at the ankles or the wrists.</p></div>
+      </div>
+      <div class="cols-2" style="grid-template-columns: 1fr 62mm; gap:7mm; align-items:center">
+        <figure>
+          <div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-ram-katha-show-ceiling--projection.jpg" alt="Ram Katha Show — Ayodhya" style="object-position:50% 40%">
+            <svg class="ov" viewBox="0 0 960 540" preserveAspectRatio="none"><line x1="480" y1="0" x2="480" y2="540" stroke="#E9B25A" stroke-width="1.2" opacity=".9"/><g stroke="#E9B25A" stroke-width="1.2" fill="none" opacity=".9"><path d="M300 300 L140 300 M150 290 L140 300 L150 310"/><path d="M660 300 L820 300 M810 290 L820 300 L810 310"/></g><circle cx="480" cy="270" r="7" fill="#E9B25A"/></svg>
+          </div>
+          <figcaption class="wl"><span class="counter">03</span><b>Ram Katha Show</b>Ayodhya</figcaption>
+        </figure>
+        <div><div class="h3">Symmetry for architecture</div><p>When the room is symmetrical, the camera is on its axis — to the centimetre. Verticals straight; converge only when looking up at a ceiling. Horizon level, always. A tripod with a bubble level is not optional.</p></div>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 07 SUBJECT ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 07 — Subject treatment</span><span class="pn">07 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Visitors walk into the light.</h1>
+    <p class="lead" style="margin-bottom:6mm">People in these pictures are visitors, not models. They are caught walking, reading, looking up — on their way to the lit thing.</p>
+    <div class="cols-3">
+      <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-prime-minister-museum--museum.jpg" alt="Prime Minister Museum — New Delhi" style="object-position:50% 50%"><span class="tag gold">Allowed · one figure, far</span></div><figcaption class="wl"><b>Prime Minister Museum</b>New Delhi</figcaption></figure>
+      <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-mahatma-gandhi-event--event.jpg" alt="Mahatma Gandhi Event" style="object-position:50% 50%"><span class="tag gold">Allowed · backs to camera</span></div><figcaption class="wl"><b>Mahatma Gandhi Event</b>National</figcaption></figure>
+      <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-mountain-projection--projection.jpg" alt="Mountain Projection — Uttarakhand" style="object-position:46% 63%"><span class="tag gold">Allowed · the lone figure, lit</span></div><figcaption class="wl"><b>Mountain Projection</b>Uttarakhand</figcaption></figure>
+    </div>
+    <div class="cols-2" style="margin-top:7mm">
+      <div>
+        <div class="h3">Do</div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p>Visitors walking into the light, seen from behind or in profile.</p></li>
+          <li><span class="counter">02</span><p>One or two figures. A crowd only when it reads as a single shape, from behind.</p></li>
+          <li><span class="counter">03</span><p>Absorbed: reading a label, looking up at a ceiling, touching a screen, mid-step.</p></li>
+          <li><span class="counter">04</span><p>Staff at work during the build — hands, tools, the room half-lit. Document, don't stage.</p></li>
+          <li><span class="counter">05</span><p>Children with a guardian in frame, from behind, never alone and never identifiable.</p></li>
+        </ul>
+      </div>
+      <div>
+        <div class="h3">Don't</div>
+        <ul class="rules tight donts">
+          <li><span class="counter">✕</span><p>Posed groups, lines of people facing the camera, ribbon-cutting rows.</p></li>
+          <li><span class="counter">✕</span><p>Eye contact with the lens — that belongs to the portrait page only.</p></li>
+          <li><span class="counter">✕</span><p>Pointing at exhibits, thumbs up, phones held toward the camera.</p></li>
+          <li><span class="counter">✕</span><p>Models in brand colours, costumes, or any clothing that competes with the exhibit.</p></li>
+          <li><span class="counter">✕</span><p>Recognisable faces without written consent. Backs need none; faces always do.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 08 BACKGROUND ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 08 — Background treatment</span><span class="pn">08 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Dark, uncluttered, and a veil for the words.</h1>
+    <div class="cols-2" style="margin-bottom:6mm">
+      <figure><div class="room r169"><img src="assets/veil-off.jpg" alt="Without the veil"><span class="tag">No veil · image only</span></div><figcaption class="wl"><b>Sant Ravi Das Museum</b>Uttar Pradesh</figcaption></figure>
+      <figure>
+        <div class="room r169"><img src="assets/veil-on.jpg" alt="With the veil and a wall label"><span class="tag gold">Veil · text sits on ≥ 80 % black</span>
+          <div class="plate-text"><div class="pt-h">Galleries planned as a route, not a floor <span class="lit">plan.</span></div><div class="wl"><span class="counter">007</span><b>Sant Ravi Das Museum</b>Uttar Pradesh</div></div>
+        </div>
+        <figcaption class="wl"><b>The same image, veiled</b>gradient 0 → 72 % black over the lower 65 %</figcaption>
+      </figure>
+    </div>
+    <ul class="rules tight">
+      <li><span class="counter">01</span><p><b>Backgrounds fall to Night.</b> The wall behind the lit object is dark, plain and out of the way. If it is bright, you are facing the wrong way.</p></li>
+      <li><span class="counter">02</span><p><b>Remove the clutter at source.</b> Cables, cones, bins, hi-vis, A-boards, fire extinguishers, the photographer in a mirror — move them or move yourself. Nothing is removed in post except dust.</p></li>
+      <li><span class="counter">03</span><p><b>The veil carries the words.</b> When a headline, wall label or logo sits on the image, apply the brand veil: <code>linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.72) 100%)</code> over the lower part of the frame. Text and logo sit on ≥ 80 % black.</p></li>
+      <li><span class="counter">04</span><p><b>Never over the lit object or a face.</b> Text goes in the dark; the picture keeps the light. If the dark is at the top, veil from the top.</p></li>
+      <li><span class="counter">05</span><p><b>Plain backgrounds for cut-outs: none.</b> Objects are never cut out onto white or black. They are photographed in the room, on their plinth, under their light.</p></li>
+    </ul>
+    <div class="swatchline"><div style="background:#000">Gallery Black #000000</div><div style="background:#0D0D0F">Night #0D0D0F</div><div style="background:#1C1C1E">Charcoal #1C1C1E</div><div style="background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.72)); color:#1A1816">veil 0 → 72 %</div></div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 09 PORTRAIT ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 09 — Portrait standards</span><span class="pn">09 / 16</span></header>
+  <div class="body">
+    <h1 class="h">The portrait is the reference.</h1>
+    <div class="cols-2" style="grid-template-columns: 86mm 1fr; gap: 8mm">
+      <div>
+        <div class="room r34"><img src="../../Approved_Images/Portrait/sanzeed-portrait--3x4-2000.jpg" alt="Sanzeed Mirza — portrait">
+          <svg class="ov" viewBox="0 0 300 400" preserveAspectRatio="none"><line x1="0" y1="140" x2="300" y2="140" stroke="#E9B25A" stroke-width="1" stroke-dasharray="3 4" opacity=".9"/><line x1="0" y1="133" x2="300" y2="133" stroke="#E9B25A" stroke-width="0" /></svg>
+          <span class="annot" style="left:3mm; top:31.5%"><b>Eye line</b> 35 %</span>
+          <span class="annot" style="left:3mm; top:5%"><b>Key</b> warm, 45° left</span>
+          <span class="annot" style="right:3mm; top:5%"><b>Bokeh</b> 85–105 mm, f/2</span>
+          <span class="annot" style="left:3mm; bottom:5%"><b>Garment</b> black, no logos</span>
+        </div>
+        <figcaption class="wl"><b>Sanzeed Mirza</b>New Delhi · 3:4 crop of the reference portrait</figcaption>
+      </div>
+      <div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p><b>Warm key from one side.</b> A single warm source, 45° to camera, slightly above the eyes. Fill comes from the city, not from a reflector. No ring lights, no two-light "corporate" set-ups.</p></li>
+          <li><span class="counter">02</span><p><b>Bokeh, not a backdrop.</b> A lit street or the room at night, far behind, thrown out of focus. The points of light are the brand's own motif. Never a paper roll, never a plain wall.</p></li>
+          <li><span class="counter">03</span><p><b>Black garment.</b> Black or near-black, matte, no logos, no patterns. Glasses are fine; watch for reflections of the key.</p></li>
+          <li><span class="counter">04</span><p><b>Eye line on the upper third.</b> Eyes at 35–38 % of the frame height, level, looking straight into the lens. Expression calm, unforced.</p></li>
+          <li><span class="counter">05</span><p><b>No retouching beyond the grade.</b> No skin smoothing, no reshaping, no whitening. Dust only.</p></li>
+          <li><span class="counter">06</span><p><b>Deliver four ratios.</b> 1:1, 4:5, 3:4 as crops with the eye line held; 16:9 as an extended plate with the figure on the right third — a landscape crop of a standing portrait is never made.</p></li>
+        </ul>
+        <div class="cols-4" style="margin-top:5mm; align-items:end">
+          <figure><div class="room r11"><img src="../../Approved_Images/Portrait/sanzeed-portrait--1x1-2000.jpg" alt="1:1"></div><figcaption class="wl"><b>1:1</b>avatar</figcaption></figure>
+          <figure><div class="room r45"><img src="../../Approved_Images/Portrait/sanzeed-portrait--4x5-2000.jpg" alt="4:5"></div><figcaption class="wl"><b>4:5</b>social</figcaption></figure>
+          <figure><div class="room r34"><img src="../../Approved_Images/Portrait/sanzeed-portrait--3x4-2000.jpg" alt="3:4"></div><figcaption class="wl"><b>3:4</b>print, press</figcaption></figure>
+          <figure><div class="room r169"><img src="../../Approved_Images/Portrait/sanzeed-portrait--16x9-extended-2000.jpg" alt="16:9"></div><figcaption class="wl"><b>16:9</b>banner plate</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 10 LIFESTYLE / PRODUCT / EDITORIAL ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 10 — Lifestyle · Product · Editorial</span><span class="pn">10 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Three jobs, one standard.</h1>
+    <div class="cols-3">
+      <div>
+        <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-buddha-park-stupa-path--museum.jpg" alt="Buddha Park — Uttarakhand" style="object-position:55% 50%"></div><figcaption class="wl"><b>Buddha Park</b>Uttarakhand</figcaption></figure>
+        <div class="h3" style="margin-top:4mm">Lifestyle — the room in use</div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p>Shot during a real visit, never staged. Available light only.</p></li>
+          <li><span class="counter">02</span><p>The route is in frame: a path, a threshold, a line of sight.</p></li>
+          <li><span class="counter">03</span><p>People as scale (page 07). Backs, profiles, movement.</p></li>
+          <li><span class="counter">04</span><p>Daylight is allowed outdoors; keep the sky small and the shadows deep.</p></li>
+        </ul>
+      </div>
+      <div>
+        <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-bhagat-singh-museum--museum.jpg" alt="Bhagat Singh Museum — Punjab" style="object-position:50% 62%"></div><figcaption class="wl"><b>Bhagat Singh Museum</b>Punjab</figcaption></figure>
+        <div class="h3" style="margin-top:4mm">Product — exhibit objects</div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p>The object as it is lit in the room, on its plinth, with its label.</p></li>
+          <li><span class="counter">02</span><p>35–50 mm from visitor eye height; one object per frame.</p></li>
+          <li><span class="counter">03</span><p>Focus on the lit edge; let the case glass and the floor fall away.</p></li>
+          <li><span class="counter">04</span><p>No cut-outs on white, no turntables, no product-shot gradients.</p></li>
+        </ul>
+      </div>
+      <div>
+        <figure><div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-yuge-yugeen-bharat-museum--museum.jpg" alt="Yuge Yugeen Bharat Museum — New Delhi" style="object-position:50% 58%"></div><figcaption class="wl"><b>Yuge Yugeen Bharat Museum</b>New Delhi</figcaption></figure>
+        <div class="h3" style="margin-top:4mm">Editorial — press and case studies</div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p>One picture that tells the room: usually the threshold.</p></li>
+          <li><span class="counter">02</span><p>Sequence as the case study reads: the brief · the idea · the walk · what visitors do.</p></li>
+          <li><span class="counter">03</span><p>Captions are wall labels: Title · Place · one line.</p></li>
+          <li><span class="counter">04</span><p>3:2 for press at 3000 px; 16:9 for the site; credit the commissioning studio.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 11 ENVIRONMENTAL / ARCHITECTURAL ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 11 — Environmental · Architectural</span><span class="pn">11 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Twenty minutes after sunset.</h1>
+    <p class="lead" style="margin-bottom:6mm">Buildings are photographed when the inside light equals the sky: the blue hour. The room reads from outside, and the night is already the room.</p>
+    <div class="cols-2" style="row-gap:5mm">
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-kedarnath-museum--architecture.jpg" alt="Kedarnath Museum — Uttarakhand" style="object-position:45% 50%"><span class="tag gold">Environmental</span></div><figcaption class="wl"><b>Kedarnath Museum</b>Uttarakhand</figcaption></figure>
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-mera-mati-mera-desh-memorial--architecture.jpg" alt="Mera Mati Mera Desh Memorial — New Delhi"><span class="tag gold">Environmental</span></div><figcaption class="wl"><b>Mera Mati Mera Desh Memorial</b>New Delhi</figcaption></figure>
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-raja-bhoj-museum--architecture.jpg" alt="Raja Bhoj Museum — New Delhi" style="object-position:50% 60%"><span class="tag gold">Architectural</span></div><figcaption class="wl"><b>Raja Bhoj Museum</b>New Delhi</figcaption></figure>
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-albert-hall-projection-show--projection.jpg" alt="Albert Hall Projection Show — Jaipur"><span class="tag gold">Architectural</span></div><figcaption class="wl"><b>Albert Hall Projection Show</b>Jaipur</figcaption></figure>
+    </div>
+    <div class="cols-2" style="margin-top:6mm">
+      <ul class="rules tight">
+        <li><span class="counter">01</span><p><b>Environmental:</b> the building in its place — valley, river, city. Include the ground plane and the approach; the route starts outside.</p></li>
+        <li><span class="counter">02</span><p><b>Dusk, not night.</b> Twenty to forty minutes after sunset. Sky at the same brightness as the lit façade.</p></li>
+        <li><span class="counter">03</span><p><b>Verticals straight.</b> Shift lens or correct in post. Converging verticals only when the picture is deliberately looking up.</p></li>
+      </ul>
+      <ul class="rules tight">
+        <li><span class="counter">04</span><p><b>Architectural:</b> square-on for symmetry, or from the corner at 30° for depth. Nothing in between.</p></li>
+        <li><span class="counter">05</span><p><b>Foreground empty</b> or holding one figure for scale. No cars, no cones, no barriers.</p></li>
+        <li><span class="counter">06</span><p><b>Let the show light the building.</b> Projection is exposed for the projection; the sky goes to Night.</p></li>
+      </ul>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 12 AI IMAGERY ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 12 — AI-generated imagery</span><span class="pn">12 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Concept visualisation only. Always labelled.</h1>
+    <div class="cols-2" style="grid-template-columns: 1fr 80mm; gap:8mm">
+      <div>
+        <ul class="rules tight">
+          <li><span class="counter">01</span><p><b>Allowed only for concept visuals.</b> Mood frames, early massing, an atmosphere study inside a concept book or a research deck. Never as a substitute for a photograph of a room that exists.</p></li>
+          <li><span class="counter">02</span><p><b>Labelled "Concept visualisation".</b> On the image as the eyebrow of its wall label, in the caption, in the alt text and in the file's metadata. The label is never cropped off and never set below 9 pt.</p></li>
+          <li><span class="counter">03</span><p><b>Never presented as built work.</b> Not in the gallery, the case studies, press material, the "delivered" section of a proposal, or any post about an opening. The same rule covers 3D renders of unbuilt projects — they carry the same label.</p></li>
+          <li><span class="counter">04</span><p><b>Never of real people, real artefacts or a client's real building as if photographed.</b> No faces, no national emblems, no recognisable artworks, no third-party logos in a prompt or an output.</p></li>
+          <li><span class="counter">05</span><p><b>Disclosure.</b> The concept book's colophon states: "Concept visualisations made with [tool], [month year]; not photographs." Prompts, seeds and outputs are kept with the project files.</p></li>
+          <li><span class="counter">06</span><p><b>Licensing.</b> Only tools whose terms grant commercial use and keep client material out of training. Client approval in writing before any external use. No image whose source rights are unclear enters the library.</p></li>
+          <li><span class="counter">07</span><p><b>Naming.</b> <code>sanzeed-concept-&lt;project&gt;--ai-&lt;nn&gt;.jpg</code>. The <code>sanzeed-img-</code> prefix is reserved for photographs and documented renders of built work.</p></li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <div class="room r45"><img src="../../Approved_Images/JPG/sanzeed-img-tree-concept--museum.jpg" alt="Tree Concept — concept visualisation" style="object-position:50% 55%">
+            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.72) 100%)"></div>
+            <div class="plate-text"><div class="wl" style="display:block"><div class="eyebrow" style="font-size:9px; color:#E9B25A; margin-bottom:4px">Concept visualisation</div><b style="font-size:12px">Tree Concept</b><span style="display:block; color:#A1A1A6">Unbuilt · 3D render</span></div></div>
+          </div>
+          <figcaption class="wl"><b>The label plate for unbuilt work</b>eyebrow · title · "Unbuilt"</figcaption>
+        </figure>
+        <p class="small" style="margin-top:4mm">This render is the client's own concept work, shown here to demonstrate the label. No AI-generated image appears anywhere in the brand package.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 13 SELECTION CHECKLIST ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 13 — Image selection criteria</span><span class="pn">13 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Twelve questions. One "no" sends it back.</h1>
+    <div class="cols-2" style="grid-template-columns: 1fr 1fr; gap:8mm">
+      <ul class="check">
+        <li><span class="box"></span><span class="counter">01</span><p>One light source leads the frame.</p></li>
+        <li><span class="box"></span><span class="counter">02</span><p>Blacks hold detail — nothing crushed to pure black, nothing lifted to grey.</p></li>
+        <li><span class="box"></span><span class="counter">03</span><p>Highlights lean warm; no cyan or magenta cast on anything white.</p></li>
+        <li><span class="box"></span><span class="counter">04</span><p>The route or the threshold is in frame (interiors).</p></li>
+        <li><span class="box"></span><span class="counter">05</span><p>Horizon level; verticals straight (architecture).</p></li>
+        <li><span class="box"></span><span class="counter">06</span><p>People, if present, are scale not subject: backs, profiles, moving.</p></li>
+      </ul>
+      <ul class="check">
+        <li><span class="box"></span><span class="counter">07</span><p>No clutter: cables, cones, bins, signage, hi-vis, reflections of the photographer.</p></li>
+        <li><span class="box"></span><span class="counter">08</span><p>The lit object is sharp. Focus on the thing that is lit.</p></li>
+        <li><span class="box"></span><span class="counter">09</span><p>Resolution ≥ 3000 px long edge for print, ≥ 1920 px for web; no upscaling beyond 1.3×.</p></li>
+        <li><span class="box"></span><span class="counter">10</span><p>Colour untouched beyond the grade; saturation never boosted.</p></li>
+        <li><span class="box"></span><span class="counter">11</span><p>Rights and consent recorded: studio credit, client approval, consent for recognisable faces.</p></li>
+        <li><span class="box"></span><span class="counter">12</span><p>Captioned as a wall label — Title · Place — and "Concept visualisation" when unbuilt.</p></li>
+      </ul>
+    </div>
+    <div class="cols-3" style="margin-top:8mm">
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-g20-led-show--projection.jpg" alt="G20 LED Show — Gujarat"><span class="tag gold">Passes · 12 / 12</span></div><figcaption class="wl"><b>G20 LED Show</b>Gujarat</figcaption></figure>
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-rbi-museum-interior--museum.jpg" alt="RBI Museum — Mumbai"><span class="tag gold">Passes · 12 / 12</span></div><figcaption class="wl"><b>RBI Museum</b>Mumbai</figcaption></figure>
+      <figure><div class="room r169"><img src="../../Approved_Images/JPG/sanzeed-img-india-pavilion-expo-2025--architecture.jpg" alt="India Pavilion Expo 2025 — concept"><span class="tag gold">Passes · labelled concept</span></div><figcaption class="wl"><b>India Pavilion Expo 2025</b>Concept</figcaption></figure>
+    </div>
+    <p class="small" style="margin-top:5mm">The thirty approved images in <code>Approved_Images/</code> each passed this list. Add to the library only through the same twelve questions, and record the answers in <code>index.md</code>.</p>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 14 UNACCEPTABLE ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 14 — Unacceptable imagery</span><span class="pn">14 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Four ways to lose the room.</h1>
+    <p class="lead" style="margin-bottom:5mm">Each example is an approved image, deliberately mistreated. The mark means it does not leave the building.</p>
+    <div class="cols-2" style="row-gap:5mm">
+      <figure>
+        <div class="room r169"><img src="assets/bad-busy.jpg" alt="Unacceptable: busy">
+          <svg class="ov" viewBox="0 0 160 90"><g stroke="#D64540" stroke-width="3.5" stroke-linecap="round"><line x1="62" y1="27" x2="98" y2="63"/><line x1="98" y1="27" x2="62" y2="63"/></g></svg>
+          <span class="tag red">Busy</span></div>
+        <figcaption class="wl"><b>Everything is mid-tone and nothing leads.</b></figcaption>
+        <p class="small" style="margin-top:1mm">Cropped into clutter, over-sharpened, no key light, no route. The eye has nowhere to rest.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="assets/bad-flat.jpg" alt="Unacceptable: flat-lit">
+          <svg class="ov" viewBox="0 0 160 90"><g stroke="#D64540" stroke-width="3.5" stroke-linecap="round"><line x1="62" y1="27" x2="98" y2="63"/><line x1="98" y1="27" x2="62" y2="63"/></g></svg>
+          <span class="tag red">Flat-lit</span></div>
+        <figcaption class="wl"><b>Flash, or blacks lifted to grey.</b></figcaption>
+        <p class="small" style="margin-top:1mm">The room has no depth. The blacks are grey, the whites are grey. Nothing is lit because everything is.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="assets/bad-saturated.jpg" alt="Unacceptable: over-saturated" style="object-position:50% 40%">
+          <svg class="ov" viewBox="0 0 160 90"><g stroke="#D64540" stroke-width="3.5" stroke-linecap="round"><line x1="62" y1="27" x2="98" y2="63"/><line x1="98" y1="27" x2="62" y2="63"/></g></svg>
+          <span class="tag red">Over-saturated</span></div>
+        <figcaption class="wl"><b>Colour pushed past the show.</b></figcaption>
+        <p class="small" style="margin-top:1mm">Gold goes orange, reds bleed, the dome glows like a screen. The grade never adds saturation.</p>
+      </figure>
+      <figure>
+        <div class="room r169"><img src="assets/bad-logo-on-busy.jpg" alt="Unacceptable: logo on a busy image">
+          <svg class="ov" viewBox="0 0 160 90"><g stroke="#D64540" stroke-width="3.5" stroke-linecap="round"><line x1="62" y1="27" x2="98" y2="63"/><line x1="98" y1="27" x2="62" y2="63"/></g></svg>
+          <span class="tag red">Logo on busy</span></div>
+        <figcaption class="wl"><b>The wordmark on a bright, busy area, no veil.</b></figcaption>
+        <p class="small" style="margin-top:1mm">The logo sits on ≥ 80 % black or on a flat brand colour. Never on pattern, never on light.</p>
+      </figure>
+    </div>
+    <div style="margin-top:5mm">
+      <div class="h3">Also never</div>
+      <p class="small">Stock photography · AI images presented as built work · chromatic light effects (magenta / cyan) · HDR halos · tilted horizons · fisheye · another studio's watermark · selfies and phone-in-mirror shots · empty placeholder boxes · photographs of screens showing the brand's own graphics.</p>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 15 CROPPING ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 15 — Cropping standards and aspect ratios</span><span class="pn">15 / 16</span></header>
+  <div class="body">
+    <h1 class="h">Every image has a focal point. Every crop keeps it.</h1>
+    <div class="cols-2" style="grid-template-columns: 1fr 70mm; gap:8mm; margin-bottom:6mm">
+      <figure>
+        <div class="room r169"><img src="assets/crop-source.jpg" alt="India Pavilion Expo 2025 — the focal point">
+          <svg class="ov" viewBox="0 0 960 540" preserveAspectRatio="none"><g stroke="#E9B25A" stroke-width="1" stroke-dasharray="3 5" opacity=".8"><line x1="653" y1="0" x2="653" y2="540"/><line x1="0" y1="216" x2="960" y2="216"/></g><circle cx="653" cy="216" r="8" fill="#E9B25A"/><circle cx="653" cy="216" r="16" fill="none" stroke="#E9B25A" stroke-width="1.5"/></svg>
+        </div>
+        <figcaption class="wl"><span class="counter">028</span><b>India Pavilion Expo 2025</b>Concept · focal point 68 % · 40 %</figcaption>
+      </figure>
+      <ul class="rules tight">
+        <li><span class="counter">01</span><p>The focal point is the lit object, recorded for every approved image in <code>approved.json</code> as fractions of width and height.</p></li>
+        <li><span class="counter">02</span><p>A crop is centred on the focal point and clamped to the frame; it is never off the picture, never stretched.</p></li>
+        <li><span class="counter">03</span><p>Keep at least 60 % of the source's long edge. Tighter is a new photograph, not a crop.</p></li>
+        <li><span class="counter">04</span><p>9:16 from a landscape source loses most of the room; prefer the wall-label plate or a portrait-orientation original.</p></li>
+      </ul>
+    </div>
+    <div class="ratio-row">
+      <figure><div class="room r169"><img src="assets/crop-16x9.jpg" alt="16:9"></div><figcaption class="wl"><b>16:9</b></figcaption></figure>
+      <figure><div class="room r916"><img src="assets/crop-9x16.jpg" alt="9:16"></div><figcaption class="wl"><b>9:16</b></figcaption></figure>
+      <figure><div class="room r45"><img src="assets/crop-4x5.jpg" alt="4:5"></div><figcaption class="wl"><b>4:5</b></figcaption></figure>
+      <figure><div class="room r11"><img src="assets/crop-1x1.jpg" alt="1:1"></div><figcaption class="wl"><b>1:1</b></figcaption></figure>
+      <figure><div class="room r32"><img src="assets/crop-3x2.jpg" alt="3:2"></div><figcaption class="wl"><b>3:2</b></figcaption></figure>
+    </div>
+    <table class="auto" style="margin-top:6mm">
+      <tr><th>Ratio</th><th>Use</th><th>Export</th><th>Focal rule</th></tr>
+      <tr><td class="n">16:9</td><td>Website hero, slides, YouTube, LinkedIn banner (crop to 4:1 from this)</td><td class="n">1920 × 1080 · 3840 × 2160</td><td>focal on the centre or a vertical third; horizon on a horizontal third</td></tr>
+      <tr><td class="n">4:5</td><td>Instagram and LinkedIn feed — the largest the feed shows</td><td class="n">1080 × 1350 · 2160 × 2700</td><td>focal in the upper 45 %; leave the veil zone below for the label</td></tr>
+      <tr><td class="n">1:1</td><td>Avatars, grid tiles, square posts</td><td class="n">1080 × 1080 · 2160 × 2160</td><td>focal centred; the lit object fills a third of the frame</td></tr>
+      <tr><td class="n">9:16</td><td>Stories, reels, highlight covers</td><td class="n">1080 × 1920</td><td>focal inside the centre-safe 1080 × 1420; text in the lower veil</td></tr>
+      <tr><td class="n">3:2</td><td>Press, print spreads, the camera's native frame</td><td class="n">3000 × 2000 · 6000 × 4000</td><td>as shot; verticals straight; 3 mm bleed when printed</td></tr>
+    </table>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>sanzeed.com</span></footer>
+</section>
+
+<!-- ======================= 16 NAMING & DELIVERY ======================= -->
+<section class="page light theme-light">
+  <header class="hdr"><span class="eyebrow">Photography guidelines · 16 — File naming and delivery</span><span class="pn">16 / 16</span></header>
+  <div class="body">
+    <h1 class="h">RAW, then TIFF, then JPG.</h1>
+    <div class="pipeline">
+      <div class="step"><div class="h3">01 · RAW</div><p class="small">The camera file, untouched. Archived as shot with the shoot's folder. Never delivered to anyone but me.</p></div>
+      <div class="step"><div class="h3">02 · TIFF master</div><p class="small">16-bit, Adobe RGB (1998) or ProPhoto, full resolution, graded with the reference curve, verticals corrected, dust removed. One master per selected frame.</p></div>
+      <div class="step"><div class="h3">03 · JPG deliverables</div><p class="small">From the master: sRGB, quality 90, 4:4:4. Print at 300 dpi for the trim size; web at the pixel sizes on page 15. WebP alongside for the site.</p></div>
+    </div>
+    <div class="cols-2" style="gap:8mm">
+      <div>
+        <div class="h3">Naming</div>
+        <table>
+          <colgroup><col style="width:46%"><col></colgroup>
+          <tr><th>Pattern</th><th>Example</th></tr>
+          <tr><td><code>sanzeed-img-&lt;project-slug&gt;--&lt;category&gt;.jpg</code></td><td><code>sanzeed-img-ram-katha-show--projection.jpg</code></td></tr>
+          <tr><td><code>…--&lt;category&gt;-&lt;ratio&gt;-&lt;width&gt;.jpg</code> (a crop)</td><td><code>sanzeed-img-ram-katha-show--projection-4x5-2160.jpg</code></td></tr>
+          <tr><td><code>sanzeed-portrait--&lt;ratio&gt;-&lt;long edge&gt;.jpg</code></td><td><code>sanzeed-portrait--4x5-2000.jpg</code></td></tr>
+          <tr><td><code>sanzeed-concept-&lt;project&gt;--ai-&lt;nn&gt;.jpg</code></td><td><code>sanzeed-concept-tree--ai-01.jpg</code></td></tr>
+          <tr><td>Categories</td><td>museum · projection · event · architecture · portrait</td></tr>
+          <tr><td>Masters</td><td><code>&lt;yyyy-mm-dd&gt;_&lt;project-slug&gt;_&lt;frame&gt;.tif</code></td></tr>
+        </table>
+        <p class="small" style="margin-top:3mm">Lowercase, hyphens, no spaces, no version numbers in a delivered name. Slugs match <code>approved.json</code>.</p>
+      </div>
+      <div>
+        <div class="h3">Delivery specification</div>
+        <table>
+          <colgroup><col style="width:22%"><col></colgroup>
+          <tr><th>Item</th><th>Spec</th></tr>
+          <tr><td>Print</td><td>300 dpi at trim · TIFF or JPG q90 · sRGB (CMYK conversion happens in the print PDF)</td></tr>
+          <tr><td>Web</td><td>sRGB · JPG q90 + WebP q90 · 1920 px long edge, 3840 px for hero</td></tr>
+          <tr><td>Social</td><td>exact platform pixels at 2× where possible (page 15)</td></tr>
+          <tr><td>Metadata</td><td>IPTC: title, place, year, credit "Employee work — rights remain with the commissioning studio", "Concept visualisation" where unbuilt</td></tr>
+          <tr><td>Folder</td><td><code>Approved_Images/JPG · WebP · Portrait</code> + <code>index.md</code> + contact sheet</td></tr>
+          <tr><td>Caption</td><td>Wall label: Title · Place · one line, in the voice of the brand</td></tr>
+        </table>
+        <div class="h3" style="margin-top:5mm">Rights</div>
+        <p class="small">Project photographs are employee work made for Tagbin, Sociopixel, DWS and B2W; rights remain with those studios. They are used for portfolio and credential purposes with a studio credit. New commissioned photography is licensed to Sanzeed Mirza for all brand uses in perpetuity, with the photographer credited where the medium allows.</p>
+      </div>
+    </div>
+    <div style="margin-top:7mm; display:flex; justify-content:space-between; align-items:flex-end">
+      <img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg" alt="Sanzeed — Experiential Design Consultant" style="width:58mm">
+      <div class="small" style="text-align:right">Questions about a picture? Tell me about the room.<br>sanzeed@gmail.com · +91 7827051270 (WhatsApp is fastest) · sanzeed.com</div>
+    </div>
+  </div>
+  <footer class="ftr"><div class="beam"></div><span>Sanzeed Mirza · Experiential Design Consultant</span><span>Photography guidelines · November 2026 · v1.0</span></footer>
+</section>
+
+</body>
+</html>

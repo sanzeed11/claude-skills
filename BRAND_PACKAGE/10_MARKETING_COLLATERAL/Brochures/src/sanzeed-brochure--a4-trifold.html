@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzeed — A4 trifold brochure (outside + inside, 3 mm bleed)</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../../_shared/collateral.css">
+<style>
+
+
+.mark { position: absolute; display: block; }
+.hl { color: var(--fg); }
+.svc { display: grid; grid-template-columns: 7mm 1fr; gap: 0 1mm; margin-bottom: 2.4mm; }
+.svc .c { font-family: var(--font-heading); font-weight: 500; font-size: 6.5pt; letter-spacing: .08em; color: var(--accent-text); padding-top: .4mm; font-variant-numeric: tabular-nums; }
+.svc b { display: block; font-family: var(--font-heading); font-weight: 600; font-size: 8pt; line-height: 1.25; color: var(--fg); }
+.svc span { display: block; font-size: 6.8pt; line-height: 1.4; color: var(--fg-2); }
+.svc em { display: block; font-style: normal; font-size: 6.2pt; color: var(--fg-3); margin-top: .4mm; }
+.step { position: relative; padding-left: 7mm; margin-bottom: 3.5mm; }
+.step::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 2.2mm; height: 2.2mm; border-radius: 50%; background: var(--accent); }
+.step .ey { font-family: var(--font-heading); font-weight: 600; font-size: 5.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); }
+.step b { display: block; font-family: var(--font-display); font-weight: 300; font-size: 14pt; line-height: 1; color: var(--fg); font-variation-settings: "opsz" 72; margin: .6mm 0 1mm; }
+.step span { display: block; font-size: 6.8pt; line-height: 1.4; color: var(--fg-2); }
+.step span i { font-style: normal; font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.stat .n { font-family: var(--font-display); font-weight: 300; font-size: 22pt; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 144; }
+.stat .n .plus { color: var(--accent); }
+.stat .l { font-size: 6.5pt; color: var(--fg-2); margin-top: 1mm; }
+.contact { font-size: 7.5pt; line-height: 1.65; color: var(--fg-2); }
+.contact b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.wl { font-size: 6.5pt; }
+
+@page { size: 303mm 216mm; margin: 0; }
+body { background: #000; }
+.sheet { width: 303mm; height: 216mm; font-family: var(--font-text); }
+.sheet.light { background: #F5F0E7; }
+.in { position: absolute; left: 3mm; top: 3mm; width: 297mm; height: 210mm; }
+.panel { position: absolute; top: 0; height: 210mm; }
+.fold { position: absolute; top: -3mm; bottom: -3mm; border-left: 0.2pt dashed rgba(128,128,134,.6); }
+@media print { .fold { display: none; } }
+/* outside: flap 98 | back 99 | front 100 */
+.p-flap { left: 0; width: 98mm; } .p-back { left: 98mm; width: 99mm; } .p-front { left: 197mm; width: 100mm; }
+/* inside: 100 | 99 | 98 */
+.p-i1 { left: 0; width: 100mm; } .p-i2 { left: 100mm; width: 99mm; } .p-i3 { left: 199mm; width: 98mm; }
+.pad { position: absolute; left: 10mm; right: 10mm; top: 12mm; bottom: 12mm; }
+.eyebrow, .eyebrow-quiet { font-size: 5.8pt; }
+.p-front .mark { left: 10mm; top: 12mm; width: 30mm; }
+.p-front .plate { position: absolute; left: 10mm; top: 40mm; width: 80mm; height: 100mm; border-radius: 5mm; }
+.p-front .wl { position: absolute; left: 10mm; top: 143mm; }
+.p-front .hl { position: absolute; left: 10mm; top: 156mm; width: 80mm; font-size: 20pt; line-height: 1.02; }
+.p-front .url { position: absolute; left: 10mm; bottom: 12mm; font-size: 7pt; color: var(--fg-3); }
+.p-back .hl { font-size: 17pt; margin: 1mm 0 4mm; }
+.p-back .promises { font-size: 7pt; line-height: 1.6; color: var(--fg-2); margin-top: 4mm; border-top: 1px solid var(--line); padding-top: 3mm; }
+.p-back .lock { left: 10mm; bottom: 12mm; width: 46mm; }
+.p-back .rights { position: absolute; left: 10mm; right: 10mm; bottom: 4mm; font-size: 4.8pt; color: var(--fg-3); }
+.p-flap .hl { font-size: 14pt; margin: 1mm 0 3mm; line-height: 1.05; }
+.p-flap p { font-size: 7pt; line-height: 1.5; color: var(--fg-2); margin-bottom: 2.5mm; }
+.p-flap .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 4mm; margin-top: 5mm; }
+.p-flap .trust { font-size: 6.5pt; line-height: 1.45; color: var(--fg-3); margin-top: 5mm; border-top: 1px solid var(--line); padding-top: 3mm; }
+.p-flap .plate { width: 78mm; height: 40mm; border-radius: 4mm; margin-top: 4mm; }
+.p-i1 .hl, .p-i2 .hl, .p-i3 .hl { font-size: 14pt; margin: 1mm 0 3mm; line-height: 1.05; }
+.p-i1 .sub, .p-i2 .sub { font-size: 7pt; line-height: 1.45; color: var(--fg-2); margin-bottom: 4mm; }
+.p-i1 .all { font-size: 6.6pt; color: var(--fg-2); border-top: 1px solid var(--line); padding-top: 2mm; margin-top: 1mm; }
+.p-i1 .all b { font-family: var(--font-display); font-weight: 300; font-size: 9.5pt; color: var(--fg); margin-right: 1mm; }
+.case { margin-bottom: 4mm; }
+.case .plate { width: 78mm; height: 36mm; border-radius: 4mm; }
+.case .wl { margin-top: 1.5mm; }
+.case p { font-size: 6.6pt; line-height: 1.4; color: var(--fg-2); margin-top: 1mm; }
+.case p b { font-family: var(--font-display); font-weight: 300; font-size: 9pt; color: var(--fg); }
+.p-i3 .see { position: absolute; left: 0; bottom: 0; font-size: 6.8pt; color: var(--fg-2); border-top: 1px solid var(--line); padding-top: 2mm; width: 78mm; }
+.p-i3 .see b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+
+</style>
+</head>
+<body>
+<section class="sheet grain" id="outside"><div class="in">
+  <div class="panel p-flap"><div class="pad">
+    <div class="eyebrow-quiet">About</div>
+    <h2 class="hl opsz72">Strategy, craft and calm leadership, in one person<span class="pt">.</span></h2>
+    <p>I’m an experiential design consultant based in New Delhi, working with institutions and brands wherever the project is. Fifteen years in: first as a concept artist and VFX lead on films and animation, then eight years directing museums, experience centres, pavilions and shows.</p><p>I lead the whole room — story, space, graphics, media and the team that builds it. The work I want to make is calm to run and impossible to forget once you have walked through it.</p>
+    <div class="plate"><img src="../../_shared/img/portrait--4x5-2000.jpg" alt="Sanzeed Mirza" style="object-position: 50% 30%"></div>
+    <div class="wl" style="margin-top:1.5mm"><b>Sanzeed Mirza</b><span class="sep">·</span>New Delhi</div>
+    <div class="stats"><div class="stat"><div class="n">15<span class="plus">+</span></div><div class="l">Years of experience</div></div><div class="stat"><div class="n">8<span class="plus">+</span></div><div class="l">Years experiential &amp; museum</div></div><div class="stat"><div class="n">90<span class="plus">+</span></div><div class="l">Projects directed</div></div><div class="stat"><div class="n">60<span class="plus">+</span></div><div class="l">Museums &amp; centres</div></div></div>
+    <div class="trust">Trusted by PwC, Microsoft, Discovery and National Museums, from concept to public unveiling.</div>
+  </div></div>
+  <div class="fold" style="left:98mm"></div>
+  <div class="panel p-back"><div class="pad">
+    <div class="eyebrow-quiet">Get in touch</div>
+    <h2 class="hl opsz72">Tell me about the room<span class="pt">.</span></h2>
+    <div class="contact">A few lines are enough. I reply within two working days.<br><br><b>sanzeed@gmail.com</b><br>WhatsApp @sanzeed<br>Call +91 7827051270<br>linkedin.com/in/sanzeed<br>sanzeed.com<br>New Delhi, India</div>
+    <div class="promises">The first conversation is always free.<br>I reply within two working days.<br>If it is urgent, WhatsApp is fastest.</div>
+    <img class="mark lock" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg" alt="Sanzeed — Experiential Design Consultant">
+    <div class="rights">Employee work for Tagbin, Sociopixel, DWS and B2W; rights remain with those companies.</div>
+  </div></div>
+  <div class="fold" style="left:197mm"></div>
+  <div class="panel p-front">
+    <img class="mark" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <div class="plate"><img src="../../_shared/img/hero-object--dark-4x5-1600.jpg" alt="The point of light"></div>
+    <div class="wl"><b>Between two points of light</b><span class="sep">·</span>sanzeed.com</div>
+    <h1 class="hl">Experiential design you can walk into<span class="pt">.</span></h1>
+    <div class="url">Sanzeed Mirza · Experiential Design Consultant · sanzeed.com</div>
+  </div>
+</div></section>
+<section class="sheet light theme-light" id="inside"><div class="in">
+  <div class="panel p-i1"><div class="pad">
+    <div class="eyebrow">Seven services</div>
+    <h2 class="hl opsz72">Between two points of light<span class="pt">.</span></h2>
+    <p class="sub">A brief on one side, a visitor on the other. Seven ways to carry the light across.</p>
+    <div class="svc"><span class="c">01</span><div><b>Experiential Design &amp; Creative Direction</b><span>One vision from brief to opening night: narrative, space, media and the team that builds it.</span></div></div><div class="svc"><span class="c">02</span><div><b>Museum &amp; Cultural Exhibition Planning</b><span>Galleries planned as a route, not a floor plan. Objects, stories and dwell time, in order.</span></div></div><div class="svc"><span class="c">03</span><div><b>Immersive Storytelling &amp; Narrative Architecture</b><span>The script comes first. Every room, screen and surface carries a line of it.</span></div></div><div class="svc"><span class="c">04</span><div><b>Spatial Experience &amp; Environmental Branding</b><span>Brands you can stand inside: pavilions, experience centres, thresholds and wayfinding.</span></div></div><div class="svc"><span class="c">05</span><div><b>Event Production &amp; Brand Activation</b><span>Shows, launches and tableaux where light and timing do the talking.</span></div></div><div class="svc"><span class="c">06</span><div><b>Digital ↔ Physical Experience Integration</b><span>Projection, AR and VR, sensors and data brought into real rooms and real crowds.</span></div></div><div class="svc"><span class="c">07</span><div><b>Cross-Functional Leadership &amp; Mentorship</b><span>Designers, writers, architects, producers and technologists moved toward one outcome, calmly.</span></div></div>
+    <div class="all"><b>All seven, every time.</b>Every room needs the whole list, held in one hand. That is the job, and the pleasure of it.</div>
+  </div></div>
+  <div class="fold" style="left:100mm"></div>
+  <div class="panel p-i2"><div class="pad">
+    <div class="eyebrow">Method</div>
+    <h2 class="hl opsz72">A method for the monumental<span class="pt">.</span></h2>
+    <p class="sub">Every environment begins as a question and ends as a memory. The path between is deliberate — equal parts strategy and craft, ambition and discipline.</p>
+    <div class="step"><div class="ey">Step 01</div><b>Discover</b><span>Immersion in the subject — its history, intent and audience — until the central story reveals itself. <i>You receive a research deck and the one central story.</i></span></div><div class="step"><div class="ey">Step 02</div><b>Direct</b><span>A unifying creative vision that aligns designers, architects, writers, producers and technologists toward one outcome. <i>You receive a concept book and a walkthrough film.</i></span></div><div class="step"><div class="ey">Step 03</div><b>Craft</b><span>Space, light, motion and interaction composed into environments that engage intellectually, emotionally and physically. <i>You receive detail drawings, media scripts and a prototype room.</i></span></div><div class="step"><div class="ey">Step 04</div><b>Deliver</b><span>Concept to launch — balancing creative ambition with operational discipline. On scale, on story, on time. <i>You receive a built, tested and opened experience.</i></span></div>
+  </div></div>
+  <div class="fold" style="left:199mm"></div>
+  <div class="panel p-i3"><div class="pad">
+    <div class="eyebrow">Now showing</div>
+    <h2 class="hl opsz72">Vision you can walk into<span class="pt">.</span></h2>
+    <div class="case"><div class="plate"><img src="../../_shared/img/jpg/case--prime-minister-museum-03.jpg" alt="Prime Minister Museum"></div>
+      <div class="wl"><b>Prime Minister Museum</b><span class="sep">·</span>New Delhi</div>
+      <p><b>A corridor you walk in order.</b> Visitors walk the whole line of leaders without a map, and come out knowing the order by heart.</p></div><div class="case"><div class="plate"><img src="../../_shared/img/jpg/case--ram-katha-show-07.jpg" alt="Ram Katha Show"></div>
+      <div class="wl"><b>Ram Katha Show</b><span class="sep">·</span>Ayodhya</div>
+      <p><b>The building is the screen.</b> Visitors sit in the dark and watch a building they know by day become the story by night.</p></div><div class="case"><div class="plate"><img src="../../_shared/img/jpg/case--buddha-park-05.jpg" alt="Buddha Park"></div>
+      <div class="wl"><b>Buddha Park</b><span class="sep">·</span>Uttarakhand</div>
+      <p><b>A garden of gestures.</b> Visitors complete the loop at their own pace and end at the water, facing the Buddha.</p></div>
+    <div class="see"><b>See the work.</b> Ninety projects, three case studies and the films at sanzeed.com</div>
+  </div></div>
+</div></section>
+</body>
+</html>

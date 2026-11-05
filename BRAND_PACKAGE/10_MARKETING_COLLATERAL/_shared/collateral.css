@@ -1,0 +1,64 @@
+/* ==========================================================================
+   SANZEED — collateral.css  (10_MARKETING_COLLATERAL layer on top of brand.css)
+   Load AFTER ../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css.
+   Adds the campaign vocabulary: the room (plate), the wall label, the point,
+   the beam, the route, print page helpers. Every HTML source in this folder
+   links both files with relative paths; edit the HTML, re-run render.js.
+   ========================================================================== */
+html, body { height: 100%; }
+body { overflow: hidden; }
+.page { position: relative; overflow: hidden; background: var(--bg); color: var(--fg); }
+.page.grain::after { z-index: 3; }
+
+/* ---- Headline: Fraunces 300, sentence case, ends with the point ---- */
+.hl { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.015em; line-height: 1.02;
+      font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; text-wrap: balance; }
+.hl.opsz72 { font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 0; }
+.pt { color: var(--accent); }                /* the point: a gold full stop */
+.hl .pt { font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; }
+
+/* ---- Eyebrow variants ---- */
+.eyebrow-quiet { font-family: var(--font-heading); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); }
+
+/* ---- The room: image plate ---- */
+.plate { position: relative; overflow: hidden; border-radius: 28px; border: 1px solid var(--line); background: var(--card); }
+.plate.sm { border-radius: 20px; }
+.plate.xs { border-radius: 12px; }
+.plate > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.plate.veil::after { content: ""; position: absolute; inset: 0; background: var(--sz-gradient-veil); pointer-events: none; }
+.plate .on { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; }
+
+/* ---- Wall label: Title (Inter Tight 600) · Place (Inter 400, fg-3) ---- */
+.wl { font-family: var(--font-text); font-weight: 400; color: var(--fg-3); line-height: 1.4; }
+.wl b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); }
+.wl .sep { margin: 0 .35em; }
+
+/* ---- The beam and the route ---- */
+.beam-h { position: relative; height: 1px; background: var(--line); }
+.beam-h::before { content: ""; position: absolute; top: 50%; left: 0; width: 9px; height: 9px; margin-top: -4.5px; border-radius: 50%; background: var(--accent); }
+.beam-h.end::before { left: auto; right: 0; }
+.beam-h.glow::before { box-shadow: var(--glow); }
+.route { position: relative; height: 1px; background: repeating-linear-gradient(90deg, var(--fg-3) 0 2px, transparent 2px 10px); }
+
+/* ---- Buttons (static renders) ---- */
+.cta { display: inline-flex; align-items: center; gap: .5em; border-radius: 999px; background: var(--btn); color: var(--btn-fg); font: 500 15px/1 var(--font-text); padding: 14px 22px; }
+.cta-ghost { display: inline-flex; align-items: center; gap: .5em; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); font: 500 15px/1 var(--font-text); padding: 14px 22px; }
+
+/* ---- Counters / tables ---- */
+.num { font-variant-numeric: tabular-nums; }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.45; }
+th { font-family: var(--font-heading); font-weight: 600; color: var(--fg-2); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ---- Lamp glow behind one lit object ---- */
+.lamp { position: absolute; border-radius: 50%; background: radial-gradient(closest-side, rgba(233,178,90,.38) 0%, rgba(233,178,90,.10) 45%, rgba(0,0,0,0) 100%); pointer-events: none; }
+.theme-light .lamp, html[data-theme="light"] .lamp { background: radial-gradient(closest-side, rgba(184,134,59,.22) 0%, rgba(184,134,59,.06) 45%, rgba(0,0,0,0) 100%); }
+
+/* ---- Print pages ---- */
+@media print { body { overflow: visible; } }
+.sheet { position: relative; overflow: hidden; background: var(--bg); color: var(--fg); page-break-after: always; break-after: page; }
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.bleed-guide { position: absolute; inset: 3mm; border: 0; pointer-events: none; }
+
+/* ---- PDF/print: the grain is a screen texture; it rasterises heavily in PDF, so it is dropped in print media ---- */
+@media print { .grain::after { display: none; } }

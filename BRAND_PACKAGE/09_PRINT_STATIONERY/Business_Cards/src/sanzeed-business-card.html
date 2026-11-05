@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Sanzeed — business card (HTML master, concepts A and B)</title>
+<!-- Editable HTML version of the business-card masters. Page = trim 89×51 mm + 3 mm bleed = 95×57 mm.
+     Render: node ../../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in sanzeed-business-card.html --out out.pdf --pdf --size 95x57
+     Fonts and tokens come from brand.css (relative path). Logos are the production SVGs from 02_LOGO_SYSTEM. -->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  @page { size: 95mm 57mm; margin: 0; }
+  html, body { margin: 0; background: #fff; }
+  .card { position: relative; width: 95mm; height: 57mm; overflow: hidden; page-break-after: always; break-after: page; }
+  .card:last-child { page-break-after: auto; break-after: auto; }
+  .plaster { background: #F5F0E7; color: #1A1816; }
+  .dark { background: #000; color: #F5F5F7; }
+  .dark .lamp { position: absolute; inset: 0; background: radial-gradient(58% 58% at 50% 50%, rgba(233,178,90,.34) 0%, rgba(233,178,90,.12) 28%, rgba(0,0,0,0) 70%); }
+  .centre { position: absolute; inset: 0; display: grid; place-items: center; }
+  .centre img { display: block; }
+  .lockup { width: 54mm; }
+  .wordmark { width: 46mm; }
+  .back { position: absolute; left: 11mm; top: 3mm; right: 11mm; }
+  .name { font-family: "Fraunces", serif; font-weight: 300; font-size: 12pt; line-height: 1; margin-top: 9.3mm; font-variation-settings: "opsz" 36, "SOFT" 30, "WONK" 0; }
+  .descriptor { font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: 5.6pt; letter-spacing: .12em; text-transform: uppercase; color: #665F55; margin-top: 3.2mm; }
+  .rule { border: 0; border-top: .12mm solid rgba(26,24,22,.10); margin: 3.2mm 0 4.2mm; }
+  .contact { font-family: "Inter", sans-serif; font-weight: 400; font-size: 7pt; line-height: 4mm; }
+  .contact .city { color: #665F55; }
+  .line { font-family: "Fraunces", serif; font-weight: 300; font-size: 9.5pt; margin-top: 4.8mm; font-variation-settings: "opsz" 36, "SOFT" 30, "WONK" 0; }
+  .line .point { color: #B8863B; }
+  .sep { opacity: .6; padding: 0 .6em; }
+</style>
+</head>
+<body>
+
+<!-- Concept A · front — horizontal-descriptor lockup on Plaster -->
+<section class="card plaster">
+  <div class="centre"><img class="lockup" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg" alt="Sanzeed — Experiential Design Consultant"></div>
+</section>
+
+<!-- Concept A · back -->
+<section class="card plaster">
+  <div class="back">
+    <div class="name">Sanzeed Mirza</div>
+    <div class="descriptor">Experiential Design Consultant</div>
+    <hr class="rule">
+    <div class="contact">+91 7827051270<span class="sep">·</span>sanzeed@gmail.com<br>sanzeed.com<span class="sep">·</span>linkedin.com/in/sanzeed<br><span class="city">New Delhi, India</span></div>
+    <div class="line">Experiential design you can walk into<span class="point">.</span></div>
+  </div>
+</section>
+
+<!-- Concept B · front — primary wordmark on Gallery Black with the lamp -->
+<section class="card dark">
+  <div class="lamp"></div>
+  <div class="centre"><img class="wordmark" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="SANZEED"></div>
+</section>
+
+<!-- Concept B · back -->
+<section class="card plaster">
+  <div class="back">
+    <div class="name">Sanzeed Mirza</div>
+    <div class="descriptor">Experiential Design Consultant</div>
+    <hr class="rule">
+    <div class="contact">+91 7827051270<span class="sep">·</span>sanzeed@gmail.com<br>sanzeed.com<span class="sep">·</span>linkedin.com/in/sanzeed<br><span class="city">New Delhi, India</span></div>
+    <div class="line">Experiential design you can walk into<span class="point">.</span></div>
+  </div>
+</section>
+
+</body>
+</html>

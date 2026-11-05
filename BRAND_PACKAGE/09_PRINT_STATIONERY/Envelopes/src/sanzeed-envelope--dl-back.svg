@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="226mm" height="116mm" viewBox="0 0 226 116" version="1.1">
+  <title>Sanzeed envelope 220×110 — back</title>
+  <desc>Back: symbol centred on the flap; return line under the fold. Dieline on the guides layer. Units: 1 user unit = 1 mm. Layers: paper, artwork, guides (non-printing). Fonts: Fraunces 300, Inter Tight 600, Inter 400 (04_TYPOGRAPHY/Font_Files). Logo paths embedded from 02_LOGO_SYSTEM/SVG.</desc>
+  <sodipodi:namedview inkscape:document-units="mm" showgrid="false" />
+  <defs></defs>
+  <g inkscape:groupmode="layer" inkscape:label="paper" id="layer-paper">
+<rect x="0.000" y="0.000" width="226.000" height="116.000" rx="0" fill="#F5F0E7" stroke="none" stroke-width="0.12" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="artwork" id="layer-artwork">
+<path d="M3.00 3.00 L223.00 3.00 L223.00 33.00 L217.00 39.00 L9.00 39.00 L3.00 33.00 Z" fill="#FBF8F2" />
+<g id="symbol" inkscape:label="logo symbol full-colour-light" transform="translate(108.5000 15.7375) scale(0.015050) translate(-0.0 -0.0)"><g
+     transform="translate(0 0)">
+    <g
+       id="symbol-symbol">
+      <g
+         id="symbol-symbol-ink"
+         fill="#1A1816">
+        <path
+           id="symbol-symbol-S-0"
+           d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z " />
+      </g>
+      <g
+         id="symbol-symbol-dots"
+         fill="#B8863B">
+        <circle
+           cx="553"
+           cy="455"
+           r="45" />
+      </g>
+    </g>
+  </g></g>
+<line x1="15.000" y1="48.000" x2="211.000" y2="48.000" stroke="#1A1816" stroke-opacity="0.1" stroke-width="0.12" />
+<text x="15.0000" y="52.5000" text-anchor="start" xml:space="preserve" style="font-family:'Inter';font-weight:400;font-size:2.4694px;fill:#665F55;line-height:1" >Sanzeed Mirza  ·  Experiential Design Consultant  ·  [Postal address], New Delhi, India  ·  sanzeed.com</text>
+  </g>
+<!--GUIDES-->
+  <g inkscape:groupmode="layer" inkscape:label="guides (non-printing)" id="layer-guides" style="display:inline">
+<rect x="0.060" y="0.060" width="225.880" height="115.880" rx="0" fill="none" stroke="#C0392B" stroke-width="0.12" stroke-dasharray="1 0.6"/>
+<rect x="3.000" y="3.000" width="220.000" height="110.000" rx="0" fill="none" stroke="#2F62A0" stroke-width="0.12" />
+<rect x="15.000" y="15.000" width="196.000" height="86.000" rx="0" fill="none" stroke="#2E6E48" stroke-width="0.12" stroke-dasharray="0.6 0.6"/>
+<line x1="3" y1="3" x2="0" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="3" x2="3" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="223" y1="3" x2="226" y2="3" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="223" y1="3" x2="223" y2="0" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="113" x2="0" y2="113" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="3" y1="113" x2="3" y2="116" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="223" y1="113" x2="226" y2="113" stroke="#2F62A0" stroke-width="0.12"/>
+<line x1="223" y1="113" x2="223" y2="116" stroke="#2F62A0" stroke-width="0.12"/>
+<text x="4.0000" y="112.2000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.4111px;fill:#2F62A0;line-height:1" >TRIM 220 × 110 mm · BLEED 3 mm · SAFE 12 mm</text><path d="M3.00 3.00 L223.00 3.00 L223.00 33.00 L217.00 39.00 L9.00 39.00 L3.00 33.00 Z" fill="none" stroke="#C0392B" stroke-width="0.15" /><line x1="3" y1="39" x2="223" y2="39" stroke="#C0392B" stroke-width="0.15" stroke-dasharray="2 1" /><text x="15.0000" y="37.5000" text-anchor="start" xml:space="preserve" style="font-family:'Inter Tight';font-weight:500;font-size:1.7639px;fill:#C0392B;line-height:1;letter-spacing:0.1411px" >FLAP — 36 MM DEEP, FOLD ON THE TOP EDGE (DIELINE: ADAPT TO THE CONVERTER'S STANDARD FLAP)</text>
+  </g>
+<!--/GUIDES-->
+</svg>
