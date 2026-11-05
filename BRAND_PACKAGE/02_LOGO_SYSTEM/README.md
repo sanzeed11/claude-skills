@@ -49,7 +49,7 @@ Every file here is generated from one editable master: `15_SOURCE_FILES/Project_
 
 ## Rules (see also `12_BRAND_GUIDELINES`)
 
-- **Clear space:** x = ½ cap height of the logo in use, on all sides.
+- **Clear space:** x = ½ cap height of the logo in use, on all sides (symbol on its own: ¼ of its height).
 - **Minimum size:** wordmark 120 px / 28 mm; horizontal-descriptor 220 px / 50 mm; vertical 90 px / 22 mm; symbol 16 px / 6 mm; below those use the simplified/small-size versions.
 - **Backgrounds:** flat brand colours or photography darkened to ≥ 80 % black under the logo. Never on gold (except the black logo on the gold tile), never on busy imagery.
 - **Placement:** top-left or centred; on documents the horizontal-descriptor lockup sits top-left at 20 mm margins; on covers the primary wordmark sits bottom-left or centred with the lamp glow behind.
