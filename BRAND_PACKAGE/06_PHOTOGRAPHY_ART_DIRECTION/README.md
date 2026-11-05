@@ -2,7 +2,7 @@
 
 The imagery layer of the Sanzeed brand: thirty approved project images with a repeatable grade, the portrait in four ratios, an A3 moodboard, a sixteen-page A4 photography guideline, and a set of image-treatment templates (HTML, Python, SVG). Everything is built from the client's own project visuals in `00_ORIGINAL_ASSETS_BACKUP/images/` — no stock, no AI imagery. Every export has an editable source next to it, and every render was checked by eye (logo pairing, clear space, one gold accent, Fraunces 300 display, nothing clipped, tabular figures in tables).
 
-Folder total: ~74 MB, 145 files.
+Folder total: ~77 MB, 145 files.
 
 ## The idea in one line
 
@@ -42,7 +42,7 @@ Folder total: ~74 MB, 145 files.
 | File | Spec | Edit |
 |---|---|---|
 | `Moodboard.pdf` | 420×297 mm, 4 pages: 001 Overview (the lit room), 002 Museums & experience centres, 003 Projection & shows, 004 Portrait & people; dark pages, grain, wall labels, eyebrows, a short art-direction note and four cues per page, primary wordmark (full-colour-dark) top right | source `src/moodboard/moodboard.html`; page spec and images in `src/moodboard/build_moodboard.py` → `python3 build_moodboard.py` (writes the HTML, renders with `render.js --pdf --size 420x297 --landscape`, then `pdftoppm -r 110` for the PNGs) |
-| `Moodboard_Pages/sanzeed-moodboard--p01-overview.png` … `p04-portrait-people.png` | 1819×1286 px PNG per page | same |
+| `Moodboard_Pages/sanzeed-moodboard--p01-overview.png` … `p04-portrait-people.png` | 1820×1287 px PNG per page (110 dpi) | same |
 
 To change only the layout or copy by hand, edit `moodboard.html` directly and render: `node ../../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in moodboard.html --out ../../Moodboard.pdf --pdf --size 420x297 --landscape`.
 
@@ -72,7 +72,7 @@ To change only the layout or copy by hand, edit `moodboard.html` directly and re
 | File | Spec | Edit |
 |---|---|---|
 | `Photography_Guidelines.pdf` | 210×297 mm, 16 pages, light (Plaster) inner pages with Gold Ink eyebrows and Old Gold accents, dark cover; fonts embedded by Chromium | source `src/guidelines/photography-guidelines.html`; render with `python3 src/guidelines/build_guidelines.py` |
-| `Photography_Guidelines_Pages/sanzeed-photography-guidelines--p01.png` … `p16.png` | 992×1403 px PNG previews (120 dpi) | same script |
+| `Photography_Guidelines_Pages/sanzeed-photography-guidelines--p01.png` … `p16.png` | 992×1404 px PNG previews (120 dpi) | same script |
 | `src/guidelines/assets/*` | the example images (before/after pairs, `curve.svg`, the four bad examples, the five crops, the veil pair) | regenerate with `python3 src/guidelines/build_assets.py` (uses `grade.py` and `treat_image.py`) |
 
 ---

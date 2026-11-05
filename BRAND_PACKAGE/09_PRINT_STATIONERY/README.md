@@ -42,7 +42,7 @@ python3 build_thank_you.py && python3 build_presentation.py && python3 gather_pr
 | `src/sanzeed-business-card.html` | The same four faces as an HTML master on brand.css (`@page 95mm 57mm`) | the HTML; render with `render.js --pdf --size 95x57` |
 | `sanzeed-business-card--concept-a.pdf`, `--concept-b.pdf` | Screen PDF at trim, 2 pages (front, back), text outlined | the SVGs |
 | `sanzeed-business-card--concept-a--print-cmyk.pdf`, `--concept-b--print-cmyk.pdf` | Print-ready: crop marks, trim/bleed boxes, CMYK, 115 × 77 mm sheet | the SVGs via `print_pdf.py` |
-| `sanzeed-business-card--{a,b}-{front,back}-2x.png` | 300 dpi previews, 1051 × 602 px | the PDFs |
+| `sanzeed-business-card--{a,b}-{front,back}-2x.png` | 300 dpi previews, 1052 × 603 px | the PDFs |
 | `sanzeed-business-card--html-version.pdf` | 4-page trim PDF rendered from the HTML master | the HTML |
 | `specifications.md` | Stock, finish, colour, foil option for the dots, imposition | — |
 

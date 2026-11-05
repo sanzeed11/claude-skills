@@ -173,7 +173,12 @@ def treat(im, ratio=None, focal=(0.5, 0.5), width=None, grade=1.0, veil=0.0, vei
     im = im.convert("RGB")
     if ratio: im = crop_to_ratio(im, ratio, focal)
     if width and width != im.width:
-        im = im.resize((int(width), int(round(im.height * width / im.width))), Image.LANCZOS)
+        if ratio:  # exact platform pixels: height from the requested ratio, not from the rounded crop
+            rw, rh = parse_ratio(ratio) if isinstance(ratio, str) else ratio
+            h = int(round(width * rh / rw))
+        else:
+            h = int(round(im.height * width / im.width))
+        im = im.resize((int(width), h), Image.LANCZOS)
     if grade: im = grade_image(im, grade)
     if veil: im = add_veil(im, veil, top=veil_top)
     if title or place or counter or headline or concept:

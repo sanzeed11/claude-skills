@@ -27,6 +27,15 @@ node ../../15_SOURCE_FILES/Project_Files/brand-kit/render.js --in Font_Reference
 
 Preview any page: `pdftoppm -r 60 -f 3 -l 3 -png Font_Reference.pdf page`.
 
+## Embedded fonts (pdffonts)
+
+Every PDF in this folder embeds Fraunces, Inter Tight and Inter subsets (Chromium names the Fraunces variable instances
+`Fraunces-9ptBlack`; the rendered weight is 300). Two documented exceptions: `DejaVuSansMono` is the `.mono` code face
+from `doc.css` (file paths and token names, `Font_Reference.pdf` pp. 12 and 19, `sanzeed-type-responsive-scale.pdf`),
+and `LiberationSerif` appears only on the character-set sheet (`Font_Reference.pdf` p. 16,
+`sanzeed-type-character-set.pdf`) as the browser fallback for the few glyphs the Fraunces subset does not carry.
+No brand text is set in either.
+
 ## Where the rules are applied
 
 - `15_SOURCE_FILES/Project_Files/brand-kit/brand.css` — `.t-display-1 … .t-stat` fluid classes, fonts via `@font-face` (woff2, local() first).

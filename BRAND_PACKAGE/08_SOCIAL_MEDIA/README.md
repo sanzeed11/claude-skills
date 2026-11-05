@@ -39,7 +39,7 @@ Every render was opened after generation and checked: the wordmark variant match
 light) and sits on ≥ 80 % black with its clear space; one gold accent per composition; Fraunces renders as the light serif;
 nothing clipped or overlapping; no empty boxes; story copy inside the 1080×1420 band; banner copy inside the platform safe
 areas and clear of the avatar overlaps (the `--guide` renders show the zones). All 94 raster exports were measured at their
-exact platform pixels; the carousel PDF has five 1080×1350 px pages; the six PPTX files open in LibreOffice with the brand
+exact platform pixels; the carousel PDF has five 1080 × 1351 px pages (CSS `@page` 1080 × 1350 px; Chromium rounds the height up by one pixel — LinkedIn accepts it as 4:5); the six PPTX files open in LibreOffice with the brand
 fonts resolved (proofs in `Editable_Templates/PPTX/proofs/`).
 
 ## Requirements
