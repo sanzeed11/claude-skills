@@ -1,0 +1,95 @@
+/* og.css — shared layout for the Open Graph / share cards. Requires brand.css.
+   Rendered at 1200×630 (landscape, @media default) and 1200×1200 (square: max-aspect-ratio 1.3/1).
+   Key content stays inside the centre 1200×600 band on landscape. */
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #000; color: var(--fg); }
+.og { position: relative; width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 56px 72px; box-sizing: border-box; }
+.og.bg-lamp { background-image: var(--sz-gradient-lamp); background-size: 100% 100%; }
+.og.lamp-low { background-image: radial-gradient(60% 60% at 50% 62%, rgba(233,178,90,.45) 0%, rgba(233,178,90,.10) 30%, rgba(0,0,0,0) 70%); }
+.og .wm { display: block; height: auto; color: #F5F5F7; }
+.og .wm .wm-dot { fill: #E9B25A; }
+.og .eyebrow { color: #E9B25A; font-size: 14px; letter-spacing: .14em; }
+.og .site { font: 500 15px/1 var(--font-text); letter-spacing: .02em; color: #808086; }
+.og h1, .og .line { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; line-height: 1.04; text-wrap: balance; margin: 0; }
+.og .lit { color: #E9B25A; }
+.og .dim { color: #808086; }
+.og .lead { font: 400 21px/1.5 var(--font-text); color: #A1A1A6; }
+.og .foot { position: absolute; left: 72px; right: 72px; bottom: 44px; display: flex; align-items: center; justify-content: space-between; }
+.og .top { position: absolute; left: 72px; right: 72px; top: 44px; display: flex; align-items: center; justify-content: space-between; }
+.og .grain::after, .og.grain::after { border-radius: 0; }
+
+/* centred cards: default, contact */
+.og-centred { align-items: center; text-align: center; }
+.og-centred .wm { width: 420px; margin-bottom: 44px; }
+.og-centred h1 { font-size: 56px; max-width: 18ch; }
+.og-centred .eyebrow { margin-top: 28px; }
+.og-centred .lead { margin-top: 20px; max-width: 42ch; }
+.og-centred .foot .wm { width: 190px; margin: 0; }
+.og-centred .reach { display: flex; gap: 28px; margin-top: 26px; font: 500 17px/1 var(--font-text); color: #A1A1A6; }
+
+/* left-aligned home card with the orbit */
+.og-home { justify-content: center; }
+.og-home .copy { position: relative; z-index: 2; max-width: 640px; }
+.og-home .eyebrow { display: block; margin-bottom: 22px; }
+.og-home h1 { font-size: 66px; max-width: 12ch; }
+.og-home .lead { margin-top: 22px; max-width: 36ch; font-size: 19px; }
+.og-home .orbit { position: absolute; right: -40px; top: 50%; width: 560px; transform: translateY(-50%); color: #F5F5F7; }
+.og-home .foot .wm { width: 190px; }
+
+/* work card: image + veil, title bottom-left, wordmark bottom-right */
+.og-work { padding: 0; justify-content: flex-end; }
+.og-work .img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.og-work .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.12) 30%, rgba(0,0,0,.55) 58%, rgba(0,0,0,.90) 82%, rgba(0,0,0,.94) 100%); }
+.og-work .top { z-index: 2; }
+.og-work .top .eyebrow { color: #E9B25A; }
+.og-work .site { color: #A1A1A6; }
+.og-work .foot { z-index: 2; align-items: flex-end; }
+.og-work h1 { font-size: 60px; max-width: 14ch; color: #F5F5F7; }
+.og-work .place { margin-top: 12px; font: 400 20px/1.4 var(--font-text); color: #A1A1A6; }
+.og-work .place b { font-weight: 500; color: #F5F5F7; }
+.og-work .foot .wm { width: 190px; margin-bottom: 6px; }
+.og-work .right { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+
+/* about card: copy left, portrait right */
+.og-about { padding: 0; }
+.og-about .copy { position: relative; z-index: 2; padding: 56px 72px; width: 58%; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.og-about .eyebrow { display: block; margin-bottom: 22px; }
+.og-about h1 { font-size: 54px; max-width: 14ch; }
+.og-about .who { margin-top: 26px; font: 400 18px/1.5 var(--font-text); color: #A1A1A6; }
+.og-about .who b { display: block; font: 600 20px/1.3 var(--font-heading); color: #F5F5F7; letter-spacing: -0.01em; }
+.og-about .portrait { position: absolute; top: 0; right: 0; bottom: 0; width: 46%; background-size: cover; background-position: 50% 18%; }
+.og-about .portrait::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #000 0%, rgba(0,0,0,.55) 22%, rgba(0,0,0,0) 55%); }
+.og-about .portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.8) 100%); }
+.og-about .foot { z-index: 2; }
+.og-about .foot .wm { width: 190px; }
+
+/* square 1200×1200 */
+@media (max-aspect-ratio: 1.3/1) {
+  .og { padding: 96px 96px; }
+  .og .foot { left: 96px; right: 96px; bottom: 80px; }
+  .og .top { left: 96px; right: 96px; top: 80px; }
+  .og-centred .wm { width: 520px; margin-bottom: 64px; }
+  .og-centred .foot .wm { width: 220px; }
+  .og-centred h1 { font-size: 72px; max-width: 14ch; }
+  .og-centred .lead { font-size: 24px; max-width: 32ch; }
+  .og-centred .reach { flex-direction: column; gap: 14px; align-items: center; font-size: 20px; }
+  .og-home { justify-content: flex-start; padding-top: 150px; }
+  .og-home .copy { max-width: 100%; }
+  .og-home h1 { font-size: 84px; max-width: 12ch; }
+  .og-home .lead { font-size: 22px; max-width: 40ch; }
+  .og-home .orbit { right: auto; left: 50%; top: auto; bottom: 150px; width: 640px; transform: translateX(-50%); }
+  .og-home .foot .wm { width: 220px; }
+  .og-work .veil { background: linear-gradient(180deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.1) 28%, rgba(0,0,0,.5) 60%, rgba(0,0,0,.9) 80%, rgba(0,0,0,.95) 100%); }
+  .og-work h1 { font-size: 76px; }
+  .og-work .place { font-size: 23px; }
+  .og-work .foot { flex-direction: column; align-items: flex-start; gap: 44px; }
+  .og-work .right { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+  .og-work .foot .wm { width: 220px; }
+  .og-about { justify-content: flex-end; }
+  .og-about .copy { width: 100%; height: auto; justify-content: flex-end; padding: 0 96px 190px; }
+  .og-about h1 { font-size: 64px; max-width: 16ch; }
+  .og-about .portrait { width: 100%; height: 64%; top: 0; bottom: auto; background-position: 50% 30%; }
+  .og-about .portrait::before { background: none; }
+  .og-about .portrait::after { background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.1) 45%, rgba(0,0,0,.75) 78%, #000 100%); }
+  .og-about .foot .wm { width: 220px; }
+}

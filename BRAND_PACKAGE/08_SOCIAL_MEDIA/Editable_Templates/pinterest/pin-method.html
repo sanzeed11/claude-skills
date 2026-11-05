@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Pinterest pin — method, light label variant — 1000×1500 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the four steps (sanzeed.com/#method) =================== */
+var DATA = {
+  eyebrow:  "Method",
+  headline: "A method for the monumental.",
+  lit_last_word: false,
+  n1: "01", t1: "Discover", d1: "A research deck and the one central story.",
+  n2: "02", t2: "Direct",   d2: "A concept book and a walkthrough film.",
+  n3: "03", t3: "Craft",    d3: "Detail drawings, media scripts and a prototype room.",
+  n4: "04", t4: "Deliver",  d4: "A built, tested and opened experience.",
+  foot: "Every environment begins as a question and ends as a memory.",
+  site: "sanzeed.com/#method"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .top { align-items: center; }
+  .hl { position: absolute; left: var(--pad); right: var(--pad); top: 190px; font-size: 80px; max-width: 11ch; z-index: 3; }
+  .steps { position: absolute; left: var(--pad); right: var(--pad); top: 460px; z-index: 3; }
+  .step { display: grid; grid-template-columns: 90px 1fr; gap: 0 24px; padding: 34px 0; border-top: 1px solid var(--line); position: relative; }
+  .step::before { content: ""; position: absolute; left: 0; top: -5px; width: 9px; height: 9px; border-radius: 50%; background: var(--fg-3); }
+  .step.on::before { background: var(--accent); }
+  .step .n { font: 500 18px/1 var(--font-heading); letter-spacing: .08em; color: var(--accent-text); font-variant-numeric: tabular-nums; padding-top: 10px; }
+  .step .t { font: 300 48px/1 var(--font-display); font-variation-settings: "opsz" 72, "SOFT" 30; color: var(--fg); letter-spacing: -0.01em; }
+  .step .d { grid-column: 2; margin-top: 12px; font: 400 22px/1.45 var(--font-text); color: var(--fg-2); max-width: 30ch; }
+  .steps .last { border-top: 1px solid var(--line); }
+  .bottom { bottom: 64px; align-items: flex-end; }
+  .foot { font: 400 20px/1.45 var(--font-text); color: var(--fg-3); max-width: 30ch; }
+</style>
+</head>
+<body class="f-pin">
+<div class="frame">
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-light.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <h1 class="hl" data-headline="headline"></h1>
+  <div class="steps">
+    <div class="step on"><span class="n" data-text="n1"></span><span class="t" data-text="t1"></span><span class="d" data-text="d1"></span></div>
+    <div class="step"><span class="n" data-text="n2"></span><span class="t" data-text="t2"></span><span class="d" data-text="d2"></span></div>
+    <div class="step"><span class="n" data-text="n3"></span><span class="t" data-text="t3"></span><span class="d" data-text="d3"></span></div>
+    <div class="step"><span class="n" data-text="n4"></span><span class="t" data-text="t4"></span><span class="d" data-text="d4"></span></div>
+    <div class="last"></div>
+  </div>
+  <div class="bottom"><span class="foot" data-text="foot"></span><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Instagram portrait — project, light label variant — 1080×1350 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the project ===================
+   Light "label" variant: Plaster ground, Soot type, Old Gold point. The picture sits in a 16:9 room. */
+var DATA = {
+  eyebrow:       "Case study · Museums & Experience Centres",
+  image:         "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/buddha-park-06.webp",
+  image_focal:   "50% 55%",
+  headline:      "A garden of gestures.",
+  lit_last_word: false,
+  title:         "Buddha Park",
+  place:         "Uttarakhand",
+  body:          "The walk itself is the meditation; nothing is read, everything is passed.",
+  line:          "Concept & creative direction",
+  site:          "sanzeed.com/work/buddha-park"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .top { align-items: center; }
+  .plate { position: absolute; left: var(--pad); right: var(--pad); top: 190px; }
+  .copy { position: absolute; left: var(--pad); right: var(--pad); top: 772px; }
+  .hl { font-size: 80px; max-width: 12ch; }
+  .label { margin-top: 30px; }
+  .label .t { font-size: 26px; } .label .p { font-size: 23px; }
+  .body { margin-top: 34px; max-width: 30ch; }
+  .beam { width: 140px; margin-top: 40px; }
+  .bottom { align-items: flex-end; }
+  .bottom .l { font: 400 20px/1.4 var(--font-text); color: var(--fg-3); }
+</style>
+</head>
+<body class="f-pt">
+<div class="frame">
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-light.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="plate r16"><img data-src="image" alt=""></div>
+  <div class="copy">
+    <h1 class="hl" data-headline="headline"></h1>
+    <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+    <p class="body" data-text="body"></p>
+  </div>
+  <div class="bottom"><span class="l" data-text="line"></span><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

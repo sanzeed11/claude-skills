@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn post — insight, light label variant — 1200×627 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — one insight, one image ===================
+   Light "label" variant. The insight is two short sentences; the image is the project it comes from. */
+var DATA = {
+  eyebrow:     "Insight",
+  insight:     "The spine of the museum is a single long passage. The building tells the story before any gallery does.",
+  image:       "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-03.webp",
+  image_focal: "50% 50%",
+  title:       "Prime Minister Museum",
+  place:       "New Delhi",
+  site:        "sanzeed.com"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .copy { position: absolute; left: var(--pad); top: var(--pad); bottom: var(--pad); width: 640px; display: flex; flex-direction: column; justify-content: space-between; z-index: 3; }
+  .copy .eyebrow { margin-top: 10px; }
+  .insight { font-family: var(--font-display); font-weight: 300; font-size: 44px; line-height: 1.16; letter-spacing: -0.01em; font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 0; color: var(--fg); text-wrap: balance; }
+  .plate { position: absolute; right: var(--pad); top: var(--pad); bottom: var(--pad); width: 410px; }
+  .plate .label { position: absolute; left: 24px; right: 24px; bottom: 22px; z-index: 2; }
+  .plate .label .t { color: #F5F5F7; font-size: 20px; } .plate .label .p { color: #A1A1A6; font-size: 17px; }
+  .plate .veil { background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.85) 100%); }
+  .foot { display: flex; align-items: center; justify-content: space-between; }
+</style>
+</head>
+<body class="f-ld">
+<div class="frame">
+  <div class="copy">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-light.svg" alt="Sanzeed">
+    <div><div class="eyebrow" data-text="eyebrow" style="margin-bottom:20px"></div><p class="insight" data-text="insight"></p></div>
+    <div class="foot"><span class="site" data-text="site"></span></div>
+  </div>
+  <div class="plate">
+    <img data-src="image" alt="">
+    <div class="veil"></div>
+    <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+  </div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

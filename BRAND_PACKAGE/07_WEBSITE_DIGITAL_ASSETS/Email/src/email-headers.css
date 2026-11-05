@@ -1,0 +1,22 @@
+/* email-headers.css — 600×200 header and 600×150 newsletter masthead, rendered at 2× (1200×400 / 1200×300). Requires brand.css. */
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+.hd { position: relative; width: 600px; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; box-sizing: border-box; background: #000; color: #F5F5F7; }
+.hd.light { background: #F5F0E7; color: #1A1816; }
+.hd .wm { width: 190px; height: auto; display: block; color: inherit; }            /* 190 ≥ 120 min; cap 26 px → clear space 13 px */
+.hd .wm .wm-dot { fill: #E9B25A; } .hd.light .wm .wm-dot { fill: #B8863B; }
+.hd .rule { width: 1px; height: 64px; background: rgba(255,255,255,.12); margin: 0 32px; } .hd.light .rule { background: rgba(40,30,10,.12); }
+.hd .line { flex: 1; font-family: var(--font-display); font-weight: 300; font-size: 24px; line-height: 1.15; letter-spacing: -0.01em; font-variation-settings: "opsz" 36, "SOFT" 30, "WONK" 0; max-width: 15ch; }
+.hd .lit { color: #E9B25A; } .hd.light .lit { color: #8A6124; }
+.hd .eyebrow { display: block; margin-top: 10px; font-size: 10px; letter-spacing: .14em; color: #E9B25A; } .hd.light .eyebrow { color: #8A6124; }
+.hd.dark { background-image: radial-gradient(60% 100% at 22% 50%, rgba(233,178,90,.38) 0%, rgba(233,178,90,.06) 40%, rgba(0,0,0,0) 70%); }
+.hd.light { background-image: radial-gradient(60% 100% at 22% 50%, rgba(184,134,59,.22) 0%, rgba(184,134,59,.04) 40%, rgba(0,0,0,0) 70%); }
+/* newsletter masthead 600×150 */
+.nl { height: 150px; padding: 0 36px; align-items: center; }
+.nl .wm { width: 124px; }
+.nl .mast { flex: 1; margin-left: 28px; }
+.nl .mast .k { display: block; font: 600 10px/1 var(--font-heading); letter-spacing: .14em; text-transform: uppercase; color: #E9B25A; margin-bottom: 8px; } .nl.light .mast .k { color: #8A6124; }
+.nl .mast .t { font-family: var(--font-display); font-weight: 300; font-size: 34px; line-height: 1; letter-spacing: -0.015em; font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 0; }
+.nl .issue { text-align: right; font: 500 11px/1.6 var(--font-text); color: #808086; font-variant-numeric: tabular-nums; } .nl.light .issue { color: #665F55; }
+.nl .issue b { display: block; font: 500 13px/1.4 var(--font-heading); letter-spacing: .08em; color: #E9B25A; } .nl.light .issue b { color: #8A6124; }
+.nl.dark { background-image: radial-gradient(50% 120% at 40% 50%, rgba(233,178,90,.3) 0%, rgba(233,178,90,.05) 40%, rgba(0,0,0,0) 70%); }
+.nl.light { background-image: radial-gradient(50% 120% at 40% 50%, rgba(184,134,59,.18) 0%, rgba(184,134,59,.03) 40%, rgba(0,0,0,0) 70%); }

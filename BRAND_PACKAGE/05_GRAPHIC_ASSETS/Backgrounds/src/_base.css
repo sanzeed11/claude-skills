@@ -1,0 +1,17 @@
+/* shared by every background source in this folder; brand.css carries the tokens and fonts */
+html,body{margin:0;width:100vw;height:100vh;overflow:hidden}
+.bg{position:relative;width:100vw;height:100vh;background:var(--bg)}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>")}
+.lamp{background-color:#000;background-image:radial-gradient(60% 60% at 50% 40%,rgba(233,178,90,.55) 0%,rgba(233,178,90,.12) 28%,rgba(0,0,0,0) 70%)}
+.lamp-low{background-color:#000;background-image:radial-gradient(60% 60% at 50% 64%,rgba(233,178,90,.50) 0%,rgba(233,178,90,.10) 30%,rgba(0,0,0,0) 70%)}
+.dusk{background-image:linear-gradient(180deg,#000 0%,#1C1C1E 100%)}
+.plaster{background-image:linear-gradient(180deg,#FBF8F2 0%,#ECE7DC 100%)}
+.lamp-light{background-color:#F5F0E7;background-image:radial-gradient(60% 60% at 50% 40%,rgba(184,134,59,.22) 0%,rgba(184,134,59,.06) 30%,rgba(184,134,59,0) 70%),linear-gradient(180deg,#FBF8F2 0%,#ECE7DC 100%)}
+.hair{position:absolute;height:1px;background:rgba(255,255,255,.10)}
+.theme-light .hair{background:rgba(40,30,10,.10)}
+.pt{position:absolute;width:9px;height:9px;border-radius:50%;background:#E9B25A;box-shadow:0 0 24px rgba(233,178,90,.55),0 0 64px rgba(233,178,90,.25)}
+.theme-light .pt{background:#B8863B;box-shadow:none}
+.logo{position:absolute;display:block}
+.logo img{display:block;width:100%;height:auto}
+.arch{position:absolute;fill:none;stroke:rgba(255,255,255,.10);stroke-width:1}
+.theme-light .arch{stroke:rgba(40,30,10,.12)}

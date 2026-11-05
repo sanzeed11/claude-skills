@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>YouTube thumbnail — process — 1280×720 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE =================== */
+var DATA = {
+  image:       "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/ram-katha-show-02.webp",
+  image_focal: "50% 50%",
+  eyebrow:     "Process",
+  headline:    "The script comes first.",
+  lit_last_word: false,
+  title:       "Every room, screen and surface carries a line of it.",
+  place:       "Ram Katha Show · Ayodhya"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .photo { object-position: 80% 50%; }
+  .veil { background: linear-gradient(90deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.88) 40%, rgba(0,0,0,.40) 62%, rgba(0,0,0,.08) 100%); }
+  .top { align-items: center; }
+  .copy { position: absolute; left: var(--pad); bottom: var(--pad); width: 760px; z-index: 3; }
+  .copy .eyebrow { margin-bottom: 22px; }
+  .hl { font-size: 100px; max-width: 11ch; }
+  .label { margin-top: 26px; } .label .t { font-size: 26px; font-weight: 500; font-family: var(--font-text); max-width: 26ch; }
+</style>
+</head>
+<body class="f-th">
+<div class="frame grain">
+  <img class="photo" data-src="image" alt="">
+  <div class="veil"></div>
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"></div>
+  <div class="copy">
+    <div class="eyebrow" data-text="eyebrow"></div>
+    <h1 class="hl" data-headline="headline"></h1>
+    <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+  </div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

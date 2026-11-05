@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Instagram post — project (wall label) — 1080×1080 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — text and image for this post ===================
+   Paths are relative to this file. Project images: ../../../00_ORIGINAL_ASSETS_BACKUP/images/img/
+   (case images, 1600×900, in .../img/case/). Keep the headline in sentence case, ending with a full stop. */
+var DATA = {
+  image:         "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-03.webp",
+  image_focal:   "50% 50%",                 // which part of the picture survives the square crop
+  eyebrow:       "Case study · Museums & Experience Centres",
+  headline:      "A corridor you walk in order.",
+  lit_last_word: false,                      // true = last word in Lamp Gold
+  title:         "Prime Minister Museum",     // wall label: Title
+  place:         "New Delhi",                 //             · Place
+  site:          "sanzeed.com/work"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .bottom { align-items: flex-end; }
+  .copy { max-width: 820px; }
+  .copy .eyebrow { margin-bottom: 26px; }
+  .copy .label { margin-top: 34px; }
+  .copy .label .t { font-size: 24px; }
+  .copy .label .p { font-size: 22px; }
+  .top .site { margin-top: 6px; }
+</style>
+</head>
+<body class="f-sq">
+<div class="frame grain">
+  <img class="photo" data-src="image" alt="">
+  <div class="veil"></div>
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="site" data-text="site"></span>
+  </div>
+  <div class="bottom">
+    <div class="copy">
+      <div class="eyebrow" data-text="eyebrow"></div>
+      <h1 class="hl" data-headline="headline"></h1>
+      <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+    </div>
+  </div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

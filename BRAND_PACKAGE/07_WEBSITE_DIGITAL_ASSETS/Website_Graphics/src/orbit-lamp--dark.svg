@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Sanzeed — orbit on a lamp (dark)">
+  <title>Sanzeed — hero background: the orbit, drawn in monoline, on the lamp (dark)</title>
+  <desc>A sphere, a ring and a plinth in 1.5 px hairlines; one gold point of light on the ring; the lamp glow behind. Editable: strokes use currentColor-equivalent fills set in the style block.</desc>
+  <defs>
+    <radialGradient id="lamp" cx="50%" cy="46%" r="55%"><stop offset="0" stop-color="#E9B25A" stop-opacity=".55"/><stop offset=".3" stop-color="#E9B25A" stop-opacity=".12"/><stop offset=".72" stop-color="#E9B25A" stop-opacity="0"/></radialGradient>
+    <filter id="blur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
+    <style>.ln{fill:none;stroke:#F5F5F7;stroke-width:1.5}.ln-2{opacity:.45}.ln-3{opacity:.22}</style>
+  </defs>
+  <rect width="1600" height="900" fill="#000000"/>
+  <rect width="1600" height="900" fill="url(#lamp)"/>
+  <g class="dust" fill="#F5F5F7" opacity=".3"><circle cx="330" cy="250" r="2.5"/><circle cx="1240" cy="190" r="2"/><circle cx="1330" cy="470" r="2.5"/><circle cx="260" cy="560" r="2"/><circle cx="1180" cy="690" r="1.8"/><circle cx="520" cy="150" r="1.6"/></g>
+  <g transform="translate(800 400)">
+    <g transform="rotate(-16)"><path class="ln ln-2" d="M -300 0 A 300 72 0 0 1 300 0"/></g>
+    <circle r="150" fill="#000000" fill-opacity=".92"/>
+    <circle class="ln" r="150"/>
+    <path class="ln ln-3" d="M -104 -78 A 130 130 0 0 1 -26 -126"/>
+    <g transform="rotate(-16)"><path class="ln" d="M -300 0 A 300 72 0 0 0 300 0"/><circle cx="193" cy="55" r="16" fill="#E9B25A" opacity=".35" filter="url(#blur)"/><circle cx="193" cy="55" r="7" fill="#E9B25A"/></g>
+  </g>
+  <g transform="translate(800 670)"><ellipse class="ln ln-3" rx="118" ry="18"/><ellipse class="ln ln-2" rx="250" ry="44"/><path class="ln ln-2" d="M -250 0 v 30 A 250 44 0 0 0 250 30 v -30"/></g>
+  <path class="ln ln-3" d="M 420 770 H 1180"/>
+</svg>

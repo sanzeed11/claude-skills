@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Facebook post — quote — 1200×630 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE =================== */
+var DATA = {
+  eyebrow: "About",
+  quote:   "I lead the whole room — story, space, graphics, media and the team that builds it.",
+  who:     "— Sanzeed Mirza",
+  role:    "Experiential Design Consultant · New Delhi",
+  site:    "sanzeed.com"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .top { align-items: center; }
+  .content { top: 52%; }
+  .beam { width: 120px; margin-bottom: 30px; }
+  .quote { font-size: 46px; max-width: 21em; }
+  .quote::before { content: "“"; color: var(--fg-3); } .quote::after { content: "”"; color: var(--fg-3); }
+  .who { margin-top: 30px; display: flex; flex-direction: column; gap: 4px; }
+  .who .t { font: 600 22px/1.3 var(--font-heading); color: var(--fg); }
+  .who .p { font: 400 18px/1.4 var(--font-text); color: var(--fg-2); }
+</style>
+</head>
+<body class="f-ld">
+<div class="frame grain">
+  <div class="lamp lamp-soft"></div>
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="content">
+    <div class="beam"></div>
+    <p class="quote" data-text="quote"></p>
+    <div class="who"><span class="t" data-text="who"></span><span class="p" data-text="role"></span></div>
+  </div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Sanzeed — now showing card frame">
+  <title>Sanzeed — “Now showing” card frame (16:9, transparent)</title>
+  <desc>The room: a rounded rectangle (radius 56 at 1920 = 28 at 960) with a hairline, the NOW SHOWING tag top-left, the wall-label slot and the arrow bottom. Place the project image under this layer, cropped to the frame; replace the bracketed labels.</desc>
+  <defs>
+    <style>
+      .hair{fill:none;stroke:#FFFFFF;stroke-opacity:.14;stroke-width:2}
+      .tag{font:600 22px "Inter Tight",Inter,sans-serif;letter-spacing:2.6px;fill:#E9B25A}
+      .title{font:600 34px "Inter Tight",Inter,sans-serif;letter-spacing:-.3px;fill:#F5F5F7}
+      .place{font:400 26px Inter,sans-serif;fill:#A1A1A6}
+      .arrow{fill:none;stroke:#F5F5F7;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <linearGradient id="veil" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".72"/></linearGradient>
+    <clipPath id="room"><rect x="1" y="1" width="1918" height="1078" rx="56"/></clipPath>
+  </defs>
+  <rect x="1" y="1" width="1918" height="1078" rx="56" fill="url(#veil)" clip-path="url(#room)"/>
+  <rect x="1" y="1" width="1918" height="1078" rx="56" class="hair"/>
+  <g transform="translate(48 48)">
+    <rect width="236" height="52" rx="26" fill="#0A0A0C" fill-opacity=".62" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="2"/>
+    <circle cx="30" cy="26" r="6" fill="#E9B25A"/>
+    <text class="tag" x="48" y="34">NOW SHOWING</text>
+  </g>
+  <g transform="translate(64 940)">
+    <text class="title" x="0" y="0">[Project title]</text>
+    <text class="place" x="0" y="40">[Place]</text>
+  </g>
+  <g transform="translate(1800 960)">
+    <circle r="36" class="hair" stroke-opacity=".3"/>
+    <path class="arrow" d="M-12 0h24M4 -10l10 10-10 10"/>
+  </g>
+</svg>

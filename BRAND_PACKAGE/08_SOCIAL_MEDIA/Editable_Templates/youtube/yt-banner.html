@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>YouTube banner — 2560×1440 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE ===================
+   Everything important sits inside the 1546×423 centre-safe area (what every device shows). */
+var DATA = {
+  image:       "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/ram-katha-show-07.webp",
+  image_focal: "50% 42%",
+  headline:    "Experiential design you can walk into.",
+  lit_last_word: false,
+  line:        "Sanzeed Mirza · Experiential Design Consultant · New Delhi · sanzeed.com"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .veil { background: radial-gradient(60% 60% at 50% 50%, rgba(0,0,0,.90) 0%, rgba(0,0,0,.86) 35%, rgba(0,0,0,.62) 70%, rgba(0,0,0,.45) 100%); }
+  .safe { position: absolute; left: 507px; top: 508px; width: 1546px; height: 423px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .wm { width: 520px; }
+  .hl { margin-top: 44px; font-size: 56px; max-width: none; white-space: nowrap; }
+  .line { margin-top: 22px; font: 400 22px/1.4 var(--font-text); color: var(--fg-2); }
+  .guide .zone.tv { inset: 0; border-color: var(--fg-3); }
+  .guide .zone.desk { left: 0; right: 0; top: 508px; height: 423px; border-color: var(--fg-2); }
+  .guide .zone.tab { left: 352px; top: 508px; width: 1855px; height: 423px; border-color: var(--fg); }
+  .guide .zone.safe-z { left: 507px; top: 508px; width: 1546px; height: 423px; }
+  .guide .tag.a { left: 519px; top: 468px; } .guide .tag.b { left: 364px; top: 940px; background: var(--fg); } .guide .tag.c { left: 16px; top: 940px; background: var(--fg-2); } .guide .tag.d { left: 16px; top: 16px; background: var(--fg-3); }
+</style>
+</head>
+<body class="f-wd">
+<div class="frame grain">
+  <img class="photo" data-src="image" alt="">
+  <div class="veil"></div>
+  <div class="safe">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <h1 class="hl" data-headline="headline"></h1>
+    <p class="line" data-text="line"></p>
+  </div>
+  <div class="guide"><div class="zone tv"></div><div class="zone desk"></div><div class="zone tab"></div><div class="zone safe-z"></div>
+    <span class="tag a">Safe for all devices 1546 × 423</span><span class="tag b">Tablet 1855 × 423</span><span class="tag c">Desktop 2560 × 423</span><span class="tag d">TV 2560 × 1440</span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

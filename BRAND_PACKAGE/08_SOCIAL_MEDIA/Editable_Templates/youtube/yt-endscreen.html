@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>YouTube end screen — 1920×1080 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE ===================
+   The three rooms are where the YouTube end-screen elements go (set them in YouTube Studio to these pixel boxes):
+   video 1 · 96,340 · 672×378      subscribe · 862,429 · 196×196      video 2 · 1152,340 · 672×378 */
+var DATA = {
+  eyebrow:  "End screen",
+  headline: "Watch the next film.",
+  lit_last_word: false,
+  z1: "Next film", z1s: "video element · 672 × 378",
+  z2: "Subscribe",  z2s: "channel element · 196 × 196",
+  z3: "The galleries", z3s: "playlist element · 672 × 378",
+  site: "sanzeed.com · the first conversation is always free"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  body { --pad: 96px; }
+  .top { top: 72px; align-items: center; }
+  .hl { position: absolute; left: var(--pad); top: 168px; font-size: 72px; z-index: 3; max-width: none; }
+  .room { position: absolute; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(28,28,30,.55); z-index: 3; }
+  .room.v1 { left: 96px; top: 340px; width: 672px; height: 378px; }
+  .room.v2 { left: 1152px; top: 340px; width: 672px; height: 378px; }
+  .room.sub { left: 862px; top: 429px; width: 196px; height: 196px; border-radius: 50%; display: grid; place-items: center; }
+  .room .cap { position: absolute; left: 0; right: 0; top: 100%; margin-top: 22px; }
+  .room .cap .t { display: block; font: 600 22px/1.3 var(--font-heading); color: var(--fg); letter-spacing: -0.01em; }
+  .room .cap .s { display: block; font: 400 16px/1.4 var(--font-text); color: var(--fg-3); margin-top: 4px; }
+  .room.sub .cap { text-align: center; white-space: nowrap; }
+  .room.sub .cap .t { font-size: 20px; }
+  .beam { position: absolute; left: 96px; right: 96px; top: 529px; z-index: 2; --dot: 10px; }
+  .beam::after { left: 50%; margin-left: -5px; }
+  .bottom { bottom: 72px; }
+  .guide .zone.a { left: 96px; top: 340px; width: 672px; height: 378px; }
+  .guide .zone.b { left: 1152px; top: 340px; width: 672px; height: 378px; }
+  .guide .zone.c { left: 862px; top: 429px; width: 196px; height: 196px; border-radius: 50%; }
+  .guide .tag.a { left: 96px; top: 300px; } .guide .tag.b { left: 1152px; top: 300px; } .guide .tag.c { left: 848px; top: 389px; }
+</style>
+</head>
+<body class="f-wd">
+<div class="frame grain">
+  <div class="lamp lamp-low"></div>
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <h1 class="hl" data-headline="headline"></h1>
+  <div class="beam"></div>
+  <div class="room v1"><div class="cap"><span class="t" data-text="z1"></span><span class="s" data-text="z1s"></span></div></div>
+  <div class="room sub"><img src="../../../02_LOGO_SYSTEM/SVG/sanzeed-symbol--full-colour-dark.svg" alt="" style="width:72px"><div class="cap"><span class="t" data-text="z2"></span><span class="s" data-text="z2s"></span></div></div>
+  <div class="room v2"><div class="cap"><span class="t" data-text="z3"></span><span class="s" data-text="z3s"></span></div></div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+  <div class="guide"><div class="zone a"></div><div class="zone b"></div><div class="zone c"></div><span class="tag a">Video · x 96 y 340 · 672 × 378</span><span class="tag b">Video / playlist · x 1152 y 340 · 672 × 378</span><span class="tag c">Subscribe · 196 × 196</span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

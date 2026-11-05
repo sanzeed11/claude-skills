@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40" role="img" aria-label="Loading">
+  <title>Sanzeed — loading: the point travels the beam (SMIL, loops forever)</title>
+  <defs><filter id="g" x="-200%" y="-400%" width="500%" height="900%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+  <line x1="20" y1="20" x2="180" y2="20" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="1"/>
+  <g>
+    <circle cx="0" cy="20" r="9" fill="#E9B25A" opacity=".35" filter="url(#g)"/>
+    <circle cx="0" cy="20" r="4.5" fill="#E9B25A"/>
+    <animateTransform attributeName="transform" type="translate" values="24.5 0; 175.5 0" keyTimes="0;1" dur="1.6s" calcMode="spline" keySplines=".65 0 .2 1" repeatCount="indefinite"/>
+  </g>
+</svg>

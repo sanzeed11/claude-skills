@@ -1,0 +1,692 @@
+{
+  "after": [
+    {
+      "page": "index",
+      "viewport": "desktop",
+      "url": "/",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter Tight normal 100 900",
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": true
+      },
+      "signature": [
+        {
+          "src": "img/sanzeed-signature--ink.svg",
+          "ok": true
+        },
+        {
+          "src": "img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "gallery": {
+        "visibleDefault": 12,
+        "visibleProjection": 12,
+        "pressed": "projection",
+        "visibleSearchAyodhya": 2
+      },
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "index",
+      "viewport": "mobile",
+      "url": "/",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter Tight normal 100 900",
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": true
+      },
+      "signature": [
+        {
+          "src": "img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "gallery": {
+        "visibleDefault": 12,
+        "visibleProjection": 12,
+        "pressed": "projection",
+        "visibleSearchAyodhya": 2
+      },
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "desktop",
+      "url": "/work/prime-minister-museum.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": true
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "mobile",
+      "url": "/work/prime-minister-museum.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-ram-katha-show",
+      "viewport": "desktop",
+      "url": "/work/ram-katha-show.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-ram-katha-show",
+      "viewport": "mobile",
+      "url": "/work/ram-katha-show.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-buddha-park",
+      "viewport": "desktop",
+      "url": "/work/buddha-park.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-buddha-park",
+      "viewport": "mobile",
+      "url": "/work/buddha-park.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 100 900",
+          "Fraunces normal 100 900",
+          "Fraunces italic 100 900"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3590 500",
+        "width": 122,
+        "height": 17,
+        "letters": true,
+        "pathLen": 17114,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": true,
+        "lockupDesc": 28,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/sanzeed-signature--ink.svg",
+          "ok": false
+        },
+        {
+          "src": "../img/sanzeed-signature--white.svg",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    }
+  ],
+  "before": [
+    {
+      "page": "index",
+      "viewport": "desktop",
+      "url": "/",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter Tight normal 400 800",
+          "Inter normal 400 600",
+          "Fraunces normal 300",
+          "Fraunces italic 300"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3729 561",
+        "width": 93,
+        "height": 14,
+        "letters": true,
+        "pathLen": 16701,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": false,
+        "lockupDesc": 0,
+        "loaderClip": true
+      },
+      "signature": [
+        {
+          "src": "img/signature-dark.png",
+          "ok": true
+        },
+        {
+          "src": "img/signature-light.png",
+          "ok": true
+        }
+      ],
+      "gallery": {
+        "visibleDefault": 12,
+        "visibleProjection": 12,
+        "pressed": "projection",
+        "visibleSearchAyodhya": 2
+      },
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "index",
+      "viewport": "mobile",
+      "url": "/",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter Tight normal 400 800",
+          "Inter normal 400 600",
+          "Fraunces normal 300",
+          "Fraunces italic 300"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3729 561",
+        "width": 93,
+        "height": 14,
+        "letters": true,
+        "pathLen": 16701,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": false,
+        "lockupDesc": 0,
+        "loaderClip": true
+      },
+      "signature": [
+        {
+          "src": "img/signature-dark.png",
+          "ok": true
+        },
+        {
+          "src": "img/signature-light.png",
+          "ok": true
+        }
+      ],
+      "gallery": {
+        "visibleDefault": 12,
+        "visibleProjection": 12,
+        "pressed": "projection",
+        "visibleSearchAyodhya": 2
+      },
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "desktop",
+      "url": "/work/prime-minister-museum.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 400 600",
+          "Fraunces normal 300",
+          "Fraunces italic 300"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3729 561",
+        "width": 93,
+        "height": 14,
+        "letters": true,
+        "pathLen": 16701,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": false,
+        "lockupDesc": 0,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/signature-dark.png",
+          "ok": false
+        },
+        {
+          "src": "../img/signature-light.png",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "mobile",
+      "url": "/work/prime-minister-museum.html",
+      "fonts": {
+        "status": "loaded",
+        "loaded": [
+          "Inter normal 400 600",
+          "Fraunces normal 300",
+          "Fraunces italic 300"
+        ],
+        "h1": "Fraunces",
+        "h1weight": "300",
+        "fraunces": true,
+        "inter": true,
+        "tight": true
+      },
+      "wordmark": {
+        "viewBox": "0 0 3729 561",
+        "width": 93,
+        "height": 14,
+        "letters": true,
+        "pathLen": 16701,
+        "fill": "rgb(245, 245, 247)",
+        "dots": 2,
+        "lockup": false,
+        "lockupDesc": 0,
+        "loaderClip": false
+      },
+      "signature": [
+        {
+          "src": "../img/signature-dark.png",
+          "ok": true
+        },
+        {
+          "src": "../img/signature-light.png",
+          "ok": true
+        }
+      ],
+      "theme": {
+        "after": "light",
+        "bg": "rgb(245, 240, 231)",
+        "fg": "rgb(26, 24, 22)"
+      },
+      "errors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+      ],
+      "failed": [
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "localFailures": [],
+      "localErrors": []
+    }
+  ],
+  "files": {
+    "/favicon.ico": "200 image/vnd.microsoft.icon",
+    "/favicon.svg": "200 image/svg+xml",
+    "/apple-touch-icon.png": "200 image/png",
+    "/safari-pinned-tab.svg": "200 image/svg+xml",
+    "/site.webmanifest": "200 application/manifest+json",
+    "/assets/fonts/Fraunces-variable.woff2": "200 font/woff2",
+    "/assets/fonts/InterTight-variable.woff2": "200 font/woff2",
+    "/assets/fonts/Inter-variable.woff2": "200 font/woff2",
+    "/og.jpg": "200 image/jpeg",
+    "/img/og/prime-minister-museum-1200x630.jpg": "200 image/jpeg",
+    "/img/og/ram-katha-show-1200x630.jpg": "200 image/jpeg",
+    "/img/og/buddha-park-1200x630.jpg": "200 image/jpeg",
+    "/android-chrome-192x192.png": "200 image/png",
+    "/android-chrome-512x512.png": "200 image/png",
+    "/maskable-icon-512x512.png": "200 image/png",
+    "/sitemap.xml": "200 application/xml",
+    "/robots.txt": "200 text/plain",
+    "/sanzeed-mirza.vcf": "200 text/vcard",
+    "/img/sanzeed-signature--white.svg": "200 image/svg+xml",
+    "/img/sanzeed-signature--ink.svg": "200 image/svg+xml"
+  }
+}

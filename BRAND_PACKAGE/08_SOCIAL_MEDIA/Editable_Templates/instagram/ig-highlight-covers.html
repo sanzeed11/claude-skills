@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Instagram highlight covers ×8 — 1080×1920 each — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the eight covers ===================
+   Each cover is one monoline icon on the 24-unit grid (stroke 1.5, round caps), centred in the circle Instagram shows.
+   "d" = stroke paths, "pt" = the gold point [x, y]. Add a cover: add a row and a matching id in render-all.sh. */
+var COVERS = [
+  { id: "work",     name: "Work",     d: "M6 21V11a6 6 0 0 1 12 0v10M3.5 21h17",                                   pt: [12, 15.5] },
+  { id: "museums",  name: "Museums",  d: "M3 9.5l9-5.5 9 5.5M4.5 9.5h15M6.5 13v6M12 13v6M17.5 13v6M3.5 20.5h17",  pt: [12, 7.4]  },
+  { id: "shows",    name: "Shows",    d: "M19.5 4.5v15M6 11.2L19.5 4.5M6 12.8l13.5 6.7",                           pt: [4.2, 12]  },
+  { id: "method",   name: "Method",   d: "M3 18c3-8 6-8 9 0s6 8 9 0",  dash: true, pts: [[3,18],[12,18]],           pt: [21, 18]   },
+  { id: "about",    name: "About",    d: "M12 4.5a3.8 3.8 0 1 1 0 7.6a3.8 3.8 0 0 1 0-7.6zM4.5 20.5a7.5 7.5 0 0 1 15 0", pt: [20.5, 20] },
+  { id: "films",    name: "Films",    d: "M3 8.5h18v11.5H3zM3 8.5l2-4.5h14l2 4.5M8 4l-1.5 4.5M13 4l-1.5 4.5M18 4l-1.5 4.5", pt: [12, 14.3] },
+  { id: "press",    name: "Press",    d: "M6 3h9l4 4v14H6zM15 3v4h4M9 12h6M9 15.5h6M9 19h3.5",                     pt: [14.6, 19] },
+  { id: "contact",  name: "Contact",  d: "M4 5h16v11H10l-5 4v-4H4z",                                               pt: [12, 10.5] }
+];
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  html, body { height: auto; overflow: visible; }
+  body { background: #000; }
+  .cover { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg-2); }
+  .cover + .cover { margin-top: 0; }
+  .cover svg { position: absolute; left: 50%; top: 50%; width: 336px; height: 336px; transform: translate(-50%, -50%); color: var(--fg); }
+  .cover svg path { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .cover svg circle { fill: currentColor; } .cover svg circle.pt { fill: var(--accent); }
+  .cover .name { position: absolute; left: 0; right: 0; top: 1600px; text-align: center; font: 600 20px/1 var(--font-heading); letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); }
+  .cover .ring { position: absolute; left: 0; top: 420px; width: 1080px; height: 1080px; border-radius: 50%; border: 1px solid var(--line-2); }
+</style>
+</head>
+<body>
+<script>
+  COVERS.forEach(function (c) {
+    var pts = (c.pts || []).map(function (p) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="1.5"/>'; }).join('');
+    document.write('<section class="cover" id="cover-' + c.id + '"><div class="ring"></div>' +
+      '<svg viewBox="0 0 24 24" role="img" aria-label="' + c.name + '"><path d="' + c.d + '"' + (c.dash ? ' stroke-dasharray="0 3.1"' : '') + '/>' + pts +
+      '<circle class="pt" cx="' + c.pt[0] + '" cy="' + c.pt[1] + '" r="1.6"/></svg>' +
+      '<div class="name">' + c.name + '</div></section>');
+  });
+</script>
+</body>
+</html>

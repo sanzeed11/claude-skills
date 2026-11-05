@@ -1,0 +1,115 @@
+/* ==========================================================================
+   SANZEED — social.css  (layout layer for every social-media template)
+   Requires brand.css (tokens, fonts, type classes). Nothing here redefines a colour:
+   every value is a brand token. One gold accent per composition.
+   Formats: body.f-sq 1080×1080 · f-pt 1080×1350 · f-st 1080×1920 · f-ld 1200×630/627
+            f-wd 1600×900 · f-th 1280×720 · f-pin 1000×1500 · banners set their own.
+   ========================================================================== */
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-text); -webkit-font-smoothing: antialiased; }
+
+/* ---------- per-format scale (px, exact platform pixels) ---------- */
+body            { --pad: 72px; --hl: 84px; --eb: 18px; --lt: 28px; --lp: 24px; --wm: 220px; --body: 26px; --site: 20px; --dot: 12px; --radius: 28px; }
+body.f-pt       { --hl: 88px; }
+body.f-st       { --pad: 80px; --hl: 96px; --eb: 20px; --lt: 30px; --lp: 26px; --wm: 240px; --body: 28px; --site: 22px; --dot: 14px; }
+body.f-ld       { --pad: 56px; --hl: 60px; --eb: 15px; --lt: 24px; --lp: 20px; --wm: 180px; --body: 21px; --site: 16px; --dot: 10px; }
+body.f-wd       { --pad: 88px; --hl: 86px; --eb: 18px; --lt: 28px; --lp: 24px; --wm: 230px; --body: 26px; --site: 20px; }
+body.f-th       { --pad: 72px; --hl: 104px; --eb: 20px; --lt: 32px; --lp: 26px; --wm: 210px; --body: 28px; --site: 20px; }
+body.f-pin      { --hl: 84px; }
+
+/* ---------- the frame = the room ---------- */
+.frame { position: relative; width: 100vw; height: 100vh; overflow: hidden; background: var(--bg); }
+.frame > .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); }
+.veil { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.72) 14%, rgba(0,0,0,.18) 32%, rgba(0,0,0,.42) 56%, rgba(0,0,0,.90) 80%, rgba(0,0,0,.96) 100%); }
+.veil-top { background: linear-gradient(180deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.78) 30%, rgba(0,0,0,.30) 70%, rgba(0,0,0,.12) 100%); }
+.veil-flat { background: rgba(0,0,0,.82); }
+.veil-left { background: linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.90) 34%, rgba(0,0,0,.55) 58%, rgba(0,0,0,.25) 100%); }
+.lamp { position: absolute; inset: 0; pointer-events: none; background-image: var(--sz-gradient-lamp); background-size: 100% 100%; }
+.lamp-low { background-image: radial-gradient(55% 45% at 50% 68%, rgba(233,178,90,.42) 0%, rgba(233,178,90,.10) 32%, rgba(0,0,0,0) 70%); }
+.lamp-soft { background-image: radial-gradient(60% 50% at 50% 45%, rgba(233,178,90,.30) 0%, rgba(233,178,90,.07) 34%, rgba(0,0,0,0) 72%); }
+html[data-theme="light"] .lamp, html[data-theme="light"] .lamp-low, html[data-theme="light"] .lamp-soft { background-image: radial-gradient(60% 50% at 50% 45%, rgba(184,134,59,.22) 0%, rgba(184,134,59,.05) 34%, rgba(0,0,0,0) 72%); }
+.grain::after { border-radius: 0; }
+
+/* ---------- layers ---------- */
+.top, .bottom, .content { position: absolute; left: var(--pad); right: var(--pad); z-index: 3; }
+.top { top: var(--pad); display: flex; align-items: flex-start; justify-content: space-between; }
+.bottom { bottom: var(--pad); display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+.content { top: 50%; transform: translateY(-50%); }
+.stack > * + * { margin-top: 24px; }
+
+/* ---------- the wordmark (production SVG via <img>; pairing is chosen in the HTML) ---------- */
+.wm { display: block; width: var(--wm); height: auto; }
+
+/* ---------- type ---------- */
+.eyebrow { font: 600 var(--eb)/1.2 var(--font-heading); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); }
+.hl { font-family: var(--font-display); font-weight: 300; font-size: var(--hl); line-height: 1.04; letter-spacing: -0.015em;
+      font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; text-wrap: balance; color: var(--fg); max-width: 14ch; }
+.hl.xl { font-size: calc(var(--hl) * 1.25); line-height: 1.0; }
+.hl.sm { font-size: calc(var(--hl) * .78); line-height: 1.08; font-variation-settings: "opsz" 72, "SOFT" 30, "WONK" 0; }
+.lit { color: var(--accent); }
+html[data-theme="light"] .lit { color: var(--accent-text); }   /* gold text on light is Gold Ink */
+.dim { color: var(--fg-3); }
+.quote { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: calc(var(--hl) * .78); line-height: 1.22; letter-spacing: -0.01em;
+         font-variation-settings: "opsz" 72, "SOFT" 50, "WONK" 0; text-wrap: balance; color: var(--fg); max-width: 24ch; }
+.body { font: 400 var(--body)/1.5 var(--font-text); color: var(--fg-2); max-width: 36ch; }
+.body b, .body strong { font-weight: 500; color: var(--fg); }
+.site { font: 500 var(--site)/1.2 var(--font-text); letter-spacing: .02em; color: var(--fg-3); white-space: nowrap; }
+.stat { font-family: var(--font-display); font-weight: 300; line-height: .9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; color: var(--fg); }
+.stat .plus { color: var(--accent); }
+.counter { font: 500 var(--eb)/1 var(--font-heading); letter-spacing: .08em; font-variant-numeric: tabular-nums; color: var(--accent-text); }
+
+/* ---------- wall label: Title (Inter Tight 600) · Place (Inter 400, fg-3) · one line ---------- */
+.label { display: flex; flex-direction: column; gap: 6px; }
+.label .t { font: 600 var(--lt)/1.25 var(--font-heading); letter-spacing: -0.01em; color: var(--fg); }
+.label .p { font: 400 var(--lp)/1.35 var(--font-text); color: var(--fg-2); }
+.label .p .sep { color: var(--fg-3); padding: 0 .35em; }
+.label .l { font: 400 var(--lp)/1.4 var(--font-text); color: var(--fg-3); max-width: 40ch; }
+
+/* ---------- the beam and the point ---------- */
+.beam { position: relative; height: 1px; background: var(--line); }
+.beam::after { content: ""; position: absolute; top: 50%; left: 0; width: var(--dot); height: var(--dot); margin-top: calc(var(--dot) / -2); border-radius: 50%; background: var(--accent); box-shadow: var(--glow); }
+.beam.end::after { left: auto; right: 0; }
+.beam.mid::after { left: 50%; margin-left: calc(var(--dot) / -2); }
+.beam.plain::after { display: none; }
+html[data-theme="light"] .beam::after { box-shadow: none; }
+.point { display: inline-block; width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--accent); box-shadow: var(--glow); vertical-align: middle; }
+html[data-theme="light"] .point { box-shadow: none; }
+
+/* ---------- the route (method diagrams): points along a beam ---------- */
+.route { position: relative; display: flex; justify-content: space-between; align-items: center; height: 24px; }
+.route::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line); }
+.route i { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--fg-3); }
+.route i.on { width: var(--dot); height: var(--dot); background: var(--accent); box-shadow: var(--glow); }
+html[data-theme="light"] .route i.on { box-shadow: none; }
+.route-labels { display: flex; justify-content: space-between; font: 500 calc(var(--eb) - 2px)/1.2 var(--font-heading); letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
+.route-labels b { font-weight: 600; color: var(--fg); }
+
+/* ---------- the room as an image plate ---------- */
+.plate { position: relative; border-radius: var(--radius); border: 1px solid var(--line); background: var(--card); overflow: hidden; }
+.plate img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); }
+.plate.r16 { aspect-ratio: 16 / 9; }
+.plate.r45 { aspect-ratio: 4 / 5; }
+.plate.r11 { aspect-ratio: 1 / 1; }
+.plate.r32 { aspect-ratio: 3 / 2; }
+
+/* ---------- buttons (brand.css .btn) at social scale ---------- */
+.btn { font-size: var(--body); padding: 22px 36px; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+
+/* ---------- reach list ---------- */
+.reach { display: flex; flex-direction: column; gap: 14px; font: 500 var(--body)/1.3 var(--font-text); color: var(--fg-2); }
+.reach b { font-weight: 500; color: var(--fg); }
+.reach.row { flex-direction: row; gap: 36px; }
+
+/* ---------- play mark for film covers ---------- */
+.play { width: 120px; height: 120px; border-radius: 50%; border: 1px solid rgba(245,245,247,.55); display: grid; place-items: center; backdrop-filter: blur(6px); background: rgba(0,0,0,.25); }
+.play::after { content: ""; width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid var(--fg); margin-left: 8px; }
+
+/* ---------- safe zones and guides (only when <html class="show-guides">; render with --js "document.documentElement.classList.add('show-guides')") ---------- */
+.guide { display: none; }
+html.show-guides .guide { display: block; position: absolute; inset: 0; z-index: 20; pointer-events: none; }
+.guide .zone { position: absolute; border: 2px dashed var(--accent); border-radius: 4px; }
+.guide .zone.hatch { background: repeating-linear-gradient(135deg, rgba(233,178,90,.18) 0 10px, rgba(233,178,90,0) 10px 22px); }
+.guide .tag { position: absolute; font: 600 14px/1 var(--font-heading); letter-spacing: .08em; text-transform: uppercase; color: #000; background: var(--accent); padding: 6px 10px; border-radius: 4px; }
+.guide .dark { position: absolute; background: rgba(0,0,0,.55); }

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Link preview mock — how og-default renders</title>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<style>
+  /* Generic card shapes only — no platform logos or trade dress. Labels say where each shape is seen. */
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+  body { background: #0D0D0F; color: #F5F5F7; padding: 64px 72px; box-sizing: border-box; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 40px; }
+  .head .t { font-family: var(--font-display); font-weight: 300; font-size: 34px; font-variation-settings: "opsz" 48, "SOFT" 30; letter-spacing: -0.01em; }
+  .head .eyebrow { color: #E9B25A; }
+  .row { display: grid; grid-template-columns: 1.15fr 1fr .8fr; gap: 40px; align-items: start; }
+  .lbl { font: 600 12px/1 var(--font-heading); letter-spacing: .12em; text-transform: uppercase; color: #808086; margin-bottom: 14px; }
+  .sub { font: 400 13px/1.5 var(--font-text); color: #808086; margin-top: 14px; max-width: 46ch; }
+  /* feed card: image above, grey panel with title + domain */
+  .feed { background: #fff; color: #191919; border-radius: 8px; overflow: hidden; border: 1px solid #e0dfdc; font-family: var(--font-text); }
+  .feed .post { padding: 14px 16px; font-size: 14px; line-height: 1.45; color: #191919; }
+  .feed .post b { display: block; font-weight: 600; margin-bottom: 2px; }
+  .feed .post span { color: #666; font-size: 12px; }
+  .feed img { display: block; width: 100%; }
+  .feed .meta { background: #eef3f8; padding: 12px 16px; }
+  .feed .meta b { display: block; font-weight: 600; font-size: 14px; color: #191919; }
+  .feed .meta i { display: block; font-style: normal; font-size: 12px; color: #666; margin-top: 4px; }
+  /* summary-large card: image with rounded corners and domain pill */
+  .large { background: #000; color: #e7e9ea; font-family: var(--font-text); }
+  .large .post { font-size: 15px; line-height: 1.4; margin-bottom: 12px; }
+  .large .post b { font-weight: 700; margin-right: 6px; } .large .post span { color: #71767b; }
+  .large .card { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid #2f3336; }
+  .large .card img { display: block; width: 100%; }
+  .large .pill { position: absolute; left: 12px; bottom: 12px; padding: 3px 8px; border-radius: 4px; background: rgba(0,0,0,.77); font-size: 13px; color: #fff; }
+  .large .dom { font-size: 13px; color: #71767b; margin-top: 8px; }
+  /* chat bubble: compact preview above the link */
+  .chat { background: #0b141a; padding: 20px; border-radius: 10px; font-family: var(--font-text); }
+  .chat .bubble { width: 100%; max-width: 330px; background: #005c4b; color: #e9edef; border-radius: 10px; padding: 6px; font-size: 14px; }
+  .chat .prev { background: rgba(0,0,0,.25); border-radius: 7px; overflow: hidden; }
+  .chat .prev img { display: block; width: 100%; }
+  .chat .prev .txt { padding: 8px 10px; }
+  .chat .prev b { display: block; font-weight: 600; font-size: 13px; }
+  .chat .prev i { display: block; font-style: normal; font-size: 12px; color: #c7d0d2; margin-top: 2px; line-height: 1.35; }
+  .chat .prev u { display: block; text-decoration: none; font-size: 11px; color: #8696a0; margin-top: 4px; }
+  .chat .link { color: #53bdeb; padding: 6px 6px 2px; word-break: break-all; }
+  .chat .time { text-align: right; font-size: 11px; color: #8696a0; padding: 0 6px 2px; }
+</style>
+</head>
+<body>
+  <div class="head"><div><span class="eyebrow">Open Graph · link preview</span><div class="t" style="margin-top:10px">How sanzeed.com appears when the link is shared.</div></div><div class="sub" style="margin:0;text-align:right">og:image sanzeed-og--default-1200x630 · og:title Sanzeed Mirza — Experiential Design Consultant<br>Card shapes are generic approximations of each platform; verify in the platform’s own debugger before launch.</div></div>
+  <div class="row">
+    <div><div class="lbl">Professional network feed (LinkedIn-style)</div>
+      <div class="feed"><div class="post"><b>Sanzeed Mirza</b><span>Experiential Design Consultant · New Delhi</span><p style="margin:10px 0 0">The doors are open: sanzeed.com — museums, pavilions and shows you can walk into.</p></div><img src="../../Open_Graph/sanzeed-og--default-1200x630.png" alt="og-default preview"><div class="meta"><b>Sanzeed Mirza — Experiential Design Consultant</b><i>sanzeed.com · 2 min read</i></div></div>
+      <div class="sub">1200 × 627 recommended; the 1200 × 630 card displays uncropped.</div></div>
+    <div><div class="lbl">Summary card with large image (X-style)</div>
+      <div class="large"><div class="post"><b>Sanzeed Mirza</b><span>@sanzeed · 5 Nov</span><br>Experiential design you can walk into.</div><div class="card"><img src="../../Open_Graph/sanzeed-og--default-1200x630.png" alt="og-default preview"><span class="pill">sanzeed.com</span></div><div class="dom">From sanzeed.com</div></div>
+      <div class="sub">twitter:card summary_large_image · 1.91:1 shown in full.</div></div>
+    <div><div class="lbl">Chat preview (WhatsApp-style)</div>
+      <div class="chat"><div class="bubble"><div class="prev"><img src="../../Open_Graph/sanzeed-og--default-1200x630.png" alt="og-default preview"><div class="txt"><b>Sanzeed Mirza — Experiential Design Consultant</b><i>Museums, experience centres, pavilions, memorials and projection shows — one vision, from the brief to opening night.</i><u>sanzeed.com</u></div></div><div class="link">https://sanzeed.com</div><div class="time">13:12</div></div></div>
+      <div class="sub">WhatsApp shows the image at the bubble width; the square 1200 × 1200 variant gives a taller thumbnail in some clients.</div></div>
+  </div>
+</body>
+</html>

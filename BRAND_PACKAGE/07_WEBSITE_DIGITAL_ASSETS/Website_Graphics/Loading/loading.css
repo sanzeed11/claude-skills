@@ -1,0 +1,10 @@
+/* Sanzeed — loading: the point travels the beam.
+   <div class="sz-loader" role="status" aria-label="Loading"></div>
+   Tokens: --accent #E9B25A (dark) / #B8863B (light), --line rgba(255,255,255,.1) / rgba(40,30,10,.1). */
+.sz-loader { --w: 160px; --dot: 9px; position: relative; width: var(--w); height: 1px; background: var(--line, rgba(255,255,255,.1)); }
+.sz-loader::after { content: ""; position: absolute; top: calc(var(--dot) / -2 + .5px); left: 0; width: var(--dot); height: var(--dot); border-radius: 50%;
+  background: var(--accent, #E9B25A); box-shadow: 0 0 24px rgba(233,178,90,.55), 0 0 64px rgba(233,178,90,.25);
+  animation: sz-beam 1.6s cubic-bezier(.65,0,.2,1) infinite; }
+@keyframes sz-beam { 0% { left: 0; transform: scale(.6); opacity: .6; } 50% { transform: scale(1); opacity: 1; } 100% { left: calc(100% - var(--dot)); transform: scale(.6); opacity: .6; } }
+.sz-loader.is-page { --w: 120px; margin: 22px auto 0; }
+@media (prefers-reduced-motion: reduce) { .sz-loader::after { animation: none; left: calc(100% - var(--dot)); } }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Instagram reel cover — talk / method — 1080×1920 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the talk =================== */
+var DATA = {
+  eyebrow:       "Method",
+  image:         "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/mountain-projection.webp",
+  image_focal:   "46% 63%",
+  headline:      "A method for the monumental.",
+  lit_last_word: true,
+  title:         "Discover · Direct · Craft · Deliver",
+  place:         "Four steps, a named deliverable at each",
+  site:          "sanzeed.com/#method"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .top { top: 300px; align-items: center; }
+  .plate { position: absolute; left: var(--pad); right: var(--pad); top: 400px; height: 1150px; }
+  .plate .veil { background: linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.05) 40%, rgba(0,0,0,.55) 68%, rgba(0,0,0,.92) 100%); }
+  .plate .copy { position: absolute; left: 56px; right: 56px; bottom: 56px; }
+  .plate .play { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); }
+  .hl { font-size: 76px; max-width: 12ch; }
+  .label { margin-top: 26px; }
+  .bottom { bottom: 300px; }
+  .guide .zone.a { left: 0; right: 0; top: 285px; height: 1350px; } .guide .zone.b { left: 0; right: 0; top: 420px; height: 1080px; border-style: dotted; }
+  .guide .tag.a { left: 24px; top: 297px; } .guide .tag.b { right: 24px; top: 432px; }
+</style>
+</head>
+<body class="f-st">
+<div class="frame grain">
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="plate">
+    <img data-src="image" alt="">
+    <div class="veil"></div>
+    <div class="play"></div>
+    <div class="copy">
+      <h1 class="hl" data-headline="headline"></h1>
+      <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+    </div>
+  </div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+  <div class="guide"><div class="zone a"></div><div class="zone b"></div><span class="tag a">Feed crop 1080 × 1350</span><span class="tag b">Grid crop 1080 × 1080</span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

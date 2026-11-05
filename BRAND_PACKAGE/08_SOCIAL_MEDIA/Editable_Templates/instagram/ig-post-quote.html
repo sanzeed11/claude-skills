@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Instagram post — quote — 1080×1080 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the quote and its attribution ===================
+   Quotes are set in Fraunces Light italic. Keep to about 25 words; the lamp glow sits behind. */
+var DATA = {
+  eyebrow:   "About",
+  quote:     "The most powerful stories aren’t just told — they’re felt, lived and remembered through the spaces we design and the moments we shape.",
+  who:       "— Sanzeed Mirza",
+  role:      "Experiential Design Consultant",
+  site:      "sanzeed.com"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .content { top: 50%; transform: translateY(-50%); }
+  .quote { font-size: 58px; max-width: 15.5em; }
+  .quote::before { content: "“"; color: var(--fg-3); }
+  .quote::after { content: "”"; color: var(--fg-3); }
+  .who { margin-top: 44px; display: flex; flex-direction: column; gap: 6px; }
+  .who .t { font: 600 26px/1.3 var(--font-heading); color: var(--fg); }
+  .who .p { font: 400 22px/1.4 var(--font-text); color: var(--fg-2); }
+  .beam { width: 160px; margin-bottom: 40px; }
+</style>
+</head>
+<body class="f-sq">
+<div class="frame grain">
+  <div class="lamp lamp-soft"></div>
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="content">
+    <div class="beam"></div>
+    <p class="quote" data-text="quote"></p>
+    <div class="who"><span class="t" data-text="who"></span><span class="p" data-text="role"></span></div>
+  </div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

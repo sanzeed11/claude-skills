@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzeed — design tokens reference</title>
+<meta name="description" content="Every design token in brand.css and colour-variables.css: colour, type, space, radius, shadow and motion, printed with live specimens.">
+<link rel="icon" href="../Favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  .tk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+  .tk { border: var(--hairline); border-radius: var(--radius-xs); overflow: hidden; background: var(--card); }
+  .tk .sw { height: 72px; }
+  .tk .m { padding: 10px 12px; font: 400 12px/1.5 var(--font-mono); color: var(--fg-3); }
+  .tk .m b { display: block; font: 600 13px/1.3 var(--font-heading); color: var(--fg); letter-spacing: var(--ls-heading); font-family: var(--font-heading); }
+  .tk .m code { color: var(--fg-2); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .pair > div { border-radius: var(--radius-sm); padding: 20px; border: var(--hairline); }
+  .pair .sem { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pair .sem .row { display: flex; align-items: center; gap: 10px; font: 400 12px/1.3 var(--font-mono); color: var(--fg-2); }
+  .pair .sem .row i { flex: none; width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); }
+  .type-row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: baseline; padding: 18px 0; border-bottom: var(--hairline); }
+  .type-row .meta { font: 400 12px/1.6 var(--font-mono); color: var(--fg-3); }
+  .type-row .meta b { display: block; font: 600 13px/1.3 var(--font-heading); color: var(--fg); margin-bottom: 4px; }
+  .sp-row { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+  .sp { display: grid; justify-items: center; gap: 8px; font: 400 11px/1.4 var(--font-mono); color: var(--fg-3); text-align: center; }
+  .sp i { display: block; background: var(--accent); border-radius: 2px; }
+  .rad-row { display: flex; gap: 20px; flex-wrap: wrap; }
+  .rad { width: 150px; height: 110px; background: var(--card); border: var(--hairline); display: grid; place-items: end start; padding: 12px; font: 400 11px/1.4 var(--font-mono); color: var(--fg-3); }
+  .sh-row { display: flex; gap: 32px; flex-wrap: wrap; padding: 20px 0; }
+  .sh { width: 180px; height: 110px; border-radius: var(--radius-sm); background: var(--card); display: grid; place-items: end start; padding: 12px; font: 400 11px/1.4 var(--font-mono); color: var(--fg-3); }
+  .ease-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .ease { border: var(--hairline); border-radius: var(--radius-xs); padding: 16px; background: var(--card); font: 400 12px/1.6 var(--font-mono); color: var(--fg-3); }
+  .ease b { display: block; font: 600 13px/1.3 var(--font-heading); color: var(--fg); margin-bottom: 6px; }
+  .ease svg { width: 100%; height: 90px; margin-top: 10px; }
+  .ease svg path { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+  .ease svg line { stroke: var(--line); }
+  .grad { height: 90px; border-radius: var(--radius-xs); border: var(--hairline); }
+  code { overflow-wrap: anywhere; }
+  @media (max-width: 720px) {
+    .pair { grid-template-columns: 1fr; }
+    .type-row { grid-template-columns: 1fr; gap: 10px; }
+    .type-row .meta { order: 2; }
+  }
+  @media (max-width: 480px) { .pair .sem { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="kit-head">
+  <div class="container">
+    <span class="eyebrow">Design tokens · brand.css + colour-variables.css</span>
+    <h1 class="t-h1">Every token, <span class="dim">printed.</span></h1>
+    <p class="t-lead measure" style="margin-top:14px">The single source of truth is <code>15_SOURCE_FILES/Project_Files/brand-kit/brand.css</code>, which imports <code>03_COLOUR_SYSTEM/colour-variables.css</code>. Nothing on this page is typed by hand twice: every swatch and specimen is drawn with the variable it names, so if a token changes, this page changes.</p>
+    <nav class="kit-toc" aria-label="Sections"><a href="#colour">Colour</a><a href="#type">Type</a><a href="#space">Space</a><a href="#radius">Radius</a><a href="#shadow">Shadow &amp; glow</a><a href="#motion">Motion</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="kit-section" id="colour"><div class="container">
+  <div class="kit-title"><span class="counter">001</span><div><h2 class="t-h2">Colour</h2><p>Palette tokens are fixed values (<code>--sz-*</code>). Semantic tokens (<code>--bg</code>, <code>--fg</code>, <code>--accent</code>…) switch with <code>html[data-theme]</code> or <code>prefers-color-scheme</code>. One gold accent per composition; functional colours mark states only.</p></div></div>
+
+  <div class="spec"><span class="spec-label">Palette — dark side (the gallery)</span>
+    <div class="tk-grid">
+      <div class="tk"><div class="sw" style="background:var(--sz-gallery-black)"></div><div class="m"><b>Gallery Black</b><code>--sz-gallery-black</code> #000000<br>background · 100 K in print</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-night)"></div><div class="m"><b>Night</b><code>--sz-night</code> #0D0D0F<br>surface, footers, app tile</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-charcoal)"></div><div class="m"><b>Charcoal</b><code>--sz-charcoal</code> #1C1C1E<br>cards on dark</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-graphite)"></div><div class="m"><b>Graphite</b><code>--sz-graphite</code> #2A2A2D<br>raised / hover card</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-mist)"></div><div class="m"><b>Mist</b><code>--sz-mist</code> #808086<br>tertiary text on dark · 5.35:1</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-silver)"></div><div class="m"><b>Silver</b><code>--sz-silver</code> #A1A1A6<br>secondary text on dark · 8.16:1</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-gallery-white)"></div><div class="m"><b>Gallery White</b><code>--sz-gallery-white</code> #F5F5F7<br>text and logo on dark · never #FFF</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-lamp-gold)"></div><div class="m"><b>Lamp Gold</b><code>--sz-lamp-gold</code> #E9B25A<br>the point of light on dark · 10.98:1</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-lamp-light)"></div><div class="m"><b>Lamp Light</b><code>--sz-lamp-light</code> #F4C97A<br>hover and glow of Lamp Gold</div></div>
+    </div>
+  </div>
+  <div class="spec"><span class="spec-label">Palette — light side (the label)</span>
+    <div class="tk-grid">
+      <div class="tk"><div class="sw" style="background:var(--sz-plaster)"></div><div class="m"><b>Plaster</b><code>--sz-plaster</code> #F5F0E7<br>light background, documents</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-paper)"></div><div class="m"><b>Paper</b><code>--sz-paper</code> #FBF8F2<br>cards on Plaster, letterhead</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-stone)"></div><div class="m"><b>Stone</b><code>--sz-stone</code> #ECE7DC<br>raised state, table stripes</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-umber)"></div><div class="m"><b>Umber</b><code>--sz-umber</code> #665F55<br>secondary text on light · 5.55:1</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-soot)"></div><div class="m"><b>Soot</b><code>--sz-soot</code> #1A1816<br>text and logo on light · 15.6:1</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-old-gold)"></div><div class="m"><b>Old Gold</b><code>--sz-old-gold</code> #B8863B<br>accent on light · decorative only</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-amber)"></div><div class="m"><b>Amber</b><code>--sz-amber</code> #D9A64A<br>hover gold on light</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-gold-ink)"></div><div class="m"><b>Gold Ink</b><code>--sz-gold-ink</code> #8A6124<br>gold as text on light · 4.85:1</div></div>
+    </div>
+  </div>
+  <div class="spec"><span class="spec-label">Functional — states only, never decoration</span>
+    <div class="tk-grid">
+      <div class="tk"><div class="sw" style="background:var(--sz-moss)"></div><div class="m"><b>Moss</b><code>--sz-moss</code> #3D8B5E · success on dark</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-moss-deep)"></div><div class="m"><b>Moss Deep</b><code>--sz-moss-deep</code> #2E6E48 · success on light</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-ochre)"></div><div class="m"><b>Ochre</b><code>--sz-ochre</code> #D4862B · warning on dark</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-ochre-deep)"></div><div class="m"><b>Ochre Deep</b><code>--sz-ochre-deep</code> #A8651B · warning on light</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-signal-red)"></div><div class="m"><b>Signal Red</b><code>--sz-signal-red</code> #D64540 · error on dark</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-brick)"></div><div class="m"><b>Brick</b><code>--sz-brick</code> #C0392B · error on light</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-slate-blue)"></div><div class="m"><b>Slate Blue</b><code>--sz-slate-blue</code> #4A86C8 · info on dark</div></div>
+      <div class="tk"><div class="sw" style="background:var(--sz-slate-deep)"></div><div class="m"><b>Slate Deep</b><code>--sz-slate-deep</code> #2F62A0 · info on light</div></div>
+    </div>
+  </div>
+  <div class="spec"><span class="spec-label">Semantic tokens — both themes, drawn live</span>
+    <div class="pair">
+      <div style="background:var(--bg)"><span class="eyebrow" style="display:block;margin-bottom:14px">Dark (default)</span>
+        <div class="sem">
+          <div class="row"><i style="background:var(--bg)"></i>--bg</div><div class="row"><i style="background:var(--bg-2)"></i>--bg-2</div>
+          <div class="row"><i style="background:var(--card)"></i>--card</div><div class="row"><i style="background:var(--card-2)"></i>--card-2</div>
+          <div class="row"><i style="background:var(--fg)"></i>--fg</div><div class="row"><i style="background:var(--fg-2)"></i>--fg-2</div>
+          <div class="row"><i style="background:var(--fg-3)"></i>--fg-3</div><div class="row"><i style="background:var(--line)"></i>--line (10 %)</div>
+          <div class="row"><i style="background:var(--accent)"></i>--accent</div><div class="row"><i style="background:var(--accent-2)"></i>--accent-2</div>
+          <div class="row"><i style="background:var(--accent-text)"></i>--accent-text</div><div class="row"><i style="background:var(--accent-ink)"></i>--accent-ink</div>
+          <div class="row"><i style="background:var(--btn)"></i>--btn</div><div class="row"><i style="background:var(--btn-fg)"></i>--btn-fg</div>
+          <div class="row"><i style="background:var(--glass)"></i>--glass</div><div class="row"><i style="background:var(--veil)"></i>--veil</div>
+          <div class="row"><i style="background:var(--success)"></i>--success</div><div class="row"><i style="background:var(--warning)"></i>--warning</div>
+          <div class="row"><i style="background:var(--error)"></i>--error</div><div class="row"><i style="background:var(--info)"></i>--info</div>
+        </div>
+      </div>
+      <div class="theme-light" style="background:var(--bg);color:var(--fg)"><span class="eyebrow" style="display:block;margin-bottom:14px">Light (html[data-theme=light] / .theme-light)</span>
+        <div class="sem">
+          <div class="row"><i style="background:var(--bg)"></i>--bg</div><div class="row"><i style="background:var(--bg-2)"></i>--bg-2</div>
+          <div class="row"><i style="background:var(--card)"></i>--card</div><div class="row"><i style="background:var(--card-2)"></i>--card-2</div>
+          <div class="row"><i style="background:var(--fg)"></i>--fg</div><div class="row"><i style="background:var(--fg-2)"></i>--fg-2</div>
+          <div class="row"><i style="background:var(--fg-3)"></i>--fg-3</div><div class="row"><i style="background:var(--line)"></i>--line (10 %)</div>
+          <div class="row"><i style="background:var(--accent)"></i>--accent</div><div class="row"><i style="background:var(--accent-2)"></i>--accent-2</div>
+          <div class="row"><i style="background:var(--accent-text)"></i>--accent-text</div><div class="row"><i style="background:var(--accent-ink)"></i>--accent-ink</div>
+          <div class="row"><i style="background:var(--btn)"></i>--btn</div><div class="row"><i style="background:var(--btn-fg)"></i>--btn-fg</div>
+          <div class="row"><i style="background:var(--glass)"></i>--glass</div><div class="row"><i style="background:var(--veil)"></i>--veil</div>
+          <div class="row"><i style="background:var(--success)"></i>--success</div><div class="row"><i style="background:var(--warning)"></i>--warning</div>
+          <div class="row"><i style="background:var(--error)"></i>--error</div><div class="row"><i style="background:var(--info)"></i>--info</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spec"><span class="spec-label">Gradients</span>
+    <div class="tk-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div><div class="grad" style="background:#000 var(--sz-gradient-lamp)"></div><p class="spec-note">--sz-gradient-lamp · the glow behind one lit object (.bg-lamp)</p></div>
+      <div><div class="grad" style="background:var(--sz-gradient-dusk)"></div><p class="spec-note">--sz-gradient-dusk · dark sections (.bg-dusk)</p></div>
+      <div><div class="grad" style="background:var(--sz-gradient-plaster)"></div><p class="spec-note">--sz-gradient-plaster · light documents (.bg-plaster)</p></div>
+      <div><div class="grad" style="background:var(--sz-gradient-foil)"></div><p class="spec-note">--sz-gradient-foil · mockups only, never text under 24 px</p></div>
+      <div><div class="grad" style="background:url('../../00_ORIGINAL_ASSETS_BACKUP/images/img/buddha-park.webp') center/cover;position:relative"><div style="position:absolute;inset:0;background:var(--sz-gradient-veil);border-radius:inherit"></div></div><p class="spec-note">--sz-gradient-veil · over photography for wall labels</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="kit-section" id="type"><div class="container">
+  <div class="kit-title"><span class="counter">002</span><div><h2 class="t-h2">Type</h2><p>Fraunces 300 for display (opsz 144 ≥ 48 px, 72 for 24–48, 36 below; italic for quotes). Inter Tight 600 for H3/H4, eyebrows and labels. Inter 400 for body, 500 for UI. Sizes are <code>clamp()</code> tokens; the specimen shows the value at this viewport.</p></div></div>
+  <div class="spec"><span class="spec-label">Scale (--fs-* / .t-*) — live specimens</span>
+    <div class="type-row"><div class="meta"><b>.t-display-1</b>--fs-display-1 · clamp(44px, 2.2rem + 4.6vw, 104px)<br>Fraunces 300 · opsz 144 · lh 1.02 · ls −0.015em<br><span data-size=".t-display-1"></span></div><div class="t-display-1">Walk into.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-display-2</b>--fs-display-2 · clamp(36px, 1.6rem + 3.2vw, 72px)<br>Fraunces 300 · opsz 144 · lh 1.08<br><span data-size=".t-display-2"></span></div><div class="t-display-2">Eight rooms, <span class="lit">lit.</span></div></div>
+    <div class="type-row"><div class="meta"><b>.t-h1</b>--fs-h1 · clamp(32px, 1.5rem + 2vw, 52px)<br>Fraunces 300 · opsz 72 · lh 1.1<br><span data-size=".t-h1"></span></div><div class="t-h1">A method for the monumental.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-h2</b>--fs-h2 · clamp(26px, 1.3rem + 1.3vw, 38px)<br>Fraunces 300 · opsz 48 · lh 1.15<br><span data-size=".t-h2"></span></div><div class="t-h2">Galleries planned as a route, not a floor plan.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-h3</b>--fs-h3 · clamp(20px, 1.1rem + 0.5vw, 24px)<br>Inter Tight 600 · lh 1.2 · ls −0.01em<br><span data-size=".t-h3"></span></div><div class="t-h3">Museum &amp; Cultural Exhibition Planning</div></div>
+    <div class="type-row"><div class="meta"><b>.t-h4</b>--fs-h4 · 18px<br>Inter Tight 600 · lh 1.3<br><span data-size=".t-h4"></span></div><div class="t-h4">Creative Director · Tagbin</div></div>
+    <div class="type-row"><div class="meta"><b>.t-lead</b>--fs-lead · clamp(18px, 1rem + 0.5vw, 21px)<br>Inter 400 · lh 1.5 · fg-2<br><span data-size=".t-lead"></span></div><div class="t-lead">I lead the whole room — story, space, graphics, media and the team that builds it.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-body</b>--fs-body · clamp(16px, 0.95rem + 0.2vw, 17px)<br>Inter 400 · lh 1.6 · measure 64ch<br><span data-size=".t-body"></span></div><div class="t-body measure">The script comes first. Every room, screen and surface carries a line of it. You receive a concept book and a walkthrough film.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-small</b>--fs-small · 15px<br>Inter 400 · lh 1.55<br><span data-size=".t-small"></span></div><div class="t-small measure">The first conversation is always free. I reply within two working days. If it is urgent, WhatsApp is fastest.</div></div>
+    <div class="type-row"><div class="meta"><b>.t-caption / .wall-label</b>--fs-caption · 13px<br>Inter 400 · lh 1.5 · fg-3<br><span data-size=".t-caption"></span></div><div class="wall-label"><b>Prime Minister Museum</b><span>New Delhi</span></div></div>
+    <div class="type-row"><div class="meta"><b>.eyebrow</b>--fs-eyebrow · 12px<br>Inter Tight 600 · caps · +0.12em · accent-text<br><span data-size=".eyebrow"></span></div><div><span class="eyebrow">Now showing</span></div></div>
+    <div class="type-row"><div class="meta"><b>.t-ui</b>--fs-ui · 15px<br>Inter 500 · buttons, inputs<br><span data-size=".t-ui"></span></div><div class="t-ui">Tell me about the room →</div></div>
+    <div class="type-row"><div class="meta"><b>.t-stat</b>--fs-stat · clamp(40px, 2rem + 2.4vw, 64px)<br>Fraunces 300 · tnum · gold plus<br><span data-size=".t-stat"></span></div><div class="t-stat">90<span class="plus">+</span></div></div>
+    <div class="type-row"><div class="meta"><b>.t-quote</b>--fs-quote · clamp(24px, 1.2rem + 1.2vw, 34px)<br>Fraunces 300 italic · opsz 72 · SOFT 50 · lh 1.3<br><span data-size=".t-quote"></span></div><div class="t-quote">The building is the screen.</div></div>
+    <div class="type-row"><div class="meta"><b>.counter</b>Inter Tight 500 · 13px · +0.08em · tnum</div><div><span class="counter">001</span> &nbsp; <span class="counter">STEP 02</span></div></div>
+  </div>
+  <div class="spec"><span class="spec-label">Families and fallbacks</span>
+    <div class="table-wrap"><table class="table token-table"><thead><tr><th>Token</th><th>Stack</th><th>Files</th></tr></thead><tbody>
+      <tr><td><code>--font-display</code></td><td>"Fraunces", "Iowan Old Style", Palatino, Georgia, serif</td><td>04_TYPOGRAPHY/Font_Files/Fraunces/*.woff2 (variable: SOFT, WONK, opsz, wght)</td></tr>
+      <tr><td><code>--font-heading</code></td><td>"Inter Tight", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif</td><td>04_TYPOGRAPHY/Font_Files/Inter_Tight/*.woff2</td></tr>
+      <tr><td><code>--font-text</code></td><td>"Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif</td><td>04_TYPOGRAPHY/Font_Files/Inter/*.woff2</td></tr>
+      <tr><td><code>--font-mono</code></td><td>"SF Mono", ui-monospace, Menlo, Consolas, monospace</td><td>system — code and token labels only</td></tr>
+      <tr><td><code>--lh-*</code></td><td>tight 1.02 · display 1.08 · heading 1.2 · body 1.6 · ui 1.2</td><td></td></tr>
+      <tr><td><code>--ls-*</code></td><td>display −0.015em · heading −0.01em · eyebrow 0.12em · caps 0.08em</td><td>Never letter-space Fraunces.</td></tr>
+    </tbody></table></div>
+  </div>
+</div></section>
+
+<section class="kit-section" id="space"><div class="container">
+  <div class="kit-title"><span class="counter">003</span><div><h2 class="t-h2">Space</h2><p>A 4 px base. Section rhythm uses 7–10; component padding uses 4–6; inline gaps use 1–3.</p></div></div>
+  <div class="spec"><span class="spec-label">--space-1 … --space-12</span>
+    <div class="sp-row">
+      <div class="sp"><i style="width:var(--space-1);height:var(--space-1)"></i>1 · 4</div>
+      <div class="sp"><i style="width:var(--space-2);height:var(--space-2)"></i>2 · 8</div>
+      <div class="sp"><i style="width:var(--space-3);height:var(--space-3)"></i>3 · 12</div>
+      <div class="sp"><i style="width:var(--space-4);height:var(--space-4)"></i>4 · 16</div>
+      <div class="sp"><i style="width:var(--space-5);height:var(--space-5)"></i>5 · 24</div>
+      <div class="sp"><i style="width:var(--space-6);height:var(--space-6)"></i>6 · 32</div>
+      <div class="sp"><i style="width:var(--space-7);height:var(--space-7)"></i>7 · 48</div>
+      <div class="sp"><i style="width:var(--space-8);height:var(--space-8)"></i>8 · 64</div>
+      <div class="sp"><i style="width:var(--space-9);height:var(--space-9)"></i>9 · 96</div>
+      <div class="sp"><i style="width:var(--space-10);height:var(--space-10)"></i>10 · 128</div>
+      <div class="sp"><i style="width:var(--space-11);height:var(--space-11)"></i>11 · 160</div>
+      <div class="sp"><i style="width:var(--space-12);height:var(--space-12)"></i>12 · 224</div>
+    </div>
+    <p class="spec-note">--gutter clamp(20px, 5vw, 80px) · --maxw 1280px · --narrow 980px · --measure 64ch · .container = min(100% − 2·gutter, maxw)</p>
+  </div>
+</div></section>
+
+<section class="kit-section" id="radius"><div class="container">
+  <div class="kit-title"><span class="counter">004</span><div><h2 class="t-h2">Radius and line</h2><p>The room is a rounded rectangle: 28 for cards and frames, 20 for small cards and tiles, 12 for inputs and menus, pill for buttons and tags. Hairlines are white at 10 % on dark, Soot at 10 % on light (6 % / 5.5 % for the quieter line).</p></div></div>
+  <div class="spec"><span class="spec-label">--radius · --radius-sm · --radius-xs · --radius-pill · --hairline</span>
+    <div class="rad-row">
+      <div class="rad" style="border-radius:var(--radius)">--radius 28</div>
+      <div class="rad" style="border-radius:var(--radius-sm)">--radius-sm 20</div>
+      <div class="rad" style="border-radius:var(--radius-xs)">--radius-xs 12</div>
+      <div class="rad" style="border-radius:var(--radius-pill);height:56px;width:200px">--radius-pill 999</div>
+      <div class="rad" style="border-radius:var(--radius-sm);border:1px solid var(--line-2)">--line-2 (6 %)</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="kit-section" id="shadow"><div class="container">
+  <div class="kit-title"><span class="counter">005</span><div><h2 class="t-h2">Shadow and glow</h2><p>Shadows are for rooms, never for type. The glow belongs to the point of light only (and to the dots in motion).</p></div></div>
+  <div class="spec"><span class="spec-label">--shadow-sm · --shadow · --glow — dark then light</span>
+    <div class="sh-row"><div class="sh" style="box-shadow:var(--shadow-sm)">--shadow-sm</div><div class="sh" style="box-shadow:var(--shadow)">--shadow</div><div class="sh" style="display:grid;place-items:center"><span class="dot dot-glow" style="width:12px;height:12px"></span></div></div>
+    <div class="theme-light" style="background:var(--bg);border-radius:var(--radius-sm);padding:0 24px"><div class="sh-row"><div class="sh" style="box-shadow:var(--shadow-sm)">--shadow-sm</div><div class="sh" style="box-shadow:var(--shadow)">--shadow</div><div class="sh" style="display:grid;place-items:center"><span class="dot dot-glow" style="width:12px;height:12px"></span></div></div></div>
+    <p class="spec-note">dark: --shadow-sm 0 1px 2px rgba(0,0,0,.5), 0 10px 30px rgba(0,0,0,.45) · --shadow adds 0 50px 100px rgba(0,0,0,.5) · --glow 0 0 24px rgba(233,178,90,.55), 0 0 64px rgba(233,178,90,.25)<br>light: --shadow-sm 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06) · --glow 0 0 24px rgba(184,134,59,.35)</p>
+  </div>
+</div></section>
+
+<section class="kit-section" id="motion"><div class="container">
+  <div class="kit-title"><span class="counter">006</span><div><h2 class="t-h2">Motion</h2><p>Four durations, three easings. Light leaves fast and settles long.</p></div></div>
+  <div class="spec"><span class="spec-label">Easing curves and durations</span>
+    <div class="ease-row">
+      <div class="ease"><b>--ease</b>cubic-bezier(.22,.8,.2,1) · hover, reveal, menus<svg viewBox="0 0 200 100"><line x1="0" y1="90" x2="200" y2="90"/><line x1="10" y1="0" x2="10" y2="100"/><path d="M10 90 C 54 10, 50 10, 190 10"/></svg></div>
+      <div class="ease"><b>--ease-in</b>cubic-bezier(.6,0,.9,.4) · exits<svg viewBox="0 0 200 100"><line x1="0" y1="90" x2="200" y2="90"/><line x1="10" y1="0" x2="10" y2="100"/><path d="M10 90 C 118 90, 172 58, 190 10"/></svg></div>
+      <div class="ease"><b>--ease-io</b>cubic-bezier(.65,0,.2,1) · loops, images<svg viewBox="0 0 200 100"><line x1="0" y1="90" x2="200" y2="90"/><line x1="10" y1="0" x2="10" y2="100"/><path d="M10 90 C 127 90, 46 10, 190 10"/></svg></div>
+      <div class="ease"><b>Durations</b>--t-fast .2s (colour) · --t .4s (transform) · --t-slow .8s (images, modal) · --t-reveal 1.1s (headline reveal, dot pulse)<div style="margin-top:14px;display:grid;gap:8px"><div class="beam" style="width:100%"></div></div></div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="kit-foot"><div class="container">Sanzeed — tokens reference. Generated from brand.css; re-render with render.js (see README.md).</div></footer>
+<script>
+  // print the computed size of each type token at this viewport
+  document.querySelectorAll('[data-size]').forEach(function(s){ var w=s.closest('.type-row').children[1]; var el=(w.className? w : (w.querySelector('[class]')||w)); var cs=getComputedStyle(el); s.textContent='at this viewport: '+Math.round(parseFloat(cs.fontSize))+' px / '+(Math.round(parseFloat(cs.lineHeight)/parseFloat(cs.fontSize)*100)/100)+' · '+cs.fontFamily.split(',')[0].replace(/"/g,'')+' '+cs.fontWeight; });
+</script>
+</body>
+</html>

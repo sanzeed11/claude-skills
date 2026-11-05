@@ -1,0 +1,14 @@
+{
+  "name": "Sanzeed Mirza — Experiential Design Consultant",
+  "short_name": "Sanzeed",
+  "description": "Experiential design you can walk into.",
+  "icons": [
+    { "src": "/pwa-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/pwa-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/pwa-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "theme_color": "#0D0D0F",
+  "background_color": "#0D0D0F",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -1,0 +1,28 @@
+# Email — headers, newsletter masthead, signature
+
+Everything for mail: the header for transactional or campaign mail, the newsletter masthead (“From the room”), and the signature in HTML and plain text with its logo. All rendered at 2× so they stay sharp on retina clients.
+
+## Files
+
+| File | Use | Spec | Source / edit |
+|---|---|---|---|
+| `sanzeed-email-header--dark-1200x400.png` / `.jpg` | email header on a dark canvas | 600×200 displayed, 1200×400 file (2×); wordmark 190 px (≥ 120 min, clear space built in), hairline, master line in Fraunces 300 with the lit last word, descriptor eyebrow, lamp | `src/email-header--dark.html` + `src/email-headers.css` |
+| `sanzeed-email-header--light-1200x400.png` / `.jpg` | email header on Plaster (most clients) | as above, full-colour-light pairing (Soot + Old Gold, Gold Ink for text) | `src/email-header--light.html` |
+| `sanzeed-newsletter-header--dark-1200x300.png` / `.jpg` | newsletter masthead | 600×150 displayed, 1200×300 file; “A letter from Sanzeed Mirza” eyebrow, masthead “From the room.”, issue block `No. 001 · [Month Year]` (bracketed field to fill) | `src/newsletter-header--dark.html` |
+| `sanzeed-newsletter-header--light-1200x300.png` / `.jpg` | masthead, light | | `src/newsletter-header--light.html` |
+| `email-signature.html` | the HTML signature: table-based, inline CSS, 600 px max; name, descriptor, phone, email, site, LinkedIn and WhatsApp links, New Delhi, the master line | logo referenced by relative path `images/sanzeed-email-logo--light-640x200.png`, displayed at 320×100 | edit directly (keep styles inline) |
+| `email-signature.txt` | plain-text signature | 7 lines, from `01_BRAND_STRATEGY/Brand_Messaging.md` | edit directly |
+| `images/sanzeed-email-logo--light-640x200.png` | the signature logo, 320×100 @2× | wordmark 540 px wide on a 640×200 transparent canvas (clear space ≥ ½ cap height on every side), full-colour-light for light mail backgrounds | `src/email-logo--light.svg` → cairosvg (in `build_email.sh`) |
+| `images/sanzeed-email-logo--dark-640x200.png` | same, full-colour-dark, for clients that force a dark canvas | | `src/email-logo--dark.svg` |
+| `sanzeed-email-signature--preview.png` | the signature as received in a light client, with the reply copy above it | 1632 × … (2×) | `src/signature-preview.html` (+ `--built.html`, generated) |
+| `build_email.sh` | renders the four headers (PNG + JPG q90) and the preview | `bash build_email.sh` | |
+
+## Hosting the signature
+
+Mail clients cannot load a local image. Upload `images/sanzeed-email-logo--light-640x200.png` to `https://sanzeed.com/email/` (or any HTTPS host that serves PNG with long cache headers) and replace the `src` in `email-signature.html` with the absolute URL before installing. Keep `width="320" height="100"` so the 2× file displays at 320×100.
+
+Installing: Gmail → Settings → Signature → paste the rendered HTML (open the file in a browser, select all, copy). Apple Mail → Preferences → Signatures → paste. Outlook → paste into the signature editor; Outlook on Windows may rewrite the table but keeps inline styles.
+
+Dark mode: Gmail and Outlook may invert the canvas. The signature text uses Soot and Umber, which survive inversion legibly; the logo stays dark on its transparent canvas, so if a client is known to force dark backgrounds, swap to `--dark`. Fonts: Inter is not available in mail clients — the stack falls back to Helvetica/Arial; the master line sits in Georgia italic so it never renders as a bold serif.
+
+The headers are images; alt text when placing them: “Sanzeed — Experiential design you can walk into.” and “From the room — a letter from Sanzeed Mirza”.

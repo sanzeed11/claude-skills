@@ -1,0 +1,38 @@
+/* share.css — generic share images for sanzeed.com (16:9 1920×1080, 1:1 1080×1080, 9:16 1080×1920). Requires brand.css. */
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #000; color: #F5F5F7; }
+.share { position: relative; width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-sizing: border-box; }
+.share .wm { display: block; height: auto; color: #F5F5F7; }
+.share .wm .wm-dot { fill: #E9B25A; }
+.share .eyebrow { color: #E9B25A; }
+.share h1 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; line-height: 1.04; margin: 0; text-wrap: balance; }
+.share .lit { color: #E9B25A; }
+.share .site { font: 500 var(--site-size, 18px)/1 var(--font-text); letter-spacing: .02em; color: #808086; }
+.share .foot { position: absolute; left: var(--pad); right: var(--pad); bottom: var(--pad-b); display: flex; justify-content: space-between; align-items: center; }
+.orbit { color: #F5F5F7; }
+.orbit .ln { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.orbit .ln-2 { opacity: .45; } .orbit .ln-3 { opacity: .22; }
+.orbit .fill-bg { fill: #000; } .orbit .pt { fill: #E9B25A; } .orbit .pt-glow { fill: #E9B25A; opacity: .35; filter: blur(8px); } .orbit .dust { fill: currentColor; opacity: .3; }
+
+/* 16:9 — wordmark and line left, orbit right */
+.share-169 { --pad: 120px; --pad-b: 84px; --site-size: 20px; flex-direction: row; justify-content: space-between; text-align: left; padding: 0 var(--pad); background-image: radial-gradient(42% 70% at 70% 50%, rgba(233,178,90,.5) 0%, rgba(233,178,90,.1) 32%, rgba(0,0,0,0) 70%); }
+.share-169 .copy { width: 880px; }
+.share-169 .wm { width: 420px; margin-bottom: 56px; }
+.share-169 h1 { font-size: 96px; max-width: 11ch; }
+.share-169 .eyebrow { display: block; margin-top: 36px; font-size: 18px; letter-spacing: .14em; }
+.share-169 .orbit { width: 760px; margin-right: -40px; }
+
+/* 1:1 — stacked */
+.share-11 { --pad: 96px; --pad-b: 80px; --site-size: 18px; justify-content: flex-start; padding: 150px var(--pad) 0; background-image: radial-gradient(60% 42% at 50% 68%, rgba(233,178,90,.5) 0%, rgba(233,178,90,.1) 32%, rgba(0,0,0,0) 70%); }
+.share-11 .wm { width: 440px; margin-bottom: 52px; }
+.share-11 h1 { font-size: 72px; max-width: 13ch; }
+.share-11 .eyebrow { display: block; margin-top: 30px; font-size: 15px; letter-spacing: .14em; }
+.share-11 .orbit { position: absolute; left: 50%; bottom: 120px; width: 620px; transform: translateX(-50%); }
+
+/* 9:16 — safe area 1080×1420 centred (250 px top and bottom are UI on stories) */
+.share-916 { --pad: 96px; --pad-b: 290px; --site-size: 18px; justify-content: flex-start; padding: 420px var(--pad) 0; background-image: radial-gradient(70% 36% at 50% 62%, rgba(233,178,90,.5) 0%, rgba(233,178,90,.1) 32%, rgba(0,0,0,0) 70%); }
+.share-916 .wm { width: 460px; margin-bottom: 56px; }
+.share-916 h1 { font-size: 80px; max-width: 12ch; }
+.share-916 .eyebrow { display: block; margin-top: 32px; font-size: 15px; letter-spacing: .14em; }
+.share-916 .orbit { position: absolute; left: 50%; bottom: 360px; width: 700px; transform: translateX(-50%); }
+.share-916 .safe { position: absolute; left: 0; right: 0; top: 250px; height: 1420px; pointer-events: none; }

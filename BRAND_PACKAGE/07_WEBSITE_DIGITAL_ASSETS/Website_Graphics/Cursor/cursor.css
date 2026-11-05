@@ -1,0 +1,8 @@
+/* Sanzeed — the point of light as a cursor (32 px, hotspot centre; 64 px for 2× screens).
+   Use on dark sections and over the gallery only; never on form fields or text (keep the system I-beam and pointer there). */
+.sz-cursor { cursor: url("sanzeed-cursor-dot-32.png") 16 16, auto; }
+.sz-cursor { cursor: image-set(url("sanzeed-cursor-dot-32.png") 1x, url("sanzeed-cursor-dot-64.png") 2x) 16 16, auto; }
+.sz-cursor a, .sz-cursor button { cursor: pointer; }
+.sz-cursor input, .sz-cursor textarea, .sz-cursor p, .sz-cursor li { cursor: auto; }
+/* JS-free fallback for a following "dot" that trails the pointer: give the body a 9 px .dot positioned with --x/--y */
+.sz-dot { position: fixed; left: 0; top: 0; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%; background: #E9B25A; box-shadow: 0 0 24px rgba(233,178,90,.55); pointer-events: none; transform: translate(var(--x, -100px), var(--y, -100px)); transition: transform .4s cubic-bezier(.22,.8,.2,1); z-index: 9999; }

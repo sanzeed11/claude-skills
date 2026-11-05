@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Instagram story — method step — 1080×1920 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — one step of the method (step = 1…4) =================== */
+var DATA = {
+  eyebrow:     "Method",
+  counter:     "Step 01 / 04",
+  headline:    "Discover.",
+  lit_last_word: false,
+  body:        "Immersion in the subject — its history, intent and audience — until the central story reveals itself.",
+  receive:     "You receive",
+  deliverable: "a research deck and the one central story.",
+  step:        1,
+  site:        "sanzeed.com/#method"
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  .top { top: 270px; align-items: center; }
+  .content { top: 46%; }
+  .counter { display: block; margin-bottom: 32px; font-size: 22px; }
+  .hl { font-size: 180px; line-height: .95; }
+  .body { margin-top: 44px; font-size: 30px; max-width: 28ch; }
+  .receive { margin-top: 52px; font: 400 30px/1.5 var(--font-text); color: var(--fg-3); max-width: 26ch; }
+  .receive b { display: block; font: 600 32px/1.35 var(--font-heading); color: var(--fg); letter-spacing: -0.01em; }
+  .bottom { bottom: 266px; flex-direction: column; align-items: stretch; gap: 24px; }
+  .route { height: 28px; }
+  .route-labels { font-size: 18px; }
+  .foot { display: flex; justify-content: space-between; margin-top: 8px; }
+  .guide .zone { left: 0; right: 0; top: 250px; bottom: 250px; }
+  .guide .dark.a { left: 0; right: 0; top: 0; height: 250px; } .guide .dark.b { left: 0; right: 0; bottom: 0; height: 250px; }
+  .guide .tag { left: 24px; top: 196px; }
+</style>
+</head>
+<body class="f-st">
+<div class="frame grain">
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="content">
+    <span class="counter" data-text="counter"></span>
+    <h1 class="hl" data-headline="headline"></h1>
+    <p class="body" data-text="body"></p>
+    <p class="receive"><span data-text="receive"></span><b data-text="deliverable"></b></p>
+  </div>
+  <div class="bottom">
+    <div class="route"><i data-step="1"></i><i data-step="2"></i><i data-step="3"></i><i data-step="4"></i></div>
+    <div class="route-labels"><span data-step="1">01 Discover</span><span data-step="2">02 Direct</span><span data-step="3">03 Craft</span><span data-step="4">04 Deliver</span></div>
+    <div class="foot"><span class="site" data-text="site"></span></div>
+  </div>
+  <div class="guide"><div class="dark a"></div><div class="dark b"></div><div class="zone"></div><span class="tag">Centre-safe 1080 × 1420</span></div>
+</div>
+<script src="../fill.js"></script>
+<script>
+  document.querySelectorAll('[data-step]').forEach(function (el) { var on = +el.dataset.step === +DATA.step; el.classList.toggle('on', on); if (el.tagName === 'SPAN') el.innerHTML = on ? '<b>' + el.textContent + '</b>' : el.textContent; });
+</script>
+</body>
+</html>

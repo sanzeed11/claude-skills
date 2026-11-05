@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn document carousel — Prime Minister Museum case study — 5 pages 1080×1350 — Sanzeed</title>
+<script>
+/* =================== EDIT HERE — the case study (copy from sanzeed.com/work/prime-minister-museum) ===================
+   Five pages: cover · the brief · the idea · the walk & what visitors do · the call. Each page is 1080×1350. */
+var DATA = {
+  category:  "Case study · Museums & Experience Centres",
+  title:     "Prime Minister Museum",
+  place:     "New Delhi",
+  role:      "Concept & creative direction",
+  cover_img: "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-03.webp", cover_img_focal: "50% 50%",
+  brief_h:   "The brief",
+  brief:     "One museum for every Prime Minister of India since 1947, in New Delhi — a building that has to hold schoolchildren and heads of state on the same afternoon, and give each leader a room without turning the whole into a corridor of portraits.",
+  brief_img: "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-02.webp", brief_img_focal: "50% 50%",
+  brief_cap: "The new wing from above, the chakra over the lawns",
+  idea_h:    "The idea",
+  idea_hl:   "A corridor you walk in order.",
+  lit_last_word: true,
+  idea:      "The spine of the museum is a single long passage under a tricolour canopy. Visitors meet one Prime Minister at a time, in sequence, so the building itself tells the story of the office before any gallery does.",
+  idea_img:  "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-03.webp", idea_img_focal: "50% 50%",
+  idea_cap:  "The tricolour corridor: one Prime Minister at a time",
+  walk_h:    "The walk",
+  walk:      "Off the spine, each gallery changes its mood to its subject: wood and light for one era, screens and sound for another. Guides stand at the thresholds; planting softens the floor so the passage reads as a walk rather than a hall.",
+  walk_img1: "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-04.webp", walk_img1_focal: "50% 50%",
+  walk_img2: "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/prime-minister-museum-07.webp", walk_img2_focal: "50% 42%",
+  visitors_h: "What visitors do",
+  visitors:  "Visitors walk the whole line of leaders without a map, and come out knowing the order by heart.",
+  call_hl:   "Tell me about the room.",
+  call:      "A few lines are enough. I reply within two working days. The first conversation is always free.",
+  whatsapp:  "+91 7827051270", email: "sanzeed@gmail.com", web: "sanzeed.com/work/prime-minister-museum",
+  film:      "The project film is on the site."
+};
+/* ================================================================================ */
+</script>
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../social.css">
+<style>
+  @page { size: 1080px 1350px; margin: 0; }
+  html, body { height: auto; overflow: visible; background: #000; }
+  .page { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--bg); page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .page .top, .page .bottom, .page .content { position: absolute; left: var(--pad); right: var(--pad); transform: none; }
+  .page .top { top: var(--pad); display: flex; justify-content: space-between; align-items: center; }
+  .page .bottom { bottom: var(--pad); display: flex; justify-content: space-between; align-items: flex-end; }
+  .page .pg { font: 500 18px/1 var(--font-heading); letter-spacing: .08em; font-variant-numeric: tabular-nums; color: var(--fg-3); }
+  .page .plate { position: absolute; left: var(--pad); right: var(--pad); }
+  .page .cap { position: absolute; left: 28px; right: 28px; bottom: 24px; z-index: 2; font: 400 19px/1.4 var(--font-text); color: #A1A1A6; }
+  .page .plate .veil { background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.82) 100%); }
+  .page .sec { display: block; margin-bottom: 22px; }
+  .page .body { font-size: 30px; line-height: 1.45; max-width: 32ch; color: var(--fg-2); }
+  .page .body.lead { color: var(--fg); font-size: 34px; }
+  /* p1 cover */
+  #p1 .plate { top: 190px; height: 700px; }
+  #p1 .copy { position: absolute; left: var(--pad); right: var(--pad); top: 936px; }
+  #p1 .hl { font-size: 96px; max-width: none; }
+  #p1 .label { margin-top: 24px; }
+  /* p2 brief */
+  #p2 .content { top: 190px; }
+  #p2 .plate { top: 760px; height: 420px; }
+  /* p3 idea */
+  #p3 .content { top: 190px; }
+  #p3 .hl { font-size: 84px; margin-bottom: 36px; max-width: 12ch; }
+  #p3 .plate { top: 800px; height: 380px; }
+  /* p4 walk */
+  #p4 .content { top: 190px; }
+  #p4 .plates { position: absolute; left: var(--pad); right: var(--pad); top: 640px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  #p4 .plates .plate { position: relative; left: auto; right: auto; height: 300px; }
+  #p4 .visitors { position: absolute; left: var(--pad); right: var(--pad); top: 990px; }
+  #p4 .visitors .q { font-family: var(--font-display); font-weight: 300; font-style: italic; font-size: 40px; line-height: 1.25; font-variation-settings: "opsz" 72, "SOFT" 50; color: var(--fg); max-width: 24ch; }
+  /* p5 call */
+  #p5 .content { top: 50%; transform: translateY(-50%); }
+  #p5 .hl { font-size: 110px; line-height: .98; max-width: 9ch; }
+  #p5 .body { margin-top: 36px; }
+  #p5 .reach { margin-top: 56px; font-size: 28px; }
+  #p5 .reach b { display: inline-block; min-width: 170px; font-weight: 500; color: var(--fg-3); }
+  #p5 .film { font: 400 20px/1.4 var(--font-text); color: var(--fg-3); }
+</style>
+</head>
+<body class="f-pt">
+<section class="page grain" id="p1">
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="pg">1 / 5</span></div>
+  <div class="plate"><img data-src="cover_img" alt=""></div>
+  <div class="copy">
+    <span class="eyebrow sec" data-text="category"></span>
+    <h1 class="hl"><span data-text="title"></span>.</h1>
+    <div class="label"><span class="p"><span data-text="place"></span><span class="sep">·</span><span data-text="role"></span></span></div>
+  </div>
+  <div class="bottom"><span class="site">sanzeed.com</span><span class="site">Swipe →</span></div>
+</section>
+<section class="page grain" id="p2">
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="pg">2 / 5</span></div>
+  <div class="content">
+    <span class="eyebrow sec" data-text="brief_h"></span>
+    <p class="body lead" data-text="brief"></p>
+  </div>
+  <div class="plate"><img data-src="brief_img" alt=""><div class="veil"></div><span class="cap" data-text="brief_cap"></span></div>
+  <div class="bottom"><span class="site" data-text="title"></span><span class="site" data-text="place"></span></div>
+</section>
+<section class="page grain" id="p3">
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="pg">3 / 5</span></div>
+  <div class="content">
+    <span class="eyebrow sec" data-text="idea_h"></span>
+    <h2 class="hl" data-headline="idea_hl"></h2>
+    <p class="body" data-text="idea"></p>
+  </div>
+  <div class="plate"><img data-src="idea_img" alt=""><div class="veil"></div><span class="cap" data-text="idea_cap"></span></div>
+  <div class="bottom"><span class="site" data-text="title"></span><span class="site" data-text="place"></span></div>
+</section>
+<section class="page grain" id="p4">
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="pg">4 / 5</span></div>
+  <div class="content">
+    <span class="eyebrow sec" data-text="walk_h"></span>
+    <p class="body" data-text="walk"></p>
+  </div>
+  <div class="plates"><div class="plate"><img data-src="walk_img1" alt=""></div><div class="plate"><img data-src="walk_img2" alt=""></div></div>
+  <div class="visitors"><span class="eyebrow sec" data-text="visitors_h"></span><p class="q" data-text="visitors"></p></div>
+  <div class="bottom"><span class="site" data-text="title"></span><span class="site" data-text="place"></span></div>
+</section>
+<section class="page grain" id="p5">
+  <div class="lamp lamp-low"></div>
+  <div class="top"><img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed"><span class="pg">5 / 5</span></div>
+  <div class="content">
+    <h2 class="hl" data-headline="call_hl"></h2>
+    <p class="body" data-text="call"></p>
+    <div class="reach">
+      <span><b>WhatsApp</b><span data-text="whatsapp"></span></span>
+      <span><b>Email</b><span data-text="email"></span></span>
+      <span><b>Web</b><span data-text="web"></span></span>
+    </div>
+  </div>
+  <div class="bottom"><span class="film" data-text="film"></span><span class="site">Sanzeed Mirza · Experiential Design Consultant</span></div>
+</section>
+<script src="../fill.js"></script>
+</body>
+</html>

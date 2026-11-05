@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" width="1600" height="420" role="img" aria-label="Sanzeed — method: Discover, Direct, Craft, Deliver">
+  <title>Sanzeed — the method as a route: four points on the beam (light)</title>
+  <desc>Discover → Direct → Craft → Deliver, with what the client receives at each step. The point of light is on the current step (01). Editable text; fonts Inter Tight 600 / Inter 400 / Fraunces 300 (installed from 04_TYPOGRAPHY).</desc>
+  <defs>
+    <style>
+      .k{font:600 13px "Inter Tight",Inter,sans-serif;letter-spacing:1.6px;fill:#8A6124}
+      .t{font:300 44px Fraunces,Georgia,serif;fill:#1A1816;letter-spacing:-.4px}
+      .r{font:400 15px Inter,sans-serif;fill:#665F55}
+      .y{font:600 11px "Inter Tight",Inter,sans-serif;letter-spacing:1.4px;fill:#6D665C}
+    </style>
+    <filter id="g" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <rect width="1600" height="420" fill="#F5F0E7"/>
+  <line x1="80" y1="120" x2="1520" y2="120" stroke="#1A1816" stroke-opacity=".12" stroke-width="1"/>
+  <g stroke="#1A1816" stroke-opacity=".35" stroke-dasharray="0 14" stroke-width="2" stroke-linecap="round"><line x1="80" y1="120" x2="1520" y2="120"/></g>
+  <circle cx="80" cy="120" r="16" fill="#8A6124" opacity=".35" filter="url(#g)"/><circle cx="80" cy="120" r="7" fill="#8A6124"/>
+  <text class="k" x="80" y="86">STEP 01</text>
+  <text class="t" x="80" y="206">Discover</text>
+  <text class="y" x="80" y="252">YOU RECEIVE</text>
+  <text class="r" x="80" y="282">a research deck and the one</text>
+  <text class="r" x="80" y="306">central story</text>
+  <circle cx="440" cy="120" r="5" fill="#6D665C"/>
+  <text class="k" x="440" y="86">STEP 02</text>
+  <text class="t" x="440" y="206">Direct</text>
+  <text class="y" x="440" y="252">YOU RECEIVE</text>
+  <text class="r" x="440" y="282">a concept book and a walkthrough</text>
+  <text class="r" x="440" y="306">film</text>
+  <circle cx="800" cy="120" r="5" fill="#6D665C"/>
+  <text class="k" x="800" y="86">STEP 03</text>
+  <text class="t" x="800" y="206">Craft</text>
+  <text class="y" x="800" y="252">YOU RECEIVE</text>
+  <text class="r" x="800" y="282">detail drawings, media scripts and</text>
+  <text class="r" x="800" y="306">a prototype room</text>
+  <circle cx="1160" cy="120" r="5" fill="#6D665C"/>
+  <text class="k" x="1160" y="86">STEP 04</text>
+  <text class="t" x="1160" y="206">Deliver</text>
+  <text class="y" x="1160" y="252">YOU RECEIVE</text>
+  <text class="r" x="1160" y="282">a built, tested and opened</text>
+  <text class="r" x="1160" y="306">experience</text>
+  <circle cx="1520" cy="120" r="5" fill="#6D665C"/><text class="k" x="1520" y="86" text-anchor="end">OPENING NIGHT</text>
+</svg>
