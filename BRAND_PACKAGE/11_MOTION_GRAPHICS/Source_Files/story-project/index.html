@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<script>
+/* =================== EDIT HERE — copy and image =================== */
+var DATA = {
+  eyebrow:       "Case study",
+  image:         "../../../00_ORIGINAL_ASSETS_BACKUP/images/img/case/ram-katha-show-08.webp",
+  image_focal:   "50% 50%",
+  headline:      "The building is the screen.",
+  lit_last_word: true,
+  title:         "Ram Katha Show",
+  place:         "Ayodhya",
+  site:          "sanzeed.com/work/ram-katha-show"
+};
+/* timing lives in the :root block below; the markup is filled by ../fill.js */
+</script>
+<title>Story — project reveal with wall label — 1080×1920 — 6 s — Sanzeed</title>
+<!--
+  STORY 01 · project reveal with wall label · 6 s · 180 frames @ 30 fps · 1080×1920 (text inside the 1080×1420 centre-safe band)
+  0.2  wordmark and eyebrow rise
+  0.4–1.5  the image plate settles (opacity + a 4 % scale-down, 1100 ms, ease — photography may settle; the logo never scales)
+  1.6–2.6  the headline types in word by word; the last word is lit
+  2.7–3.5  the beam grows and its point travels to the end; the wall label rises (title 2.9 s, place 3.05 s)
+  3.4  the site line rises · hold to 6 s
+  Same layout as 08_SOCIAL_MEDIA/Editable_Templates/instagram/ig-story-project.html.
+  Render: ../render.sh story-project/index.html 1080 1920 6 ../Social_Animations sanzeed-story--project-reveal-1080x1920 mp4,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — image, copy, timing =================== */
+  :root { --t-plate: .4s; --t-line: 1.6s; --word-gap: .16s; --t-label: 2.7s; --t-site: 3.4s; }
+  /* ======================================================================= */
+  body { --pad: 80px; --eb: 20px; --lt: 30px; --lp: 26px; --site: 22px; }
+  .top { position: absolute; left: var(--pad); right: var(--pad); top: 270px; display: flex; align-items: center; justify-content: space-between; z-index: 3; }
+  .wm { width: 240px; animation: sz-rise .4s var(--ease) .2s both; }
+  .eyebrow { animation: sz-rise .4s var(--ease) .3s both; }
+  .plate { position: absolute; left: var(--pad); right: var(--pad); top: 380px; aspect-ratio: 5 / 4; z-index: 3; animation: sz-scale-in 1.1s var(--ease) var(--t-plate) both; }
+  .copy { position: absolute; left: var(--pad); right: var(--pad); top: 1190px; z-index: 3; }
+  .hl { font-size: 84px; max-width: 13ch; }
+  .hl .w { animation: sz-word .4s var(--ease) both; }
+  .hl .w:nth-child(1) { animation-delay: var(--t-line); } .hl .w:nth-child(2) { animation-delay: calc(var(--t-line) + var(--word-gap)); }
+  .hl .w:nth-child(3) { animation-delay: calc(var(--t-line) + var(--word-gap) * 2); } .hl .w:nth-child(4) { animation-delay: calc(var(--t-line) + var(--word-gap) * 3); }
+  .hl .w:nth-child(5) { animation-delay: calc(var(--t-line) + var(--word-gap) * 4); } .hl .w:nth-child(6) { animation-delay: calc(var(--t-line) + var(--word-gap) * 5); }
+  .hl .w:nth-child(7) { animation-delay: calc(var(--t-line) + var(--word-gap) * 6); } .hl .w:nth-child(8) { animation-delay: calc(var(--t-line) + var(--word-gap) * 7); }
+  .beamrow { position: relative; width: 160px; height: 14px; margin-top: 34px; }
+  .beamrow .beam { left: 0; top: 50%; width: 100%; transform-origin: left; animation: sz-grow-x .8s var(--ease) var(--t-label) both; }
+  .beamrow .point { left: 0; top: 50%; --dot: 14px; --x0: 0px; --x1: 160px; animation: sz-travel .8s var(--ease) var(--t-label) both, sz-fade-in .2s var(--ease) var(--t-label) both; }
+  .label { margin-top: 20px; }
+  .label .t { animation: sz-rise .4s var(--ease) calc(var(--t-label) + .2s) both; }
+  .label .p { animation: sz-rise .4s var(--ease) calc(var(--t-label) + .35s) both; }
+  .bottom { position: absolute; left: var(--pad); bottom: 266px; z-index: 3; animation: sz-rise .4s var(--ease) var(--t-site) both; }
+</style>
+</head>
+<body>
+<div class="frame grain">
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="plate"><img data-src="image" alt=""></div>
+  <div class="copy">
+    <h1 class="hl" data-headline="headline"></h1>
+    <div class="beamrow"><div class="beam"></div><div class="point"></div></div>
+    <div class="label"><span class="t" data-text="title"></span><span class="p" data-text="place"></span></div>
+  </div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Logo outro — 3 s — Sanzeed</title>
+<!--
+  LOGO OUTRO · 3 s · 90 frames @ 30 fps
+  0.0–0.4  the full wordmark holds on the settled lamp
+  0.4–1.05 the letters A N Z E E D fade out in a wave, left -> right (400 ms each, ease-in — exits ease in)
+  0.8–1.6  the S glides to the centre and grows to 2× (800 ms, ease): the wordmark becomes the symbol S.
+  1.4–1.8  the symbol's point settles into place (400 ms, ease)
+  1.8–2.6  the point glows once (800 ms, ease-io)
+  2.0–2.4  the contact line rises beneath (400 ms, ease); 2.4–3.0 hold
+  Render: ../render.sh logo-outro/index.html 1920 1080 3 ../Logo_Animations sanzeed-logo-outro--dark-1920x1080 mp4,webm,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — contact line and timing =================== */
+  :root { --t-out: .4s; --t-glide: .8s; --t-contact: 2s; }
+  /* ============================================================================ */
+  .frame { display: grid; place-items: center; }
+  .lamp { opacity: .7; }
+  .logo { position: relative; z-index: 2; width: 720px; }
+  @media (aspect-ratio: 1/1) { .logo { width: 720px; } }
+  @media (max-aspect-ratio: 9/16) { .logo { width: 760px; } }
+
+  .L { animation: sz-fade-out .4s var(--ease-in) both; }
+  #L-S { animation: none; }
+  #L-A { animation-delay: var(--t-out); } #L-N { animation-delay: calc(var(--t-out) + .05s); } #L-Z { animation-delay: calc(var(--t-out) + .1s); }
+  #L-E { animation-delay: calc(var(--t-out) + .15s); } #L-E2 { animation-delay: calc(var(--t-out) + .2s); } #L-D { animation-delay: calc(var(--t-out) + .25s); }
+  .dot-A { animation: sz-fade-out .4s var(--ease-in) var(--t-out) both; }
+  .dot-D { animation: sz-fade-out .4s var(--ease-in) calc(var(--t-out) + .25s) both; }
+
+  /* the S and its new point glide to the centre and grow — a uniform scale, never a stretch */
+  .mark { transform-box: view-box; transform-origin: 299px 250px; animation: glide .8s var(--ease) var(--t-glide) both; }
+  @keyframes glide { from { transform: translate(0, 0) scale(1); } to { transform: translate(1496px, 0) scale(2); } }
+  .dot-S { transform-box: fill-box; transform-origin: center; animation: sz-settle .4s var(--ease) calc(var(--t-glide) + .6s) both; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse-once .8s var(--ease-io) calc(var(--t-glide) + 1s) both; }
+  @keyframes pulse-once { 0% { opacity: 0; transform: scale(1); } 45% { opacity: .9; transform: scale(1.5); } 100% { opacity: .28; transform: scale(1.1); } }
+
+  /* the contact line */
+  .contact { position: absolute; left: 0; right: 0; top: calc(50% + 150px); display: flex; flex-direction: column; align-items: center; gap: 22px; z-index: 2;
+             animation: sz-rise .4s var(--ease) var(--t-contact) both; }
+  .contact .beam { position: static; width: 120px; transform-origin: left; animation: sz-grow-x .8s var(--ease) calc(var(--t-contact) + .1s) both; }
+  .contact p { font: 400 24px/1.4 var(--font-text); color: var(--fg-2); letter-spacing: .01em; }
+  .contact p .sep { color: var(--fg-3); padding: 0 .6em; }
+  @media (max-aspect-ratio: 9/16) { .contact { top: calc(50% + 190px); } .contact p { font-size: 28px; } }
+</style>
+</head>
+<body>
+<div class="frame grain">
+  <div class="lamp"></div>
+  <svg class="logo" viewBox="0 0 3590 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">
+    <defs>
+      <radialGradient id="halo"><stop offset="0" style="stop-color: var(--accent); stop-opacity: .6"/><stop offset=".35" style="stop-color: var(--accent); stop-opacity: .2"/><stop offset="1" style="stop-color: var(--accent); stop-opacity: 0"/></radialGradient>
+    </defs>
+    <g class="ink">
+      <g id="L-A" class="L"><path id="wordmark-A" d="M536 500L816 0L1096 500L1022.65 500L816 130.99L609.35 500Z"/></g>
+      <g id="L-N" class="L"><path id="wordmark-N" d="M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z"/></g>
+      <g id="L-Z" class="L"><path id="wordmark-Z" d="M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z"/></g>
+      <g id="L-E" class="L"><path id="wordmark-E" d="M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z"/></g>
+      <g id="L-E2" class="L"><path id="wordmark-E2" d="M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z"/></g>
+      <g id="L-D" class="L"><path id="wordmark-D" d="M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z"/></g>
+    </g>
+    <g class="dots">
+      <circle class="dot-A glow-dot" cx="816" cy="412" r="45"/>
+      <circle class="dot-D glow-dot" cx="3242" cy="250" r="45"/>
+    </g>
+    <!-- the symbol S. — the S of the wordmark plus the symbol's own point (02_LOGO_SYSTEM/Source_Files/sanzeed-symbol) -->
+    <g class="mark">
+      <circle class="pulse" cx="553" cy="455" r="150" fill="url(#halo)"/>
+      <g id="L-S" class="L ink"><path id="wordmark-S" d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z"/></g>
+      <circle class="dot-S glow-dot dots" cx="553" cy="455" r="45" style="fill: var(--accent)"/>
+    </g>
+  </svg>
+  <div class="contact">
+    <div class="beam"></div>
+    <p>sanzeed.com<span class="sep">·</span>+91 7827051270<span class="sep">·</span>sanzeed@gmail.com</p>
+  </div>
+</div>
+</body>
+</html>

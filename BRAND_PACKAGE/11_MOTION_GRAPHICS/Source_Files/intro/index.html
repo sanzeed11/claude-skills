@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Branded video intro — 6 s — Sanzeed</title>
+<!--
+  BRANDED VIDEO INTRO · 6 s · 180 frames @ 30 fps · 1920×1080 and 1080×1920 from the same file (the viewport decides)
+  0.0–0.8  black; the lamp rises (800 ms, ease)
+  0.5–1.6  the point travels the beam and reveals the wordmark; 1.7–2.5 the two points pulse once
+  2.4–3.6  the master line types in word by word (6 words, 160 ms apart, each 400 ms, ease); the last word is lit
+  3.9–4.3  the descriptor rises (400 ms, ease) — Inter Tight 600, caps, +0.12 em, as in the lockup
+  4.3–6.0  hold
+  Render: ../render.sh intro/index.html 1920 1080 6 ../Intros_Outros sanzeed-intro--1920x1080 mp4,webm,gif
+          ../render.sh intro/index.html 1080 1920 6 ../Intros_Outros sanzeed-intro--1080x1920 mp4,webm,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — copy and timing =================== */
+  :root { --t-line: 2.4s; --word-gap: .16s; --t-desc: 3.9s;
+          --t-dot: .5s; --dot-dur: 1.1s; --S-start: .500s; --A-start: .541s; --N-start: .598s; --Z-start: .654s; --E-start: .732s; --E2-start: .836s; --D-start: 1.117s; --A-dot: .574s; --t-arrive: 1.6s; --t-pulse: 1.7s; }
+  /* the master line is in the markup below: <h1 class="hl"> — one word per <span class="w">; the descriptor is <p class="descriptor"> */
+  /* ==================================================================== */
+  .frame { display: grid; place-items: center; }
+  .stack { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 56px; width: 100%; }
+  .logo { width: 640px; }
+  .hl { font-size: 76px; text-align: center; max-width: 20ch; }
+  .descriptor { font-size: 22px; }
+  @media (max-aspect-ratio: 9/16) { .stack { gap: 72px; } .logo { width: 720px; } .hl { font-size: 92px; max-width: 12ch; } .descriptor { font-size: 26px; } }
+  .lamp { --lamp-y: 44%; animation: lamp 6s linear 0s both; }
+  @keyframes lamp { 0% { opacity: 0; animation-timing-function: var(--ease); } 13.3% { opacity: 1; } 33% { opacity: 1; animation-timing-function: var(--ease); } 47% { opacity: .7; } 100% { opacity: .7; } }
+  .beam { left: 0; right: 0; top: 0; animation: beamline 6s linear 0s both; }
+  @keyframes beamline { 0% { opacity: 0; animation-timing-function: var(--ease); } 10% { opacity: 1; } 33% { opacity: 1; animation-timing-function: var(--ease); } 47% { opacity: 0; } 100% { opacity: 0; } }
+
+  /* --- the reveal (identical to logo-reveal/index.html) --- */
+  .L { opacity: 0; animation: sz-fade-in .4s var(--ease) both; }
+  #L-S { animation-delay: var(--S-start); } #L-A { animation-delay: var(--A-start); } #L-N { animation-delay: var(--N-start); }
+  #L-Z { animation-delay: var(--Z-start); } #L-E { animation-delay: var(--E-start); } #L-E2 { animation-delay: var(--E2-start); } #L-D { animation-delay: var(--D-start); }
+  .traveller { --x0: 0px; --x1: 3242px; animation: sz-travel var(--dot-dur) var(--ease) var(--t-dot) both; }
+  .traveller .halo-t { animation: halo-t 6s linear 0s both; }
+  @keyframes halo-t { 0% { opacity: 0; } 6.7% { opacity: 0; animation-timing-function: var(--ease); } 10.7% { opacity: .95; } 26.7% { opacity: .95; animation-timing-function: var(--ease); } 30% { opacity: 0; } 100% { opacity: 0; } }
+  .traveller .pt { animation: pt 6s linear 0s both; }
+  @keyframes pt { 0% { opacity: 0; } 6.7% { opacity: 0; animation-timing-function: var(--ease); } 9.3% { opacity: 1; } 26.7% { opacity: 1; } 30% { opacity: 0; } 100% { opacity: 0; } }
+  .dot-A { transform-box: fill-box; transform-origin: center; animation: sz-settle .4s var(--ease) var(--A-dot) both; }
+  .dot-D { animation: sz-fade-in .2s var(--ease) calc(var(--t-arrive) - .1s) both; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse-once .8s var(--ease-io) var(--t-pulse) both; }
+  .pulse-A { animation-delay: calc(var(--t-pulse) + .1s); }
+  @keyframes pulse-once { 0% { opacity: 0; transform: scale(1); } 45% { opacity: .9; transform: scale(1.5); } 100% { opacity: .28; transform: scale(1.1); } }
+
+  /* --- the line types in word by word --- */
+  .hl .w { animation: sz-word .4s var(--ease) both; }
+  .hl .w:nth-child(1) { animation-delay: var(--t-line); }
+  .hl .w:nth-child(2) { animation-delay: calc(var(--t-line) + var(--word-gap)); }
+  .hl .w:nth-child(3) { animation-delay: calc(var(--t-line) + var(--word-gap) * 2); }
+  .hl .w:nth-child(4) { animation-delay: calc(var(--t-line) + var(--word-gap) * 3); }
+  .hl .w:nth-child(5) { animation-delay: calc(var(--t-line) + var(--word-gap) * 4); }
+  .hl .w:nth-child(6) { animation-delay: calc(var(--t-line) + var(--word-gap) * 5); }
+  .hl .w:nth-child(7) { animation-delay: calc(var(--t-line) + var(--word-gap) * 6); }
+  .hl .w:nth-child(8) { animation-delay: calc(var(--t-line) + var(--word-gap) * 7); }
+  .descriptor { animation: sz-rise .4s var(--ease) var(--t-desc) both; }
+</style>
+</head>
+<body>
+<div class="frame grain">
+  <div class="lamp"></div>
+  <div class="stack">
+    <div style="position: relative;">
+      <div class="beam" style="top: 50%; left: -2000px; right: -2000px;"></div>
+      <svg class="logo" viewBox="0 0 3590 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">
+        <defs><radialGradient id="halo"><stop offset="0" style="stop-color: var(--accent); stop-opacity: .6"/><stop offset=".35" style="stop-color: var(--accent); stop-opacity: .2"/><stop offset="1" style="stop-color: var(--accent); stop-opacity: 0"/></radialGradient></defs>
+        <g class="ink">
+          <g id="L-S" class="L"><path id="wordmark-S" d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z"/></g>
+          <g id="L-A" class="L"><path id="wordmark-A" d="M536 500L816 0L1096 500L1022.65 500L816 130.99L609.35 500Z"/></g>
+          <g id="L-N" class="L"><path id="wordmark-N" d="M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z"/></g>
+          <g id="L-Z" class="L"><path id="wordmark-Z" d="M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z"/></g>
+          <g id="L-E" class="L"><path id="wordmark-E" d="M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z"/></g>
+          <g id="L-E2" class="L"><path id="wordmark-E2" d="M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z"/></g>
+          <g id="L-D" class="L"><path id="wordmark-D" d="M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z"/></g>
+        </g>
+        <circle class="pulse pulse-A" cx="816" cy="412" r="200" fill="url(#halo)"/>
+        <circle class="pulse pulse-D" cx="3242" cy="250" r="200" fill="url(#halo)"/>
+        <g class="dots"><circle class="dot-A glow-dot" cx="816" cy="412" r="45"/><circle class="dot-D glow-dot" cx="3242" cy="250" r="45"/></g>
+        <g class="traveller"><circle class="halo-t" cx="0" cy="250" r="230" fill="url(#halo)"/><circle class="pt glow-dot" cx="0" cy="250" r="45" style="fill: var(--accent)"/></g>
+      </svg>
+    </div>
+    <h1 class="hl"><span class="w">Experiential</span> <span class="w">design</span> <span class="w">you</span> <span class="w">can</span> <span class="w">walk</span> <span class="w lit">into.</span></h1>
+    <p class="descriptor">Experiential Design Consultant</p>
+  </div>
+</div>
+</body>
+</html>

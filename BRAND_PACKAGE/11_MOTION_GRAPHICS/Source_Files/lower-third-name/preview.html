@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Lower third — name + descriptor — 5 s — preview over a project image — Sanzeed</title>
+<!--
+  LOWER THIRD 01 · name + descriptor · 5 s · 150 frames @ 30 fps · 1920×1080 · transparent
+  in   0.0–1.1  the plate (a small room) wipes in left -> right (800 ms); the beam grows and its point travels to the end (800 ms);
+                the name rises at 0.3 s, the descriptor at 0.45 s (400 ms each, ease)
+  hold 1.1–4.0
+  out  4.0–4.4  the whole lower third sinks and fades (400 ms, ease-in); 4.4–5.0 empty
+  Edit the two lines in the markup. Keep Inter Tight 600 for the name and Inter 400 for the descriptor.
+  PREVIEW: the same lower third composited over an approved project image (06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images). Derived from index.html — edit that, then mirror the change here.
+  Render: ../render.sh lower-third-name/preview.html 1920 1080 5 ../Lower_Thirds sanzeed-lower-third--name--preview-1920x1080 mp4
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE =================== */
+  :root { --t-in: 0s; --t-out: 4s; --beam-w: 160px; }
+  /* ================================================= */
+  .lt { position: absolute; left: 120px; bottom: 120px; animation: sz-sink .4s var(--ease-in) var(--t-out) both; }
+  .plate { position: relative; min-width: 560px; padding: 30px 44px 34px 40px; border-radius: 20px; border: 1px solid var(--line);
+           background: rgba(13,13,15,.80); animation: sz-wipe .8s var(--ease) var(--t-in) both; }
+  .beamrow { position: relative; height: 12px; margin-bottom: 18px; }
+  .beamrow .beam { left: 0; top: 50%; width: var(--beam-w); transform-origin: left; animation: sz-grow-x .8s var(--ease) calc(var(--t-in) + .1s) both; }
+  .beamrow .point { left: 0; top: 50%; --dot: 10px; --x0: 0px; --x1: var(--beam-w); animation: sz-travel .8s var(--ease) calc(var(--t-in) + .1s) both, sz-fade-in .2s var(--ease) calc(var(--t-in) + .1s) both; }
+  .name { font: 600 44px/1.15 var(--font-heading); letter-spacing: -0.01em; color: var(--fg); animation: sz-rise .4s var(--ease) calc(var(--t-in) + .3s) both; }
+  .role { font: 400 26px/1.35 var(--font-text); color: var(--fg-2); margin-top: 8px; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .45s) both; }
+  .veil-top { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,0) 26%); }
+  .label .t { font-size: 26px; } .label .p { font-size: 22px; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <img class="photo" src="../../../06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images/JPG/sanzeed-img-ram-katha-show-diyas--projection.jpg" alt="">
+  <div class="veil-top"></div>
+  <div class="label" style="position:absolute; right: 120px; top: 96px; z-index: 2; align-items: flex-end; text-align: right;"><span class="t">Ram Katha Show</span><span class="p">Ayodhya</span></div>
+  <div class="lt">
+    <div class="plate">
+      <div class="beamrow"><div class="beam"></div><div class="point"></div></div>
+      <div class="name">Sanzeed Mirza</div>
+      <div class="role">Experiential Design Consultant</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

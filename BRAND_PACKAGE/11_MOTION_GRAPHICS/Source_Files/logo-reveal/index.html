@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Logo reveal — 4 s — Sanzeed</title>
+<!--
+  LOGO REVEAL · 4 s · 120 frames @ 30 fps
+  0.0–0.8  the lamp rises behind the wordmark (800 ms, ease)
+  0.5–1.6  the point of light leaves the S and travels the beam to the counter of the D (1100 ms, ease);
+           each letter blooms as the light passes it (400 ms, ease — windows pre-computed from the easing curve)
+  0.57     the A's point settles as the light passes it
+  1.6      the travelling point becomes the D's point
+  1.7–2.5  the two points pulse once (800 ms, ease-io) and keep a faint glow
+  2.0–2.8  the beam hairline fades, the lamp settles to 70 %
+  2.8–4.0  hold
+  Theme: data-theme="dark" (Gallery Black, full-colour-dark pairing) or "light" (Plaster, full-colour-light) — the SVG fills follow the theme.
+  Size:   the viewport decides; the logo width adapts to 16:9, 1:1 and 9:16 (see @media below).
+  Render: ../render.sh logo-reveal/index.html 1920 1080 4 ../Logo_Animations sanzeed-logo-reveal--dark-1920x1080 mp4,webm,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — timing (seconds) =================== */
+  :root {
+    --t-dot: .5s;  --dot-dur: 1.1s;              /* the travel */
+    --S-start: .500s; --A-start: .541s; --N-start: .598s; --Z-start: .654s; --E-start: .732s; --E2-start: .836s; --D-start: 1.117s;
+    --A-dot: .574s;                                /* when the light passes the A */
+    --t-arrive: 1.6s; --t-pulse: 1.7s;
+  }
+  /* ===================================================================== */
+  .frame { display: grid; place-items: center; }
+  .logo { position: relative; z-index: 2; width: 720px; }
+  @media (aspect-ratio: 1/1) { .logo { width: 720px; } }
+  @media (max-aspect-ratio: 9/16) { .logo { width: 760px; } }
+  html.transparent .lamp { --lamp-a: .32; }
+
+  .lamp { animation: lamp 4s linear 0s both; }
+  @keyframes lamp { 0% { opacity: 0; animation-timing-function: var(--ease); } 20% { opacity: 1; } 50% { opacity: 1; animation-timing-function: var(--ease); } 70% { opacity: .7; } 100% { opacity: .7; } }
+
+  .beam { left: 0; right: 0; top: 50%; animation: beamline 4s linear 0s both; }
+  @keyframes beamline { 0% { opacity: 0; animation-timing-function: var(--ease); } 15% { opacity: 1; } 50% { opacity: 1; animation-timing-function: var(--ease); } 70% { opacity: 0; } 100% { opacity: 0; } }
+
+  /* letters bloom as the light passes */
+  .L { opacity: 0; animation: sz-fade-in .4s var(--ease) both; }
+  #L-S { animation-delay: var(--S-start); } #L-A { animation-delay: var(--A-start); } #L-N { animation-delay: var(--N-start); }
+  #L-Z { animation-delay: var(--Z-start); } #L-E { animation-delay: var(--E-start); } #L-E2 { animation-delay: var(--E2-start); } #L-D { animation-delay: var(--D-start); }
+
+  /* the travelling point: group moves, circle fades at arrival */
+  .traveller { --x0: 0px; --x1: 3242px; animation: sz-travel var(--dot-dur) var(--ease) var(--t-dot) both; }
+  .traveller .halo-t { animation: halo-t 4s linear 0s both; }
+  @keyframes halo-t { 0% { opacity: 0; } 10% { opacity: 0; animation-timing-function: var(--ease); } 16% { opacity: .95; } 40% { opacity: .95; animation-timing-function: var(--ease); } 45% { opacity: 0; } 100% { opacity: 0; } }
+  .traveller .pt { animation: pt 4s linear 0s both; }
+  @keyframes pt { 0% { opacity: 0; } 10% { opacity: 0; animation-timing-function: var(--ease); } 14% { opacity: 1; } 40% { opacity: 1; } 45% { opacity: 0; } 100% { opacity: 0; } }
+
+  /* the logo's own points */
+  .dot-A { transform-box: fill-box; transform-origin: center; animation: sz-settle .4s var(--ease) var(--A-dot) both; }
+  .dot-D { animation: sz-fade-in .2s var(--ease) calc(var(--t-arrive) - .1s) both; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse-once .8s var(--ease-io) var(--t-pulse) both; }
+  .pulse-A { animation-delay: calc(var(--t-pulse) + .1s); }
+  @keyframes pulse-once { 0% { opacity: 0; transform: scale(1); } 45% { opacity: .9; transform: scale(1.5); } 100% { opacity: .28; transform: scale(1.1); } }
+  html[data-theme="light"] .pulse { animation-name: pulse-once-light; }
+  @keyframes pulse-once-light { 0% { opacity: 0; transform: scale(1); } 45% { opacity: .6; transform: scale(1.4); } 100% { opacity: .12; transform: scale(1.1); } }
+</style>
+</head>
+<body>
+<div class="frame grain">
+  <div class="lamp"></div>
+  <div class="beam"></div>
+  <!-- the primary wordmark: one unioned outline per letter (_shared/wordmark-letters-unioned.svg, built from 02_LOGO_SYSTEM/Source_Files) so each letter animates on its own -->
+  <svg class="logo" viewBox="0 0 3590 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">
+    <defs>
+      <radialGradient id="halo"><stop offset="0" style="stop-color: var(--accent); stop-opacity: .6"/><stop offset=".35" style="stop-color: var(--accent); stop-opacity: .2"/><stop offset="1" style="stop-color: var(--accent); stop-opacity: 0"/></radialGradient>
+    </defs>
+    <g class="ink">
+      <g id="L-S" class="L"><path id="wordmark-S" d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z"/></g>
+      <g id="L-A" class="L"><path id="wordmark-A" d="M536 500L816 0L1096 500L1022.65 500L816 130.99L609.35 500Z"/></g>
+      <g id="L-N" class="L"><path id="wordmark-N" d="M 1390 0 A 230 230 0 0 0 1160 230 L 1160 500 L 1224 500 L 1224 230 A 166 166 0 0 1 1556 230 L 1556 500 L 1620 500 L 1620 230 A 230 230 0 0 0 1390 0 z"/></g>
+      <g id="L-Z" class="L"><path id="wordmark-Z" d="M 1724 0 L 1724 64 L 2090.8809 64 L 1724 436 L 1724 500 L 2194 500 L 2194 436 L 1827.1191 436 L 2194 64 L 2194 0 L 1724 0 z"/></g>
+      <g id="L-E" class="L"><path id="wordmark-E" d="M 2312 0 L 2312 64 L 2636 64 L 2636 0 L 2312 0 z M 2312 218 L 2312 282 L 2636 282 L 2636 218 L 2312 218 z M 2312 436 L 2312 500 L 2636 500 L 2636 436 L 2312 436 z"/></g>
+      <g id="L-E2" class="L"><path id="wordmark-E2" d="M 2768 0 L 2768 64 L 3092 64 L 3092 0 L 2768 0 z M 2768 218 L 2768 282 L 3092 282 L 3092 218 L 2768 218 z M 2768 436 L 2768 500 L 3092 500 L 3092 436 L 2768 436 z"/></g>
+      <g id="L-D" class="L"><path id="wordmark-D" d="M 3210 0 L 3210 64 L 3210 191 L 3274 191 L 3274 64 L 3340 64 A 186 186 0 0 1 3340 436 L 3274 436 L 3274 309 L 3210 309 L 3210 436 L 3210 500 L 3274 500 L 3340 500 A 250 250 0 0 0 3340 0 L 3210 0 z"/></g>
+    </g>
+    <!-- glow pulses behind the two points -->
+    <circle class="pulse pulse-A" cx="816" cy="412" r="200" fill="url(#halo)"/>
+    <circle class="pulse pulse-D" cx="3242" cy="250" r="200" fill="url(#halo)"/>
+    <!-- the two points of light -->
+    <g class="dots">
+      <circle class="dot-A glow-dot" cx="816" cy="412" r="45"/>
+      <circle class="dot-D glow-dot" cx="3242" cy="250" r="45"/>
+    </g>
+    <!-- the travelling point: exists only in motion -->
+    <g class="traveller">
+      <circle class="halo-t" cx="0" cy="250" r="230" fill="url(#halo)"/>
+      <circle class="pt glow-dot" cx="0" cy="250" r="45" style="fill: var(--accent)"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

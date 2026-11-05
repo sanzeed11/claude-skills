@@ -17,7 +17,7 @@ KV = {
     label=("Between two points of light", "sanzeed.com"), alt="The point of light: a black glass sphere with a gold ring on a dark plinth"),
  "walk-into": dict(
     head="Experiential design you can walk into", sub="Museums, experience centres, pavilions, memorials and shows — one vision from the brief to opening night.",
-    img=img("case/prime-minister-museum-03"), img45=img("case/prime-minister-museum-03"),
+    img=jimg("case/prime-minister-museum-03"), img45=jimg("case/prime-minister-museum-03"),   # tone-restored copy (common.TONE_FIX), not the raw webp
     label=("Prime Minister Museum", "New Delhi"), alt="The tricolour corridor of the Prime Minister Museum, New Delhi"),
  "tell-me": dict(
     head="Tell me about the room", sub="A few lines are enough. I reply within two working days. The first conversation is always free.",

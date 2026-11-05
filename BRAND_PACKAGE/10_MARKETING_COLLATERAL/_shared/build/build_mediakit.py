@@ -23,10 +23,11 @@ CSS = A4_CSS + """
 .shots .plate { border-radius: 4mm; }
 .shots .spec { font-size: 6.8pt; line-height: 1.5; color: var(--fg-2); margin-top: 2mm; }
 .shots .spec b { font-family: var(--font-heading); font-weight: 600; color: var(--fg); display: block; }
-.logos .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 2mm; }
+.logos .tiles { display: grid; grid-template-columns: 1fr; gap: 4mm; margin-top: 2mm; }   /* one tile per row so every specimen sits above its minimum size */
 .logos .tile { border-radius: 4mm; border: 1px solid var(--line); height: 34mm; display: flex; align-items: center; justify-content: center; }
 .logos .tile.dark { background: #000; } .logos .tile.plaster { background: #F5F0E7; } .logos .tile.gold { background: #B8863B; }
-.logos .tile img { width: 60%; }
+.logos .tile img { width: 55%; }   /* wordmark ≈ 46 mm (min 28) */
+.logos .tile.lockup img { width: 68%; }   /* lockup ≈ 56 mm (min 50) */
 .logos .tile.sym img { width: 14mm; }
 .logos .cap { font-size: 6.5pt; color: var(--fg-3); margin-top: 1.5mm; }
 .logos ul { padding-left: 4mm; margin: 0; font-size: 8pt; line-height: 1.5; color: var(--fg-2); } .logos li { margin-bottom: 1mm; }
@@ -92,7 +93,7 @@ def build():
     <div class="tiles">
       <div><div class="tile dark"><img src="{logo('primary-wordmark','full-colour-dark')}" alt=""></div><div class="cap">Primary wordmark · full-colour-dark · on Gallery Black and dark photography</div></div>
       <div><div class="tile plaster"><img src="{logo('primary-wordmark','full-colour-light')}" alt=""></div><div class="cap">Primary wordmark · full-colour-light · on Plaster, Paper, white</div></div>
-      <div><div class="tile dark"><img src="{logo('horizontal-descriptor','full-colour-dark')}" alt=""></div><div class="cap">Horizontal descriptor lockup · stationery, covers, signage</div></div>
+      <div><div class="tile dark lockup"><img src="{logo('horizontal-descriptor','full-colour-dark')}" alt=""></div><div class="cap">Horizontal descriptor lockup · stationery, covers, signage</div></div>
       <div><div class="tile plaster sym"><img src="{logo('symbol','full-colour-light')}" alt=""></div><div class="cap">Symbol “S.” · avatars, favicons, stamps</div></div>
     </div></div>
     <div><h3>Rules</h3><ul>

@@ -55,8 +55,8 @@ def a5():
 .back .m-ey {{ margin-top: 6mm; }}
 .back .steps {{ display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 6mm; }}
 .back .step span {{ font-size: 6.3pt; }}
-.back .contact {{ position: absolute; left: 14mm; bottom: 13mm; width: 78mm; font-size: 7pt; }}
-.back .lock {{ left: auto; top: auto; right: 14mm; bottom: 14mm; width: 36mm; }}
+.back .contact {{ position: absolute; left: 14mm; bottom: 13mm; width: 70mm; font-size: 6.8pt; }}
+.back .lock {{ left: auto; top: auto; right: 14mm; bottom: 14mm; width: 52mm; }}   /* lockup minimum 50 mm */
 """
     front = f"""<section class="sheet grain front" id="front"><div class="in">
   <img class="mark" src="{logo('primary-wordmark','full-colour-dark')}" alt="Sanzeed">

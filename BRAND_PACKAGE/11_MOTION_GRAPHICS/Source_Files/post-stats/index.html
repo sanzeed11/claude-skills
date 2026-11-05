@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<script>
+/* =================== EDIT HERE — copy and image =================== */
+var DATA = {
+  eyebrow:       "Journey",
+  stat1_l: "years", stat2_l: "years experiential & museum", stat3_l: "projects directed", stat4_l: "museums & centres",
+  headline:      "90 projects, one continuous craft.",
+  dim_last_word: true,
+  site:          "sanzeed.com/#galleries"
+};
+/* timing lives in the :root block below; the markup is filled by ../fill.js */
+</script>
+<title>Stat counter — 15+ · 8+ · 90+ · 60+ — 1080×1080 — 5 s — Sanzeed</title>
+<!--
+  STAT COUNTER · 5 s · 150 frames @ 30 fps · 1080×1080
+  0.2  wordmark and eyebrow rise
+  0.6–2.3  the four figures count up in Fraunces 300 (tabular numerals), 1100 ms each on the brand ease, 200 ms apart;
+           each gold plus settles in as its figure lands; the labels rise with the figures
+  2.6–3.6  the proof line types in word by word · 3.8 the site line · hold to 5 s
+  Counting is pure CSS: a registered <integer> custom property animates and feeds counter() — deterministic, no script.
+  Figures: confirmed proof (15+ years · 8+ years experiential & museum · 90+ projects directed · 60+ museums & centres).
+  Render: ../render.sh post-stats/index.html 1080 1080 5 ../Social_Animations sanzeed-post--stat-counter-1080x1080 mp4,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — the four figures (labels are in DATA above) and timing =================== */
+  :root { --t-count: .6s; --count-dur: 1.1s; --stagger: .2s; --t-line: 2.6s; --word-gap: .16s; --t-site: 3.8s; }
+  @keyframes count-1 { from { --n: 0; } to { --n: 15; } }   /* years */
+  @keyframes count-2 { from { --n: 0; } to { --n: 8; } }    /* years experiential & museum */
+  @keyframes count-3 { from { --n: 0; } to { --n: 90; } }   /* projects directed */
+  @keyframes count-4 { from { --n: 0; } to { --n: 60; } }   /* museums & centres */
+  /* =========================================================================== */
+  @property --n { syntax: "<integer>"; inherits: false; initial-value: 0; }
+  body { --pad: 72px; --eb: 18px; --site: 20px; }
+  .lamp { --lamp-y: 46%; --lamp-a: .34; animation: sz-lamp .8s var(--ease) .2s both; }
+  .top { position: absolute; left: var(--pad); right: var(--pad); top: var(--pad); display: flex; align-items: center; justify-content: space-between; z-index: 3; }
+  .wm { width: 220px; animation: sz-rise .4s var(--ease) .2s both; }
+  .eyebrow { animation: sz-rise .4s var(--ease) .3s both; }
+  .grid { position: absolute; left: var(--pad); right: var(--pad); top: 232px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px 48px; z-index: 3; }
+  .cell { display: flex; flex-direction: column; gap: 14px; }
+  .stat { font-size: 184px; display: flex; align-items: baseline; }
+  .stat .num { counter-reset: n var(--n); animation: count-1 var(--count-dur) var(--ease) var(--t-count) both; min-width: 2ch; }
+  .stat .num::before { content: counter(n); }
+  .cell:nth-child(2) .num { animation-name: count-2; animation-delay: calc(var(--t-count) + var(--stagger)); }
+  .cell:nth-child(3) .num { animation-name: count-3; animation-delay: calc(var(--t-count) + var(--stagger) * 2); }
+  .cell:nth-child(4) .num { animation-name: count-4; animation-delay: calc(var(--t-count) + var(--stagger) * 3); }
+  .stat .plus { font-size: .62em; margin-left: .04em; animation: sz-settle .4s var(--ease) both; display: inline-block; }
+  .cell:nth-child(1) .plus { animation-delay: calc(var(--t-count) + var(--count-dur) - .3s); }
+  .cell:nth-child(2) .plus { animation-delay: calc(var(--t-count) + var(--stagger) + var(--count-dur) - .3s); }
+  .cell:nth-child(3) .plus { animation-delay: calc(var(--t-count) + var(--stagger) * 2 + var(--count-dur) - .3s); }
+  .cell:nth-child(4) .plus { animation-delay: calc(var(--t-count) + var(--stagger) * 3 + var(--count-dur) - .3s); }
+  .cell .l { font: 400 24px/1.35 var(--font-text); color: var(--fg-2); max-width: 20ch; animation: sz-rise .4s var(--ease) both; }
+  .cell:nth-child(1) .l { animation-delay: var(--t-count); } .cell:nth-child(2) .l { animation-delay: calc(var(--t-count) + var(--stagger)); }
+  .cell:nth-child(3) .l { animation-delay: calc(var(--t-count) + var(--stagger) * 2); } .cell:nth-child(4) .l { animation-delay: calc(var(--t-count) + var(--stagger) * 3); }
+  .copy { position: absolute; left: var(--pad); right: var(--pad); top: 836px; z-index: 3; }
+  .hl { font-size: 56px; max-width: 18ch; }
+  .hl .w { animation: sz-word .4s var(--ease) both; }
+  .hl .w:nth-child(1) { animation-delay: var(--t-line); } .hl .w:nth-child(2) { animation-delay: calc(var(--t-line) + var(--word-gap)); }
+  .hl .w:nth-child(3) { animation-delay: calc(var(--t-line) + var(--word-gap) * 2); } .hl .w:nth-child(4) { animation-delay: calc(var(--t-line) + var(--word-gap) * 3); }
+  .hl .w:nth-child(5) { animation-delay: calc(var(--t-line) + var(--word-gap) * 4); }
+  .bottom { position: absolute; left: var(--pad); bottom: var(--pad); z-index: 3; animation: sz-rise .4s var(--ease) var(--t-site) both; }
+</style>
+</head>
+<body>
+<div class="frame grain">
+  <div class="lamp"></div>
+  <div class="top">
+    <img class="wm" src="../../../02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed">
+    <span class="eyebrow" data-text="eyebrow"></span>
+  </div>
+  <div class="grid">
+    <div class="cell"><div class="stat"><span class="num"></span><span class="plus">+</span></div><span class="l" data-text="stat1_l"></span></div>
+    <div class="cell"><div class="stat"><span class="num"></span><span class="plus">+</span></div><span class="l" data-text="stat2_l"></span></div>
+    <div class="cell"><div class="stat"><span class="num"></span><span class="plus">+</span></div><span class="l" data-text="stat3_l"></span></div>
+    <div class="cell"><div class="stat"><span class="num"></span><span class="plus">+</span></div><span class="l" data-text="stat4_l"></span></div>
+  </div>
+  <div class="copy">
+    <h1 class="hl" data-headline="headline"></h1>
+  </div>
+  <div class="bottom"><span class="site" data-text="site"></span></div>
+</div>
+<script src="../fill.js"></script>
+</body>
+</html>

@@ -135,12 +135,27 @@ def folder_size_mb(path):
         for f in files: t += os.path.getsize(os.path.join(root, f))
     return round(t / 1e6, 1)
 
+# Tone restoration for source frames the site exports washed out (prime-minister-museum-03 carries a white veil:
+# mean luminance 218, floor 171, where every other case frame sits at 40–150). Linear levels — black point lifted to
+# the veil floor, mild gamma, a 0.4 px blur against banding — no retouching. Applied to every derived copy (jimg,
+# Presentations/src/assets) so the corridor reads as the lit room. Replace with the original render when supplied.
+TONE_FIX = {"case/prime-minister-museum-03": dict(black=171, gamma=1.15)}
+
+def tone_fix(im, name):
+    fx = TONE_FIX.get(name)
+    if not fx: return im
+    import numpy as np
+    from PIL import ImageFilter
+    a = np.asarray(im.convert("RGB")).astype("float32")
+    a = np.clip((a - fx["black"]) / (255 - fx["black"]), 0, 1) ** fx["gamma"] * 255
+    return Image.fromarray(a.astype("uint8")).filter(ImageFilter.GaussianBlur(0.4))
+
 def jimg(name, rel_mc=REL_MC, q=82, width=1400):
-    """JPEG copy of a project image (webp → jpg, q86) for PDF embedding; cached in _shared/img/jpg/."""
+    """JPEG copy of a project image (webp → jpg, q82) for PDF embedding; cached in _shared/img/jpg/. TONE_FIX applies."""
     out_dir = f"{MC}/_shared/img/jpg"; os.makedirs(out_dir, exist_ok=True)
     stem = name.replace("/", "--"); out = f"{out_dir}/{stem}.jpg"
     if not os.path.exists(out):
-        im = Image.open(f"{IMG}/{name}.webp").convert("RGB")
+        im = tone_fix(Image.open(f"{IMG}/{name}.webp").convert("RGB"), name)
         if im.width > width: im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
         im.save(out, quality=q, subsampling=0, optimize=True)
     return f"{rel_mc}/_shared/img/jpg/{stem}.jpg"

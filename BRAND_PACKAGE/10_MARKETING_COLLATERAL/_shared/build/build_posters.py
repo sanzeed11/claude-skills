@@ -69,7 +69,7 @@ def method(size):
 .step .rec {{ font-family: var(--font-heading); font-weight: 600; font-size: {pt(13,s)}; color: var(--fg); margin-top: {mm(3,s)}; }}
 .step .rec span {{ font-weight: 400; color: var(--fg-3); }}
 .foot {{ position: absolute; left: {mm(30,s)}; right: {mm(30,s)}; bottom: {mm(30,s)}; display: flex; justify-content: space-between; align-items: flex-end; font-size: {pt(13,s)}; color: var(--fg-3); }}
-.foot img {{ width: {mm(60,s)}; }}
+.foot img {{ width: {max(60*s, 52):.2f}mm; }}   /* lockup never below the 50 mm minimum (A3) */
 """
     steps = ""
     for i, (n, name, desc, rec) in enumerate(C.METHOD):
@@ -103,7 +103,7 @@ def typographic(size):
 .item .c {{ font-family: var(--font-heading); font-weight: 500; font-variant-numeric: tabular-nums; color: var(--accent-text); font-size: {pt(7.5,s)}; letter-spacing: .06em; padding-top: 0.25em; }}
 .item b {{ font-family: var(--font-heading); font-weight: 600; color: var(--fg); }}
 .foot {{ position: absolute; left: {mm(30,s)}; right: {mm(30,s)}; bottom: {mm(30,s)}; display: flex; justify-content: space-between; align-items: flex-end; font-size: {pt(12,s)}; color: var(--fg-3); }}
-.foot img {{ width: {mm(60,s)}; }}
+.foot img {{ width: {max(60*s, 52):.2f}mm; }}   /* lockup never below the 50 mm minimum (A3) */
 .foot .rights {{ font-size: {pt(7,s)}; }}
 """
     cols = ""; k = 0

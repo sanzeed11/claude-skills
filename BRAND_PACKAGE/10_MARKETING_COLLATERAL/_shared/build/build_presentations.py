@@ -20,7 +20,7 @@ def asset(name):
     stem = name.replace("/", "--").removesuffix(".jpg"); out = f"{ASSETS}/{stem}.jpg"
     if not os.path.exists(out):
         src = f"{IMG}/{name}.webp" if not name.startswith("_") else f"{MC}/_shared/img/{name[1:]}"
-        im = Image.open(src).convert("RGB")
+        im = tone_fix(Image.open(src).convert("RGB"), name)   # TONE_FIX (common.py) restores the washed-out corridor frame
         if im.width > 1400: im = im.resize((1400, round(im.height * 1400 / im.width)), Image.LANCZOS)
         im.save(out, quality=82, subsampling=0, optimize=True)
     return out
@@ -201,7 +201,7 @@ def proposal_deck():
 
 # ---------------- Case-study template (A4, HTML) ----------------
 CASE_CSS = A4_CSS + """
-.sheet .lock { left: 18mm; top: 18mm; width: 46mm; }
+.sheet .lock { left: 18mm; top: 18mm; width: 52mm; }   /* lockup minimum 50 mm */
 .sheet .top { position: absolute; left: 18mm; right: 18mm; top: 40mm; bottom: 18mm; }
 .n { font-family: var(--font-heading); font-weight: 500; font-size: 6.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); }
 .title { font-size: 34pt; margin: 2mm 0 1mm; }

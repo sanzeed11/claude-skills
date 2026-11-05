@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 48" width="480" height="48" role="img" aria-label="Loading">
+  <title>Sanzeed — loader: the point travels the beam (SVG + SMIL, 2 s loop)</title>
+  <desc>1.1 s travel on cubic-bezier(.22,.8,.2,1), 0.3 s fade, 0.6 s rest. Drop in as an img or inline; no script. Dark version: Gallery White beam at 10 %, Lamp Gold point.</desc>
+  <defs>
+    <radialGradient id="sz-halo"><stop offset="0" stop-color="#E9B25A" stop-opacity=".55"/><stop offset=".4" stop-color="#E9B25A" stop-opacity=".18"/><stop offset="1" stop-color="#E9B25A" stop-opacity="0"/></radialGradient>
+  </defs>
+  <line x1="0" y1="24" x2="480" y2="24" stroke="#F5F5F7" stroke-opacity=".10" stroke-width="1"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 468 0; 468 0" keyTimes="0; .55; 1" calcMode="spline" keySplines=".22 .8 .2 1; 0 0 1 1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; .1; .55; .7; 1" dur="2s" repeatCount="indefinite"/>
+    <circle cx="6" cy="24" r="18" fill="url(#sz-halo)"/>
+    <circle cx="6" cy="24" r="4.5" fill="#E9B25A"/>
+  </g>
+</svg>

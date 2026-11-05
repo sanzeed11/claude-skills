@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="transparent">
+<head>
+<meta charset="utf-8">
+<title>Lower third — quote attribution — 5 s — alpha — Sanzeed</title>
+<!--
+  LOWER THIRD 03 · quote attribution · 5 s · 150 frames @ 30 fps · 1920×1080 · transparent
+  Sits beneath a quote that is already on screen. Centred: a short beam with its point, the name, the descriptor, on a soft bottom veil.
+  in   0.0–1.1  the veil fades (800 ms); the beam grows and the point travels to its end (800 ms); name 0.3 s, descriptor 0.45 s rise
+  hold 1.1–4.0
+  out  4.0–4.4  sinks and fades (400 ms, ease-in); the veil fades with it; 4.4–5.0 empty
+  Render: ../render.sh lower-third-quote/index.html 1920 1080 5 ../Lower_Thirds sanzeed-lower-third--quote-attribution--alpha-1920x1080 mov,webm transparent
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE =================== */
+  :root { --t-in: 0s; --t-out: 4s; --beam-w: 120px; }
+  /* ================================================= */
+  .veil-bottom { animation: veil 5s linear 0s both; }
+  @keyframes veil { 0% { opacity: 0; animation-timing-function: var(--ease); } 16% { opacity: 1; } 80% { opacity: 1; animation-timing-function: var(--ease-in); } 88% { opacity: 0; } 100% { opacity: 0; } }
+  .lt { position: absolute; left: 0; right: 0; bottom: 110px; display: flex; flex-direction: column; align-items: center; animation: sz-sink .4s var(--ease-in) var(--t-out) both; }
+  .beamrow { position: relative; width: var(--beam-w); height: 12px; margin-bottom: 22px; }
+  .beamrow .beam { left: 0; top: 50%; width: 100%; transform-origin: left; animation: sz-grow-x .8s var(--ease) calc(var(--t-in) + .1s) both; }
+  .beamrow .point { left: 0; top: 50%; --dot: 10px; --x0: 0px; --x1: var(--beam-w); animation: sz-travel .8s var(--ease) calc(var(--t-in) + .1s) both, sz-fade-in .2s var(--ease) calc(var(--t-in) + .1s) both; }
+  .name { font: 600 34px/1.2 var(--font-heading); letter-spacing: -0.01em; color: var(--fg); animation: sz-rise .4s var(--ease) calc(var(--t-in) + .3s) both; }
+  .role { font: 400 24px/1.35 var(--font-text); color: var(--fg-2); margin-top: 8px; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .45s) both; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="veil-bottom"></div>
+  <div class="lt">
+    <div class="beamrow"><div class="beam"></div><div class="point"></div></div>
+    <div class="name">— Sanzeed Mirza</div>
+    <div class="role">Experiential Design Consultant</div>
+  </div>
+</div>
+</body>
+</html>

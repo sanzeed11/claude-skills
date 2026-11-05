@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="transparent">
+<head>
+<meta charset="utf-8">
+<title>Animated symbol loop — 3 s seamless — transparent — Sanzeed</title>
+<!--
+  ANIMATED SYMBOL · S. with the point breathing · 3 s seamless loop · 90 frames @ 30 fps · transparent
+  The S is still. The point breathes: scale 1 -> 1.1 -> 1 and its halo 35 % -> 90 % -> 35 %, on a symmetrical sine-like curve
+  so frame 90 equals frame 0. Nothing spins, bounces or stretches.
+  Theme: data-theme="dark" gives Gallery White + Lamp Gold (for dark slides and video); "light" gives Soot + Old Gold.
+  Render: ../render.sh symbol-loop/index.html 1920 1080 3 ../Logo_Animations sanzeed-symbol-loop--alpha-1920x1080 mov,webm,mp4,gif transparent 20
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE =================== */
+  :root { --period: 3s; --size: 300px; }    /* --size = cap height of the S on screen */
+  /* ================================================= */
+  .frame { display: grid; place-items: center; }
+  .logo { height: var(--size); width: auto; }
+  .halo-b { transform-box: fill-box; transform-origin: center; animation: sz-breathe var(--period) var(--ease-loop) 0s infinite; }
+  .dot-S  { transform-box: fill-box; transform-origin: center; animation: sz-dot-breathe var(--period) var(--ease-loop) 0s infinite; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <svg class="logo" viewBox="-80 -80 758 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="S.">
+    <defs>
+      <radialGradient id="halo"><stop offset="0" style="stop-color: var(--accent); stop-opacity: .6"/><stop offset=".35" style="stop-color: var(--accent); stop-opacity: .2"/><stop offset="1" style="stop-color: var(--accent); stop-opacity: 0"/></radialGradient>
+    </defs>
+    <circle class="halo-b" cx="553" cy="455" r="150" fill="url(#halo)"/>
+    <g class="ink" id="symbol-ink"><path id="symbol-S" d="M 128 0 A 128 128 0 0 0 128 256 L 214 256 L 214 192 L 128 192 A 64 64 0 0 1 128 64 L 268 64 L 268 0 L 128 0 z M 234 244 L 234 308 L 320 308 A 64 64 0 0 1 320 436 L 180 436 L 180 500 L 320 500 A 128 128 0 0 0 320 244 L 234 244 z"/></g>
+    <circle class="dot-S glow-dot dots" cx="553" cy="455" r="45" style="fill: var(--accent)"/>
+  </svg>
+</div>
+</body>
+</html>

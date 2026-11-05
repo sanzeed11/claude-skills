@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Website loader — the point travels the beam — 2 s loop — Sanzeed</title>
+<!--
+  WEBSITE LOADER · 2 s seamless loop · 60 frames @ 30 fps · rendered at 960×120 on Gallery Black for the GIF / MP4
+  The CSS is the deliverable itself: ../../Website_Loader/sanzeed-loader.css (this page only links it and sizes the beam to 720 px).
+  Render: ../render.sh loader/index.html 960 120 2 ../Website_Loader sanzeed-loader--960x120 mp4,gif "" 20
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../../Website_Loader/sanzeed-loader.css">
+<style>
+  html, body { margin: 0; height: 100%; background: var(--bg); }
+  body { display: grid; place-items: center; }
+  .sz-loader { width: 720px; }
+</style>
+</head>
+<body>
+<div class="sz-loader" role="status" aria-label="Loading"><i class="sz-beam"></i><i class="sz-point"></i></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   SANZEED — reveal on scroll (matches sanzeed.com: [data-reveal] rises 24 px and fades in, 1 s, once)
+   Markup:  <h2 data-reveal>…</h2>   <div data-reveal data-reveal-delay="120">…</div>
+   Script:  sanzeed-reveal-on-scroll.js adds .is-in when the element enters the viewport (top 88 %), once.
+   Without the script (or with reduced motion) everything is simply visible — content never depends on JS.
+   ========================================================================== */
+[data-reveal] { opacity: 0; transform: translateY(24px);
+  transition: opacity 1s cubic-bezier(.22,.8,.2,1), transform 1s cubic-bezier(.22,.8,.2,1);
+  transition-delay: calc(var(--reveal-delay, 0) * 1ms); will-change: opacity, transform; }
+[data-reveal].is-in { opacity: 1; transform: none; }
+
+/* stagger children: <ul data-reveal-group> … <li data-reveal> */
+[data-reveal-group] > [data-reveal]:nth-child(2) { --reveal-delay: 100; }
+[data-reveal-group] > [data-reveal]:nth-child(3) { --reveal-delay: 200; }
+[data-reveal-group] > [data-reveal]:nth-child(4) { --reveal-delay: 300; }
+[data-reveal-group] > [data-reveal]:nth-child(5) { --reveal-delay: 400; }
+[data-reveal-group] > [data-reveal]:nth-child(n+6) { --reveal-delay: 500; }
+
+/* the lit last word of a headline arrives 200 ms after the line */
+[data-reveal] .lit { transition: color .4s cubic-bezier(.22,.8,.2,1) .2s; }
+
+/* no JS, or reduced motion: visible at once */
+html.no-js [data-reveal], html.reduce [data-reveal] { opacity: 1; transform: none; transition: none; }
+@media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } }

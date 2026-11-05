@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Brand transition — preview over project images — 1.5 s — Sanzeed</title>
+<!--
+  PREVIEW of the brand transition: the beam of light carries the cut from one project image to the next.
+  Same sweep as index.html; the incoming image is clipped at the hairline (same timing: 1100 ms, ease-io, from 0.2 s).
+  Images: 06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images (graded, with wall labels — never a project image without one).
+  Render: ../render.sh transition/preview.html 1920 1080 1.5 ../Intros_Outros sanzeed-transition--preview-1920x1080 mp4,gif
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE — the two images and their wall labels =================== */
+  :root { --t-start: .2s; --t-cross: 1.1s; --trail: 420px; }
+  /* ========================================================================================= */
+  .shot { position: absolute; inset: 0; isolation: isolate; }
+  .shot.a { z-index: 1; } .shot.b { z-index: 2; }
+  .shot .label { position: absolute; left: 96px; bottom: 88px; z-index: 2; }
+  .shot .veil-bottom { position: absolute; inset: 0; }
+  .shot.b { clip-path: inset(0 100% 0 0); animation: sz-wipe var(--t-cross) var(--ease-io) var(--t-start) both; }
+  .sweep { position: absolute; top: 0; bottom: 0; left: calc(-1 * var(--trail) - 40px); width: calc(var(--trail) + 40px); z-index: 3;
+           --x0: 0px; --x1: calc(100vw + var(--trail) + 40px); animation: sz-travel var(--t-cross) var(--ease-io) var(--t-start) both; }
+  .sweep .trail { position: absolute; inset: 0 40px 0 0; background: linear-gradient(90deg, rgba(var(--glow-ink), 0) 0%, rgba(var(--glow-ink), .10) 55%, rgba(var(--glow-ink), .42) 100%); }
+  .sweep .edge { position: absolute; top: 0; bottom: 0; right: 40px; width: 2px; background: var(--fg); box-shadow: 0 0 18px 4px rgba(var(--glow-ink), .9), 0 0 60px 16px rgba(var(--glow-ink), .45); }
+  .sweep .bloom { position: absolute; top: 0; bottom: 0; right: 0; width: 40px; background: linear-gradient(90deg, rgba(var(--glow-ink), .35), rgba(var(--glow-ink), 0)); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="shot a">
+    <img class="photo" src="../../../06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images/JPG/sanzeed-img-ram-katha-show-diyas--projection.jpg" alt="Ram Katha Show, Ayodhya">
+    <div class="veil-bottom"></div>
+    <div class="label"><span class="t">Ram Katha Show</span><span class="p">Ayodhya</span></div>
+  </div>
+  <div class="shot b">
+    <img class="photo" src="../../../06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images/JPG/sanzeed-img-prime-minister-museum-projection-room--projection.jpg" alt="Prime Minister Museum, New Delhi">
+    <div class="veil-bottom"></div>
+    <div class="label"><span class="t">Prime Minister Museum</span><span class="p">New Delhi</span></div>
+  </div>
+  <div class="sweep"><div class="trail"></div><div class="edge"></div><div class="bloom"></div></div>
+</div>
+</body>
+</html>

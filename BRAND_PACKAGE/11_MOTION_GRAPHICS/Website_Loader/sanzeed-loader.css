@@ -1,0 +1,31 @@
+/* ==========================================================================
+   SANZEED — website loading animation: the point travels the beam
+   2 s loop · 1.1 s travel on the brand ease, 0.3 s fade, 0.6 s rest · one gold accent · no script needed
+   Usage:
+     <div class="sz-loader" role="status" aria-label="Loading"><i class="sz-beam"></i><i class="sz-point"></i></div>
+   Width: set on .sz-loader (default min(52vw, 380px), like the site's loader). Colours fall back to the brand tokens
+   if brand.css is not present. Reduced motion: the point rests at the centre and breathes instead of travelling.
+   ========================================================================== */
+.sz-loader { position: relative; display: block; width: min(52vw, 380px); height: 24px; }
+.sz-loader .sz-beam { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line, rgba(255,255,255,.10)); }
+.sz-loader .sz-point { position: absolute; left: 0; top: 50%; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%;
+  background: var(--accent, #E9B25A);
+  box-shadow: 0 0 12px rgba(233,178,90,.9), 0 0 32px rgba(233,178,90,.45);
+  animation: sz-loader-travel 2s linear infinite, sz-loader-fade 2s linear infinite; }
+@keyframes sz-loader-travel {
+  0%   { left: 0;    animation-timing-function: cubic-bezier(.22,.8,.2,1); }   /* light: fast out, long settle */
+  55%  { left: 100%; }
+  100% { left: 100%; } }
+@keyframes sz-loader-fade {
+  0%   { opacity: 0; }  10% { opacity: 1; }  55% { opacity: 1; }
+  70%  { opacity: 0; }  100% { opacity: 0; } }
+
+/* light theme (Plaster): Old Gold point, no glow */
+html[data-theme="light"] .sz-loader .sz-point, .theme-light .sz-loader .sz-point { background: var(--accent, #B8863B); box-shadow: 0 0 10px rgba(184,134,59,.35); }
+html[data-theme="light"] .sz-loader .sz-beam, .theme-light .sz-loader .sz-beam { background: var(--line, rgba(40,30,10,.10)); }
+
+/* reduced motion: no travel, the point rests at the centre and breathes */
+@media (prefers-reduced-motion: reduce) {
+  .sz-loader .sz-point { left: 50%; animation: sz-loader-breathe 2s cubic-bezier(.45,0,.55,1) infinite; }
+  @keyframes sz-loader-breathe { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+}

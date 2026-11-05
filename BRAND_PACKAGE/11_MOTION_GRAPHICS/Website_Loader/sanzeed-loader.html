@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanzeed — website loader and reveal-on-scroll demo</title>
+<!-- Self-contained demo of the two web motion snippets. Open in any browser (file:// is fine). Toggle the theme with the button. -->
+<link rel="stylesheet" href="sanzeed-loader.css">
+<link rel="stylesheet" href="sanzeed-reveal-on-scroll.css">
+<style>
+  :root { --bg: #000; --fg: #F5F5F7; --fg-2: #A1A1A6; --fg-3: #808086; --line: rgba(255,255,255,.10); --accent: #E9B25A; }
+  html[data-theme="light"] { --bg: #F5F0E7; --fg: #1A1816; --fg-2: #665F55; --fg-3: #6D665C; --line: rgba(40,30,10,.10); --accent: #B8863B; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 Inter, -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 760px; margin: 0 auto; padding: 96px 24px 160px; }
+  h1, h2 { font-family: Fraunces, "Iowan Old Style", Georgia, serif; font-weight: 300; letter-spacing: -0.015em; line-height: 1.08; margin: 0 0 16px; }
+  h1 { font-size: 44px; } h2 { font-size: 30px; margin-top: 96px; }
+  .eyebrow { font: 600 12px/1 "Inter Tight", Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+  p { color: var(--fg-2); margin: 0 0 16px; } code { font: 500 14px/1.5 ui-monospace, Menlo, monospace; color: var(--fg); }
+  .demo { padding: 48px 24px; border: 1px solid var(--line); border-radius: 20px; display: grid; place-items: center; gap: 24px; }
+  .lit { color: var(--accent); }
+  button { position: fixed; right: 20px; top: 20px; border: 1px solid var(--line); background: transparent; color: var(--fg); border-radius: 999px; padding: 10px 16px; font: 500 14px/1 Inter, sans-serif; cursor: pointer; }
+  ul { padding-left: 20px; color: var(--fg-2); } li { margin: 6px 0; }
+  .sp { height: 70vh; }
+</style>
+</head>
+<body>
+<button onclick="var h=document.documentElement;h.dataset.theme=h.dataset.theme==='light'?'dark':'light'">Toggle theme</button>
+<main>
+  <p class="eyebrow">Website loading animation</p>
+  <h1>The point travels the <span class="lit">beam.</span></h1>
+  <p>Two-second loop: 1.1 s travel on <code>cubic-bezier(.22,.8,.2,1)</code>, a 0.3 s fade, 0.6 s of rest. One gold accent. CSS only — <code>sanzeed-loader.css</code>, 1 KB.</p>
+  <div class="demo">
+    <div class="sz-loader" role="status" aria-label="Loading"><i class="sz-beam"></i><i class="sz-point"></i></div>
+  </div>
+  <p style="margin-top:16px">Same loop as an SVG with SMIL (<code>sanzeed-loader--smil.svg</code>, drop in as an <code>&lt;img&gt;</code>) and as Lottie JSON (<code>sanzeed-loader.json</code>, 480 × 48, 60 frames).</p>
+  <div class="demo"><img src="sanzeed-loader--smil.svg" alt="" width="480" height="48"></div>
+
+  <h2 data-reveal>Reveal on scroll, as on the <span class="lit">site.</span></h2>
+  <p data-reveal>Elements marked <code>data-reveal</code> rise 24 px and fade in over 1 s on the brand ease, once, when their top edge crosses 88 % of the viewport — the same values as sanzeed.com. Scroll to see the list below arrive in a stagger.</p>
+  <div class="sp"></div>
+  <p class="eyebrow" data-reveal>Method</p>
+  <ul data-reveal-group>
+    <li data-reveal><b>01 Discover</b> — a research deck and the one central story</li>
+    <li data-reveal><b>02 Direct</b> — a concept book and a walkthrough film</li>
+    <li data-reveal><b>03 Craft</b> — detail drawings, media scripts, a prototype room</li>
+    <li data-reveal><b>04 Deliver</b> — a built, tested and opened experience</li>
+  </ul>
+  <div class="sp"></div>
+  <h2 data-reveal>Tell me about the <span class="lit">room.</span></h2>
+  <p data-reveal>With <code>prefers-reduced-motion: reduce</code> every element is visible at once and the loader's point breathes in place instead of travelling.</p>
+</main>
+<script src="sanzeed-reveal-on-scroll.js"></script>
+</body>
+</html>

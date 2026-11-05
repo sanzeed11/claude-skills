@@ -27,7 +27,7 @@ Three campaign lines, each as a key visual in 16:9, 1:1 and 9:16; a digital ad s
 | Line | Image | Wall label |
 |---|---|---|
 | Carry the light across. | the point-of-light object (`_shared/img/hero-object--dark-2400.jpg`, from `poster-dark.webp`) | Between two points of light · sanzeed.com |
-| Experiential design you can walk into. | Prime Minister Museum, the tricolour corridor (`case/prime-minister-museum-03`) | Prime Minister Museum · New Delhi |
+| Experiential design you can walk into. | Prime Minister Museum, the tricolour corridor (`_shared/img/jpg/case--prime-minister-museum-03.jpg` — the site exports this frame washed out, so the build uses a levels-restored copy; see `_shared/README.md`) | Prime Minister Museum · New Delhi |
 | Tell me about the room. | the portrait, 4:5 crop | Sanzeed Mirza · New Delhi |
 
 **Exports.** Key visuals: PNG at 2× (3840×2160 / 2160×2160 / 2160×3840) + JPG at 1× (q88). Ads: PNG at 2× (`@2x`) + JPG at exact IAB pixels. Banners: PNG at 2× + JPG at 1×. 9:16 keeps text inside the centre-safe 1080×1420 band.
@@ -133,7 +133,7 @@ Regenerate (also rebuilds the spread PNGs): `python3 _shared/build/build_brochur
 
 **Proposal template** `sanzeed-proposal-template--12-slides.pptx` (12 slides): cover · the room · the story · approach · scope · deliverables · timeline · investment bands · team · why Sanzeed · selected work · next step. Every `[bracketed]` field is for the client/project; the investment slide carries `[GSTIN]` and `[Bank name]` fields. Also PDF + PNG per slide.
 
-Both decks are built with python-pptx and are fully editable in PowerPoint/Keynote/Google Slides. Fonts used by name: **Fraunces Light**, **Inter Tight SemiBold**, **Inter**, **Inter Medium** — install the static instances from `_shared/fonts-static/` (derived from `04_TYPOGRAPHY`) so the decks render as designed. Images are JPEG copies in `src/assets/`; pictures are masked to rounded rectangles (the room) with a hairline.
+Both decks are built with python-pptx and are fully editable in PowerPoint/Keynote/Google Slides. Fonts used by name: **Fraunces Light**, **Inter Tight SemiBold**, **Inter**, **Inter Medium** — install the static instances from `_shared/fonts-static/` (derived from `04_TYPOGRAPHY`) so the decks render as designed. Images are JPEG copies in `src/assets/` (the Prime Minister Museum corridor, `case--prime-minister-museum-03.jpg`, is the levels-restored copy — see `_shared/README.md`); pictures are masked to rounded rectangles (the room) with a hairline.
 
 **Case-study template** — A4, 2 pages, from HTML: `--filled-prime-minister-museum` (complete) and `--blank` (bracketed fields and labelled image slots). **Portfolio template** — A4 landscape, 12 pages: cover · 10 projects (one per page, full-bleed-style plate, counter, title, place, category, wall label; the three case studies carry their idea line) · contact.
 
@@ -162,7 +162,7 @@ if __name__ == "__main__":
 | Path | What it is |
 |---|---|
 | `collateral.css` | the campaign vocabulary on top of `brand.css`: `.plate` (the room), `.wl` (wall label), `.hl` + `.pt` (Fraunces headline with the gold point), `.beam-h`, `.lamp`, print helpers; grain is dropped in print media |
-| `img/` | derived imagery: the point-of-light object (`poster-dark.webp` upsampled to 2400 px, plus 4:5 and 1:1 crops; light version from `poster-light.webp`), portrait crops at 2000 px, and `jpg/` JPEG copies of project images used inside PDFs |
+| `img/` | derived imagery: the point-of-light object (`poster-dark.webp` upsampled to 2400 px, plus 4:5 and 1:1 crops; light version from `poster-light.webp`), portrait crops at 2000 px, and `jpg/` JPEG copies of project images used inside PDFs. One frame, `case/prime-minister-museum-03` (the tricolour corridor), is served by the site washed out — mean luminance 218 with a floor at 171, where every other case frame sits at 40–150 — so `common.TONE_FIX` restores it with linear levels (black point to the veil floor, gamma 1.15, 0.4 px blur against banding; no retouching) in every derived copy (`jpg/`, `Presentations/src/assets/`). Replace both copies with the original render when the client supplies it. |
 | `icons/` | monoline arrow icons on the logo construction (500-unit box, 64-unit stroke, 45-unit gold point at the tail); `--white` and `--soot` variants |
 | `fonts-static/` | static instances (Fraunces Light + Italic, Inter Tight SemiBold / Medium, Inter Regular / Medium / Italic) made from the variable fonts in `04_TYPOGRAPHY` with fontTools, for Office documents (PPTX/DOCX name fonts by instance). OFL licences included. |
 | `build/` | generators: `brandcopy.py` (all approved copy), `common.py` (paths, render/print helpers, `jimg`), `render_batch.js` (same as `render.js`, many jobs per browser), `build_*.py` one per subfolder, `pptx_kit.py` (brand on slides), `docstyle.py`, `manifest.py` (measures every file → `manifest.json`), `write_readmes.py` |
@@ -192,6 +192,6 @@ Campaign idea carried through every piece: **Carry the light across.** — a sin
 
 Every export has an editable source beside it (`src/*.html`, `.pptx`, `.docx`); each subfolder’s `README.md` lists every file with its measured spec and the command to re-export it. Print-ready PDFs (`-print-ready-cmyk.pdf`) carry crop marks, trim and bleed boxes and CMYK conversion from `print_pdf.py` — proof gold on the chosen stock before a run. Total size of this folder: {tot/1e6:.0f} MB, {len(MAN)} files.
 
-**Known limitations.** Source imagery is the site's 960×540 / 1600×900 renders and the 1100 px portrait, so large-format print (A2 poster plate, 1:10 backdrops) is below 300 dpi — supply higher-resolution originals for press. The 12-page profile holds the three case studies as spreads by merging the three pillars into the About page and the galleries, journey and contact onto page 12. Office documents need the static fonts in `_shared/fonts-static/` installed to show Fraunces Light and Inter Tight SemiBold.
+**Known limitations.** Source imagery is the site's 960×540 / 1600×900 renders and the 1100 px portrait, so large-format print (A2 poster plate, 1:10 backdrops) is below 300 dpi — supply higher-resolution originals for press. The 12-page profile holds the three case studies as spreads by merging the three pillars into the About page and the galleries, journey and contact onto page 12. Office documents need the static fonts in `_shared/fonts-static/` installed to show Fraunces Light and Inter Tight SemiBold. The Prime Minister Museum corridor frame (`case/prime-minister-museum-03`) is served by the site washed out; every piece that shows it (walk-into key visuals, sales deck 09, proposal 11, case-study and portfolio templates, trifold, profile p06) uses a levels-restored copy made by `_shared/build/common.py` (`TONE_FIX`) — swap in the original render when supplied.
 """
     open(f"{MC}/README.md", "w", encoding="utf-8").write(top); print("wrote top README")

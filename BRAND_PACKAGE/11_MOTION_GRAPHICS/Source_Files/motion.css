@@ -1,0 +1,106 @@
+/* ==========================================================================
+   SANZEED — motion.css  (shared motion layer for every animation in 11_MOTION_GRAPHICS)
+   Requires brand.css (tokens, fonts, type classes) — every index.html links both.
+   Principle: light, not bounce. The point travels the beam; letters are revealed by the
+   passing light; glow is gold; durations 200 / 400 / 800 / 1100 ms; holds are calm.
+   Everything is CSS @keyframes so capture_frames.js can step it deterministically.
+   ========================================================================== */
+
+/* ---------- timing scale (mirrors brand.css) ---------- */
+:root {
+  --ease:    cubic-bezier(.22,.8,.2,1);   /* light: fast out, long settle — every entrance, every travel */
+  --ease-in: cubic-bezier(.6,0,.9,.4);    /* exits only */
+  --ease-io: cubic-bezier(.65,0,.2,1);    /* symmetrical: moving between two resting states */
+  --ease-loop: cubic-bezier(.45,0,.55,1); /* symmetrical, for seamless breathing loops only */
+  --t-fast: .2s; --t: .4s; --t-slow: .8s; --t-reveal: 1.1s;
+  --glow-ink: 233,178,90;                  /* Lamp Gold as rgb triplet for gradients */
+}
+html[data-theme="light"] { --glow-ink: 184,134,59; }   /* Old Gold on Plaster */
+
+/* ---------- the frame = the room ---------- */
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-text); -webkit-font-smoothing: antialiased; }
+html.transparent, html.transparent body { background: transparent; }
+.frame { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+.frame > .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); }
+.grain::after { border-radius: 0; z-index: 1; }
+html[data-theme="light"] .grain::after, html.transparent .grain::after { display: none; }
+
+/* ---------- lamp: the radial glow behind the single lit object ---------- */
+.lamp { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background-image: radial-gradient(var(--lamp-w, 60%) var(--lamp-h, 60%) at var(--lamp-x, 50%) var(--lamp-y, 46%),
+    rgba(var(--glow-ink), var(--lamp-a, .50)) 0%, rgba(var(--glow-ink), calc(var(--lamp-a, .50) * .22)) 30%, rgba(0,0,0,0) 70%); }
+html[data-theme="light"] .lamp { --lamp-a: .26; }
+
+/* ---------- veils for photography (text must sit on >= 80 % black) ---------- */
+.veil { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.62) 16%, rgba(0,0,0,.16) 36%, rgba(0,0,0,.40) 58%, rgba(0,0,0,.90) 82%, rgba(0,0,0,.96) 100%); }
+.veil-bottom { background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 46%, rgba(0,0,0,.55) 70%, rgba(0,0,0,.92) 100%); }
+.veil-flat { background: rgba(0,0,0,.80); }
+
+/* ---------- the beam and the point ---------- */
+.beam { position: absolute; height: 1px; background: var(--line); }
+.beam::after { display: none; }   /* brand.css draws a resting point at the beam's left end; in motion the point is its own element */
+.point { position: absolute; width: var(--dot, 12px); height: var(--dot, 12px); border-radius: 50%; background: var(--accent);
+  margin: calc(var(--dot, 12px) / -2) 0 0 calc(var(--dot, 12px) / -2); box-shadow: var(--glow); }
+html[data-theme="light"] .point { box-shadow: 0 0 18px rgba(184,134,59,.35); }
+.halo { position: absolute; width: var(--halo, 160px); height: var(--halo, 160px); border-radius: 50%; pointer-events: none;
+  margin: calc(var(--halo, 160px) / -2) 0 0 calc(var(--halo, 160px) / -2);
+  background: radial-gradient(circle, rgba(var(--glow-ink), .55) 0%, rgba(var(--glow-ink), .18) 35%, rgba(0,0,0,0) 70%); }
+
+/* ---------- inline logo: fills follow the theme so one SVG serves dark and Plaster ---------- */
+.logo { display: block; overflow: visible; }
+.logo .ink  { fill: var(--fg); }
+.logo .dots { fill: var(--accent); }
+.logo .glow-dot { filter: drop-shadow(0 0 10px rgba(var(--glow-ink), .9)) drop-shadow(0 0 28px rgba(var(--glow-ink), .55)); }
+html[data-theme="light"] .logo .glow-dot { filter: drop-shadow(0 0 10px rgba(var(--glow-ink), .45)); }
+
+/* ---------- type at video scale ---------- */
+.eyebrow { font: 600 var(--eb, 20px)/1.2 var(--font-heading); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); }
+.hl { font-family: var(--font-display); font-weight: 300; font-size: var(--hl, 84px); line-height: 1.04; letter-spacing: -0.015em;
+      font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; color: var(--fg); text-wrap: balance; }
+.hl .w { display: inline-block; }                 /* a word: the unit of the type-in */
+.lit { color: var(--accent); } html[data-theme="light"] .lit { color: var(--accent-text); }
+.dim { color: var(--fg-3); }
+.quote { font-family: var(--font-display); font-style: italic; font-weight: 300; font-size: var(--q, 64px); line-height: 1.22; letter-spacing: -0.01em;
+         font-variation-settings: "opsz" 72, "SOFT" 50, "WONK" 0; color: var(--fg); text-wrap: balance; }
+.body { font: 400 var(--body, 26px)/1.5 var(--font-text); color: var(--fg-2); }
+.site { font: 500 var(--site, 20px)/1.2 var(--font-text); letter-spacing: .02em; color: var(--fg-3); white-space: nowrap; }
+.descriptor { font: 600 var(--desc, 22px)/1.2 var(--font-heading); letter-spacing: .12em; text-transform: uppercase; color: var(--fg-2); }
+.stat { font-family: var(--font-display); font-weight: 300; line-height: .9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;
+        font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0; color: var(--fg); }
+.stat .plus { color: var(--accent); }
+.label { display: flex; flex-direction: column; gap: 6px; }
+.label .t { font: 600 var(--lt, 30px)/1.25 var(--font-heading); letter-spacing: -0.01em; color: var(--fg); }
+.label .p { font: 400 var(--lp, 26px)/1.35 var(--font-text); color: var(--fg-2); }
+.label .l { font: 400 var(--lp, 26px)/1.4 var(--font-text); color: var(--fg-3); max-width: 40ch; }
+.plate { position: relative; border-radius: 28px; border: 1px solid var(--line); background: var(--card); overflow: hidden; }
+.plate img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--focal, 50% 50%); }
+
+/* ==========================================================================
+   KEYFRAME LIBRARY — the only movements in the identity
+   Each element sets:  animation: <name> <duration> var(--ease) <delay> both;
+   ========================================================================== */
+@keyframes sz-fade-in  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sz-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes sz-rise     { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }   /* the site's [data-reveal] */
+@keyframes sz-sink     { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(12px); } }
+@keyframes sz-word     { from { opacity: 0; transform: translateY(.35em); filter: blur(4px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }  /* the site's statement words */
+@keyframes sz-lamp     { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sz-lamp-settle { from { opacity: 1; } to { opacity: .7; } }
+@keyframes sz-travel   { from { transform: translateX(var(--x0, 0px)); } to { transform: translateX(var(--x1, 0px)); } }      /* the point travels the beam, left -> right */
+@keyframes sz-drop     { from { transform: translateY(var(--y0, 0px)); } to { transform: translateY(var(--y1, 0px)); } }      /* top -> down */
+@keyframes sz-wipe     { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }                         /* light wipes left -> right */
+@keyframes sz-wipe-out { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 0 100%); } }                         /* and leaves to the right */
+@keyframes sz-grow-x   { from { transform: scaleX(0); } to { transform: scaleX(1); } }                                        /* beam draws from its left end */
+@keyframes sz-settle   { from { opacity: 0; transform: scale(1.6); } to { opacity: 1; transform: scale(1); } }               /* a point arrives and settles */
+@keyframes sz-pulse    { 0% { opacity: .35; transform: scale(1); } 45% { opacity: .95; transform: scale(1.5); } 100% { opacity: .35; transform: scale(1); } }  /* glow pulses once */
+@keyframes sz-breathe  { 0% { opacity: .35; transform: scale(1); } 50% { opacity: .9; transform: scale(1.35); } 100% { opacity: .35; transform: scale(1); } }  /* seamless loop (ease-in-out) */
+@keyframes sz-dot-breathe { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+@keyframes sz-draw     { from { stroke-dashoffset: var(--len, 1000); } to { stroke-dashoffset: 0; } }                       /* a line draws on (signature, routes) */
+@keyframes sz-scale-in { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1); } }              /* photography settles — never the logo */
+
+/* reduced motion: every animation collapses to its end state */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; }
+}

@@ -84,7 +84,7 @@ def release(sample=True):
     eyebrow(doc, "Media contact", before=4)
     para(doc, f"Sanzeed Mirza · {C.EMAIL} · {C.PHONE} (call / WhatsApp) · {C.SITE} · {C.LINKEDIN}", size=9.5, after=6)
     eyebrow(doc, "Images", before=4)
-    para(doc, "Headshots (1:1, 4:5, 3:4 at 2000 px) and project images with wall labels are in the media kit (10_MARKETING_COLLATERAL/Media_Kit and /Press). " + C.RIGHTS, size=9, color=MIST, after=10, line=1.4)
+    para(doc, "Headshots (1:1, 4:5, 3:4 at 2000 px) and project images with wall labels are in the media kit, available from the media contact below. " + C.RIGHTS, size=9, color=MIST, after=10, line=1.4)
     p = para(doc, "— ENDS —", font="Inter Tight SemiBold", size=9, color=MIST, align=WD_ALIGN_PARAGRAPH.CENTER)
     return doc
 

@@ -3,7 +3,8 @@
  * verify.js — loads the built site (and the untouched backup as "before") in headless Chromium and checks:
  *   console/page errors, failed requests (404s), fonts resolved (document.fonts), wordmark SVG geometry,
  *   theme toggle, gallery filter + search, favicon/manifest/OG files return 200.
- * Writes screenshots/ (desktop + mobile, dark + light, before/after, header @2×) and screenshots/verify-report.json.
+ * Writes screenshots/ (desktop + mobile, dark + light, before/after, header + footer @2×) and screenshots/verify-report.json.
+ *   The footer captures wait for the signature write-on to finish (the site restarts it every 5 s) and pin the end state.
  *   node 16_WEBSITE_IMPLEMENTATION/src/verify.js [--before <dir>]
  */
 const { chromium } = require('playwright');
@@ -54,7 +55,7 @@ async function audit(browser, base, name, url, vp, label) {
     return { viewBox: s.getAttribute('viewBox'), width: +b.width.toFixed(1), height: +b.height.toFixed(1), letters: !!p, pathLen: p ? +p.getTotalLength().toFixed(0) : 0, fill: p && getComputedStyle(p).fill, dots: s.querySelectorAll('.wm-dot').length,
       lockup: !!document.querySelector('.f-lockup svg'), lockupDesc: document.querySelectorAll('.f-lockup .wm-desc path').length, loaderClip: !!document.querySelector('#ldClip rect') }; });
   await scrollThrough(page);
-  r.signature = await page.evaluate(() => [...document.querySelectorAll('.foot2 .sig img')].map(i => ({ src: i.getAttribute('src'), ok: i.complete && i.naturalWidth > 0 })));
+  r.signature = await page.evaluate(() => [...document.querySelectorAll('.foot2 .sig img')].map(i => ({ src: i.getAttribute('src'), shown: getComputedStyle(i).display !== 'none', ok: i.complete && i.naturalWidth > 0 })));   // dark theme at this point: the white one is shown; the hidden lazy one stays unloaded (see report.footers for both themes)
   await page.waitForTimeout(400);
   await page.screenshot({ ...jpg(`${tag}-dark-full.jpg`), fullPage: true });
   await page.screenshot(jpg(`${tag}-dark.jpg`));
@@ -64,11 +65,11 @@ async function audit(browser, base, name, url, vp, label) {
     const count = () => page.evaluate(() => [...document.querySelectorAll('.collection .card')].filter(c => c.getClientRects().length && getComputedStyle(c).visibility !== 'hidden').length);
     const before = await count();
     await page.evaluate(() => document.querySelector('button[data-cat="projection"]').click()); await page.waitForTimeout(700);
-    const afterFilter = await count(); const pressed = await page.evaluate(() => document.querySelector('.seg button[aria-pressed="true"]').dataset.cat);
+    const afterFilter = await count(); const pressed = await page.evaluate(() => document.querySelector('.seg button[aria-pressed="true"]').dataset.cat); const labelProjection = await page.evaluate(() => document.querySelector('#count').textContent.trim());
     await page.screenshot(jpg(`${tag}-dark-gallery-filter-projection.jpg`));
-    await page.fill('#search', 'Ayodhya'); await page.waitForTimeout(700); const afterSearch = await count();
+    await page.fill('#search', 'Ayodhya'); await page.waitForTimeout(700); const afterSearch = await count(); const labelSearch = await page.evaluate(() => document.querySelector('#count').textContent.trim());
     await page.evaluate(() => document.querySelector('#searchClear').click()); await page.evaluate(() => document.querySelector('button[data-cat="work"]').click()); await page.waitForTimeout(500);
-    r.gallery = { visibleDefault: before, visibleProjection: afterFilter, pressed, visibleSearchAyodhya: afterSearch };
+    r.gallery = { visibleDefault: before, visibleProjection: afterFilter, pressed, countLabelProjection: labelProjection, visibleSearchAyodhya: afterSearch, countLabelSearch: labelSearch };
     await page.evaluate(() => { const go = (y) => { if (window.__lenis) window.__lenis.scrollTo(y, { immediate: true }); window.scrollTo(0, y); }; go(0); }); await page.waitForTimeout(400);
   }
   // theme toggle
@@ -87,15 +88,40 @@ async function loaderFrames(browser, base, label) {   // the loader: clip-path w
   await page.waitForSelector('.loader .wm svg'); await page.waitForTimeout(420);
   await page.screenshot(jpg(`${label}-index-desktop-loader-frame.jpg`)); await ctx.close();
 }
-async function headerShots(browser, base, name, url, label) {
+/* The footer signature writes itself when it arrives (`.sig.on` → sigWrite 2.2 s) and the site's JS restarts the write
+   every 5 s while it stays on screen, so a capture taken at a fixed delay can catch it mid-stroke (pen line + a few
+   letters). Scroll the footer in, wait for the write to finish, then pin the finished state (inline !important beats the
+   animation) so the light and dark captures are stable; measure the signature box and both <img>s for the report. */
+async function settledSignature(page, wait) {
+  await page.evaluate(() => { const el = document.querySelector('.foot2'); el.scrollIntoView(); });
+  await page.waitForFunction(() => { const s = document.querySelector('.foot2 .sig'); if (!s) return true; const b = s.getBoundingClientRect(); return b.top >= 0 && b.bottom <= innerHeight; }, null, { timeout: 8000, polling: 100 }).catch(() => {});
+  if (wait) await page.waitForFunction(() => { const i = document.querySelector('.foot2 .sig-ink'); if (!i) return true; const a = i.getAnimations(); return a.length > 0 && a.every(x => x.playState === 'finished'); }, null, { timeout: 9000, polling: 100 }).catch(() => {});
+  await page.evaluate(() => {
+    document.querySelectorAll('.foot2 .sig-ink').forEach(e => e.style.setProperty('clip-path', 'inset(0 -2% 0 0)', 'important'));
+    document.querySelectorAll('.foot2 .sig-pen').forEach(e => e.style.setProperty('display', 'none', 'important'));
+  });
+  await page.waitForTimeout(500);                      // let a theme-switched lazy <img> decode
+  return page.evaluate(() => { const s = document.querySelector('.foot2 .sig'); if (!s) return null; const b = s.getBoundingClientRect();
+    return { theme: document.documentElement.getAttribute('data-theme'), box: [Math.round(b.width), Math.round(b.height)], clip: getComputedStyle(s.querySelector('.sig-ink')).clipPath,
+      imgs: [...s.querySelectorAll('img')].map(i => { const r = i.getBoundingClientRect(); return { src: i.getAttribute('src').replace(/^.*\//, ''), shown: getComputedStyle(i).display !== 'none', loaded: i.complete && i.naturalWidth > 0, box: [Math.round(r.width), Math.round(r.height)] }; }) }; });
+}
+async function headerShots(browser, base, name, url, label, footers) {
   for (const [vn, w, h] of VIEWPORTS) {
     const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 2, colorScheme: 'dark' });
     const page = await ctx.newPage(); await page.goto(base + url, { waitUntil: 'load' }); await settle(page); await page.waitForTimeout(600);
     await page.locator('header.nav').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-header-2x.png`) });
-    await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(700);
+    await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 1500 : 700);   // index cross-fades via View Transitions
     await page.locator('header.nav').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-header-2x-light.png`) });
-    if (label === 'after') { await scrollThrough(page); await page.evaluate(() => { const el = document.querySelector('.foot2'); el.scrollIntoView(); }); await page.waitForTimeout(1200);
-      await page.locator('.foot2').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-footer-2x-light.png`) }); }
+    if (label === 'after') {                              // footer: lockup + signature, light then dark, signature settled
+      await scrollThrough(page);
+      const light = await settledSignature(page, true);
+      await page.locator('.foot2').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-footer-2x-light.png`) });
+      await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 2600 : 900);
+      const dark = await settledSignature(page, false);
+      await page.locator('.foot2').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-footer-2x.png`) });
+      if (footers) footers.push({ page: name, viewport: vn, light, dark });
+      console.log('footer', name, vn, 'light', JSON.stringify(light), 'dark', JSON.stringify(dark));
+    }
     await ctx.close();
   }
 }
@@ -114,16 +140,18 @@ async function files(browser, base) {
 (async () => {
   const srv = serve(SITE, 8765); await ready(8765); const base = 'http://127.0.0.1:8765';
   let bsrv = null, bbase = null; if (BEFORE) { bsrv = serve(BEFORE, 8766); await ready(8766); bbase = 'http://127.0.0.1:8766'; }
-  const browser = await chromium.launch(); const report = { after: [], before: [], files: {} };
+  const browser = await chromium.launch(); const report = { after: [], before: [], footers: [], files: {} };
   try {
     for (const [name, url] of PAGES) { for (const vp of VIEWPORTS) { const r = await audit(browser, base, name, url, vp, 'after'); report.after.push(r); console.log('after', name, vp[0], 'errors', r.localErrors.length, 'failed', r.localFailures.length, 'fonts', r.fonts.fraunces, r.fonts.inter, r.fonts.tight, 'wm', JSON.stringify(r.wordmark && [r.wordmark.width, r.wordmark.height]), 'theme', r.theme.after, r.gallery ? JSON.stringify(r.gallery) : ''); } }
     await loaderFrames(browser, base, 'after');
-    for (const [name, url] of PAGES) await headerShots(browser, base, name, url, 'after');
+    for (const [name, url] of PAGES) await headerShots(browser, base, name, url, 'after', report.footers);
     report.files = await files(browser, base); console.log('files', JSON.stringify(report.files, null, 1));
     if (bbase) { for (const [name, url] of PAGES.slice(0, 2)) { for (const vp of VIEWPORTS) { const r = await audit(browser, bbase, name, url, vp, 'before'); report.before.push(r); console.log('before', name, vp[0], 'errors', r.localErrors.length, 'failed', r.localFailures.length); } }
-      await headerShots(browser, bbase, 'index', '/', 'before'); }
+      await headerShots(browser, bbase, 'index', '/', 'before', null); }
   } finally { await browser.close(); srv.kill(); if (bsrv) bsrv.kill(); }
   fs.writeFileSync(path.join(SHOTS, 'verify-report.json'), JSON.stringify(report, null, 2));
+  const badFoot = report.footers.filter(f => [f.light, f.dark].some(t => !t || t.clip !== 'inset(0px -2% 0px 0px)' || t.imgs.some(i => i.shown && !i.loaded)));
+  if (badFoot.length) console.log('FOOTER SIGNATURE PROBLEMS: ' + JSON.stringify(badFoot, null, 1));
   const bad = report.after.filter(r => r.localErrors.length || r.localFailures.length);
   console.log(bad.length ? 'PROBLEMS: ' + JSON.stringify(bad.map(r => [r.page, r.viewport, r.localErrors, r.localFailures]), null, 1) : 'OK — no local errors or failed requests');
 })();

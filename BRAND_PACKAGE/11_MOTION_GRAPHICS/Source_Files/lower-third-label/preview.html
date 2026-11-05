@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Lower third — project title + place (wall label) — 5 s — preview over a project image — Sanzeed</title>
+<!--
+  LOWER THIRD 02 · wall label: eyebrow · title · place · one line · 5 s · 150 frames @ 30 fps · 1920×1080 · transparent
+  in   0.0–1.1  the label plate wipes in left -> right (800 ms); eyebrow 0.2 s, title 0.35 s, place 0.5 s, line 0.65 s rise (400 ms each)
+  hold 1.1–4.0
+  out  4.0–4.4  sinks and fades (400 ms, ease-in); 4.4–5.0 empty
+  Edit the four lines in the markup. The one-line note comes from 06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images/approved.json.
+  PREVIEW: the same lower third composited over an approved project image (06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images). Derived from index.html — edit that, then mirror the change here.
+  Render: ../render.sh lower-third-label/preview.html 1920 1080 5 ../Lower_Thirds sanzeed-lower-third--wall-label--preview-1920x1080 mp4
+-->
+<link rel="stylesheet" href="../../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css">
+<link rel="stylesheet" href="../motion.css">
+<style>
+  /* =================== EDIT HERE =================== */
+  :root { --t-in: 0s; --t-out: 4s; }
+  /* ================================================= */
+  .lt { position: absolute; left: 120px; bottom: 120px; animation: sz-sink .4s var(--ease-in) var(--t-out) both; }
+  .plate { position: relative; max-width: 760px; padding: 30px 44px 34px 40px; border-radius: 20px; border: 1px solid var(--line);
+           background: rgba(13,13,15,.80); animation: sz-wipe .8s var(--ease) var(--t-in) both; }
+  .eyebrow { font-size: 18px; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .2s) both; }
+  .label { margin-top: 14px; gap: 4px; }
+  .label .t { font-size: 40px; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .35s) both; }
+  .label .p { font-size: 26px; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .5s) both; }
+  .label .l { font-size: 22px; margin-top: 10px; max-width: 44ch; animation: sz-rise .4s var(--ease) calc(var(--t-in) + .65s) both; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <img class="photo" src="../../../06_PHOTOGRAPHY_ART_DIRECTION/Approved_Images/JPG/sanzeed-img-prime-minister-museum-projection-room--projection.jpg" alt="">
+  <div class="lt">
+    <div class="plate">
+      <div class="eyebrow">Now showing</div>
+      <div class="label">
+        <span class="t">Prime Minister Museum</span>
+        <span class="p">New Delhi</span>
+        <span class="l">A long corridor of every Prime Minister, walked beneath a tricolour canopy of light.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
