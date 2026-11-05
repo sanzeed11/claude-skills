@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" rx="28" fill="#D9A64A"/>
+<g font-family="Inter, 'Inter Tight', Arial, sans-serif" fill="#1A1816">
+<text x="40" y="60" font-size="30" font-weight="600">Amber</text>
+<text x="40" y="300" font-size="22">#D9A64A</text>
+<text x="40" y="332" font-size="18" opacity="0.85">RGB 217 166 74</text>
+<text x="40" y="360" font-size="18" opacity="0.85">CMYK 0 24 66 15</text>
+</g></svg>

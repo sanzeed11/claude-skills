@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" rx="28" fill="#4A86C8"/>
+<g font-family="Inter, 'Inter Tight', Arial, sans-serif" fill="#F5F5F7">
+<text x="40" y="60" font-size="30" font-weight="600">Slate Blue</text>
+<text x="40" y="300" font-size="22">#4A86C8</text>
+<text x="40" y="332" font-size="18" opacity="0.85">RGB 74 134 200</text>
+<text x="40" y="360" font-size="18" opacity="0.85">CMYK 63 33 0 22</text>
+</g></svg>

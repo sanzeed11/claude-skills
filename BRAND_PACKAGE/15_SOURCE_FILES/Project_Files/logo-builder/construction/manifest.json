@@ -1,0 +1,485 @@
+[
+ {
+  "file": "sanzeed-primary-wordmark--full-colour-dark.svg",
+  "variant": "primary-wordmark",
+  "colour": "full-colour-dark",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--full-colour-light.svg",
+  "variant": "primary-wordmark",
+  "colour": "full-colour-light",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--black.svg",
+  "variant": "primary-wordmark",
+  "colour": "black",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--white.svg",
+  "variant": "primary-wordmark",
+  "colour": "white",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--grayscale.svg",
+  "variant": "primary-wordmark",
+  "colour": "grayscale",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--grayscale-inverted.svg",
+  "variant": "primary-wordmark",
+  "colour": "grayscale-inverted",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-primary-wordmark--single-colour-gold.svg",
+  "variant": "primary-wordmark",
+  "colour": "single-colour-gold",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--full-colour-dark.svg",
+  "variant": "wordmark-plain",
+  "colour": "full-colour-dark",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--full-colour-light.svg",
+  "variant": "wordmark-plain",
+  "colour": "full-colour-light",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--black.svg",
+  "variant": "wordmark-plain",
+  "colour": "black",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--white.svg",
+  "variant": "wordmark-plain",
+  "colour": "white",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--grayscale.svg",
+  "variant": "wordmark-plain",
+  "colour": "grayscale",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--grayscale-inverted.svg",
+  "variant": "wordmark-plain",
+  "colour": "grayscale-inverted",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-wordmark-plain--single-colour-gold.svg",
+  "variant": "wordmark-plain",
+  "colour": "single-colour-gold",
+  "w": 3590.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--full-colour-dark.svg",
+  "variant": "symbol",
+  "colour": "full-colour-dark",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--full-colour-light.svg",
+  "variant": "symbol",
+  "colour": "full-colour-light",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--black.svg",
+  "variant": "symbol",
+  "colour": "black",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--white.svg",
+  "variant": "symbol",
+  "colour": "white",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--grayscale.svg",
+  "variant": "symbol",
+  "colour": "grayscale",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--grayscale-inverted.svg",
+  "variant": "symbol",
+  "colour": "grayscale-inverted",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol--single-colour-gold.svg",
+  "variant": "symbol",
+  "colour": "single-colour-gold",
+  "w": 598.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--full-colour-dark.svg",
+  "variant": "monogram",
+  "colour": "full-colour-dark",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--full-colour-light.svg",
+  "variant": "monogram",
+  "colour": "full-colour-light",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--black.svg",
+  "variant": "monogram",
+  "colour": "black",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--white.svg",
+  "variant": "monogram",
+  "colour": "white",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--grayscale.svg",
+  "variant": "monogram",
+  "colour": "grayscale",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--grayscale-inverted.svg",
+  "variant": "monogram",
+  "colour": "grayscale-inverted",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-monogram--single-colour-gold.svg",
+  "variant": "monogram",
+  "colour": "single-colour-gold",
+  "w": 1294.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--full-colour-dark.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "full-colour-dark",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--full-colour-light.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "full-colour-light",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--black.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "black",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--white.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "white",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--grayscale.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "grayscale",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--grayscale-inverted.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "grayscale-inverted",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-secondary-symbol-wordmark--single-colour-gold.svg",
+  "variant": "secondary-symbol-wordmark",
+  "colour": "single-colour-gold",
+  "w": 4388.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--full-colour-dark.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "full-colour-dark",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--full-colour-light.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "full-colour-light",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--black.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "black",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--white.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "white",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--grayscale.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "grayscale",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--grayscale-inverted.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "grayscale-inverted",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-horizontal-descriptor--single-colour-gold.svg",
+  "variant": "horizontal-descriptor",
+  "colour": "single-colour-gold",
+  "w": 3590.0,
+  "h": 742
+ },
+ {
+  "file": "sanzeed-vertical-stacked--full-colour-dark.svg",
+  "variant": "vertical-stacked",
+  "colour": "full-colour-dark",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--full-colour-light.svg",
+  "variant": "vertical-stacked",
+  "colour": "full-colour-light",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--black.svg",
+  "variant": "vertical-stacked",
+  "colour": "black",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--white.svg",
+  "variant": "vertical-stacked",
+  "colour": "white",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--grayscale.svg",
+  "variant": "vertical-stacked",
+  "colour": "grayscale",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--grayscale-inverted.svg",
+  "variant": "vertical-stacked",
+  "colour": "grayscale-inverted",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-vertical-stacked--single-colour-gold.svg",
+  "variant": "vertical-stacked",
+  "colour": "single-colour-gold",
+  "w": 3590.0,
+  "h": 1432
+ },
+ {
+  "file": "sanzeed-simplified-small-size--full-colour-dark.svg",
+  "variant": "simplified-small-size",
+  "colour": "full-colour-dark",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--full-colour-light.svg",
+  "variant": "simplified-small-size",
+  "colour": "full-colour-light",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--black.svg",
+  "variant": "simplified-small-size",
+  "colour": "black",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--white.svg",
+  "variant": "simplified-small-size",
+  "colour": "white",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--grayscale.svg",
+  "variant": "simplified-small-size",
+  "colour": "grayscale",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--grayscale-inverted.svg",
+  "variant": "simplified-small-size",
+  "colour": "grayscale-inverted",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-simplified-small-size--single-colour-gold.svg",
+  "variant": "simplified-small-size",
+  "colour": "single-colour-gold",
+  "w": 3610.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--full-colour-dark.svg",
+  "variant": "symbol-small-size",
+  "colour": "full-colour-dark",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--full-colour-light.svg",
+  "variant": "symbol-small-size",
+  "colour": "full-colour-light",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--black.svg",
+  "variant": "symbol-small-size",
+  "colour": "black",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--white.svg",
+  "variant": "symbol-small-size",
+  "colour": "white",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--grayscale.svg",
+  "variant": "symbol-small-size",
+  "colour": "grayscale",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--grayscale-inverted.svg",
+  "variant": "symbol-small-size",
+  "colour": "grayscale-inverted",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-small-size--single-colour-gold.svg",
+  "variant": "symbol-small-size",
+  "colour": "single-colour-gold",
+  "w": 640.0,
+  "h": 500
+ },
+ {
+  "file": "sanzeed-symbol-tile--dark.svg",
+  "variant": "symbol-tile",
+  "colour": "dark",
+  "w": 1000,
+  "h": 1000
+ },
+ {
+  "file": "sanzeed-symbol-tile-square--dark.svg",
+  "variant": "symbol-tile-square",
+  "colour": "dark",
+  "w": 1000,
+  "h": 1000
+ },
+ {
+  "file": "sanzeed-symbol-tile--light.svg",
+  "variant": "symbol-tile",
+  "colour": "light",
+  "w": 1000,
+  "h": 1000
+ },
+ {
+  "file": "sanzeed-symbol-tile-square--light.svg",
+  "variant": "symbol-tile-square",
+  "colour": "light",
+  "w": 1000,
+  "h": 1000
+ },
+ {
+  "file": "sanzeed-symbol-tile--gold.svg",
+  "variant": "symbol-tile",
+  "colour": "gold",
+  "w": 1000,
+  "h": 1000
+ },
+ {
+  "file": "sanzeed-symbol-tile-square--gold.svg",
+  "variant": "symbol-tile-square",
+  "colour": "gold",
+  "w": 1000,
+  "h": 1000
+ }
+]

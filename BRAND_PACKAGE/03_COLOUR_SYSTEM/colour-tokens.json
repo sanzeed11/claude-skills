@@ -1,0 +1,1257 @@
+{
+  "$schema": "sanzeed-colour-tokens/1.0",
+  "brand": "Sanzeed",
+  "generated_by": "build_colour.py",
+  "colours": {
+    "gallery-black": {
+      "name": "Gallery Black",
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "rgb_css": "rgb(0, 0, 0)",
+      "cmyk": [
+        0,
+        0,
+        0,
+        100
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        0,
+        0,
+        0
+      ],
+      "group": "core",
+      "role": "bg-dark",
+      "usage": "Primary dark background: website, social, presentations, video.",
+      "pantone_nearest": [
+        {
+          "pantone": "Black 6 C",
+          "deltaE": 10.4,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "Neutral Black C",
+          "deltaE": 13.3,
+          "reliability": "no reliable match"
+        }
+      ],
+      "contrast_on_black": 1.0,
+      "contrast_on_plaster": 18.5
+    },
+    "night": {
+      "name": "Night",
+      "hex": "#0D0D0F",
+      "rgb": [
+        13,
+        13,
+        15
+      ],
+      "rgb_css": "rgb(13, 13, 15)",
+      "cmyk": [
+        13,
+        13,
+        0,
+        94
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        7,
+        5
+      ],
+      "group": "core",
+      "role": "surface-dark",
+      "usage": "Secondary dark surface, app-icon tile, footers, cards on black.",
+      "pantone_nearest": [
+        {
+          "pantone": "Black 6 C",
+          "deltaE": 7.3,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "Neutral Black C",
+          "deltaE": 9.6,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 1.08,
+      "contrast_on_plaster": 17.1
+    },
+    "charcoal": {
+      "name": "Charcoal",
+      "hex": "#1C1C1E",
+      "rgb": [
+        28,
+        28,
+        30
+      ],
+      "rgb_css": "rgb(28, 28, 30)",
+      "cmyk": [
+        7,
+        7,
+        0,
+        88
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        3,
+        11
+      ],
+      "group": "core",
+      "role": "card-dark",
+      "usage": "Cards and panels on dark backgrounds.",
+      "pantone_nearest": [
+        {
+          "pantone": "Neutral Black C",
+          "deltaE": 3.0,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Black 6 C",
+          "deltaE": 6.1,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 1.23,
+      "contrast_on_plaster": 14.99
+    },
+    "graphite": {
+      "name": "Graphite",
+      "hex": "#2A2A2D",
+      "rgb": [
+        42,
+        42,
+        45
+      ],
+      "rgb_css": "rgb(42, 42, 45)",
+      "cmyk": [
+        7,
+        7,
+        0,
+        82
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        3,
+        17
+      ],
+      "group": "core",
+      "role": "card-dark-2",
+      "usage": "Raised/hover state of dark cards, dividers on dark.",
+      "pantone_nearest": [
+        {
+          "pantone": "Neutral Black C",
+          "deltaE": 4.1,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Black C",
+          "deltaE": 4.6,
+          "reliability": "close"
+        }
+      ],
+      "contrast_on_black": 1.47,
+      "contrast_on_plaster": 12.61
+    },
+    "mist": {
+      "name": "Mist",
+      "hex": "#808086",
+      "rgb": [
+        128,
+        128,
+        134
+      ],
+      "rgb_css": "rgb(128, 128, 134)",
+      "cmyk": [
+        4,
+        4,
+        0,
+        47
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        2,
+        51
+      ],
+      "group": "core",
+      "role": "text-dark-3",
+      "usage": "Tertiary text on dark (captions, labels). Minimum size 12 px.",
+      "pantone_nearest": [
+        {
+          "pantone": "Cool Gray 9 C",
+          "deltaE": 4.1,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Cool Gray 7 C",
+          "deltaE": 9.7,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 5.35,
+      "contrast_on_plaster": 3.46
+    },
+    "silver": {
+      "name": "Silver",
+      "hex": "#A1A1A6",
+      "rgb": [
+        161,
+        161,
+        166
+      ],
+      "rgb_css": "rgb(161, 161, 166)",
+      "cmyk": [
+        3,
+        3,
+        0,
+        35
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        3,
+        64
+      ],
+      "group": "core",
+      "role": "text-dark-2",
+      "usage": "Secondary text on dark.",
+      "pantone_nearest": [
+        {
+          "pantone": "Cool Gray 7 C",
+          "deltaE": 3.7,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Warm Gray 7 C",
+          "deltaE": 11.6,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 8.16,
+      "contrast_on_plaster": 2.27
+    },
+    "gallery-white": {
+      "name": "Gallery White",
+      "hex": "#F5F5F7",
+      "rgb": [
+        245,
+        245,
+        247
+      ],
+      "rgb_css": "rgb(245, 245, 247)",
+      "cmyk": [
+        1,
+        1,
+        0,
+        3
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        240,
+        11,
+        96
+      ],
+      "group": "core",
+      "role": "text-dark-1",
+      "usage": "Primary text and the logo on dark backgrounds.",
+      "pantone_nearest": [
+        {
+          "pantone": "9224 C",
+          "deltaE": 6.5,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "9143 C",
+          "deltaE": 9.8,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 19.29,
+      "contrast_on_plaster": 1.04
+    },
+    "plaster": {
+      "name": "Plaster",
+      "hex": "#F5F0E7",
+      "rgb": [
+        245,
+        240,
+        231
+      ],
+      "rgb_css": "rgb(245, 240, 231)",
+      "cmyk": [
+        0,
+        2,
+        6,
+        4
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        39,
+        41,
+        93
+      ],
+      "group": "core",
+      "role": "bg-light",
+      "usage": "Primary light background: documents, print, light mode.",
+      "pantone_nearest": [
+        {
+          "pantone": "9224 C",
+          "deltaE": 1.0,
+          "reliability": "close"
+        },
+        {
+          "pantone": "9143 C",
+          "deltaE": 4.0,
+          "reliability": "close"
+        }
+      ],
+      "contrast_on_black": 18.5,
+      "contrast_on_plaster": 1.0
+    },
+    "paper": {
+      "name": "Paper",
+      "hex": "#FBF8F2",
+      "rgb": [
+        251,
+        248,
+        242
+      ],
+      "rgb_css": "rgb(251, 248, 242)",
+      "cmyk": [
+        0,
+        1,
+        4,
+        2
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        40,
+        53,
+        97
+      ],
+      "group": "core",
+      "role": "surface-light",
+      "usage": "Cards, sheets and panels on Plaster; letterhead paper tone.",
+      "pantone_nearest": [
+        {
+          "pantone": "9224 C",
+          "deltaE": 4.1,
+          "reliability": "close"
+        },
+        {
+          "pantone": "9143 C",
+          "deltaE": 7.1,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 19.81,
+      "contrast_on_plaster": 1.07
+    },
+    "stone": {
+      "name": "Stone",
+      "hex": "#ECE7DC",
+      "rgb": [
+        236,
+        231,
+        220
+      ],
+      "rgb_css": "rgb(236, 231, 220)",
+      "cmyk": [
+        0,
+        2,
+        7,
+        7
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        41,
+        30,
+        89
+      ],
+      "group": "core",
+      "role": "card-light-2",
+      "usage": "Raised state, table stripes, dividers on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "9143 C",
+          "deltaE": 2.2,
+          "reliability": "close"
+        },
+        {
+          "pantone": "9224 C",
+          "deltaE": 2.4,
+          "reliability": "close"
+        }
+      ],
+      "contrast_on_black": 17.03,
+      "contrast_on_plaster": 1.09
+    },
+    "umber": {
+      "name": "Umber",
+      "hex": "#665F55",
+      "rgb": [
+        102,
+        95,
+        85
+      ],
+      "rgb_css": "rgb(102, 95, 85)",
+      "cmyk": [
+        0,
+        7,
+        17,
+        60
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        35,
+        9,
+        37
+      ],
+      "group": "core",
+      "role": "text-light-2",
+      "usage": "Secondary text on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "Warm Gray 11 C",
+          "deltaE": 2.8,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Cool Gray 11 C",
+          "deltaE": 10.4,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 3.33,
+      "contrast_on_plaster": 5.55
+    },
+    "soot": {
+      "name": "Soot",
+      "hex": "#1A1816",
+      "rgb": [
+        26,
+        24,
+        22
+      ],
+      "rgb_css": "rgb(26, 24, 22)",
+      "cmyk": [
+        0,
+        8,
+        15,
+        90
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        30,
+        8,
+        9
+      ],
+      "group": "core",
+      "role": "text-light-1",
+      "usage": "Primary text and the logo on light backgrounds (warm black).",
+      "pantone_nearest": [
+        {
+          "pantone": "Neutral Black C",
+          "deltaE": 5.4,
+          "reliability": "close"
+        },
+        {
+          "pantone": "Black C",
+          "deltaE": 8.6,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 1.19,
+      "contrast_on_plaster": 15.6
+    },
+    "lamp-gold": {
+      "name": "Lamp Gold",
+      "hex": "#E9B25A",
+      "rgb": [
+        233,
+        178,
+        90
+      ],
+      "rgb_css": "rgb(233, 178, 90)",
+      "cmyk": [
+        0,
+        24,
+        61,
+        9
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        37,
+        76,
+        63
+      ],
+      "group": "accent",
+      "role": "accent-dark",
+      "usage": "The point of light on dark: dots, eyebrows, links, highlights. One per composition.",
+      "pantone_nearest": [
+        {
+          "pantone": "7407 C",
+          "deltaE": 10.2,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "1225 C",
+          "deltaE": 10.3,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 10.98,
+      "contrast_on_plaster": 1.68
+    },
+    "lamp-light": {
+      "name": "Lamp Light",
+      "hex": "#F4C97A",
+      "rgb": [
+        244,
+        201,
+        122
+      ],
+      "rgb_css": "rgb(244, 201, 122)",
+      "cmyk": [
+        0,
+        18,
+        50,
+        4
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        39,
+        85,
+        72
+      ],
+      "group": "accent",
+      "role": "accent-dark-2",
+      "usage": "Glow and hover of Lamp Gold on dark; the beam highlight.",
+      "pantone_nearest": [
+        {
+          "pantone": "134 C",
+          "deltaE": 3.5,
+          "reliability": "close"
+        },
+        {
+          "pantone": "1225 C",
+          "deltaE": 5.2,
+          "reliability": "close"
+        }
+      ],
+      "contrast_on_black": 13.48,
+      "contrast_on_plaster": 1.37
+    },
+    "old-gold": {
+      "name": "Old Gold",
+      "hex": "#B8863B",
+      "rgb": [
+        184,
+        134,
+        59
+      ],
+      "rgb_css": "rgb(184, 134, 59)",
+      "cmyk": [
+        0,
+        27,
+        68,
+        28
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        36,
+        51,
+        48
+      ],
+      "group": "accent",
+      "role": "accent-light",
+      "usage": "The point of light on light backgrounds; print spot colour; single-colour logo.",
+      "pantone_nearest": [
+        {
+          "pantone": "7510 C",
+          "deltaE": 5.4,
+          "reliability": "close"
+        },
+        {
+          "pantone": "7557 C",
+          "deltaE": 8.7,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 6.51,
+      "contrast_on_plaster": 2.84
+    },
+    "amber": {
+      "name": "Amber",
+      "hex": "#D9A64A",
+      "rgb": [
+        217,
+        166,
+        74
+      ],
+      "rgb_css": "rgb(217, 166, 74)",
+      "cmyk": [
+        0,
+        24,
+        66,
+        15
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        39,
+        65,
+        57
+      ],
+      "group": "accent",
+      "role": "accent-light-2",
+      "usage": "Hover/secondary gold on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "7407 C",
+          "deltaE": 8.3,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "7556 C",
+          "deltaE": 11.1,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 9.5,
+      "contrast_on_plaster": 1.95
+    },
+    "gold-ink": {
+      "name": "Gold Ink",
+      "hex": "#8A6124",
+      "rgb": [
+        138,
+        97,
+        36
+      ],
+      "rgb_css": "rgb(138, 97, 36)",
+      "cmyk": [
+        0,
+        30,
+        74,
+        46
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        36,
+        59,
+        34
+      ],
+      "group": "accent",
+      "role": "accent-text-light",
+      "usage": "Gold used as TEXT on light backgrounds (meets 4.5:1 on Plaster).",
+      "pantone_nearest": [
+        {
+          "pantone": "7557 C",
+          "deltaE": 13.8,
+          "reliability": "no reliable match"
+        },
+        {
+          "pantone": "7511 C",
+          "deltaE": 17.4,
+          "reliability": "no reliable match"
+        }
+      ],
+      "contrast_on_black": 3.82,
+      "contrast_on_plaster": 4.85
+    },
+    "moss": {
+      "name": "Moss",
+      "hex": "#3D8B5E",
+      "rgb": [
+        61,
+        139,
+        94
+      ],
+      "rgb_css": "rgb(61, 139, 94)",
+      "cmyk": [
+        56,
+        0,
+        32,
+        45
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        145,
+        39,
+        39
+      ],
+      "group": "functional",
+      "role": "success-dark",
+      "usage": "Success on dark.",
+      "pantone_nearest": [
+        {
+          "pantone": "7731 C",
+          "deltaE": 12.8,
+          "reliability": "no reliable match"
+        },
+        {
+          "pantone": "7741 C",
+          "deltaE": 16.1,
+          "reliability": "no reliable match"
+        }
+      ],
+      "contrast_on_black": 5.05,
+      "contrast_on_plaster": 3.66
+    },
+    "moss-deep": {
+      "name": "Moss Deep",
+      "hex": "#2E6E48",
+      "rgb": [
+        46,
+        110,
+        72
+      ],
+      "rgb_css": "rgb(46, 110, 72)",
+      "cmyk": [
+        58,
+        0,
+        35,
+        57
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        144,
+        41,
+        31
+      ],
+      "group": "functional",
+      "role": "success-light",
+      "usage": "Success on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "7731 C",
+          "deltaE": 19.4,
+          "reliability": "no reliable match"
+        },
+        {
+          "pantone": "7741 C",
+          "deltaE": 21.3,
+          "reliability": "no reliable match"
+        }
+      ],
+      "contrast_on_black": 3.44,
+      "contrast_on_plaster": 5.38
+    },
+    "ochre": {
+      "name": "Ochre",
+      "hex": "#D4862B",
+      "rgb": [
+        212,
+        134,
+        43
+      ],
+      "rgb_css": "rgb(212, 134, 43)",
+      "cmyk": [
+        0,
+        37,
+        80,
+        17
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        32,
+        66,
+        50
+      ],
+      "group": "functional",
+      "role": "warning-dark",
+      "usage": "Warning on dark (distinct from Lamp Gold by hue and saturation).",
+      "pantone_nearest": [
+        {
+          "pantone": "7413 C",
+          "deltaE": 4.3,
+          "reliability": "close"
+        },
+        {
+          "pantone": "157 C",
+          "deltaE": 9.0,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 7.24,
+      "contrast_on_plaster": 2.55
+    },
+    "ochre-deep": {
+      "name": "Ochre Deep",
+      "hex": "#A8651B",
+      "rgb": [
+        168,
+        101,
+        27
+      ],
+      "rgb_css": "rgb(168, 101, 27)",
+      "cmyk": [
+        0,
+        40,
+        84,
+        34
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        31,
+        72,
+        38
+      ],
+      "group": "functional",
+      "role": "warning-light",
+      "usage": "Warning on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "7511 C",
+          "deltaE": 7.1,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "7510 C",
+          "deltaE": 13.9,
+          "reliability": "no reliable match"
+        }
+      ],
+      "contrast_on_black": 4.54,
+      "contrast_on_plaster": 4.07
+    },
+    "signal-red": {
+      "name": "Signal Red",
+      "hex": "#D64540",
+      "rgb": [
+        214,
+        69,
+        64
+      ],
+      "rgb_css": "rgb(214, 69, 64)",
+      "cmyk": [
+        0,
+        68,
+        70,
+        16
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        2,
+        65,
+        55
+      ],
+      "group": "functional",
+      "role": "error-dark",
+      "usage": "Error on dark.",
+      "pantone_nearest": [
+        {
+          "pantone": "180 C",
+          "deltaE": 7.4,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "179 C",
+          "deltaE": 11.0,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 4.78,
+      "contrast_on_plaster": 3.87
+    },
+    "brick": {
+      "name": "Brick",
+      "hex": "#C0392B",
+      "rgb": [
+        192,
+        57,
+        43
+      ],
+      "rgb_css": "rgb(192, 57, 43)",
+      "cmyk": [
+        0,
+        70,
+        78,
+        25
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        6,
+        63,
+        46
+      ],
+      "group": "functional",
+      "role": "error-light",
+      "usage": "Error on light (existing site value).",
+      "pantone_nearest": [
+        {
+          "pantone": "180 C",
+          "deltaE": 5.4,
+          "reliability": "close"
+        },
+        {
+          "pantone": "7621 C",
+          "deltaE": 9.7,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 3.86,
+      "contrast_on_plaster": 4.79
+    },
+    "slate-blue": {
+      "name": "Slate Blue",
+      "hex": "#4A86C8",
+      "rgb": [
+        74,
+        134,
+        200
+      ],
+      "rgb_css": "rgb(74, 134, 200)",
+      "cmyk": [
+        63,
+        33,
+        0,
+        22
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        211,
+        53,
+        54
+      ],
+      "group": "functional",
+      "role": "info-dark",
+      "usage": "Information on dark.",
+      "pantone_nearest": [
+        {
+          "pantone": "660 C",
+          "deltaE": 6.4,
+          "reliability": "approximate"
+        },
+        {
+          "pantone": "7461 C",
+          "deltaE": 8.8,
+          "reliability": "approximate"
+        }
+      ],
+      "contrast_on_black": 5.54,
+      "contrast_on_plaster": 3.34
+    },
+    "slate-deep": {
+      "name": "Slate Deep",
+      "hex": "#2F62A0",
+      "rgb": [
+        47,
+        98,
+        160
+      ],
+      "rgb_css": "rgb(47, 98, 160)",
+      "cmyk": [
+        71,
+        39,
+        0,
+        37
+      ],
+      "cmyk_note": "process conversion from sRGB (naive); proof with the printer",
+      "hsl": [
+        213,
+        55,
+        41
+      ],
+      "group": "functional",
+      "role": "info-light",
+      "usage": "Information on light.",
+      "pantone_nearest": [
+        {
+          "pantone": "7684 C",
+          "deltaE": 3.2,
+          "reliability": "close"
+        },
+        {
+          "pantone": "7683 C",
+          "deltaE": 5.0,
+          "reliability": "close"
+        }
+      ],
+      "contrast_on_black": 3.38,
+      "contrast_on_plaster": 5.48
+    }
+  },
+  "gradients": {
+    "lamp": {
+      "type": "radial",
+      "stops": [
+        [
+          "#E9B25A",
+          "0%",
+          0.55
+        ],
+        [
+          "#E9B25A",
+          "28%",
+          0.12
+        ],
+        [
+          "#000000",
+          "70%",
+          0.0
+        ]
+      ],
+      "css": "radial-gradient(60% 60% at 50% 40%, rgba(233,178,90,.55) 0%, rgba(233,178,90,.12) 28%, rgba(0,0,0,0) 70%)",
+      "use": "The glow behind a lit object on black. Hero backgrounds, cover pages, video."
+    },
+    "dusk": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+        [
+          "#000000",
+          "0%"
+        ],
+        [
+          "#1C1C1E",
+          "100%"
+        ]
+      ],
+      "css": "linear-gradient(180deg, #000000 0%, #1C1C1E 100%)",
+      "use": "Dark section backgrounds, slide backgrounds."
+    },
+    "plaster": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+        [
+          "#FBF8F2",
+          "0%"
+        ],
+        [
+          "#ECE7DC",
+          "100%"
+        ]
+      ],
+      "css": "linear-gradient(180deg, #FBF8F2 0%, #ECE7DC 100%)",
+      "use": "Light document backgrounds, print covers."
+    },
+    "foil": {
+      "type": "linear",
+      "angle": 135,
+      "stops": [
+        [
+          "#B8863B",
+          "0%"
+        ],
+        [
+          "#F4C97A",
+          "50%"
+        ],
+        [
+          "#B8863B",
+          "100%"
+        ]
+      ],
+      "css": "linear-gradient(135deg, #B8863B 0%, #F4C97A 50%, #B8863B 100%)",
+      "use": "Gold-foil simulation for mockups and premium covers only. Never for text under 24 px."
+    },
+    "veil": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+        [
+          "rgba(0,0,0,0)",
+          "0%"
+        ],
+        [
+          "rgba(0,0,0,.72)",
+          "100%"
+        ]
+      ],
+      "css": "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.72) 100%)",
+      "use": "Over photography to carry captions and wall labels."
+    }
+  },
+  "themes": {
+    "dark": {
+      "bg": "#000000",
+      "bg-2": "#0D0D0F",
+      "card": "#1C1C1E",
+      "card-2": "#2A2A2D",
+      "fg": "#F5F5F7",
+      "fg-2": "#A1A1A6",
+      "fg-3": "#808086",
+      "line": "rgba(255,255,255,0.10)",
+      "line-2": "rgba(255,255,255,0.06)",
+      "accent": "#E9B25A",
+      "accent-2": "#F4C97A",
+      "accent-text": "#E9B25A",
+      "accent-ink": "#000000",
+      "btn": "#F5F5F7",
+      "btn-fg": "#000000",
+      "glass": "rgba(10,10,12,0.62)",
+      "veil": "rgba(0,0,0,0.60)",
+      "success": "#3D8B5E",
+      "warning": "#D4862B",
+      "error": "#D64540",
+      "info": "#4A86C8"
+    },
+    "light": {
+      "bg": "#F5F0E7",
+      "bg-2": "#FBF8F2",
+      "card": "#FBF8F2",
+      "card-2": "#ECE7DC",
+      "fg": "#1A1816",
+      "fg-2": "#665F55",
+      "fg-3": "#6D665C",
+      "line": "rgba(40,30,10,0.10)",
+      "line-2": "rgba(40,30,10,0.055)",
+      "accent": "#B8863B",
+      "accent-2": "#D9A64A",
+      "accent-text": "#8A6124",
+      "accent-ink": "#FFFFFF",
+      "btn": "#1A1816",
+      "btn-fg": "#FBF8F2",
+      "glass": "rgba(245,240,231,0.74)",
+      "veil": "rgba(20,15,5,0.40)",
+      "success": "#2E6E48",
+      "warning": "#A8651B",
+      "error": "#C0392B",
+      "info": "#2F62A0"
+    }
+  },
+  "approved_combinations": [
+    {
+      "foreground": "Gallery White",
+      "background": "Gallery Black",
+      "contrast": 19.29,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Silver",
+      "background": "Gallery Black",
+      "contrast": 8.16,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Mist",
+      "background": "Gallery Black",
+      "contrast": 5.35,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Lamp Gold",
+      "background": "Gallery Black",
+      "contrast": 10.98,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Lamp Light",
+      "background": "Gallery Black",
+      "contrast": 13.48,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gallery White",
+      "background": "Charcoal",
+      "contrast": 15.63,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Lamp Gold",
+      "background": "Charcoal",
+      "contrast": 8.9,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Soot",
+      "background": "Plaster",
+      "contrast": 15.6,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Umber",
+      "background": "Plaster",
+      "contrast": 5.55,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gold Ink",
+      "background": "Plaster",
+      "contrast": 4.85,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Old Gold",
+      "background": "Plaster",
+      "contrast": 2.84,
+      "wcag": "fail",
+      "allowed_for": "decorative only \u2014 never text"
+    },
+    {
+      "foreground": "Soot",
+      "background": "Paper",
+      "contrast": 16.7,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gallery Black",
+      "background": "Lamp Gold",
+      "contrast": 10.98,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Soot",
+      "background": "Old Gold",
+      "contrast": 5.49,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gallery White",
+      "background": "Old Gold",
+      "contrast": 2.96,
+      "wcag": "fail",
+      "allowed_for": "decorative only \u2014 never text"
+    },
+    {
+      "foreground": "Plaster",
+      "background": "Gallery Black",
+      "contrast": 18.5,
+      "wcag": "AAA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gallery White",
+      "background": "Moss",
+      "contrast": 3.82,
+      "wcag": "AA-large",
+      "allowed_for": "headlines \u226524 px / 19 px bold, UI graphics"
+    },
+    {
+      "foreground": "Gallery White",
+      "background": "Brick",
+      "contrast": 4.99,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    },
+    {
+      "foreground": "Gallery White",
+      "background": "Slate Deep",
+      "contrast": 5.71,
+      "wcag": "AA",
+      "allowed_for": "body text"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4330 1240" width="4330" height="1240">
+<rect width="100%" height="100%" fill="#0D0D0F"/>
+<defs><pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="rgba(233,178,90,0.18)" stroke-width="1"/></pattern></defs>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<rect x="120" y="120" width="4090" height="1000" fill="none" stroke="#E9B25A" stroke-width="3" stroke-dasharray="18 14"/>
+<rect x="370" y="370" width="3590" height="500" fill="none" stroke="rgba(245,245,247,0.5)" stroke-width="2"/>
+<g transform="translate(370 370)">
+<g fill="rgba(245,245,247,0.92)"><path d="M128 256A128 128 0 0 1 128 0L128 64A64 64 0 0 0 128 192Z"/><path d="M128 0H268V64H128Z"/><path d="M128 192H214V256H128Z"/><path d="M320 244A128 128 0 0 1 320 500L320 436A64 64 0 0 0 320 308Z"/><path d="M234 244H320V308H234Z"/><path d="M180 436H320V500H180Z"/><path d="M536 500L816 0L1096 500L1022.65 500L816 130.99L609.35 500Z"/><path d="M1160 230A230 230 0 0 1 1620 230L1556 230A166 166 0 0 0 1224 230Z"/><path d="M1160 230H1224V500H1160Z"/><path d="M1556 230H1620V500H1556Z"/><path d="M1724 0H2194V64H1724Z"/><path d="M1724 436H2194V500H1724Z"/><path d="M2090.88 64L2194 64L1827.12 436L1724 436Z"/><path d="M2312 0H2636V64H2312Z"/><path d="M2312 218H2636V282H2312Z"/><path d="M2312 436H2636V500H2312Z"/><path d="M2768 0H3092V64H2768Z"/><path d="M2768 218H3092V282H2768Z"/><path d="M2768 436H3092V500H2768Z"/><path d="M3210 0H3340V64H3210Z"/><path d="M3210 436H3340V500H3210Z"/><path d="M3340 0A250 250 0 0 1 3340 500L3340 436A186 186 0 0 0 3340 64Z"/><path d="M3210 0H3274V191H3210Z"/><path d="M3210 309H3274V500H3210Z"/></g>
+<g fill="#E9B25A"><circle cx="816" cy="412" r="45"/><circle cx="3242" cy="250" r="45"/></g>
+<line x1="-250" y1="0" x2="3840" y2="0" stroke="#E9B25A" stroke-width="2" stroke-opacity="0.6"/>
+<text x="3856" y="10" font-family="Inter, sans-serif" font-size="30" fill="#E9B25A">cap height 500</text>
+<line x1="-250" y1="250" x2="3840" y2="250" stroke="#E9B25A" stroke-width="2" stroke-opacity="0.6"/>
+<text x="3856" y="260" font-family="Inter, sans-serif" font-size="30" fill="#E9B25A">mid 250</text>
+<line x1="-250" y1="500" x2="3840" y2="500" stroke="#E9B25A" stroke-width="2" stroke-opacity="0.6"/>
+<text x="3856" y="510" font-family="Inter, sans-serif" font-size="30" fill="#E9B25A">baseline</text>
+<text x="0" y="840" font-family="Inter, sans-serif" font-size="34" fill="#F5F5F7">Clear space = x, where x = ½ cap height (250 units). Stroke 64 · dot radius 45 · cap 500.</text>
+</g></svg>

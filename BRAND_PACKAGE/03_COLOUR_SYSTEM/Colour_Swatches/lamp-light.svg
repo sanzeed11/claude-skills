@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<rect width="600" height="400" rx="28" fill="#F4C97A"/>
+<g font-family="Inter, 'Inter Tight', Arial, sans-serif" fill="#1A1816">
+<text x="40" y="60" font-size="30" font-weight="600">Lamp Light</text>
+<text x="40" y="300" font-size="22">#F4C97A</text>
+<text x="40" y="332" font-size="18" opacity="0.85">RGB 244 201 122</text>
+<text x="40" y="360" font-size="18" opacity="0.85">CMYK 0 18 50 4</text>
+</g></svg>

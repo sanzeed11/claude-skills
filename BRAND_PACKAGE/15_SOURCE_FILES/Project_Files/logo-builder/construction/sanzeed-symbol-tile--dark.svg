@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="Sanzeed symbol tile">
+<title>Sanzeed — symbol tile (dark)</title>
+<rect id="tile" width="1000" height="1000" rx="220" fill="#0D0D0F"/>
+<g id="symbol-ink" fill="#F5F5F7">
+<path id="symbol-S-0" d="M334.15 515.82A124.15 124.15 0 0 1 334.15 267.53L334.15 329.6A62.07 62.07 0 0 0 334.15 453.75Z"/>
+<path id="symbol-S-1" d="M334.15 267.53H469.93V329.6H334.15Z"/>
+<path id="symbol-S-2" d="M334.15 453.75H417.56V515.82H334.15Z"/>
+<path id="symbol-S-3" d="M520.37 504.19A124.15 124.15 0 0 1 520.37 752.48L520.37 690.41A62.07 62.07 0 0 0 520.37 566.26Z"/>
+<path id="symbol-S-4" d="M436.96 504.19H520.37V566.26H436.96Z"/>
+<path id="symbol-S-5" d="M384.58 690.41H520.37V752.48H384.58Z"/>
+</g>
+<g id="symbol-dots" fill="#E9B25A">
+<circle cx="746.35" cy="708.83" r="43.65"/>
+</g></svg>
