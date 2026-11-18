@@ -1,0 +1,96 @@
+/* mockup.css — shared scene components for 13_BRAND_MOCKUPS (imports the brand kit). Scenes are 1500 × 1000 CSS px,
+   rendered at 2× → 3000 × 2000. Every colour is a brand token; the only textures are the ones in 05_GRAPHIC_ASSETS. */
+@import url("../../15_SOURCE_FILES/Project_Files/brand-kit/brand.css");
+
+html, body { margin: 0; width: 1500px; height: 1000px; overflow: hidden; background: #000; }
+.stage { position: relative; width: 1500px; height: 1000px; overflow: hidden; background: #000; font-family: var(--font-text); color: var(--fg); }
+.stage > * { position: absolute; }
+.abs { position: absolute; }
+
+/* ---------- surfaces ---------- */
+.surf-night { background: radial-gradient(110% 80% at 50% 22%, #1c1c1f 0%, #0d0d0f 48%, #000 100%); }
+.surf-charcoal { background: radial-gradient(120% 90% at 50% 10%, #2a2a2d 0%, #1c1c1e 45%, #0d0d0f 100%); }
+.surf-plaster { background: #F5F0E7 url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-paper--plaster-2048.jpg") center / 1500px 1500px; }
+.surf-paper { background: #FBF8F2 url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-paper--paper-2048.jpg") center / 1500px 1500px; }
+.tex-grain { inset: 0; background: url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-grain--tile-1024.png") 0 0 / 640px 640px; mix-blend-mode: soft-light; opacity: .55; pointer-events: none; }
+.tex-grain.fine { background-image: url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-grain--fine-1024.png"); }
+.lamp { width: 1600px; height: 1600px; background: url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-lamp-glow--2048.png") center / contain no-repeat; pointer-events: none; }
+.lamp.light { background-image: url("../../05_GRAPHIC_ASSETS/Textures/sanzeed-texture-lamp-glow--light-2048.png"); }
+.vig { inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 52%, rgba(0,0,0,.62) 100%); pointer-events: none; }
+.vig.soft { background: radial-gradient(ellipse at 50% 45%, transparent 60%, rgba(0,0,0,.42) 100%); }
+.sweep { inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 40%, rgba(60,40,15,0) 62%, rgba(60,40,15,.14) 100%); }
+.sweep.dark { background: linear-gradient(118deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 42%, rgba(0,0,0,0) 60%, rgba(0,0,0,.45) 100%); }
+.floor-line { left: 0; right: 0; height: 1px; background: rgba(255,255,255,.06); }
+
+/* ---------- 3-D helpers ---------- */
+.p3d { transform-style: preserve-3d; }
+.persp { perspective: 2400px; perspective-origin: 50% 50%; }
+
+/* ---------- paper and shadows (reset the brand.css component classes that share a name) ---------- */
+.stage .card, .stage .label, .stage .input { border: 0; padding: 0; background: none; box-shadow: none; margin: 0; }
+.paper { background-size: 100% 100%; background-repeat: no-repeat; }
+.sh-dark { box-shadow: 0 1px 1px rgba(0,0,0,.4), 0 10px 24px rgba(0,0,0,.45), 0 36px 70px rgba(0,0,0,.5); }
+.sh-light { box-shadow: 0 1px 1px rgba(40,30,10,.10), 0 8px 18px rgba(40,30,10,.12), 0 30px 60px rgba(40,30,10,.14); }
+.sh-contact { box-shadow: 0 2px 3px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); }
+.edge { box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }
+.img-cover { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- masks (the logo SVGs from 02_LOGO_SYSTEM used as alpha) ---------- */
+.mask { -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-position: center; mask-position: center; }
+
+/* ---------- devices ---------- */
+.phone { position: absolute; width: 422px; height: 876px; border-radius: 66px; background: #0b0b0c;
+  box-shadow: inset 0 0 0 2px #333336, inset 0 0 0 4px #0b0b0c, inset 0 0 0 6px #1a1a1c, 0 60px 110px rgba(0,0,0,.65), 0 20px 40px rgba(0,0,0,.5); }
+.phone .screen { position: absolute; left: 16px; top: 16px; width: 390px; height: 844px; border-radius: 50px; overflow: hidden; background: #000; }
+.phone .screen > img.full { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.phone .island { position: absolute; left: 50%; top: 27px; width: 118px; height: 34px; margin-left: -59px; border-radius: 18px; background: #000; }
+.phone .pbtn { position: absolute; width: 4px; background: #2b2b2e; border-radius: 2px; }
+.phone .l1 { left: -4px; top: 150px; height: 34px; } .phone .l2 { left: -4px; top: 210px; height: 62px; } .phone .l3 { left: -4px; top: 286px; height: 62px; } .phone .r1 { right: -4px; top: 236px; height: 96px; }
+.phone .status { position: absolute; left: 0; right: 0; top: 0; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 34px 0 36px; font: 600 16px/1 var(--font-heading); color: #F5F5F7; pointer-events: none; }
+.phone .status .r { display: flex; gap: 6px; align-items: center; }
+.phone .status .bars { display: flex; gap: 2px; align-items: flex-end; } .phone .status .bars i { display: block; width: 3px; background: #F5F5F7; border-radius: 1px; }
+.phone .status .batt { width: 26px; height: 12px; border: 1.5px solid rgba(245,245,247,.6); border-radius: 4px; position: relative; } .phone .status .batt::after { content: ""; position: absolute; left: 2px; top: 2px; bottom: 2px; width: 70%; background: #F5F5F7; border-radius: 2px; }
+.phone .homebar { position: absolute; left: 50%; bottom: 10px; width: 134px; height: 5px; margin-left: -67px; border-radius: 3px; background: rgba(245,245,247,.8); }
+
+.laptop { position: absolute; width: 1180px; height: 820px; }
+.laptop .lid { position: absolute; left: 0; top: 0; width: 1180px; height: 762px; border-radius: 24px 24px 8px 8px; background: #141416; box-shadow: inset 0 0 0 1px #2e2e31, 0 50px 90px rgba(0,0,0,.6), 0 10px 20px rgba(0,0,0,.4); }
+.laptop .screen { position: absolute; left: 22px; top: 22px; width: 1136px; height: 710px; border-radius: 10px; overflow: hidden; background: #000; }
+.laptop .screen > img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.laptop .cam { position: absolute; left: 50%; top: 9px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: #1f1f22; box-shadow: inset 0 0 0 1px #3a3a3e; }
+.laptop .base { position: absolute; left: -90px; top: 762px; width: 1360px; height: 22px; border-radius: 0 0 28px 28px / 0 0 18px 18px; background: linear-gradient(#4a4a4f, #2a2a2d 55%, #151517); box-shadow: 0 30px 60px rgba(0,0,0,.6); }
+.laptop .base::before { content: ""; position: absolute; left: 50%; top: 0; width: 220px; height: 8px; margin-left: -110px; border-radius: 0 0 8px 8px; background: #0f0f11; }
+.laptop.silver .lid { background: #d9d7d2; box-shadow: inset 0 0 0 1px #bdbab3, 0 50px 90px rgba(40,30,10,.25), 0 10px 20px rgba(40,30,10,.12); }
+.laptop.silver .cam { background: #a9a7a1; box-shadow: inset 0 0 0 1px #8c8a84; }
+.laptop.silver .base { background: linear-gradient(#efede8, #cfccc5 55%, #a9a69f); box-shadow: 0 30px 60px rgba(40,30,10,.25); }
+.laptop.silver .base::before { background: #b9b6af; }
+
+.tablet { position: absolute; width: 1120px; height: 820px; border-radius: 44px; background: #0d0d0f; box-shadow: inset 0 0 0 2px #2f2f32, inset 0 0 0 4px #0d0d0f, 0 50px 90px rgba(0,0,0,.6); }
+.tablet .screen { position: absolute; left: 36px; top: 36px; width: 1048px; height: 748px; border-radius: 16px; overflow: hidden; background: #000; }
+.tablet .cam { position: absolute; left: 50%; top: 14px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: #1f1f22; box-shadow: inset 0 0 0 1px #3a3a3e; }
+
+.monitor { position: absolute; }
+.monitor .bezel { position: absolute; inset: 0; border-radius: 10px; background: #0f0f11; box-shadow: inset 0 0 0 1px #2b2b2e, 0 40px 90px rgba(0,0,0,.65); }
+.monitor .screen { position: absolute; left: 16px; top: 16px; right: 16px; bottom: 16px; overflow: hidden; background: #000; }
+
+/* ---------- windows (generic UI chrome, no third-party branding) ---------- */
+.win { position: absolute; border-radius: 14px; overflow: hidden; background: #1C1C1E; box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 50px 100px rgba(0,0,0,.6), 0 12px 30px rgba(0,0,0,.45); }
+.win .dots { display: flex; gap: 8px; } .win .dots i { width: 12px; height: 12px; border-radius: 50%; background: #3a3a3e; display: block; }
+.browser .tabs { height: 46px; background: #141416; display: flex; align-items: flex-end; padding: 0 14px; gap: 2px; }
+.browser .tabs .dots { margin: 0 14px 12px 4px; }
+.browser .tab { height: 36px; padding: 0 16px 0 12px; border-radius: 10px 10px 0 0; display: flex; align-items: center; gap: 9px; font: 500 13px/1 var(--font-text); color: #A1A1A6; white-space: nowrap; }
+.browser .tab img { width: 16px; height: 16px; display: block; }
+.browser .tab.active { background: #2A2A2D; color: #F5F5F7; }
+.browser .tab .x { margin-left: 8px; width: 14px; height: 14px; position: relative; opacity: .6; } .browser .tab .x::before, .browser .tab .x::after { content: ""; position: absolute; left: 6px; top: 1px; width: 1.5px; height: 12px; background: currentColor; transform: rotate(45deg); } .browser .tab .x::after { transform: rotate(-45deg); }
+.browser .bar { height: 48px; background: #2A2A2D; display: flex; align-items: center; gap: 12px; padding: 0 16px; }
+.browser .nav { display: flex; gap: 14px; color: #808086; font-size: 16px; }
+.browser .url { flex: 1; height: 32px; border-radius: 16px; background: #1C1C1E; display: flex; align-items: center; gap: 8px; padding: 0 14px; font: 400 13px/1 var(--font-text); color: #A1A1A6; }
+.browser .url b { color: #F5F5F7; font-weight: 500; }
+.browser .url .lock { width: 9px; height: 11px; border: 1.5px solid #808086; border-radius: 2px; position: relative; } .browser .url .lock::before { content: ""; position: absolute; left: 1px; top: -6px; width: 5px; height: 6px; border: 1.5px solid #808086; border-bottom: 0; border-radius: 4px 4px 0 0; }
+.browser .page { position: relative; overflow: hidden; background: #000; }
+.browser .page img { width: 100%; display: block; }
+
+/* ---------- the scene caption (the brand's wall label) ---------- */
+.cap { left: 40px; bottom: 28px; font: 400 12px/1.5 var(--font-text); color: #808086; letter-spacing: .01em; }
+.cap b { font: 600 12px/1.5 var(--font-heading); color: #A1A1A6; margin-right: 10px; }
+.cap .pt { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #E9B25A; margin: 0 8px 1px 8px; }
+.stage.light .cap { color: #8a8176; } .stage.light .cap b { color: #665F55; } .stage.light .cap .pt { background: #B8863B; }
