@@ -15,10 +15,13 @@ Every export in this package has an editable source. Sources are kept **beside t
 | `09_PRINT_STATIONERY` | 6 × .docx, 3 × .html, 1 × .pptx, 17 × .py, 26 × .svg | 53 |
 | `10_MARKETING_COLLATERAL` | 1 × .css, 3 × .docx, 57 × .html, 1 × .js, 2 × .json, 2 × .pptx, 15 × .py, 31 × .svg | 112 |
 | `11_MOTION_GRAPHICS` | 3 × .css, 26 × .html, 5 × .js, 3 × .json, 3 × .py, 2 × .sh, 5 × .svg | 47 |
+| `12_BRAND_GUIDELINES` | 1 × .css, 30 × .html, 7 × .py | 38 |
+| `13_BRAND_MOCKUPS` | 1 × .css, 36 × .html, 1 × .js, 2 × .py | 40 |
+| `14_PRESENTATION` | 1 × .html, 1 × .json, 1 × .pptx, 1 × .py | 4 |
 | `15_SOURCE_FILES` | 2 × .css, 2 × .js, 1 × .json, 9 × .py, 70 × .svg | 84 |
 | `16_WEBSITE_IMPLEMENTATION` | 1 × .css, 10 × .html, 1 × .js, 1 × .json, 2 × .py, 2 × .svg | 17 |
 
-Total editable source files: **956**
+Total editable source files: **1038**
 
 ## Full listing
 
@@ -909,6 +912,97 @@ Total editable source files: **956**
 - `11_MOTION_GRAPHICS/Website_Loader/sanzeed-loader.json`
 - `11_MOTION_GRAPHICS/Website_Loader/sanzeed-reveal-on-scroll.css`
 - `11_MOTION_GRAPHICS/Website_Loader/sanzeed-reveal-on-scroll.js`
+
+### 12_BRAND_GUIDELINES
+
+- `12_BRAND_GUIDELINES/Editable_Source/00-cover.html`
+- `12_BRAND_GUIDELINES/Editable_Source/01-introduction.html`
+- `12_BRAND_GUIDELINES/Editable_Source/02-strategy.html`
+- `12_BRAND_GUIDELINES/Editable_Source/03-positioning.html`
+- `12_BRAND_GUIDELINES/Editable_Source/04-personality-voice.html`
+- `12_BRAND_GUIDELINES/Editable_Source/05-logo-system.html`
+- `12_BRAND_GUIDELINES/Editable_Source/06-logo-construction.html`
+- `12_BRAND_GUIDELINES/Editable_Source/07-logo-colour-versions.html`
+- `12_BRAND_GUIDELINES/Editable_Source/08-clear-space-placement.html`
+- `12_BRAND_GUIDELINES/Editable_Source/09-minimum-sizes.html`
+- `12_BRAND_GUIDELINES/Editable_Source/10-incorrect-usage.html`
+- `12_BRAND_GUIDELINES/Editable_Source/11-signature-monogram.html`
+- `12_BRAND_GUIDELINES/Editable_Source/12-colour-system.html`
+- `12_BRAND_GUIDELINES/Editable_Source/13-typography.html`
+- `12_BRAND_GUIDELINES/Editable_Source/14-graphic-elements.html`
+- `12_BRAND_GUIDELINES/Editable_Source/15-iconography.html`
+- `12_BRAND_GUIDELINES/Editable_Source/16-photography.html`
+- `12_BRAND_GUIDELINES/Editable_Source/17-website.html`
+- `12_BRAND_GUIDELINES/Editable_Source/18-digital-assets.html`
+- `12_BRAND_GUIDELINES/Editable_Source/19-social-media.html`
+- `12_BRAND_GUIDELINES/Editable_Source/20-print-stationery.html`
+- `12_BRAND_GUIDELINES/Editable_Source/21-marketing.html`
+- `12_BRAND_GUIDELINES/Editable_Source/22-signage.html`
+- `12_BRAND_GUIDELINES/Editable_Source/23-motion.html`
+- `12_BRAND_GUIDELINES/Editable_Source/24-voice-communication.html`
+- `12_BRAND_GUIDELINES/Editable_Source/25-applications-gallery.html`
+- `12_BRAND_GUIDELINES/Editable_Source/26-formats-production.html`
+- `12_BRAND_GUIDELINES/Editable_Source/27-appendix.html`
+- `12_BRAND_GUIDELINES/Editable_Source/99-back-cover.html`
+- `12_BRAND_GUIDELINES/Editable_Source/Brand_Guidelines.html`
+- `12_BRAND_GUIDELINES/Editable_Source/build.py`
+- `12_BRAND_GUIDELINES/Editable_Source/generate_chapters.py`
+- `12_BRAND_GUIDELINES/Editable_Source/guide.css`
+- `12_BRAND_GUIDELINES/Editable_Source/lib/ch_a.py`
+- `12_BRAND_GUIDELINES/Editable_Source/lib/ch_b.py`
+- `12_BRAND_GUIDELINES/Editable_Source/lib/ch_c.py`
+- `12_BRAND_GUIDELINES/Editable_Source/lib/ch_d.py`
+- `12_BRAND_GUIDELINES/Editable_Source/lib/guide.py`
+
+### 13_BRAND_MOCKUPS
+
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-email-signature-mail-window.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-instagram-feed-phone.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-linkedin-profile-laptop.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-og-card-chat-bubble.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-presentation-conference-screen.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-website-laptop-dark.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-website-laptop-light.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-website-phone-dark.html`
+- `13_BRAND_MOCKUPS/Digital_Mockups/src/sanzeed-mockup--digital-youtube-channel-tablet.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-app-icon-phone.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-backlit-signage-night.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-blind-deboss-plaster.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-brass-plaque-symbol.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-favicon-browser-tab.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-frosted-glass-door.html`
+- `13_BRAND_MOCKUPS/Logo_Mockups/src/sanzeed-mockup--logo-gold-foil-black.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-backdrop-g20-show.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-door-plate-wayfinding-museum-wall.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-flyer-in-hand.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-logo-reveal-cinema-screen.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-lower-third-ram-katha.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-poster-a2-gallery-wall.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-rollup-banner-entrance.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-social-ad-phone.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-totem-lobby.html`
+- `13_BRAND_MOCKUPS/Marketing_Mockups/src/sanzeed-mockup--marketing-trifold-brochure-standing.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-cards-fanned-dark.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-cards-flat-lay-plaster.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-folder-open-insert.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-id-card-lanyard.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-letterhead-envelope-card.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-notepad-pen.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-proposal-cover-desk.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-stamp-impression.html`
+- `13_BRAND_MOCKUPS/Stationery_Mockups/src/sanzeed-mockup--stationery-thank-you-card-open.html`
+- `13_BRAND_MOCKUPS/_build/build_mockups.py`
+- `13_BRAND_MOCKUPS/_build/capture_site.js`
+- `13_BRAND_MOCKUPS/_build/contact-sheet.html`
+- `13_BRAND_MOCKUPS/_build/make_plates.py`
+- `13_BRAND_MOCKUPS/_build/mockup.css`
+
+### 14_PRESENTATION
+
+- `14_PRESENTATION/Editable_Presentation/Brand_Presentation.pptx`
+- `14_PRESENTATION/src/Brand_Presentation.html`
+- `14_PRESENTATION/src/build_presentation.py`
+- `14_PRESENTATION/src/slide-index.json`
 
 ### 15_SOURCE_FILES
 

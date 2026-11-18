@@ -47,9 +47,11 @@ def render_pdf():
     info = subprocess.run(['pdfinfo', OUT_PDF], capture_output=True, text=True).stdout
     print(''.join(l + '\n' for l in info.splitlines() if l.startswith(('Pages', 'Page size', 'File size'))))
 
-def render_pages(dpi=72):
+def render_pages(dpi=100):
     shutil.rmtree(PAGES, ignore_errors=True); os.makedirs(PAGES)
     subprocess.run(['pdftoppm', '-r', str(dpi), '-png', OUT_PDF, os.path.join(PAGES, 'sanzeed-brand-guidelines--p')], check=True)
+    for f in glob.glob(os.path.join(PAGES, '*.png')):  # pdftoppm writes p-001.png; keep the brand naming p001.png
+        os.rename(f, f.replace('--p-', '--p'))
     n = len(glob.glob(os.path.join(PAGES, '*.png')))
     print(f'pages/: {n} PNG previews at {dpi} dpi')
 
