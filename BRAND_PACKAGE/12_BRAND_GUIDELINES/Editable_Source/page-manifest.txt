@@ -1,0 +1,28 @@
+chapter	slug	title	first_page	pages
+01	introduction	Brand introduction	3	4
+02	strategy	Brand strategy	7	4
+03	positioning	Positioning	11	3
+04	personality-voice	Personality & voice summary	14	2
+05	logo-system	Logo system	16	4
+06	logo-construction	Logo construction	20	2
+07	logo-colour-versions	Logo variations & colour versions	22	3
+08	clear-space-placement	Clear space & placement	25	3
+09	minimum-sizes	Minimum sizes	28	2
+10	incorrect-usage	Incorrect usage	30	2
+11	signature-monogram	Signature mark and monogram	32	3
+12	colour-system	Colour system	35	10
+13	typography	Typography	45	6
+14	graphic-elements	Graphic elements	51	7
+15	iconography	Iconography	58	3
+16	photography	Photography standards & art direction	61	7
+17	website	Website application	68	9
+18	digital-assets	Digital assets	77	5
+19	social-media	Social media application	82	6
+20	print-stationery	Print & corporate stationery	88	7
+21	marketing	Marketing materials	95	6
+22	signage	Signage & environmental	101	3
+23	motion	Motion design	104	6
+24	voice-communication	Brand voice & communication	110	5
+25	applications-gallery	Applications gallery	115	7
+26	formats-production	File formats, naming & production specifications	122	5
+27	appendix	Appendix · Delivery index	127	3
