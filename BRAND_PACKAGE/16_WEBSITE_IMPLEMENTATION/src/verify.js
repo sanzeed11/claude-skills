@@ -110,9 +110,9 @@ async function loaderFrames(browser, base, label) {   // the loader: clip-path w
   // the main thread is busy compiling the three.js module during the wipe, so the frozen moment is early; seek the site's own
   // loader timeline (paused) to its midpoint so the frame shows the clip half open and the beam dot mid-travel
   console.log('loader frame', await page.evaluate(() => { const r = document.querySelector('#ldClip rect'); const tw = window.gsap && window.gsap.getTweensOf(r)[0];
-    if (tw && tw.parent) tw.parent.progress(.55); return [r.getAttribute('width'), document.querySelector('.loader .beam-dot').getAttribute('cx')]; }));
+    if (tw && tw.parent) tw.parent.progress(.42); return [r.getAttribute('width'), document.querySelector('.loader .beam-dot').getAttribute('cx')]; }));
   await page.screenshot(jpg(`${label}-index-desktop-loader-frame.jpg`));
-  await page.evaluate(() => window.gsap && window.gsap.globalTimeline.resume()); await ctx.close();
+  await ctx.close();
 }
 /* The footer signature writes itself when it arrives (`.sig.on` → sigWrite 2.2 s) and the site's JS restarts the write
    every 5 s while it stays on screen, so a capture taken at a fixed delay can catch it mid-stroke (pen line + a few

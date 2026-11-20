@@ -28,7 +28,7 @@ Folder size ≈ 32 MB: 10.1 MB deployable site (145 files incl. 117 WebP images)
 | `src/build_site.py` | Reads the backup HTML, applies every change with targeted replacements (favicons, fonts, wordmark, tokens, signature, lockup, OG meta, `.lit/.dim`, Fraunces axes) and writes the four pages + sitemap. Reads the artwork live — header/loader wordmark from `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg`, lockup from `02_LOGO_SYSTEM/SVG/` — copies the favicon set from `02_LOGO_SYSTEM/Favicon/`, and reads the tokens from `03_COLOUR_SYSTEM/colour-variables.css`. `python3 src/build_site.py` |
 | `src/build_og.py` | Fills the OG templates, renders them with `15_SOURCE_FILES/Project_Files/brand-kit/render.js` (Playwright) and writes the JPGs. `python3 src/build_og.py` |
 | `src/og/og-home.html` · `src/og/og-work--template.html` · `src/og/og.css` | Editable OG card sources (brand.css linked relatively; `{{WM}}`, `{{TITLE}}`… filled by the builder). `src/og/build/` holds the last filled copies. |
-| `src/verify.js` | Playwright check: console errors, failed requests, `document.fonts`, wordmark geometry, theme toggle, gallery filter/search, favicon/manifest/OG files → `screenshots/` + `screenshots/verify-report.json`. `node src/verify.js [--before <dir>]` |
+| `src/verify.js` | Playwright check: console errors, failed requests, `document.fonts`, wordmark geometry, theme toggle, gallery filter/search, favicon/manifest/OG files → `screenshots/` + `screenshots/verify-report.json`. `node src/verify.js [--before <dir>] [--loader-only]` |
 
 ### Screenshots (`screenshots/`)
 
