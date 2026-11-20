@@ -1,6 +1,6 @@
 # Press — release template, sample release, headshots, fact sheet, logo note, About page
 
-All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM`; type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed.
+All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM` (the approved refined original wordmark, option B, 20 Nov 2026 — hooked S, three gold points on A, Z and D, the Z point in its ring; HTML sources link the SVGs and the PPTX/DOCX builders embed the PNGs at build time, so no logo geometry is copied into this folder); type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed.
 
 - `sanzeed-press-release--2026-independent-practice.docx` — sample release, dated New Delhi, 5 November 2026, using only confirmed facts (dates and roles from the site timeline, the 90/60/15 numbers, the three case studies, Sanzeed’s own two quotes). PDF preview alongside.
 - `sanzeed-press-release--template.docx` — the same structure with bracketed fields; boilerplate and media contact pre-filled.
@@ -18,16 +18,16 @@ DOCX files are generated with python-docx (`_shared/build/build_press.py`): A4, 
 | File | Spec | Size |
 |---|---|---|
 | `README.md` | Markdown | 3 KB |
-| `logo-pack-note.md` | Markdown | 1 KB |
-| `sanzeed-about--one-page.pdf` | 1 page · 209.9×297.0 mm · fonts embedded | 774 KB |
+| `logo-pack-note.md` | Markdown | 2 KB |
+| `sanzeed-about--one-page.pdf` | 1 page · 209.9×297.0 mm · fonts embedded | 778 KB |
 | `sanzeed-about--one-page.png` | 1588×2246 px | 707 KB |
-| `sanzeed-fact-sheet.docx` | A4 · 6 paragraphs | 73 KB |
-| `sanzeed-fact-sheet.pdf` | 2 pages · 210.0×297.0 mm · fonts embedded | 59 KB |
+| `sanzeed-fact-sheet.docx` | A4 · 6 paragraphs | 75 KB |
+| `sanzeed-fact-sheet.pdf` | 2 pages · 210.0×297.0 mm · fonts embedded | 60 KB |
 | `sanzeed-mirza-headshot--1x1-2000.jpg` | 2000×2000 px | 537 KB |
 | `sanzeed-mirza-headshot--3x4-2000.jpg` | 2000×2667 px | 653 KB |
 | `sanzeed-mirza-headshot--4x5-2000.jpg` | 2000×2500 px | 626 KB |
-| `sanzeed-press-release--2026-independent-practice.docx` | A4 · 17 paragraphs | 73 KB |
-| `sanzeed-press-release--2026-independent-practice.pdf` | 2 pages · 210.0×297.0 mm · fonts embedded | 53 KB |
-| `sanzeed-press-release--template.docx` | A4 · 17 paragraphs | 72 KB |
-| `sanzeed-press-release--template.pdf` | 1 page · 210.0×297.0 mm · fonts embedded | 50 KB |
+| `sanzeed-press-release--2026-independent-practice.docx` | A4 · 17 paragraphs | 75 KB |
+| `sanzeed-press-release--2026-independent-practice.pdf` | 2 pages · 210.0×297.0 mm · fonts embedded | 54 KB |
+| `sanzeed-press-release--template.docx` | A4 · 17 paragraphs | 75 KB |
+| `sanzeed-press-release--template.pdf` | 1 page · 210.0×297.0 mm · fonts embedded | 51 KB |
 | `src/sanzeed-about--one-page.html` | HTML source (brand.css + collateral.css) | 9 KB |

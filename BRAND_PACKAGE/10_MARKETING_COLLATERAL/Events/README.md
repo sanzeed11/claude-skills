@@ -1,6 +1,6 @@
 # Events — invitation, event branding, exhibition graphics
 
-All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM`; type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed.
+All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM` (the approved refined original wordmark, option B, 20 Nov 2026 — hooked S, three gold points on A, Z and D, the Z point in its ring; HTML sources link the SVGs and the PPTX/DOCX builders embed the PNGs at build time, so no logo geometry is copied into this folder); type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed.
 
 **Invitation** (the event itself is a template: `[Day, date]`, `[Time]`, `[Venue]`, `[City]`, `[RSVP date]` are fields). A5 print with 3 mm bleed (page 154×216 mm, front + back), digital 1080×1350 (PNG 2× + JPG), email 600×800 (PNG 2× + JPG).
 
@@ -21,32 +21,32 @@ Regenerate everything: `python3 _shared/build/build_events.py`.
 
 | File | Spec | Size |
 |---|---|---|
-| `README.md` | Markdown | 5 KB |
-| `sanzeed-event-backdrop--3000x2400mm-1-10.pdf` | 1 page · 299.9×239.9 mm · fonts embedded | 115 KB |
+| `README.md` | Markdown | 6 KB |
+| `sanzeed-event-backdrop--3000x2400mm-1-10.pdf` | 1 page · 299.9×239.9 mm · fonts embedded | 114 KB |
 | `sanzeed-event-backdrop--3000x2400mm-1-10.png` | 3402×2724 px | 1.7 MB |
 | `sanzeed-event-invitation--a5-back.png` | 1166×1634 px | 772 KB |
-| `sanzeed-event-invitation--a5-bleed.pdf` | 2 pages · 154.2×215.9 mm · fonts embedded | 381 KB |
-| `sanzeed-event-invitation--a5-front.png` | 1166×1634 px | 308 KB |
-| `sanzeed-event-invitation--a5-print-ready-cmyk.pdf` | 2 pages · 174.0×236.0 mm · fonts embedded | 520 KB |
-| `sanzeed-event-invitation--digital-1080x1350.jpg` | 1080×1350 px | 109 KB |
+| `sanzeed-event-invitation--a5-bleed.pdf` | 2 pages · 154.2×215.9 mm · fonts embedded | 388 KB |
+| `sanzeed-event-invitation--a5-front.png` | 1166×1634 px | 309 KB |
+| `sanzeed-event-invitation--a5-print-ready-cmyk.pdf` | 2 pages · 174.0×236.0 mm · fonts embedded | 525 KB |
+| `sanzeed-event-invitation--digital-1080x1350.jpg` | 1080×1350 px | 108 KB |
 | `sanzeed-event-invitation--digital-2160x2700.png` | 2160×2700 px | 1.1 MB |
 | `sanzeed-event-invitation--email-1200x1600.png` | 1200×1600 px | 446 KB |
 | `sanzeed-event-invitation--email-600x800.jpg` | 600×800 px | 52 KB |
-| `sanzeed-event-lanyard--900x20mm.pdf` | 1 page · 899.9×20.1 mm · fonts embedded | 9 KB |
-| `sanzeed-event-lanyard--900x20mm.png` | 6804×152 px | 32 KB |
-| `sanzeed-event-name-badge--90x60mm-bleed.pdf` | 2 pages · 95.9×66.0 mm · fonts embedded | 37 KB |
-| `sanzeed-event-name-badge--90x60mm-print-ready-cmyk.pdf` | 2 pages · 116.0×86.0 mm · fonts embedded | 38 KB |
-| `sanzeed-event-name-badge--guest.png` | 1452×1000 px | 37 KB |
-| `sanzeed-event-name-badge--host.png` | 1452×1000 px | 49 KB |
-| `sanzeed-event-table-tent--a6-bleed.pdf` | 1 page · 154.2×215.9 mm · fonts embedded | 44 KB |
-| `sanzeed-event-table-tent--a6-flat.png` | 1166×1634 px | 85 KB |
-| `sanzeed-event-table-tent--a6-print-ready-cmyk.pdf` | 1 page · 174.0×236.0 mm · fonts embedded | 43 KB |
-| `sanzeed-event-welcome-board--900x1800mm-1-10.pdf` | 1 page · 90.0×179.9 mm · fonts embedded | 301 KB |
+| `sanzeed-event-lanyard--900x20mm.pdf` | 1 page · 899.9×20.1 mm · fonts embedded | 13 KB |
+| `sanzeed-event-lanyard--900x20mm.png` | 6804×152 px | 31 KB |
+| `sanzeed-event-name-badge--90x60mm-bleed.pdf` | 2 pages · 95.9×66.0 mm · fonts embedded | 46 KB |
+| `sanzeed-event-name-badge--90x60mm-print-ready-cmyk.pdf` | 2 pages · 116.0×86.0 mm · fonts embedded | 46 KB |
+| `sanzeed-event-name-badge--guest.png` | 1452×1000 px | 39 KB |
+| `sanzeed-event-name-badge--host.png` | 1452×1000 px | 51 KB |
+| `sanzeed-event-table-tent--a6-bleed.pdf` | 1 page · 154.2×215.9 mm · fonts embedded | 52 KB |
+| `sanzeed-event-table-tent--a6-flat.png` | 1166×1634 px | 86 KB |
+| `sanzeed-event-table-tent--a6-print-ready-cmyk.pdf` | 1 page · 174.0×236.0 mm · fonts embedded | 48 KB |
+| `sanzeed-event-welcome-board--900x1800mm-1-10.pdf` | 1 page · 90.0×179.9 mm · fonts embedded | 305 KB |
 | `sanzeed-event-welcome-board--900x1800mm-1-10.png` | 1364×2724 px | 1.0 MB |
-| `sanzeed-exhibition-booth-wall--2400x2400mm-1-10.pdf` | 1 page · 239.9×239.9 mm · fonts embedded | 330 KB |
+| `sanzeed-exhibition-booth-wall--2400x2400mm-1-10.pdf` | 1 page · 239.9×239.9 mm · fonts embedded | 333 KB |
 | `sanzeed-exhibition-booth-wall--2400x2400mm-1-10.png` | 2724×2724 px | 1.1 MB |
-| `sanzeed-exhibition-rollup--850x2000mm-1-5.pdf` | 1 page · 170.0×400.0 mm · fonts embedded | 251 KB |
-| `sanzeed-exhibition-rollup--850x2000mm-1-5.png` | 1929×4536 px | 925 KB |
+| `sanzeed-exhibition-rollup--850x2000mm-1-5.pdf` | 1 page · 170.0×400.0 mm · fonts embedded | 254 KB |
+| `sanzeed-exhibition-rollup--850x2000mm-1-5.png` | 1929×4536 px | 926 KB |
 | `src/sanzeed-event-backdrop--3000x2400mm-1-10.html` | HTML source (brand.css + collateral.css) | 2 KB |
 | `src/sanzeed-event-invitation--a5-print.html` | HTML source (brand.css + collateral.css) | 4 KB |
 | `src/sanzeed-event-invitation--digital-1080x1350.html` | HTML source (brand.css + collateral.css) | 2 KB |
