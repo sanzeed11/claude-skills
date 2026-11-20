@@ -52,8 +52,15 @@ async function audit(browser, base, name, url, vp, label) {
     fraunces: document.fonts.check('300 48px Fraunces'), inter: document.fonts.check('400 16px Inter'), tight: document.fonts.check('600 12px "Inter Tight"'),
   }));
   r.wordmark = await page.evaluate(() => { const s = document.querySelector('.brand svg'); if (!s) return null; const b = s.getBoundingClientRect(); const p = s.querySelector('.wm-letters');
-    return { viewBox: s.getAttribute('viewBox'), width: +b.width.toFixed(1), height: +b.height.toFixed(1), letters: !!p, pathLen: p ? +p.getTotalLength().toFixed(0) : 0, fill: p && getComputedStyle(p).fill, dots: s.querySelectorAll('.wm-dot').length,
-      lockup: !!document.querySelector('.f-lockup svg'), lockupDesc: document.querySelectorAll('.f-lockup .wm-desc path').length, loaderClip: !!document.querySelector('#ldClip rect') }; });
+    const paths = [...s.querySelectorAll('path.wm-letters, .wm-letters path')]; const ink = p && p.getBBox ? p.getBBox() : null; const k = b.height / s.viewBox.baseVal.height;
+    const lk = [...document.querySelectorAll('.f-lockup .wm-dot')];
+    return { viewBox: s.getAttribute('viewBox'), width: +b.width.toFixed(1), height: +b.height.toFixed(1), inkWidth: ink ? +(ink.width * k).toFixed(1) : 0, letters: !!p, letterPaths: paths.map(x => x.dataset.letter || '').join(' '),
+      pathLen: paths.reduce((a, x) => a + x.getTotalLength(), 0).toFixed(0) * 1, fill: p && getComputedStyle(p).fill, dots: s.querySelectorAll('.wm-dot').length,
+      dotCx: [...s.querySelectorAll('.wm-dot')].map(c => +c.getAttribute('cx')), dotFill: getComputedStyle(s.querySelector('.wm-dot')).fill,
+      lockup: !!document.querySelector('.f-lockup svg'), lockupViewBox: (document.querySelector('.f-lockup svg') || { getAttribute: () => null }).getAttribute('viewBox'), lockupDots: lk.length,
+      lockupDotDelays: lk.map(c => getComputedStyle(c).animationDelay), lockupDesc: document.querySelectorAll('.f-lockup .wm-desc path').length,
+      loaderClip: !!document.querySelector('#ldClip rect'), loaderClipWidth: (document.querySelector('#ldClip rect') || { getAttribute: () => null }).getAttribute('width'),
+      beamDotCy: (document.querySelector('.loader .beam-dot') || { getAttribute: () => null }).getAttribute('cy') }; });
   await scrollThrough(page);
   r.signature = await page.evaluate(() => [...document.querySelectorAll('.foot2 .sig img')].map(i => ({ src: i.getAttribute('src'), shown: getComputedStyle(i).display !== 'none', ok: i.complete && i.naturalWidth > 0 })));   // dark theme at this point: the white one is shown; the hidden lazy one stays unloaded (see report.footers for both themes)
   await page.waitForTimeout(400);
@@ -95,6 +102,7 @@ async function loaderFrames(browser, base, label) {   // the loader: clip-path w
 async function settledSignature(page, wait) {
   await page.evaluate(() => { const el = document.querySelector('.foot2'); el.scrollIntoView(); });
   await page.waitForFunction(() => { const s = document.querySelector('.foot2 .sig'); if (!s) return true; const b = s.getBoundingClientRect(); return b.top >= 0 && b.bottom <= innerHeight; }, null, { timeout: 8000, polling: 100 }).catch(() => {});
+  await page.waitForTimeout(3600);                     // ≥ 3.5 s: the write-on (2.2 s) has finished before anything is pinned or captured
   if (wait) await page.waitForFunction(() => { const i = document.querySelector('.foot2 .sig-ink'); if (!i) return true; const a = i.getAnimations(); return a.length > 0 && a.every(x => x.playState === 'finished'); }, null, { timeout: 9000, polling: 100 }).catch(() => {});
   await page.evaluate(() => {
     document.querySelectorAll('.foot2 .sig-ink').forEach(e => e.style.setProperty('clip-path', 'inset(0 -2% 0 0)', 'important'));

@@ -78,7 +78,7 @@ def window_vinyl():   # glass bay 3000 x 2000 mm at 1:10 → 300 x 200 mm previe
 .sheet { width: 300mm; height: 200mm; background: #0D0D0F; }
 .glass { position: absolute; inset: 0; background: linear-gradient(160deg, #15161a 0%, #0b0b0d 100%); }
 .frost { position: absolute; left: 0; right: 0; top: 70mm; height: 60mm; background: rgba(245,245,247,.16); backdrop-filter: blur(1px); }
-.mark { position: absolute; left: 90mm; top: 91.6mm; width: 120mm; }
+.mark { position: absolute; left: 90mm; top: 100mm; transform: translateY(-50%); width: 120mm; }   /* centred in the frost band (70–130 mm) */
 .mullion { position: absolute; top: 0; bottom: 0; width: 1.2mm; background: #000; }
 .cap { position: absolute; left: 10mm; bottom: 6mm; font-size: 5pt; color: var(--fg-3); }
 """
@@ -94,11 +94,34 @@ def window_vinyl():   # glass bay 3000 x 2000 mm at 1:10 → 300 x 200 mm previe
     return head("Sanzeed — window vinyl preview 3000x2000 mm (1:10)", "dark", css) + body
 
 def cut_file(out):
-    """1:1 cut file: the white wordmark at 1200 mm wide (SVG units = mm)."""
-    src = open(f"{LOGO_SVG}/sanzeed-primary-wordmark--white.svg", encoding="utf-8").read()
-    src = re.sub(r'width="3590"', 'width="1200mm"', src, count=1); src = re.sub(r'height="500"', f'height="{1200*500/3590:.2f}mm"', src, count=1)
-    src = src.replace("<title>Sanzeed — primary-wordmark (white)</title>", "<title>Sanzeed — window vinyl cut file — wordmark 1200 mm (white)</title>")
-    open(out, "w", encoding="utf-8").write(src); return out
+    """1:1 cut file: the white primary wordmark at 1200 mm wide (SVG user units scaled to mm), read from
+    02_LOGO_SYSTEM at build time. True vector for the plotter: the unioned letter outline is kept as its path and
+    the three points of light (A, Z, D) are converted from <circle> to closed arc paths; no strokes, no raster."""
+    import xml.etree.ElementTree as ET
+    NS = "http://www.w3.org/2000/svg"; ET.register_namespace("", NS)
+    tree = ET.parse(f"{LOGO_SVG}/sanzeed-primary-wordmark--white.svg"); root = tree.getroot()
+    vb = [float(v) for v in root.get("viewBox").split()]; vw, vh = vb[2], vb[3]
+    W = 1200.0; H = W * vh / vw
+    root.set("width", f"{W:g}mm"); root.set("height", f"{H:.2f}mm")
+    root.set("aria-label", "Sanzeed — window vinyl cut file — primary wordmark 1200 mm (white)")
+    for el in root.iter():
+        if el.get("id") == "wordmark-S" and el.tag == f"{{{NS}}}path": el.set("id", "wordmark-letters")   # unioned outline of all seven letters
+        if el.tag == f"{{{NS}}}title": el.text = "Sanzeed — window vinyl cut file — wordmark 1200 mm (white)"
+        if el.tag == f"{{{NS}}}desc":
+            el.text = (f"Window vinyl cut file. The approved primary wordmark (refined original, option B: three points of light "
+                       f"A, Z, D; the Z point inside its ring) in white, 1:1 at 1200 × {H:.2f} mm. Source: "
+                       f"02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--white.svg. Filled closed paths only — cut on the outlines.")
+    for parent in list(root.iter()):
+        for i, c in enumerate(list(parent)):
+            if c.tag == f"{{{NS}}}circle":
+                cx, cy, r = (float(c.get(k)) for k in ("cx", "cy", "r"))
+                d = f"M {cx - r:g} {cy:g} A {r:g} {r:g} 0 1 0 {cx + r:g} {cy:g} A {r:g} {r:g} 0 1 0 {cx - r:g} {cy:g} Z"
+                pth = ET.Element(f"{{{NS}}}path", {"d": d})
+                parent.remove(c); parent.insert(i, pth)
+                pth.set("id", f"cut-dot-{cx:.0f}")
+    dots = sorted((e for e in root.iter() if (e.get("id") or "").startswith("cut-dot-")), key=lambda e: float(e.get("id")[8:]))
+    for letter, e in zip("AZD", dots): e.set("id", f"wordmark-dot-{letter}")
+    tree.write(out, encoding="UTF-8", xml_declaration=True); return out
 
 def spec_sheet():
     css = """

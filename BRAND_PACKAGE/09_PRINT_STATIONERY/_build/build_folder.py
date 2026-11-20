@@ -26,11 +26,11 @@ art.append(f'<rect x="0" y="0" width="{W}" height="{H}" fill="{C["black"]}" />')
 # lamp behind the wordmark on the front panel
 art.append(f'<rect x="{xf - 10}" y="{y0 - BL}" width="{PW + 20}" height="{PH + BL}" fill="url(#lamp)" />')
 lw = 120
-g, lh, cap = logo('primary-wordmark', 'full-colour-dark', lw, xf + (PW - lw) / 2, y0 + (PH - lw * 500 / 3590) / 2 - 8, 'wm')
+g, lh, cap = logo('primary-wordmark', 'full-colour-dark', lw, xf + (PW - lw) / 2, y0 + (PH - logo_size('primary-wordmark', lw)[0]) / 2 - 8, 'wm')
 art.append(g)
 art.append(text(xf + PW / 2, y0 + PH / 2 + 22, 'Experiential Design Consultant', 8, fam='heading', weight=600, fill=C['silver'], ls=0.12, upper=True, anchor='middle'))
 # back panel: symbol small + contact at the bottom (outside back)
-g2, sh, _ = logo('symbol', 'full-colour-dark', 10, xb + 20, y0 + PH - 20 - 10 * 500 / 598, 'sym')
+g2, sh, _ = logo('symbol', 'full-colour-dark', 10, xb + 20, y0 + PH - 20 - logo_size('symbol', 10)[0], 'sym')
 art.append(g2)
 art.append(text(xb + PW - 20, y0 + PH - 24.5, 'Sanzeed Mirza  ·  Experiential Design Consultant  ·  New Delhi, India', 7.5, fill=C['silver'], anchor='end'))
 art.append(text(xb + PW - 20, y0 + PH - 20.5, '+91 7827051270  ·  sanzeed@gmail.com  ·  sanzeed.com  ·  linkedin.com/in/sanzeed', 7.5, fill=C['silver'], anchor='end'))

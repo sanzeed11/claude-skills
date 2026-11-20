@@ -3,6 +3,7 @@
 # and composes the four captures side by side into renders/responsive-sheet.png (labels drawn with Inter).
 set -e
 R="../../15_SOURCE_FILES/Project_Files/brand-kit/render.js"; mkdir -p renders/.parts
+python3 ../sync_logo.py responsive-specimen.html   # re-inline the approved wordmark from 02_LOGO_SYSTEM/SVG
 for W in 1440 1280 834 390; do node "$R" --in responsive-specimen.html --out "renders/.parts/resp-$W.png" --width $W --height 900 --scale 1 --full --wait 900; done
 python3 -I - <<'PY'
 from PIL import Image, ImageDraw, ImageFont

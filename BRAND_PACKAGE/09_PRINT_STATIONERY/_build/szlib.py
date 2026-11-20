@@ -45,10 +45,25 @@ SHORT = 'Vision you can walk into'
 _logo_cache = {}
 
 
+def _read_logo_svg(path):
+    """Raw SVG text of a logo file. The synthetic name `sanzeed-horizontal-descriptor-plain--<colour>.svg`
+    is the horizontal-descriptor lockup with its wordmark swapped for `wordmark-plain` (no points, Z ring and
+    D stem closed) — same geometry and viewBox; used where the Z ring gap would close up (rubber stamps)."""
+    m = re.search(r'sanzeed-horizontal-descriptor-plain--([a-z-]+)\.svg$', path)
+    if not m:
+        return open(path, encoding='utf-8').read()
+    colour = m.group(1)
+    lock = open(f'{LOGO_DIR}/sanzeed-horizontal-descriptor--{colour}.svg', encoding='utf-8').read()
+    plain = open(f'{LOGO_DIR}/sanzeed-wordmark-plain--{colour}.svg', encoding='utf-8').read()
+    plain_wm = re.search(r'<g\s+id="wordmark">.*?</g>\s*</g>', plain, flags=re.S).group(0)
+    # the lockup's wordmark group = ink group + dots group; replace it with the plain wordmark group
+    return re.sub(r'<g\s+id="wordmark">.*?id="wordmark-dots".*?</g>\s*</g>', lambda _: plain_wm, lock, count=1, flags=re.S)
+
+
 def _load_logo(path):
     if path in _logo_cache:
         return _logo_cache[path]
-    s = open(path, encoding='utf-8').read()
+    s = _read_logo_svg(path)
     vb = re.search(r'viewBox="([^"]+)"', s).group(1).split()
     vx, vy, vw, vh = [float(v) for v in vb]
     body = re.sub(r'^.*?<svg[^>]*>', '', s, count=1, flags=re.S)
@@ -67,14 +82,52 @@ def logo(variant, colour, width_mm, x, y, prefix='lg'):
     body = re.sub(r'id="([^"]+)"', lambda m: f'id="{prefix}-{m.group(1)}"', body)
     g = (f'<g id="{prefix}" inkscape:label="logo {variant} {colour}" '
          f'transform="translate({x:.4f} {y:.4f}) scale({s:.6f}) translate({-vx} {-vy})">{body}</g>')
-    cap = 500 * s  # every variant is constructed on a 500-unit cap height
+    cap = cap_units() * s  # cap height = height of the wordmark letters (every variant shares it)
     return g, vh * s, cap
 
 
+def cap_units():
+    """Cap height of the approved wordmark in logo units, read from 02_LOGO_SYSTEM (primary wordmark viewBox
+    height, ≈ 519.33). The symbol, monogram and lockups are drawn at the same letter height."""
+    return _load_logo(f'{LOGO_DIR}/sanzeed-primary-wordmark--black.svg')[3]
+
+
 def logo_size(variant, width_mm):
+    """(height_mm, cap_height_mm) of a logo variant placed at width_mm — read from its viewBox."""
     vx, vy, vw, vh, _ = _load_logo(f'{LOGO_DIR}/sanzeed-{variant}--black.svg')
     s = width_mm / vw
-    return vh * s, 500 * s
+    return vh * s, cap_units() * s
+
+
+_ring_gap = None
+
+
+def z_ring_gap_units():
+    """Clear gap between the Z point and the surrounding stroke (the 'ring') of the primary wordmark, in logo
+    units — measured on a 2-px-per-unit raster of the production SVG (≈ 13.7 units). Multiply by
+    width_mm / viewBox width to get the gap at a given size."""
+    global _ring_gap
+    if _ring_gap is None:
+        import cairosvg, io
+        import numpy as np
+        from PIL import Image
+        path = f'{LOGO_DIR}/sanzeed-primary-wordmark--black.svg'
+        src = open(path, encoding='utf-8').read()
+        vx, vy, vw, vh, _ = _load_logo(path)
+        dots = [tuple(float(v) for v in m) for m in
+                re.findall(r'<circle\s+cx="([\d.]+)"\s+cy="([\d.]+)"\s+r="([\d.]+)"', src)]
+        dots.sort()
+        zx, zy, zr = dots[1]  # A, Z, D from left to right — the Z point is the middle one
+        k = 2
+        png = cairosvg.svg2png(bytestring=src.encode(), output_width=int(vw * k), background_color='white')
+        a = np.array(Image.open(io.BytesIO(png)).convert('L'))
+        y0, y1 = int((zy - 4 * zr) * k), int((zy + 4 * zr) * k)
+        x0, x1 = int((zx - 4 * zr) * k), int((zx + 4 * zr) * k)
+        win = a[y0:y1, x0:x1] < 128
+        ys, xs = np.nonzero(win)
+        d = np.hypot(xs + x0 - zx * k, ys + y0 - zy * k) / k
+        _ring_gap = float(d[d > zr + 1].min() - zr)
+    return _ring_gap
 
 
 def signature(colour, width_mm, x, y, prefix='sig'):

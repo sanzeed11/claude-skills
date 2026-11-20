@@ -42,7 +42,7 @@ def back(tw, th, m, flap):
     # a Paper tint on the flap so the fold reads on screen (printer: optional)
     art.append(f'<path d="{flap_path}" fill="{C["paper"]}" />')
     sw = 9
-    g, sh, cap = logo('symbol', 'full-colour-light', sw, BL + (tw - sw) / 2, BL + (flap - sh if False else 0) + (flap - sw * 500 / 598) / 2 - 1.5, 'symbol')
+    g, sh, cap = logo('symbol', 'full-colour-light', sw, BL + (tw - sw) / 2, BL + (flap - logo_size('symbol', sw)[0]) / 2 - 1.5, 'symbol')
     art.append(g)
     # return line below the flap edge
     art.append(hairline(BL + m, BL + flap + 9, BL + tw - m, BL + flap + 9))

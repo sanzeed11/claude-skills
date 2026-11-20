@@ -61,7 +61,8 @@ write(ROOT/'Patterns'/'README.md', f'''
 
 Seven tiles drawn from the graphic vocabulary (§6 of the brand kit): **dot-grid** (two densities), **beam-lines**
 (hairlines with a travelling point), **arch-repeat** (the N/M doorway as a window pattern), **route** (a dotted
-meander with lit rooms), **monogram-repeat** (SM. at 8 %), **s-curve** (the symbol's hooks as a flowing field).
+meander with lit rooms), **monogram-repeat** (the SM. monogram, M built from two of the wordmark's N, at 8 %), **s-curve** (the refined S's two
+tapered hooks, read from the production symbol and alternated as a flowing field).
 Each exists in two inks: **dark** = Gallery White + Lamp Gold on transparent (for Gallery Black, Night, Charcoal)
 and **light** = Soot + Old Gold on transparent (for Plaster, Paper, Stone).
 
@@ -111,10 +112,10 @@ Night, Charcoal, the dusk gradient or the lamp glow, where it reads.
 
 # ------------------------------------------------------------------------------------------ Illustrations
 write(ROOT/'Illustrations'/'README.md', f'''
-# Illustrations — the monoline construction language
+# Illustrations — the monoline brand language
 
-Every drawing uses the logo's construction: a **500-unit module, 64-unit monoline stroke, round caps and joins, 45-unit
-gold points** (r = 0.7 × stroke); secondary lines are 20 units; labels are the brand fonts outlined (Fraunces 300
+Every drawing speaks the brand's monoline language: **one even stroke (64 units on the drawing grid), round caps and joins,
+gold points of light** sized to the stroke (r = 0.7 × stroke, 45 units); secondary lines are 20 units; labels are the brand fonts outlined (Fraunces 300
 opsz 144 for names, Inter Tight 600 letter-spaced caps for eyebrows and counters, Inter 400 for captions), so no file
 depends on an installed font. **dark** ink (Gallery White / Silver / Lamp Gold) is for black backgrounds; **light** ink
 (Soot / Umber / Old Gold, Gold Ink for text) is for Plaster. Export set per drawing: `svg/` (editable), `png/` (2000 px wide,

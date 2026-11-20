@@ -4,7 +4,7 @@ build_illustrations.py — editable master for every vector illustration in Illu
 
   python3 build_illustrations.py              # writes svg/, then png/ (2000 w, transparent) and pdf/ via export_svg.py
 
-Construction language = the logo's: a 500-unit module with a 64-unit monoline stroke, round caps and joins,
+Drawing language = the brand's monoline language: one even 64-unit stroke on the drawing grid, round caps and joins,
 and 45-unit gold "points of light" (r = 0.7 x stroke). Secondary lines (beams, hairlines) are 20 units.
 Two inks: dark (Gallery White / Silver / Lamp Gold, for black) and light (Soot / Umber / Old Gold, for Plaster).
 All labels are outlined from the brand fonts with fontTools (szlib.text_path), so nothing depends on
@@ -184,7 +184,7 @@ def glyph(ink, n):
       '07-leadership':          [f'<circle cx="64" cy="64" r="42" {s()}/>'] + [f'<path d="M64 64 L{f(64+42*math.cos(a))} {f(64+42*math.sin(a))}" {s(c["ink2"], 3)} stroke-opacity="0.8"/>' for a in [-math.pi/2 + k*2*math.pi/7 for k in range(7)]]
                                 + [point(64+52*math.cos(a), 64+52*math.sin(a), c['ink'], 3.2) for a in [-math.pi/2 + k*2*math.pi/7 for k in range(7)]] + [point(64, 64, c['gold'], GR+1)],
     }[n]
-    return 128, 128, '\n'.join(g), f'Service glyph {n} — monoline on a 128 grid (stroke 6, point r 4.2), same vocabulary as the logo.'
+    return 128, 128, '\n'.join(g), f'Service glyph {n} — monoline on a 128 grid (stroke 6, point r 4.2), in the brand’s monoline vocabulary.'
 for _n in ['01-experiential-design', '02-museum-planning', '03-storytelling', '04-spatial-branding', '05-event-production', '06-digital-physical', '07-leadership']:
     ILLUS[f'service-glyph-{_n}'] = (lambda n: (lambda ink: glyph(ink, n)))(_n)
 

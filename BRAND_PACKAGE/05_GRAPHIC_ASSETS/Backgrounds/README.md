@@ -40,27 +40,27 @@ The JPGs are written at q90 by Pillow; the PNGs come straight from Chromium.
 | `sanzeed-bg-plaster--light-1920x1080.jpg` | JPG | 1920 × 1080 px | 26 KB |
 | `sanzeed-bg-plaster--light-2560x1440.jpg` | JPG | 2560 × 1440 px | 46 KB |
 | `sanzeed-bg-presentation-content--dark-1920x1080.png` | PNG | 1920 × 1080 px | 14 KB |
-| `sanzeed-bg-presentation-content--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 105 KB |
+| `sanzeed-bg-presentation-content--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 106 KB |
 | `sanzeed-bg-presentation-content--light-1920x1080.png` | PNG | 1920 × 1080 px | 12 KB |
-| `sanzeed-bg-presentation-content--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 105 KB |
-| `sanzeed-bg-presentation-end--dark-1920x1080.png` | PNG | 1920 × 1080 px | 833 KB |
-| `sanzeed-bg-presentation-end--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 164 KB |
-| `sanzeed-bg-presentation-end--light-1920x1080.png` | PNG | 1920 × 1080 px | 422 KB |
-| `sanzeed-bg-presentation-end--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 128 KB |
-| `sanzeed-bg-presentation-section--dark-1920x1080.png` | PNG | 1920 × 1080 px | 328 KB |
+| `sanzeed-bg-presentation-content--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 106 KB |
+| `sanzeed-bg-presentation-end--dark-1920x1080.png` | PNG | 1920 × 1080 px | 835 KB |
+| `sanzeed-bg-presentation-end--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 167 KB |
+| `sanzeed-bg-presentation-end--light-1920x1080.png` | PNG | 1920 × 1080 px | 424 KB |
+| `sanzeed-bg-presentation-end--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 129 KB |
+| `sanzeed-bg-presentation-section--dark-1920x1080.png` | PNG | 1920 × 1080 px | 327 KB |
 | `sanzeed-bg-presentation-section--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 161 KB |
 | `sanzeed-bg-presentation-section--light-1920x1080.png` | PNG | 1920 × 1080 px | 48 KB |
-| `sanzeed-bg-presentation-section--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 120 KB |
-| `sanzeed-bg-presentation-title--dark-1920x1080.png` | PNG | 1920 × 1080 px | 809 KB |
+| `sanzeed-bg-presentation-section--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 121 KB |
+| `sanzeed-bg-presentation-title--dark-1920x1080.png` | PNG | 1920 × 1080 px | 808 KB |
 | `sanzeed-bg-presentation-title--dark-3840x2160.jpg` | JPG | 3840 × 2160 px | 155 KB |
 | `sanzeed-bg-presentation-title--light-1920x1080.png` | PNG | 1920 × 1080 px | 417 KB |
-| `sanzeed-bg-presentation-title--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 122 KB |
+| `sanzeed-bg-presentation-title--light-3840x2160.jpg` | JPG | 3840 × 2160 px | 123 KB |
 | `sanzeed-cover-a4--dark-2480x3508.png` | PNG | 2480 × 3508 px | 1.3 MB |
-| `sanzeed-cover-a4--dark.pdf` | PDF | 210 × 297 mm (vector PDF) | 11 KB |
-| `sanzeed-cover-a4--dark.svg` | SVG | 210 × 297 mm (vector) | 12 KB |
-| `sanzeed-cover-a4--light-2480x3508.png` | PNG | 2480 × 3508 px | 196 KB |
-| `sanzeed-cover-a4--light.pdf` | PDF | 210 × 297 mm (vector PDF) | 9 KB |
-| `sanzeed-cover-a4--light.svg` | SVG | 210 × 297 mm (vector) | 11 KB |
+| `sanzeed-cover-a4--dark.pdf` | PDF | 210 × 297 mm (vector PDF) | 14 KB |
+| `sanzeed-cover-a4--dark.svg` | SVG | 210 × 297 mm (vector) | 24 KB |
+| `sanzeed-cover-a4--light-2480x3508.png` | PNG | 2480 × 3508 px | 197 KB |
+| `sanzeed-cover-a4--light.pdf` | PDF | 210 × 297 mm (vector PDF) | 13 KB |
+| `sanzeed-cover-a4--light.svg` | SVG | 210 × 297 mm (vector) | 24 KB |
 | `src/_base.css` | CSS | CSS | 2 KB |
 | `src/sanzeed-bg-dusk--dark.html` | HTML | HTML source | 359 B |
 | `src/sanzeed-bg-grain--charcoal.html` | HTML | HTML source | 387 B |

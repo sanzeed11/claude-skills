@@ -123,23 +123,35 @@ def monogram_repeat():
 TILES['monogram-repeat'] = monogram_repeat()
 
 def s_curve():
-    size = 512; rowh = 128; r = 46; span = 150      # hooks: 150-degree arcs with a gap, like the S terminals
-    import math
-    def hook(cx, cy, up):
-        a0, a1 = math.radians(180 + (180-span)/2), math.radians(360 - (180-span)/2)
-        if not up: a0, a1 = a0 + math.pi, a1 + math.pi
-        x0, y0 = cx + r*math.cos(a0), cy + r*math.sin(a0); x1, y1 = cx + r*math.cos(a1), cy + r*math.sin(a1)
-        return f'M{f(x0)} {f(y0)} A{r} {r} 0 0 1 {f(x1)} {f(y1)}'
+    """The refined S's two hooks (bar sweeping into a tapered terminal), read straight from the production
+    symbol and alternated along each row like the halves of the S, so the field follows the real letter."""
+    size = 512; rowh = 128; pitch = 128; hw = 76          # hook width in px (the S hook is ~356 x 302 symbol units)
+    inner, w, h = sz.logo_body('symbol', 'full-colour-dark')
+    d = re.search(r'<path\s+d="([^"]+)"', inner).group(1)
+    subs = [s.strip() for s in re.split(r'(?=M)', d) if s.strip()]           # [0] top hook, [1] bottom hook
+    dot = re.search(r'<circle\s+cx="([\d.]+)"\s+cy="([\d.]+)"\s+r="([\d.]+)"', inner)
+    def bbox(sp):
+        n = [float(v) for v in re.findall(r'-?\d+(?:\.\d+)?(?:e-?\d+)?', sp)]
+        return min(n[0::2]), min(n[1::2]), max(n[0::2]), max(n[1::2])
+    boxes = [bbox(sp) for sp in subs]
+    s = hw / max(b[2] - b[0] for b in boxes)
+    def place(i, cx, cy):                                   # transform that centres hook i on (cx, cy)
+        x0, y0, x1, y1 = boxes[i]
+        return f'translate({f(cx - (x0 + x1)/2*s)} {f(cy - (y0 + y1)/2*s)}) scale({f(s)})'
     def draw(c):
         out = [f'<clipPath id="tile-clip"><rect width="{size}" height="{size}"/></clipPath>',
-               f'<g id="hooks" clip-path="url(#tile-clip)" fill="none" stroke="{c["ink"]}" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round">']
+               f'<defs><path id="hook-top" d="{subs[0]}"/><path id="hook-bottom" d="{subs[1]}"/></defs>',
+               f'<g id="hooks" clip-path="url(#tile-clip)" fill="{c["ink"]}" fill-opacity="0.12">']
         for row in range(size // rowh):
-            cy = rowh/2 + row*rowh; phase = (row % 2) * 128
-            for k in range(-1, 5):
-                cx = phase + k*128 + 64
-                out.append(f'<path d="{hook(cx, cy, up=(k % 2 == 0))}"/>')
+            cy = rowh/2 + row*rowh; phase = (row % 2)
+            for k in range(-1, size // pitch + 1):
+                i = (k + phase) % 2
+                out.append(f'<use href="#hook-{"top" if i == 0 else "bottom"}" transform="{place(i, k*pitch + pitch/2, cy)}"/>')
         out.append('</g>')
-        out.append(f'<g id="lit-point" fill="{c["gold"]}"><circle cx="192" cy="{f(rowh/2 - r)}" r="3.2"/></g>')
+        # the lit point: the symbol's own full stop, beside one bottom hook (row 0, second hook), same relation as in the S.
+        x0, y0, x1, y1 = boxes[1]
+        tx, ty = pitch + pitch/2 - (x0 + x1)/2*s, rowh/2 - (y0 + y1)/2*s
+        out.append(f'<g id="lit-point" fill="{c["gold"]}" fill-opacity="0.6"><circle cx="{f(tx + float(dot.group(1))*s)}" cy="{f(ty + float(dot.group(2))*s)}" r="{f(float(dot.group(3))*s)}"/></g>')
         return '\n'.join(out)
     return size, size, draw
 TILES['s-curve'] = s_curve()

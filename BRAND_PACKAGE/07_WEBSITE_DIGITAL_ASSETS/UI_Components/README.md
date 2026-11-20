@@ -26,7 +26,7 @@ Full-page renders are at 1× (a 2× capture of a 27 000 px page would be 54 000 
 
 | Section | Classes | Notes |
 |---|---|---|
-| 001 Navigation | `.nav.glass` `.nav-brand` `.nav-links` `.theme-toggle` `.burger` `.nav-menu` `.is-compact` | Wordmark inline SVG at 18 px cap height (129 px wide). Current page `aria-current="page"` gets the 4 px point. Links fold below 900 px |
+| 001 Navigation | `.nav.glass` `.nav-brand` `.nav-links` `.theme-toggle` `.burger` `.nav-menu` `.is-compact` | Wordmark inline SVG at 18 px cap height (128 px wide; the refined original wordmark, three points). Current page `aria-current="page"` gets the 4 px point. Links fold below 900 px |
 | 002 Footer | `.footer` `.footer-big` `.footer-grid` `.footer-col` `.footer-k` `.footer-bottom` `.footer-rights` | Walk · Reach · Studio; `[data-clock]` filled by script with IST |
 | 003 Hero | `.hero.bg-lamp.grain` `.hero-copy` `.hero-lead` `.hero-cta` `.hero-stage` `.orbit` `.hero-cue` | Headline `.t-display-1` with `.lit` last word; the orbit is inline SVG in monoline (`currentColor` strokes, one gold point) |
 | 004 Buttons | `.btn` `.btn-ghost` `.btn-gold` `.btn-sm` `.btn-icon` `.arrow` | 44 px min height; hover −1 px + shadow; focus gold ring; disabled 40 % |

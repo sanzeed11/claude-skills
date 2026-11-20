@@ -25,7 +25,7 @@ paper = rect(0, 0, FW + 2 * BL, FH + 2 * BL, fill=C['plaster'])
 out = []
 fx = BL + FW / 2  # front panel left edge
 out.append(text_point(fx + FW / 4, BL + FH / 2 + 4, 'Thank you', 36, C['oldgold'], fill=C['soot'], anchor='middle', opsz=144))
-g, sh, cap = logo('symbol', 'full-colour-light', 7, BL + FW / 4 - 3.5, BL + FH - SAFE - 10 - 7 * 500 / 598, 'sym')
+g, sh, cap = logo('symbol', 'full-colour-light', 7, BL + FW / 4 - 3.5, BL + FH - SAFE - 10 - logo_size('symbol', 7)[0], 'sym')
 out.append(g)
 out.append(text(BL + FW / 4, BL + FH - SAFE - 4, 'sanzeed.com', 6.5, fill=C['umber'], anchor='middle'))
 OUT_SVG = write(f'{SRC}/sanzeed-thank-you-card--folded-outside.svg', svg_doc(FW + 2 * BL, FH + 2 * BL, paper, '\n'.join(out), fold_guides(FW, FH),
@@ -56,7 +56,7 @@ pb.append(text(BL + SAFE + 6, BL + 16 + sh3 + 8, 'Sanzeed Mirza', 7.5, fam='head
 pb.append(text(BL + SAFE + 6, BL + 16 + sh3 + 12, 'Experiential Design Consultant', 6.5, fill=C['umber']))
 pb.append(text(BL + SAFE + 6, BL + 16 + sh3 + 16, '+91 7827051270  ·  sanzeed@gmail.com', 6.5, fill=C['umber']))
 pb.append(text(BL + SAFE + 6, BL + 16 + sh3 + 20, 'sanzeed.com  ·  New Delhi, India', 6.5, fill=C['umber']))
-g, sh, cap = logo('symbol', 'full-colour-light', 6, BL + SAFE + 6, BL + PH - SAFE - 6 * 500 / 598 - 2, 'sym3')
+g, sh, cap = logo('symbol', 'full-colour-light', 6, BL + SAFE + 6, BL + PH - SAFE - logo_size('symbol', 6)[0] - 2, 'sym3')
 pb.append(g)
 PB_SVG = write(f'{SRC}/sanzeed-thank-you-postcard--back.svg', svg_doc(PW + 2 * BL, PH + 2 * BL, pp, '\n'.join(pb), guides(PW, PH, BL, SAFE),
                title='Sanzeed thank-you postcard — back', desc='Postal layout: divider, address lines, stamp box; signature mark and contact on the left.'))

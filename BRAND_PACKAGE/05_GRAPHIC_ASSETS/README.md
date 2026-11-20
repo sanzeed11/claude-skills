@@ -16,7 +16,7 @@ Lamp Gold `#E9B25A` on dark, Old Gold `#B8863B` on light (Gold Ink `#8A6124` whe
 | [`Decorative_Elements/`](Decorative_Elements/README.md) | dividers, room frames with named image placeholder, corner marks, eyebrow lockups, wall-label template, counter badges 001–010, arrows, the 'lit.' full stop, visitor's-book rule block | 201 |
 | `_build/` | `szlib.py` (shared: colour tokens, brand-font outlining with fontTools, kit-helper wrappers) and `write_readmes.py` | — |
 
-Total: **17.1 MB** on disk.
+Total: **17.2 MB** on disk.
 
 ## Conventions
 

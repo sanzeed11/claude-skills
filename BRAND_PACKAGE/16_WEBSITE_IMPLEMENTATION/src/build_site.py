@@ -21,38 +21,60 @@ SRC = B / '00_ORIGINAL_ASSETS_BACKUP' / 'site_source'
 OUT = B / '16_WEBSITE_IMPLEMENTATION'
 LOGO = B / '02_LOGO_SYSTEM' / 'SVG'
 TOKENS = B / '03_COLOUR_SYSTEM' / 'colour-variables.css'
-TODAY = '2026-11-05'
+TODAY = '2026-11-20'
 
 # ---------------------------------------------------------------- artwork
+# Approved logo (20 Nov 2026): the refined original wordmark, option B — three gold points (A, Z, D), the Z point in
+# its ring. Header + loader use the per-letter raw master (same 3729 × 561 viewBox as the live site's hand-traced
+# wordmark); the footer lockup uses the unioned production horizontal-descriptor from 02_LOGO_SYSTEM/SVG.
+MASTER = B / '15_SOURCE_FILES' / 'Project_Files' / 'logo-builder' / 'refined_master.svg'
+
+def master_wordmark(path):
+    """Return (viewBox w, h, [(letter, d)], dots [(cx,cy,r)]) from the raw master (paths id="wm-S" … "wm-D")."""
+    s = path.read_text()
+    w, h = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', s).groups()
+    letters = re.findall(r'<path id="wm-([A-Z0-9]+)" d="([^"]+)"', s)
+    dots = re.findall(r'<circle class="wm-dot" cx="([\d.]+)" cy="([\d.]+)" r="([\d.]+)"', s)
+    return w, h, letters, dots
+
 def svg_paths(path):
-    """Return (ink path d, dots [(cx,cy,r)], descriptor path ds) from a production SVG."""
+    """Return (viewBox, ink path d, dots [(cx,cy,r)], descriptor path ds) from a production SVG."""
     s = path.read_text()
     s = re.sub(r'\s+', ' ', s)
+    vb = re.search(r'viewBox="([^"]+)"', s).group(1)
     ink = re.search(r'id="wordmark-ink"[^>]*>(.*?)</g>', s).group(1)
     ink_d = ' '.join(d.strip() for d in re.findall(r'(?<=\s)d="([^"]+)"', ink))   # (?<=\s) so id="…" is not read as d="…"
     dots = re.findall(r'<circle cx="([\d.]+)" cy="([\d.]+)" r="([\d.]+)"', s)
     desc = re.search(r'id="descriptor-text"[^>]*>(.*?)</g>', s)
     desc_ds = re.findall(r'(?<=\s)d="([^"]+)"', desc.group(1)) if desc else []
-    return ink_d, dots, desc_ds
+    return vb, ink_d, dots, desc_ds
 
-WM_D, WM_DOTS, _ = svg_paths(LOGO / 'sanzeed-primary-wordmark--full-colour-dark.svg')
-LK_D, LK_DOTS, LK_DESC = svg_paths(LOGO / 'sanzeed-horizontal-descriptor--full-colour-dark.svg')
-assert len(WM_DOTS) == 2 and len(LK_DESC) > 20, 'logo artwork not found'
-assert WM_D.startswith('M') and all(d.startswith('M') for d in LK_DESC), 'path data must start with a moveto'
+WM_W, WM_H, WM_LETTERS, WM_DOTS = master_wordmark(MASTER)
+LK_VB, LK_D, LK_DOTS, LK_DESC = svg_paths(LOGO / 'sanzeed-horizontal-descriptor--full-colour-dark.svg')
+assert (WM_W, WM_H) == ('3729', '561'), 'master viewBox changed: update the loader constant and the header height'
+assert [l for l, _ in WM_LETTERS] == ['S', 'A', 'N', 'Z', 'E1', 'E2', 'D'], 'master letters not found'
+assert len(WM_DOTS) == 3 and len(LK_DOTS) == 3 and len(LK_DESC) > 20, 'logo artwork not found (three points expected)'
+assert LK_D.startswith('M') and all(d.startswith('M') for d in LK_DESC), 'path data must start with a moveto'
+# DOM order of the points is A, D, Z (as in the master): the site's JS uses the first point (A) for the loader's
+# landing dot and the first two (A, D) for the dots that fly into the services stage, exactly as with the old artwork.
+BEAM_CY = max(WM_DOTS, key=lambda d: float(d[0]))[1]          # the beam dot travels at the D-point height (= the Z point)
 
 def dots_markup(dots):
     return ''.join(f'<circle class="wm-dot" cx="{cx}" cy="{cy}" r="{r}"/>' for cx, cy, r in dots)
 
+# letters as one group carrying class="wm-letters" (CSS fills it), one path per letter (data-letter instead of ids,
+# so the loader and header copies on the same page do not duplicate ids)
+WM_LETTERS_MARKUP = '<g class="wm-letters">' + ''.join(f'<path data-letter="{l}" d="{d}"/>' for l, d in WM_LETTERS) + '</g>'
 # Header / footer wordmark — same class names and structure as the original inline SVG
-WM_SVG = ('<svg viewBox="0 0 3590 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">'
-          f'<path class="wm-letters" d="{WM_D}"/>{dots_markup(WM_DOTS)}</svg>')
+WM_SVG = (f'<svg viewBox="0 0 {WM_W} {WM_H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">'
+          f'{WM_LETTERS_MARKUP}{dots_markup(WM_DOTS)}</svg>')
 # Loader wordmark — keeps the clip-path (#ldClip) and the travelling beam dot the JS animates
-WM_SVG_LOADER = ('<svg viewBox="0 0 3590 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">'
-                 '<defs><clipPath id="ldClip"><rect x="0" y="0" width="3590" height="500"/></clipPath></defs>'
-                 f'<g clip-path="url(#ldClip)"><path class="wm-letters" d="{WM_D}"/>{dots_markup(WM_DOTS)}</g>'
-                 '<circle class="beam-dot" cx="0" cy="250" r="30"/></svg>')
+WM_SVG_LOADER = (f'<svg viewBox="0 0 {WM_W} {WM_H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SANZEED">'
+                 f'<defs><clipPath id="ldClip"><rect x="0" y="0" width="{WM_W}" height="{WM_H}"/></clipPath></defs>'
+                 f'<g clip-path="url(#ldClip)">{WM_LETTERS_MARKUP}{dots_markup(WM_DOTS)}</g>'
+                 f'<circle class="beam-dot" cx="0" cy="{BEAM_CY}" r="30"/></svg>')
 # Footer lockup — horizontal descriptor (wordmark + "EXPERIENTIAL DESIGN CONSULTANT")
-LOCKUP_SVG = ('<div class="f-lockup"><svg viewBox="0 0 3590 742" xmlns="http://www.w3.org/2000/svg" role="img" '
+LOCKUP_SVG = (f'<div class="f-lockup"><svg viewBox="{LK_VB}" xmlns="http://www.w3.org/2000/svg" role="img" '
               'aria-label="Sanzeed — Experiential Design Consultant">'
               f'<path class="wm-letters" d="{LK_D}"/>{dots_markup(LK_DOTS)}'
               '<g class="wm-desc">' + ''.join(f'<path d="{d}"/>' for d in LK_DESC) + '</g></svg></div>\n  ')
@@ -114,7 +136,11 @@ CSS_ADDENDUM = '''
 .f-lockup svg{width:min(320px,100%);height:auto;display:block;overflow:visible}
 .f-lockup .wm-letters,.f-lockup .wm-desc{fill:var(--fg)}
 .f-lockup .wm-dot{fill:var(--accent);transform-box:fill-box;transform-origin:center;animation:dotIdle 6s ease-in-out infinite}
-.f-lockup .wm-dot:last-of-type{animation-delay:.35s}
+/* three points (DOM order A, D, Z): the idle pulse runs left to right A → Z → D, A and D keep their old timing */
+.f-lockup .wm-dot:nth-of-type(2){animation-delay:.35s}
+.f-lockup .wm-dot:nth-of-type(3){animation-delay:.175s}
+.foot .wm .wm-dot:nth-of-type(2){animation-delay:.35s}
+.foot .wm .wm-dot:nth-of-type(3){animation-delay:.175s}
 h1 .lit,h2 .lit,h3 .lit,.h1 .lit,.h2 .lit,.h3 .lit,.f-big .lit{color:var(--accent);font-style:normal}
 h1 .dim,h2 .dim,h3 .dim,.h1 .dim,.h2 .dim,.h3 .dim,.f-big .dim{color:var(--fg3);font-style:normal}
 h1,h2,.f-big,.numbers .v{font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 0}
@@ -148,11 +174,12 @@ def transform(html, rel, slug=None):
     def wm(m):
         return WM_SVG_LOADER if 'ldClip' in m.group(0) else WM_SVG
     html, k = re.subn(r'<svg viewBox="0 0 3729 561".*?</svg>', wm, html, flags=re.S); log.append(f'replaced {k} wordmark SVGs')
-    html, k = re.subn(r'const W = 3729;', 'const W = 3590;', html); log.append(f'loader width constant: {k}')
-    html = html.replace('.brand svg{height:14px;width:auto;display:block}', '.brand svg{height:17px;width:auto;display:block}')  # ≥120 px wide
-    html = html.replace('.foot .wm svg{height:12px;width:auto}', '.foot .wm svg{height:17px;width:auto}')
-    html = html.replace('.f-brand .wm svg{height:14px;width:auto;display:block}', '.f-brand .wm svg{height:17px;width:auto;display:block}')
-    html = html.replace('.c-foot .wm svg{height:12px;width:auto}', '.c-foot .wm svg{height:17px;width:auto}')
+    html, k = re.subn(r'const W = \d+;', f'const W = {WM_W};', html); log.append(f'loader width constant (= viewBox width {WM_W}): {k}')
+    # header height: 18.5 px → the letters span 18.5 × 3692.5 / 561 ≈ 122 px (≥ 120 px minimum), cap ≈ 17 px as before
+    html = html.replace('.brand svg{height:14px;width:auto;display:block}', '.brand svg{height:18.5px;width:auto;display:block}')
+    html = html.replace('.foot .wm svg{height:12px;width:auto}', '.foot .wm svg{height:18.5px;width:auto}')
+    html = html.replace('.f-brand .wm svg{height:14px;width:auto;display:block}', '.f-brand .wm svg{height:18.5px;width:auto;display:block}')
+    html = html.replace('.c-foot .wm svg{height:12px;width:auto}', '.c-foot .wm svg{height:18.5px;width:auto}')
 
     # 4. colour tokens — same variable names, values from colour-variables.css + functional + palette
     m = re.search(r':root\{\n(.*?)\n\}\nhtml\[data-theme="dark"\]\{\n(.*?)\n\}', html, re.S)
@@ -190,8 +217,23 @@ def transform(html, rel, slug=None):
     log.append(f'size {n0:,} -> {len(html):,} bytes')
     return html, log
 
+FAVICON_DIR = B / '02_LOGO_SYSTEM' / 'Favicon'
+FAVICON_FILES = ['favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'android-chrome-192x192.png',
+                 'android-chrome-512x512.png', 'maskable-icon-512x512.png', 'safari-pinned-tab.svg', 'site.webmanifest']
+
+def copy_favicons():
+    """Favicon + PWA set served from the site root, copied from the logo system. SVG <desc> lines that still describe
+    the retired geometric construction are dropped from the copies (the artwork itself is the approved logo)."""
+    for name in FAVICON_FILES:
+        src, dst = FAVICON_DIR / name, OUT / name
+        if name.endswith('.svg'):
+            dst.write_text(re.sub(r'\s*<desc>[^<]*(?:500-unit|64-unit)[^<]*</desc>', '', src.read_text()))
+        else:
+            dst.write_bytes(src.read_bytes())
+    return len(FAVICON_FILES)
+
 def main():
-    report = {}
+    report = {'favicons': [f'copied {copy_favicons()} files from 02_LOGO_SYSTEM/Favicon']}
     html, log = transform((SRC / 'index.html').read_text(), '')
     (OUT / 'index.html').write_text(html); report['index.html'] = log
     for slug in OG:

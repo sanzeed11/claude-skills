@@ -16,7 +16,7 @@ def table(folder):
         out.append(f"| `{rel}` | {r['spec']} | {r['bytes']/1e6:.1f} MB |" if r["bytes"] > 1e6 else f"| `{rel}` | {r['spec']} | {r['bytes']/1e3:.0f} KB |")
     return "\n".join(out)
 
-HEAD = "All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM`; type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed."
+HEAD = "All copy is from `01_BRAND_STRATEGY` (confirmed from sanzeed.com); imagery is the client's own project visuals from `00_ORIGINAL_ASSETS_BACKUP`; logos from `02_LOGO_SYSTEM` (the approved refined original wordmark, option B, 20 Nov 2026 — hooked S, three gold points on A, Z and D, the Z point in its ring; HTML sources link the SVGs and the PPTX/DOCX builders embed the PNGs at build time, so no logo geometry is copied into this folder); type Fraunces 300 / Inter Tight 600 / Inter 400 via `brand.css`. Bracketed fields such as `[Date]` are the only placeholders and must be filled by Sanzeed."
 
 NOTES = {
 "Campaign_Templates": ("Campaign templates — “Carry the light across.”", f"""
@@ -75,7 +75,7 @@ Each sign: `.html` source → `.pdf` (vector, fonts embedded) → `.svg` (pdftoc
 pdftocairo -svg sanzeed-door-plate--300x100mm.pdf sanzeed-door-plate--300x100mm.svg
 {PP} sanzeed-door-plate--300x100mm.pdf sanzeed-door-plate--300x100mm-print-ready-cmyk.pdf --trim=300x100 --bleed=3 --cmyk
 ```
-Regenerate everything: `python3 _shared/build/build_signage.py`. The cut file is copied from `02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--white.svg` with mm units.
+Regenerate everything: `python3 _shared/build/build_signage.py`. The cut file `sanzeed-window-vinyl--wordmark-cut-1200mm.svg` is rebuilt by `cut_file()` from `02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--white.svg`: 1200 × 168.77 mm (the wordmark's own 7.11:1 ratio), filled closed paths only — the letter outline (Z ring included as a cut-out) plus the three points A, Z, D converted from circles to arc paths — ready for the plotter.
 """),
 "Posters": ("Posters — campaign, method, typographic", f"""
 Three posters at A2 (420×594 mm) and A3 (297×420 mm), each with 3 mm bleed in the PDF (A2 page 426×600, A3 page 303×426):
@@ -163,7 +163,7 @@ if __name__ == "__main__":
 |---|---|
 | `collateral.css` | the campaign vocabulary on top of `brand.css`: `.plate` (the room), `.wl` (wall label), `.hl` + `.pt` (Fraunces headline with the gold point), `.beam-h`, `.lamp`, print helpers; grain is dropped in print media |
 | `img/` | derived imagery: the point-of-light object (`poster-dark.webp` upsampled to 2400 px, plus 4:5 and 1:1 crops; light version from `poster-light.webp`), portrait crops at 2000 px, and `jpg/` JPEG copies of project images used inside PDFs. One frame, `case/prime-minister-museum-03` (the tricolour corridor), is served by the site washed out — mean luminance 218 with a floor at 171, where every other case frame sits at 40–150 — so `common.TONE_FIX` restores it with linear levels (black point to the veil floor, gamma 1.15, 0.4 px blur against banding; no retouching) in every derived copy (`jpg/`, `Presentations/src/assets/`). Replace both copies with the original render when the client supplies it. |
-| `icons/` | monoline arrow icons on the logo construction (500-unit box, 64-unit stroke, 45-unit gold point at the tail); `--white` and `--soot` variants |
+| `icons/` | monoline arrow icons (round-capped line, gold point of light at the tail; drawn independently of the logo); `--white` and `--soot` variants |
 | `fonts-static/` | static instances (Fraunces Light + Italic, Inter Tight SemiBold / Medium, Inter Regular / Medium / Italic) made from the variable fonts in `04_TYPOGRAPHY` with fontTools, for Office documents (PPTX/DOCX name fonts by instance). OFL licences included. |
 | `build/` | generators: `brandcopy.py` (all approved copy), `common.py` (paths, render/print helpers, `jimg`), `render_batch.js` (same as `render.js`, many jobs per browser), `build_*.py` one per subfolder, `pptx_kit.py` (brand on slides), `docstyle.py`, `manifest.py` (measures every file → `manifest.json`), `write_readmes.py` |
 

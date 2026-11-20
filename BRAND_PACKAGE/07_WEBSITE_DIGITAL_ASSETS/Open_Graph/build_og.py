@@ -12,6 +12,8 @@ WORK = [  # slug, image, category, title, place, the idea line (all from the cas
   ('ram-katha-show',        IMG + 'ram-katha-show-07.webp',        'Projection Mapping &amp; Shows',   'Ram Katha Show',        'Ayodhya',   'The building is the screen.'),
   ('buddha-park',           IMG + 'buddha-park-02.webp',           'Museums &amp; Experience Centres', 'Buddha Park',           'Uttarakhand', 'A garden of gestures.'),
 ]
+# the inline wordmark in every source is re-read from 02_LOGO_SYSTEM/SVG first (approved logo, three points)
+subprocess.run([sys.executable, str(HERE / '../sync_logo.py'), str(SRC)], check=True)
 tpl = (SRC / 'og-work--template.html').read_text()
 for slug, image, cat, title, place, line in WORK:
     html = tpl.replace('{{IMAGE}}', image).replace('{{CATEGORY}}', cat).replace('{{TITLE}}', title).replace('{{PLACE}}', place).replace('{{LINE}}', line).replace('{{SLUG}}', slug)

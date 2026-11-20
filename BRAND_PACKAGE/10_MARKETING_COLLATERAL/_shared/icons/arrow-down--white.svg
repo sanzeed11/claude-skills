@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="arrow-down">
   <title>Sanzeed — monoline arrow: arrow-down</title>
-  <desc>Monoline arrow on the logo construction (500-unit box, 64-unit stroke, 45-unit point of light at the tail). Stroke takes currentColor; the point is Lamp Gold.</desc>
+  <desc>Monoline arrow icon: round-capped line in a 500 × 500 box with a point of light at the tail. Stroke takes currentColor; the point is Lamp Gold.</desc>
   <g transform="rotate(90 250 250)">
     <path d="M 70 250 H 430" fill="none" stroke="#F5F5F7" stroke-width="64" stroke-linecap="round"/>
     <path d="M 290 110 L 430 250 L 290 390" fill="none" stroke="#F5F5F7" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>

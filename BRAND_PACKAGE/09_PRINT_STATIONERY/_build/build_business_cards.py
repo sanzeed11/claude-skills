@@ -32,19 +32,19 @@ def back_plaster(prefix):
 
 # Concept A — Plaster both sides. Front: horizontal-descriptor lockup, centred.
 lw = 54
-g, lh, cap = logo('horizontal-descriptor', 'full-colour-light', lw, BL + (TW - lw) / 2, BL + (TH - 11.2) / 2 - 0.3, 'lockup')
+g, lh, cap = logo('horizontal-descriptor', 'full-colour-light', lw, BL + (TW - lw) / 2, BL + (TH - logo_size('horizontal-descriptor', lw)[0]) / 2, 'lockup')
 a_front = svg_doc(W, H, paper(C['plaster']), g, G, title='Sanzeed business card — concept A, front',
-                  desc='Horizontal-descriptor lockup (full-colour-light) on Plaster, centred. Clear space = ½ cap height (3.8 mm) all round.')
+                  desc=f'Horizontal-descriptor lockup (full-colour-light) on Plaster, centred. Clear space = ½ cap height ({cap / 2:.1f} mm) all round.')
 a_back = svg_doc(W, H, paper(C['plaster']), back_plaster('a'), G, title='Sanzeed business card — concept A, back',
                  desc='Name, descriptor, contacts and the master line ending on the gold point.')
 
 # Concept B — dark front with the primary wordmark and a lamp glow; Plaster back.
 lw2 = 46
-gw, lh2, cap2 = logo('primary-wordmark', 'full-colour-dark', lw2, BL + (TW - lw2) / 2, BL + (TH - lw2 * 500 / 3590) / 2, 'wm')
+gw, lh2, cap2 = logo('primary-wordmark', 'full-colour-dark', lw2, BL + (TW - lw2) / 2, BL + (TH - logo_size('primary-wordmark', lw2)[0]) / 2, 'wm')
 b_front_art = (f'<rect x="0" y="0" width="{W}" height="{H}" fill="url(#lamp)" />\n' + gw)
 b_front = svg_doc(W, H, paper(C['black']), b_front_art, G, defs=lamp_defs('lamp', '50%', '50%', '58%', 0.34),
                   title='Sanzeed business card — concept B, front',
-                  desc='Primary wordmark (full-colour-dark) on Gallery Black with the lamp glow. Clear space = ½ cap height (3.2 mm).')
+                  desc=f'Primary wordmark (full-colour-dark) on Gallery Black with the lamp glow. Clear space = ½ cap height ({cap2 / 2:.1f} mm).')
 b_back = svg_doc(W, H, paper(C['plaster']), back_plaster('b'), G, title='Sanzeed business card — concept B, back',
                  desc='Name, descriptor, contacts and the master line ending on the gold point.')
 
@@ -69,4 +69,8 @@ for concept in ('a', 'b'):
     print_ready(bleed_pdf, f'{D}/sanzeed-business-card--concept-{concept}--print-cmyk.pdf', TW, TH, BL)
     for i, side in enumerate(('front', 'back'), 1):
         pdf_to_png(f'{D}/sanzeed-business-card--concept-{concept}.pdf', f'{D}/sanzeed-business-card--{concept}-{side}-2x.png', dpi=300, page=i)
+# HTML master (same four faces on brand.css, logos linked from 02_LOGO_SYSTEM/SVG) → 4-page trim PDF
+html_bleed = f'{tmpd}/html-bleed.pdf'
+render_html(f'{SRC}/sanzeed-business-card.html', html_bleed, pdf=True, size=f'{W}x{H}', wait=800)
+crop_pdf(html_bleed, f'{D}/sanzeed-business-card--html-version.pdf', BL)
 print('business cards done')

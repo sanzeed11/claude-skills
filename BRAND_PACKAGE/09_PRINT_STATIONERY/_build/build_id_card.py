@@ -34,7 +34,7 @@ front.append(f'<image x="{px}" y="{py}" width="{pw}" height="{ph}" preserveAspec
 front.append(rect(px, py, pw, ph, stroke='#FFFFFF', sw=0.15, rx=4, extra='stroke-opacity="0.10"'))
 front.append(text(BL + 7, BL + 66.5, 'Sanzeed Mirza', 12, fam='display', weight=300, fill=C['gwhite'], opsz=36))
 front.append(eyebrow(BL + 7, BL + 71.3, 'Experiential Design Consultant', pt=5.2, fill=C['silver']))
-g, sh, cap = logo('symbol', 'full-colour-dark', 7, BL + 7, BL + TH - 7 - 7 * 500 / 598, 'sym')
+g, sh, cap = logo('symbol', 'full-colour-dark', 7, BL + 7, BL + TH - 7 - logo_size('symbol', 7)[0], 'sym')
 front.append(g)
 front.append(text(BL + TW - 7, BL + TH - 7.6, 'New Delhi  ·  sanzeed.com', 6, fill=C['silver'], anchor='end'))
 paper_dark = rect(0, 0, W, H, fill=C['night'])
@@ -68,7 +68,7 @@ lan = [rect(0, 0, LW + 2 * BL, LH + 2 * BL, fill=C['black'])]
 step = 110
 x = BL + 15
 while x + 60 < LW + BL:
-    g, h_, cap = logo('primary-wordmark', 'white', 60, x, BL + (LH - 60 * 500 / 3590) / 2, f'wm{int(x)}')
+    g, h_, cap = logo('primary-wordmark', 'white', 60, x, BL + (LH - logo_size('primary-wordmark', 60)[0]) / 2, f'wm{int(x)}')
     lan.append(g)
     lan.append(point(x + 85, BL + LH / 2, 0.9, dark=True))
     x += step

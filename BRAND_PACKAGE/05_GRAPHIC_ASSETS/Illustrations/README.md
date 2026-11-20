@@ -1,7 +1,7 @@
-# Illustrations — the monoline construction language
+# Illustrations — the monoline brand language
 
-Every drawing uses the logo's construction: a **500-unit module, 64-unit monoline stroke, round caps and joins, 45-unit
-gold points** (r = 0.7 × stroke); secondary lines are 20 units; labels are the brand fonts outlined (Fraunces 300
+Every drawing speaks the brand's monoline language: **one even stroke (64 units on the drawing grid), round caps and joins,
+gold points of light** sized to the stroke (r = 0.7 × stroke, 45 units); secondary lines are 20 units; labels are the brand fonts outlined (Fraunces 300
 opsz 144 for names, Inter Tight 600 letter-spaced caps for eyebrows and counters, Inter 400 for captions), so no file
 depends on an installed font. **dark** ink (Gallery White / Silver / Lamp Gold) is for black backgrounds; **light** ink
 (Soot / Umber / Old Gold, Gold Ink for text) is for Plaster. Export set per drawing: `svg/` (editable), `png/` (2000 px wide,

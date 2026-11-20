@@ -4,6 +4,7 @@
 # (sections hidden with --js) and stitched with Pillow. Run from this folder:  bash render-kit.sh
 set -e
 R="../../15_SOURCE_FILES/Project_Files/brand-kit/render.js"
+python3 ../sync_logo.py ui-kit.html   # re-inline the approved wordmark from 02_LOGO_SYSTEM/SVG
 mkdir -p renders/.parts
 render_width () {  # $1 width  $2 theme  $3 out name  $4 parts-per-page (sections are split into N groups)
   local W=$1 T=$2 OUT=$3 N=$4; local files=()

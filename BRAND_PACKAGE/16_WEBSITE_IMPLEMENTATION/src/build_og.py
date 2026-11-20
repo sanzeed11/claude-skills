@@ -13,7 +13,9 @@ s = re.sub(r'\s+', ' ', LOGO.read_text())
 d = re.search(r'id="wordmark-ink"[^>]*>.*?\sd="([^"]+)"', s).group(1).strip()   # \sd= so id="…" is skipped
 assert d.startswith('M'), d[:40]
 dots = re.findall(r'<circle cx="([\d.]+)" cy="([\d.]+)" r="([\d.]+)"', s)
-WM = ('<svg class="wm" viewBox="0 0 3590 500" role="img" aria-label="Sanzeed"><path class="wm-letters" d="%s"/>' % d
+vb = re.search(r'viewBox="([^"]+)"', s).group(1)          # tight bounds of the approved wordmark (≈ 3692.5 × 519.3)
+assert len(dots) == 3, 'the approved wordmark has three points (A, Z, D)'
+WM = ('<svg class="wm" viewBox="%s" role="img" aria-label="Sanzeed"><path class="wm-letters" d="%s"/>' % (vb, d)
       + ''.join('<circle class="wm-dot" cx="%s" cy="%s" r="%s"/>' % c for c in dots) + '</svg>')
 WORK = [  # slug, image (relative to src/og/build/), category, title, place, the idea line (all from the case-study pages)
   ('prime-minister-museum', '../../../img/prime-minister-museum.webp', 'Museums &amp; Experience Centres', 'Prime Minister Museum', 'New Delhi', 'A corridor you walk in order.'),
