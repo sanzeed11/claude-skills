@@ -198,7 +198,7 @@ class Slide:
         self.eyebrow(M, 64, f'{section:02d}  ·  {name}')
         if wordmark:
             svg, png = logo('primary-wordmark', T['logo'])
-            lw = 200; lh = lw * 500 / 3590
+            lw = 200; lh = lw * ar(svg)
             self.img(svg, W - M - lw, 62, lw, lh, mode='contain', png=png)
         self.hline(M, 1002, W - 2 * M)
         self.point(M, 1002.5, r=4)
@@ -218,8 +218,8 @@ SECTIONS = [
     (2, 'Strategy on a page', 'The one idea, the promise, the pillars, the archetype and the audience.'),
     (3, 'Three routes considered', 'Developed to the same depth before choosing. Route A was chosen.'),
     (4, 'The idea', 'The point of light, the beam it travels, the room it crosses.'),
-    (5, 'The logo family', 'Eleven variants, one construction, each on its right background.'),
-    (6, 'Construction and rules', 'Geometry, clear space, minimum sizes and the twelve things never to do.'),
+    (5, 'The logo family', 'Your own wordmark, refined: eleven variants, each on its right background.'),
+    (6, 'Construction and rules', 'The refined letters on their grid, clear space, minimum sizes and the twelve things never to do.'),
     (7, 'Colour system', 'Dark is the gallery, cream is the label, one gold accent.'),
     (8, 'Typography', 'Fraunces 300 speaks; Inter Tight and Inter work.'),
     (9, 'Graphic language', 'Patterns, icons, illustrations and textures from seven words.'),
@@ -267,7 +267,7 @@ def build_deck():
     s.text(M, 690, 1000, 40, 'The identity of Sanzeed Mirza, Experiential Design Consultant, New Delhi.', size=24,
            color=s.T['fg2'], line=1.45)
     svg, png = logo('primary-wordmark', 'full-colour-dark')
-    s.img(svg, M, 880, 560, 560 * 500 / 3590, mode='contain', png=png)
+    s.img(svg, M, 880, 560, 560 * ar(svg), mode='contain', png=png)
     s.text(W - M - 700, 896, 700, 60, 'Sanzeed Mirza  ·  Experiential Design Consultant\nsanzeed.com  ·  New Delhi, India',
            size=15, color=s.T['fg3'], align='right', line=1.6)
     S.append(s)
@@ -389,12 +389,12 @@ def build_deck():
     divider(3)
     s = content('light', 3, 'Three routes')
     s.title('Three routes, one decision.', size=72)
-    s.text(M + 900, 136, 824, 60, 'Each developed to the same depth before choosing. Route A evolves what already existed; the other two would have replaced it.',
+    s.text(M + 900, 136, 824, 60, 'Each developed to the same depth before choosing. Route A refines the wordmark that already existed and adds the swooping Z; the other two would have replaced it.',
            size=17, color=s.T['fg2'], line=1.5)
     routes = [
         ('A', 'The Point of Light', 'Chosen', [C['black'], C['plaster'], C['lamp'], C['oldgold']],
-         'Evolve and construct what exists: black and cream with the gold accent, the wordmark redrawn as a true geometric construction, the S-and-dot promoted to a brand mark, a graphic language built from the dot, the beam and the room; Fraunces, Inter Tight and Inter kept.',
-         'Preserves the equity the client invested in · the idea is already in the copy · premium, institutional · survives print, signage and motion.',
+         'Evolve what exists: black and cream with the gold accent; your own wordmark refined letter by letter, keeping its shapes, with a new swooping Z and a third point of light; the S-and-dot promoted to a brand mark; a graphic language built from the dot, the beam and the room; Fraunces, Inter Tight and Inter kept.',
+         'Keeps the logo the client already owns, cleaned rather than replaced · the idea is already in the copy · premium, institutional · survives print, signage and motion.',
          'Less of a "big reveal" · dark-first systems need careful light-mode and print rules — solved in the colour system.'),
         ('B', 'The Plan', 'Not chosen', [C['paper'], C['soot'], C['slatedeep'], C['red']],
          'Architectural drawing language: monochrome ink on paper, blueprint grids, floor-plan diagrams as graphic devices, a signal-red accent, a grotesque typeface.',
@@ -419,7 +419,7 @@ def build_deck():
             s.rect(x + 36 + j * 60, y + 136, 48, 48, fill=col, line=s.T['line'], radius=10)
         if k == 'A':
             svg, png = logo('primary-wordmark', 'full-colour-light')
-            s.img(svg, x + 300, y + 148, 216, 216 * 500 / 3590, mode='contain', png=png)
+            s.img(svg, x + 300, y + 148, 216, 216 * ar(svg), mode='contain', png=png)
         s.text(x + 36, y + 212, w - 72, 170, desc, size=15, color=s.T['fg2'], line=1.5)
         s.hline(x + 36, y + 392, w - 72)
         s.text(x + 36, y + 412, w - 72, 20, 'For', size=13, font='head', color=s.T['accent_text'], tracking=0.12, caps=True, line=1.3)
@@ -435,7 +435,7 @@ def build_deck():
            size=17, color=s.T['fg2'], line=1.5)
     colw = 544
     for i, (nm, cap) in enumerate([
-            ('The point', 'A gold dot, r = 0.7 × the stroke of its context. It sits in the A and the D of the wordmark, ends the signature, closes headlines ("lit.") and becomes the symbol. On dark it may glow.'),
+            ('The point', 'A gold dot, r = 0.7 × the stroke of its context. It sits in the A, the Z and the D of the wordmark, ends the signature, closes headlines ("lit.") and becomes the symbol. On dark it may glow.'),
             ('The beam', 'The 1 px hairline the point travels along: the route through a museum, the timeline of a career, the rule in a document, the wipe in motion.'),
             ('The room', 'A rounded rectangle, radius 28 (20 small), hairline border, Charcoal on dark / Paper on light. Cards, frames, image plates and these slides.')]):
         x = M + i * (colw + 48)
@@ -455,7 +455,7 @@ def build_deck():
 
     s = content('dark', 4, 'Between two points of light')
     s.title('Between two points of light.', size=72)
-    s.text(M + 1000, 136, 824, 60, 'The diagrams the system is drawn with — monoline, the 64-unit stroke of the logo, gold points, the dotted route.',
+    s.text(M + 1000, 136, 824, 60, 'The diagrams the system is drawn with — monoline at the wordmark\'s stroke weight, gold points, the dotted route.',
            size=17, color=s.T['fg2'], line=1.5)
     btp = f'{ILL}/sanzeed-illustration-between-two-points--dark.png'
     s.img(btp, M, 250, 1040, 520, mode='contain')
@@ -522,7 +522,7 @@ def build_deck():
         x = M + (i % 4) * (cw + 32); y = 244 + (i // 4) * (ch + 62)
         s.rect(x, y, cw, ch, fill=ground, line=LINE_D, radius=20)
         sv, pn = logo('primary-wordmark', colour)
-        lw = cw * 0.72; lh = lw * 500 / 3590
+        lw = cw * 0.72; lh = lw * ar(sv)
         s.img(sv, x + (cw - lw) / 2, y + (ch - lh) / 2, lw, lh, mode='contain', png=pn)
         s.wall_label(x, y + ch + 12, f'{i + 1:03d}', nm, use, w=cw, size=13)
     # small sizes strip
@@ -530,13 +530,13 @@ def build_deck():
     s.hline(M, sy, W - 2 * M)
     s.eyebrow(M, sy + 20, 'Below 120 px / 28 mm')
     sv, pn = logo('simplified-small-size', 'full-colour-dark')
-    s.img(sv, M, sy + 56, 120, 120 * 55 / 400, mode='contain', png=pn)
+    s.img(sv, M, sy + 56, 120, 120 * ar(sv), mode='contain', png=pn)
     s.text(M + 140, sy + 50, 420, 60, [('Simplified small-size logo', {'font': 'head', 'color': s.T['fg']}),
                                        ('  heavier stroke (84), larger dots · 24–120 px, 6–28 mm', {'color': s.T['fg3']})], size=14, line=1.5)
     s.eyebrow(M + 700, sy + 20, 'Below 24 px / 6 mm')
     sv, pn = logo('symbol-small-size', 'full-colour-dark')
-    s.img(sv, M + 700, sy + 56, 36, 36 * 100 / 128, mode='contain', png=pn)
-    s.img(sv, M + 752, sy + 60, 20, 20 * 100 / 128, mode='contain', png=pn)
+    s.img(sv, M + 700, sy + 56, 36, 36 * ar(sv), mode='contain', png=pn)
+    s.img(sv, M + 752, sy + 60, 20, 20 * ar(sv), mode='contain', png=pn)
     s.text(M + 800, sy + 50, 420, 60, [('Small-size symbol', {'font': 'head', 'color': s.T['fg']}),
                                        ('  favicon 16 px, list icons, stamps', {'color': s.T['fg3']})], size=14, line=1.5)
     s.eyebrow(M + 1260, sy + 20, 'Tiles')
@@ -693,7 +693,7 @@ def build_deck():
     lampill = f'{ILL}/sanzeed-illustration-lamp--dark.png'
     s.img(lampill, 1440, 780, 136, 170, mode='contain')
     s.wall_label(1600, 800, '005', 'The lamp', 'arch, point, pool', w=224, size=13)
-    s.text(1140, 840, 280, 110, 'Monoline drawings on the logo\'s 64-unit stroke; labels outlined from the brand fonts; dark and light inks.',
+    s.text(1140, 840, 280, 110, 'Monoline drawings at the wordmark\'s stroke weight; labels outlined from the brand fonts; dark and light inks.',
            size=13, color=s.T['fg3'], line=1.5)
 
     # 10 — photography ----------------------------------------------------------------------------------------
@@ -742,7 +742,7 @@ def build_deck():
     s.img(hb, M, 836, 848, 848 * imsize(hb)[1] / imsize(hb)[0], mode='contain', radius=8, border=LINE_D)
     s.img(ha, 976, 836, 848, 848 * imsize(ha)[1] / imsize(ha)[0], mode='contain', radius=8, border=LINE_D)
     s.wall_label(M, 900, '003', 'Header, before', 'hand-traced wordmark', w=848, size=13)
-    s.wall_label(976, 900, '004', 'Header, after', 'constructed wordmark, same height', w=848, size=13)
+    s.wall_label(976, 900, '004', 'Header, after', 'refined original wordmark, same height', w=848, size=13)
 
     s = content('dark', 11, 'UI kit and responsive')
     s.title('The design system behind it.', size=72)
@@ -1039,9 +1039,9 @@ def build_deck():
     s.text(M, 690, 1400, 120, 'sanzeed@gmail.com  ·  +91 7827051270 (call / WhatsApp)  ·  linkedin.com/in/sanzeed  ·  sanzeed.com\nNew Delhi, India',
            size=18, color=s.T['fg'], line=1.7)
     svg, png = logo('primary-wordmark', 'full-colour-dark')
-    s.img(svg, M, 880, 560, 560 * 500 / 3590, mode='contain', png=png)
+    s.img(svg, M, 880, 560, 560 * ar(svg), mode='contain', png=png)
     sv, pn = signature('white')
-    s.img(sv, W - M - 260, 850, 260, 260 * 984 / 2400, mode='contain', png=pn)
+    s.img(sv, W - M - 260, 850, 260, 260 * ar(sv), mode='contain', png=pn)
     S.append(s)
 
     # chrome with final folios ------------------------------------------------------------------------------------
