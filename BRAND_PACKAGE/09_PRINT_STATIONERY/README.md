@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | Palette | Paper = Plaster `#F5F0E7` (or Paper `#FBF8F2` on pads), type = Soot `#1A1816` / Umber `#665F55`, accent = Old Gold `#B8863B` (the single gold point), gold text = Gold Ink `#8A6124`. Dark pieces (card B front, folder, dark covers, ID card, deck) = Gallery Black / Night with Gallery White, Silver and Lamp Gold `#E9B25A`. |
-| Logos | Stationery header and formal documents: `horizontal-descriptor` (≥ 50 mm). Continuation pages, dark covers, deck: `primary-wordmark` (≥ 28 mm). Flap, seals, card corners: `symbol` (≥ 6 mm). ID-card reverse: `monogram`. `full-colour-light` on Plaster/Paper, `full-colour-dark` on black, `black` for single-colour stamps. Clear space ½ cap height. |
+| Logos | The approved logo (20 Nov 2026) — the refined original wordmark: hand-drawn SANZEED with the hooked S, the swooping N and Z, and three gold points (A, Z, D; the Z point sits inside a thin ring cut into the diagonal); symbol = the refined S with its full stop; monogram = SM. Every logo is read at build time from `02_LOGO_SYSTEM/SVG` (vector, embedded in the SVG masters at its own viewBox aspect) or rendered from those SVGs to ≥ 300 dpi PNG for the DOCX/PPTX files — nothing is redrawn here. Stationery header and formal documents and formal documents: `horizontal-descriptor` (≥ 50 mm). Continuation pages, dark covers, deck: `primary-wordmark` (≥ 28 mm). Flap, seals, card corners: `symbol` (≥ 6 mm). ID-card reverse: `monogram`. `full-colour-light` on Plaster/Paper, `full-colour-dark` on black, `black` for single-colour stamps. Clear space ½ cap height. |
 | Type | Fraunces Light for display (optical size per the brand rule: 144 ≥ 36 pt, 72 for 18–36 pt, 36 below — the SVG masters use the static instances in `_build/fonts/` so Inkscape honours it; office files use *Fraunces Light*). Inter Tight SemiBold for eyebrows / H3 / table heads (Medium with tabular numerals for figures). Inter for body. Headlines end with a full stop; the last word or the point may be gold — never both. |
 | Print | Trim + 3 mm bleed in every master; `Print_Ready_Files/` carries crop marks, TrimBox/BleedBox and CMYK conversion. Fonts outlined (Inkscape) or embedded (Chromium, LibreOffice). |
 | Copy | Confirmed details only (name, descriptor, +91 7827051270, sanzeed@gmail.com, sanzeed.com, linkedin.com/in/sanzeed, New Delhi, India; the master and short lines; the method and services from sanzeed.com). Everything the client must supply is a visible bracketed field: `[GSTIN]`, `[Bank name]`, `[Account no.]`, `[IFSC]`, `[Postal address]`, `[Invoice no.]`, `[Date]`, `[Client]`, `[Fee]` … |
@@ -43,7 +43,7 @@ python3 build_thank_you.py && python3 build_presentation.py && python3 gather_pr
 | `sanzeed-business-card--concept-a.pdf`, `--concept-b.pdf` | Screen PDF at trim, 2 pages (front, back), text outlined | the SVGs |
 | `sanzeed-business-card--concept-a--print-cmyk.pdf`, `--concept-b--print-cmyk.pdf` | Print-ready: crop marks, trim/bleed boxes, CMYK, 115 × 77 mm sheet | the SVGs via `print_pdf.py` |
 | `sanzeed-business-card--{a,b}-{front,back}-2x.png` | 300 dpi previews, 1052 × 603 px | the PDFs |
-| `sanzeed-business-card--html-version.pdf` | 4-page trim PDF rendered from the HTML master | the HTML |
+| `sanzeed-business-card--html-version.pdf` | 4-page trim PDF rendered from the HTML master (also by `build_business_cards.py`) | the HTML |
 | `specifications.md` | Stock, finish, colour, foil option for the dots, imposition | — |
 
 ## 2 · Letterheads/ — A4 and US Letter, first + continuation page
@@ -127,13 +127,13 @@ Converter note: the flap is drawn as a straight chamfered flap — adapt to the 
 
 | File | Spec | Edit from |
 |---|---|---|
-| `src/sanzeed-stamp--round-40mm--editable.svg` | Round 40 mm: outer ring 0.7 mm, inner ring 0.5 mm, symbol 14 mm (stroke 1.5 mm), ring text "SANZEED MIRZA · EXPERIENTIAL DESIGN CONSULTANT · NEW DELHI ·" Inter Tight Bold 7 pt on a textPath (live text) | the SVG · `_build/build_stamp.py` |
-| `src/sanzeed-stamp--rectangular-58x22mm--editable.svg` | 58 × 22 mm: border 0.6 mm, horizontal-descriptor lockup 50 mm (black), contact in Inter Tight Bold 6.2 pt, two lines | the SVG |
+| `src/sanzeed-stamp--round-40mm--editable.svg` | Round 40 mm: outer ring 0.7 mm, inner ring 0.5 mm, symbol (the S with its full stop) 14 mm — strokes ≈ 1.4–1.8 mm, gap between the S and the point ≈ 2 mm, ring text "SANZEED MIRZA · EXPERIENTIAL DESIGN CONSULTANT · NEW DELHI ·" Inter Tight Bold 7 pt on a textPath (live text) | the SVG · `_build/build_stamp.py` |
+| `src/sanzeed-stamp--rectangular-58x22mm--editable.svg` | 58 × 22 mm: border 0.6 mm, horizontal-descriptor lockup 50 mm (black) **with the plain wordmark** (no points; Z ring and D stem closed) — see the note below; contact in Inter Tight Bold 6.2 pt, two lines | the SVG |
 | `sanzeed-stamp--round-40mm.svg`, `--rectangular-58x22mm.svg` | Deliverable artwork, all text converted to outlines (Inkscape) | regenerate from the editable SVGs |
 | `sanzeed-stamp--….pdf`, `….png` | Vector PDF (100 K) and 600 dpi PNG | the outlined SVGs |
 | `sanzeed-stamp--…--impression-gold-ink.png` | Impression preview in Gold Ink `#8A6124` on Plaster | the outlined SVGs |
 
-Line weights: rings and symbol ≥ 0.5 mm as specified; ring-text letter stems are ≈ 0.45 mm (Bold at 7 pt) — confirm with the stamp maker (laser-engraved rubber or photopolymer both hold this).
+Line weights: rings, border and logo strokes ≥ 0.5 mm (wordmark strokes ≈ 0.8–1.0 mm at 50 mm). **Z ring:** the gap between the Z point and its ring is ≈ 13.8 logo units, i.e. 0.19 mm at the 50 mm lockup — below the 0.5 mm a stamp holds, so it would close up and fill in. The rectangular stamp therefore uses the plain wordmark in the lockup geometry (`build_stamp.py` measures the gap from the 02 SVG and switches automatically; the full mark would need a wordmark ≈ 135 mm wide). The round stamp uses the symbol, which has no ring. Ring-text letter stems are ≈ 0.45 mm (Bold at 7 pt) and the lockup's descriptor stems ≈ 0.23 mm (unchanged from the previous build) — confirm with the stamp maker (laser-engraved rubber or photopolymer both hold this).
 
 ## 11 · Thank_You_Cards/ — A6 folded (A5 flat) and A6 postcard
 
