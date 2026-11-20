@@ -9,7 +9,7 @@ Start with `DELIVERY_CHECKLIST.md` (every deliverable, its path, format and meas
 
 ## The identity in one paragraph
 
-The idea is **"Carry the light across."** A brief on one side, a visitor on the other; Sanzeed's work carries the light between them. The system is built from three things: **the point** (a gold dot — the point of light), **the beam** (the hairline it travels), and **the room** (the dark field everything sits in). The wordmark is a geometric construction (500-unit cap, 64-unit stroke) with two points of light; the symbol is the S with its full stop; the colours are Gallery Black and Plaster with one Lamp Gold accent; the type is Fraunces 300 for display and Inter / Inter Tight for everything read. The identity evolves and codifies what already existed on sanzeed.com rather than replacing it (see `01_BRAND_STRATEGY/Brand_Strategy.md`, §11, for the three routes considered).
+The idea is **"Carry the light across."** A brief on one side, a visitor on the other; Sanzeed's work carries the light between them. The system is built from three things: **the point** (a gold dot — the point of light), **the beam** (the hairline it travels), and **the room** (the dark field everything sits in). The wordmark is your original hand-drawn SANZEED, cleaned letter by letter, with a new swooping Z that carries a third point of light; the symbol is the S with its full stop; the colours are Gallery Black and Plaster with one Lamp Gold accent; the type is Fraunces 300 for display and Inter / Inter Tight for everything read. The identity evolves and codifies what already existed on sanzeed.com rather than replacing it (see `01_BRAND_STRATEGY/Brand_Strategy.md`, §11, for the three routes considered).
 
 ## Folder map
 
@@ -30,14 +30,14 @@ The idea is **"Carry the light across."** A brief on one side, a visitor on the 
 | `12_BRAND_GUIDELINES/` | Brand_Guidelines.pdf (26 chapters), editable HTML source, Brand_Usage_Reference.md |
 | `13_BRAND_MOCKUPS/` | Logo, stationery, digital and marketing mockups built from the real deliverables |
 | `14_PRESENTATION/` | Brand_Presentation.pdf and the editable PPTX / HTML source |
-| `15_SOURCE_FILES/` | The brand kit (tokens CSS, render/capture/export/print helpers, production brief), the parametric logo and colour masters, QA tooling, and the index of every editable source |
+| `15_SOURCE_FILES/` | The brand kit (tokens CSS, render/capture/export/print helpers, production brief), the logo master (refined original wordmark) and the colour master, QA tooling, and the index of every editable source |
 | `16_WEBSITE_IMPLEMENTATION/` | The existing website rebuilt with the identity applied — deployable static site with change log and verification screenshots |
 
 Every folder has its own `README.md` listing each file, its spec and how to edit it.
 
 ## How to edit and regenerate
 
-- **Logos:** edit parameters in `15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py`, run it, then `export_logo.py` → every format regenerates. Or open any `02_LOGO_SYSTEM/Source_Files/*.svg` in Illustrator / Figma / Affinity / Inkscape.
+- **Logos:** edit the outlines in `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg`, run `build_logo_refined.py`, then `export_logo.py` → every format regenerates. Or open any `02_LOGO_SYSTEM/Source_Files/*.svg` in Illustrator / Figma / Affinity / Inkscape.
 - **Colours:** edit the palette in `15_SOURCE_FILES/Project_Files/colour-builder/build_colour.py` and run it → tokens, CSS, swatches and reference regenerate.
 - **Layouts (documents, social, ads, posters, UI):** each has an HTML+CSS source using `15_SOURCE_FILES/Project_Files/brand-kit/brand.css`; render with `node brand-kit/render.js --in file.html --out file.png|pdf …` (commands are in each folder's README).
 - **Office templates:** `.docx` / `.pptx` open in Word, PowerPoint, Pages, Keynote, Google Docs/Slides. Install the fonts from `04_TYPOGRAPHY/Font_Files` first (Fraunces, Inter, Inter Tight — SIL OFL, free to install and redistribute).

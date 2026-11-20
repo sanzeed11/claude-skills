@@ -50,7 +50,7 @@ ITEMS = [
   ('Format: SVG', g(f'{LOGO}/SVG/*.svg')), ('Format: PDF (vector)', g(f'{LOGO}/PDF/*.pdf')), ('Format: EPS (genuine, Inkscape/cairo)', g(f'{LOGO}/EPS/*.eps')),
   ('Format: PNG transparent', g(f'{LOGO}/PNG/*.png')), ('Format: JPG on white', g(f'{LOGO}/JPG/*.jpg')), ('Format: WebP', g(f'{LOGO}/WebP/*.webp')),
   ('Format: AI — NOT SUPPLIED (proprietary; cannot be written here — SVG/PDF open natively in Illustrator; see 02 README)', []),
-  ('Editable construction source (parametric master + per-stroke SVGs)', g('15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py', f'{LOGO}/Source_Files/*.svg')),
+  ('Editable logo master (refined original wordmark + per-letter SVGs)', g('15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py', '15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg', f'{LOGO}/Source_Files/*.svg')),
  ]),
  ('PHASE 2.2 — COLOUR SYSTEM', [
   ('Colour_Palette.pdf', g('03_COLOUR_SYSTEM/Colour_Palette.pdf')),

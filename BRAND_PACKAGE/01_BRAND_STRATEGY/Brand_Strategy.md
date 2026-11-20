@@ -115,7 +115,7 @@ Rejected alternatives (for the record): "Rooms that remember" (too poetic for in
 Three visual routes were developed to the same depth before choosing. The chosen route is A.
 
 ### Route A — "The Point of Light" (recommended, and chosen)
-*Evolve and construct what exists.* Keep black/cream and the gold accent; redraw the wordmark as a true geometric construction; promote the S-and-dot to a brand mark; build the graphic language from the dot, the beam and the room; keep Fraunces + Inter Tight + Inter.
+*Evolve and construct what exists.* Keep black/cream and the gold accent; refine the existing wordmark letter by letter (keeping its shapes) and give the Z a swooping diagonal with a third point of light; promote the S-and-dot to a brand mark; build the graphic language from the dot, the beam and the room; keep Fraunces + Inter Tight + Inter.
 - **For:** preserves two weeks-old equity the client clearly invested in; the conceptual core is already in the copy; premium and institutional; survives print, signage and motion; honours the brief's instruction to build from existing materials.
 - **Against:** less of a "big reveal"; dark-first systems need careful light-mode and print rules (solved in the colour system).
 

@@ -101,7 +101,7 @@ Closing line: "All seven, every time. Every room needs the whole list, held in o
 
 ## 4. Opportunities
 - Codify the existing idea into a complete, ownable system — "the point of light" — instead of inventing a new one. Equity is preserved; recognition compounds.
-- Redraw the wordmark geometrically so it survives embroidery, engraving, 16-px favicons and 10-m signage.
+- Clean the existing wordmark (smooth edges, straight lines, exact bars) so it survives embroidery, engraving, 16-px favicons and 10-m signage without losing its hand-drawn character.
 - Promote the S-and-dot to a true brand mark, and derive a monogram, app icons and social avatars from it.
 - Vectorise the signature as the "personal" layer (letters, thank-you cards, certificates) distinct from the "institutional" layer (wordmark, stationery).
 - Build a token-driven website design system so the live site, documents and templates share one source of truth.

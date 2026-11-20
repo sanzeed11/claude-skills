@@ -76,7 +76,7 @@ def incorrect():
         tiles.append((bg, content, label))
     body0, vw0, vh0 = inner(wm); tiles.append(('#1C1C1E', f'<g transform="translate(60 120) scale({580/vw0},{580/vw0*1.7})">{body0}</g>', 'Do not stretch or squash'))
     g, h = place(wm, 0, 0, 500); tiles.append(('#1C1C1E', f'<g transform="translate(140 110) rotate(-12)">{g}</g>', 'Do not rotate'))
-    body, vw, vh = inner(wm); tiles.append(('#1C1C1E', f'<g transform="translate(60 170) scale({580/vw})" style="fill:none;stroke:#F5F5F7;stroke-width:12">{body}</g>', 'Do not outline'))
+    body, vw, vh = inner(wm); ob = re.sub(r'fill="[^"]*"', 'fill="none"', body); tiles.append(('#1C1C1E', f'<g transform="translate(60 170) scale({580/vw})" fill="none" stroke="#F5F5F7" stroke-width="12">{ob}</g>', 'Do not outline'))
     tiles.append(('#1C1C1E', f'<defs><filter id="sh"><feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity=".9"/></filter></defs><g filter="url(#sh)">{place(wm,60,170,580)[0]}</g>', 'Do not add shadows, bevels or effects'))
     tiles.append(('#1C1C1E', place(wm, 60, 170, 580)[0].replace('#E9B25A', '#4A86C8'), 'Do not recolour the points of light'))
     tiles.append(('#1C1C1E', f'<text x="60" y="235" font-family="{FONT}" font-weight="700" font-size="92" fill="#F5F5F7" letter-spacing="2">SANZEED</text>', 'Do not typeset the name instead of the wordmark'))
@@ -96,23 +96,24 @@ def incorrect():
         c += f'<text x="24" y="{th-24}" font-family="{FONT}" font-size="20" fill="{"#F5F5F7" if bg in ("#1C1C1E","photo","#B8863B") else "#1A1816"}">{label}</text></g>'
     save('logo-incorrect-usage', frame(W, H, '#0D0D0F', 'Incorrect usage', 'Twelve things never to do with the logo', c), 2400)
 
-# 4 — construction: stroke unit, cap height, S geometry, dots
+# 4 — construction: the refined original wordmark on a grid, with its guides and the three points
 def construction():
     import importlib.util
-    spec = importlib.util.spec_from_file_location('bl', f'{B}/15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py'); bl = importlib.util.module_from_spec(spec); spec.loader.exec_module(bl)
-    wm = bl.wordmark(); W, H = 2400, 1200; s = 2240 / wm['width']; ox, oy = 80, 380
-    c = f'<defs><pattern id="g64" width="{64*s}" height="{64*s}" patternUnits="userSpaceOnUse" x="{ox}" y="{oy}"><path d="M{64*s} 0H0V{64*s}" fill="none" stroke="rgba(233,178,90,.22)"/></pattern></defs>'
-    c += f'<rect x="{ox}" y="{oy}" width="{2240}" height="{500*s}" fill="url(#g64)"/>'
-    c += f'<g transform="translate({ox} {oy}) scale({s})"><g fill="rgba(245,245,247,.9)">' + ''.join(f'<path d="{p}"/>' for _, p in wm['letters']) + '</g><g fill="#E9B25A">' + ''.join(f'<circle cx="{cx}" cy="{cy}" r="{r}"/>' for cx, cy, r in wm['dots']) + '</g>'
-    # S construction circles
-    cx1 = bl.S_R + bl.W/2; cy1 = cx1; cx2 = cx1 + bl.S_D; cy2 = bl.CAP - bl.S_R - bl.W/2
-    for (cx, cy) in [(cx1, cy1), (cx2, cy2)]:
-        c += f'<circle cx="{cx}" cy="{cy}" r="{bl.S_R}" fill="none" stroke="#E9B25A" stroke-width="2" stroke-dasharray="8 8"/><circle cx="{cx}" cy="{cy}" r="4" fill="#E9B25A"/>'
-    c += f'<line x1="-40" y1="0" x2="{wm["width"]+40}" y2="0" stroke="#E9B25A" stroke-width="2"/><line x1="-40" y1="{bl.CAP}" x2="{wm["width"]+40}" y2="{bl.CAP}" stroke="#E9B25A" stroke-width="2"/><line x1="-40" y1="{bl.CAP/2}" x2="{wm["width"]+40}" y2="{bl.CAP/2}" stroke="#E9B25A" stroke-width="1" stroke-dasharray="6 6"/>'
+    spec = importlib.util.spec_from_file_location('blr', f'{B}/15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py'); blr = importlib.util.module_from_spec(spec); spec.loader.exec_module(blr)
+    wm = blr.wordmark(); W, H = 2400, 1200; s = 2240 / wm['width']; ox, oy = 80, 380; h = wm['height']
+    c = f'<defs><pattern id="g20" width="{20*s}" height="{20*s}" patternUnits="userSpaceOnUse" x="{ox}" y="{oy}"><path d="M{20*s} 0H0V{20*s}" fill="none" stroke="rgba(233,178,90,.18)"/></pattern></defs>'
+    c += f'<rect x="{ox}" y="{oy}" width="2240" height="{h*s}" fill="url(#g20)"/>'
+    c += f'<g transform="translate({ox} {oy}) scale({s})"><g fill="rgba(245,245,247,.9)">' + ''.join(f'<path d="{p}"/>' for _, p in wm['letters']) + '</g>'
+    c += '<g fill="#E9B25A">' + ''.join(f'<circle cx="{cx}" cy="{cy}" r="{r}"/>' for cx, cy, r in wm['dots']) + '</g>'
+    for (cx, cy, r) in wm['dots']:
+        c += f'<circle cx="{cx}" cy="{cy}" r="{r+14}" fill="none" stroke="#E9B25A" stroke-width="2" stroke-dasharray="6 6"/>'
+    cap = 40 - blr.Y0; base = h - 1; mid = wm['dots'][2][1]
+    for y in (cap, mid, base):
+        c += f'<line x1="-40" y1="{y}" x2="{wm["width"]+40}" y2="{y}" stroke="#E9B25A" stroke-width="2" stroke-opacity="0.6"/>'
     c += '</g>'
-    c += f'<g font-family="{FONT}" font-size="20" fill="#A1A1A6"><text x="80" y="{oy-60}">cap height 500 units · stroke 64 (1 unit = 1/64 of the stroke grid shown) · point of light r 45 · S hooks r 96 passing with a 20-unit gap · A apex pointed · N and D built on half-circles · E as three detached beams · Z with a vertical-cut diagonal</text>'
-    c += f'<text x="80" y="{oy+500*s+60}">The two points of light sit on the baseline grid: inside the A (88 units above the baseline, centred) and in the stem of the D (at mid-height, the stem opens 14 units either side). Letter gaps: S–A 88 · A–N 64 · N–Z 104 · Z–E 118 · E–E 132 · E–D 118.</text></g>'
-    save('logo-construction', frame(W, H, '#0D0D0F', 'Construction', 'Geometry of the wordmark on the 64-unit stroke grid', c), 2400)
+    c += f'<g font-family="{FONT}" font-size="20" fill="#A1A1A6"><text x="80" y="{oy-60}">The refined original wordmark: the hand-drawn SANZEED from sanzeed.com, cleaned letter by letter (smooth edges, straight lines, exact E bars), with a new swooping Z.</text>'
+    c += f'<text x="80" y="{oy+h*s+60}">Guides: cap line · point line (the Z and D points share one height) · baseline. Points r 45; each sits in a 14-unit clear ring (dashed). Stroke weight ≈ 64 throughout; the S overshoots the cap line as in the original.</text></g>'
+    save('logo-construction', frame(W, H, '#0D0D0F', 'Construction', 'The refined original wordmark on a 20-unit grid', c), 2400)
 
 # 5 — placement
 def placement():

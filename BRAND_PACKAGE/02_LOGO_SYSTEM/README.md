@@ -1,19 +1,21 @@
 # 02_LOGO_SYSTEM — the Sanzeed logo family
 
-Every file here is generated from one editable master: `15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py` (parametric construction: 500-unit cap height, 64-unit monoline stroke, 45-unit "point of light" dots) and exported by `export_logo.py` (Inkscape boolean union → genuine PDF/EPS via Inkscape, transparent PNG via cairosvg, JPG via Pillow, WebP via cwebp). The hand-lettered signature is traced from the original artwork with potrace.
+**Approved master (20 November 2026): the refined original wordmark, option B.** It is the hand-drawn wordmark from sanzeed.com, cleaned letter by letter rather than redrawn: S, A, N and D keep their original shapes with smooth edges and truly straight lines; the E bars are exact rectangles at their original sizes; the two original gold points keep their size and position. The only new letter is the Z: straight top and bottom bars, a diagonal that swoops like the N's right leg, and a third point of light at the D-point height, separated from the stroke by a thin ring.
+
+Every file here is generated from that master: `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg` (the outlines) and `build_logo_refined.py` (derives the symbol, monogram, lockups, small sizes and tiles), exported by `export_logo.py` (Inkscape boolean union → genuine PDF/EPS via Inkscape, transparent PNG via cairosvg, JPG via Pillow, WebP via cwebp). The symbol is the refined S with its full stop; the monogram is "SM." with an M built from two of your N's. The hand-lettered signature is traced from the original artwork with potrace. The earlier geometric redraw is retained only as `build_logo_geometric_v1.py` for reference; it is no longer used.
 
 ## The family
 
 | # | Variant | File stem | Use |
 |---|---|---|---|
-| 1 | **Primary logo** — wordmark with the two points of light | `sanzeed-primary-wordmark` | Default everywhere: website header, covers, social banners, signage |
+| 1 | **Primary logo** — wordmark with its three points of light (A, Z, D) | `sanzeed-primary-wordmark` | Default everywhere: website header, covers, social banners, signage |
 | 2 | **Secondary logo** — symbol + wordmark, horizontal | `sanzeed-secondary-symbol-wordmark` | Partner lockups, document footers, when the symbol needs introducing |
 | 3 | **Horizontal logo** — wordmark with descriptor justified beneath | `sanzeed-horizontal-descriptor` | Stationery, proposals, invoices, press, anything formal |
 | 4 | **Vertical / stacked logo** — symbol, wordmark, descriptor centred | `sanzeed-vertical-stacked` | Square and centred layouts, end cards, stamps, ID cards |
 | 5 | **Symbol / icon** — the S with its full stop ("S.") | `sanzeed-symbol` | Avatars, favicons, app icons, watermarks, pattern |
-| 6 | **Monogram** — "SM." (Sanzeed Mirza) | `sanzeed-monogram` | Seals, embossing, ID-card reverse, cufflink-scale uses |
-| 7 | **Wordmark (plain)** — letters without dots | `sanzeed-wordmark-plain` | Engraving, embroidery, single-tool cutting where a dot cannot be produced |
-| 8 | **Simplified / small-size logo** — heavier stroke (84), larger dots | `sanzeed-simplified-small-size` | 24–120 px on screen, 6–28 mm in print |
+| 6 | **Monogram** — "SM." (Sanzeed Mirza), the M built from two of the wordmark's N | `sanzeed-monogram` | Seals, embossing, ID-card reverse, cufflink-scale uses |
+| 7 | **Wordmark (plain)** — letters without points; the Z ring and the D stem are closed | `sanzeed-wordmark-plain` | Engraving, embroidery, single-tool cutting where a dot cannot be produced |
+| 8 | **Simplified / small-size logo** — strokes thickened by 10 units per side, rings re-opened around larger points | `sanzeed-simplified-small-size` | 24–120 px on screen, 6–28 mm in print |
 | 9 | **Small-size symbol** | `sanzeed-symbol-small-size` | Under 24 px / 6 mm |
 | 10 | **Symbol tile** (rounded square, dark / light / gold) and square tile | `sanzeed-symbol-tile--*`, `sanzeed-symbol-tile-square--*` | Favicon, app icon, social profile image |
 | 11 | **Signature mark** | `Signature/sanzeed-signature--*` | Personal layer: letters, thank-you cards, sign-offs |
@@ -58,7 +60,8 @@ Every file here is generated from one editable master: `15_SOURCE_FILES/Project_
 ## Regenerating
 
 ```bash
-python3 15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py 15_SOURCE_FILES/Project_Files/logo-builder/construction
+python3 15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py 15_SOURCE_FILES/Project_Files/logo-builder/construction
 python3 15_SOURCE_FILES/Project_Files/logo-builder/export_logo.py 15_SOURCE_FILES/Project_Files/logo-builder/construction 02_LOGO_SYSTEM
+python3 15_SOURCE_FILES/Project_Files/logo-builder/build_logo_guides.py
 ```
-Requires Python 3 with fontTools, cairosvg and Pillow; Inkscape 1.2+; cwebp. Fonts in `04_TYPOGRAPHY/Font_Files` must be installed (the descriptor is set in Inter Tight 600 and converted to outlines at build time, so the exported logos themselves need no fonts).
+To change a letter, edit its path in `refined_master.svg` (ids `wm-S`, `wm-A`, `wm-N`, `wm-Z`, `wm-E1`, `wm-E2`, `wm-D`) in any vector editor, save, and re-run. Requires Python 3 with fontTools, cairosvg, Pillow, numpy; Inkscape 1.2+; potrace; cwebp.

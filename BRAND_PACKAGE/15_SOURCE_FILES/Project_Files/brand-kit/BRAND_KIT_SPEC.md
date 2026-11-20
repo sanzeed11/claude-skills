@@ -42,6 +42,9 @@ Full strategy, voice and messaging: `$B/01_BRAND_STRATEGY/*.md`. **Use only conf
 
 ## 3. Logo rules (apply without exception)
 
+**Approved logo (20 Nov 2026): the refined original wordmark, option B.** The client's own hand-drawn SANZEED from sanzeed.com, cleaned letter by letter (S, A, N, D keep their original shapes; E bars exact; original points), with a new Z: straight bars, a diagonal that swoops like the N's right leg, and a **third point of light** at the D-point height inside a thin dark ring. The wordmark therefore carries **three gold points (A, Z, D)**. Symbol = the refined S + full stop. Monogram = "SM." with an M made of two of the wordmark's N. Never use or describe the earlier geometric redraw ("500-unit cap, 64-unit stroke construction"); describe the logo as the refined original wordmark. The ring around the Z point is part of the mark: on photography or colour it must show the background through it, never a fill.
+
+
 1. **Which logo where.** Website header, social covers, presentation title: `primary-wordmark`. Stationery header, document covers, signage: `horizontal-descriptor` (wordmark + descriptor) or `secondary-symbol-wordmark`. Square/centred compositions: `vertical-stacked`. Avatars, favicons, app icons, stamps: `symbol` / `symbol-tile`. Monogram `SM.` only for seals, embossing, ID-card reverse, pattern use. Below 120 px wide / 28 mm: `simplified-small-size`; below 24 px: `symbol-small-size`.
 2. **Colour pairing.** On Gallery Black / Night / Charcoal / dark photography → `full-colour-dark` (or `white`). On Plaster / Paper / Stone / white → `full-colour-light` (or `black`). Single-ink print → `black` or `single-colour-gold`. Never put the full-colour-light logo on dark, or the dark one on light.
 3. **Clear space = x = ½ the logo's cap height** (half the height of the wordmark; for the symbol alone, ¼ of its height) on all sides. Nothing enters it: no text, no edge, no other logo.

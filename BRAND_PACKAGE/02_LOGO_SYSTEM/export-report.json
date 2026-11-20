@@ -2,484 +2,484 @@
  {
   "variant": "primary-wordmark",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--full-colour-dark.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--full-colour-light.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--black.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--black.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--black.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--black.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--white.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--white.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--white.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--white.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--grayscale.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--grayscale.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--grayscale.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--grayscale.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--grayscale-inverted.eps"
  },
  {
   "variant": "primary-wordmark",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-primary-wordmark--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-primary-wordmark--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-primary-wordmark--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-primary-wordmark--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-primary-wordmark--single-colour-gold.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--full-colour-dark.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--full-colour-light.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--black.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--black.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--black.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--black.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--white.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--white.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--white.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--white.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--grayscale.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--grayscale.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--grayscale.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--grayscale.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--grayscale-inverted.eps"
  },
  {
   "variant": "wordmark-plain",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-wordmark-plain--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-wordmark-plain--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-wordmark-plain--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-wordmark-plain--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-wordmark-plain--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-wordmark-plain--single-colour-gold.eps"
  },
  {
   "variant": "symbol",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-symbol--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-symbol--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-symbol--full-colour-dark.eps"
  },
  {
   "variant": "symbol",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-symbol--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-symbol--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-symbol--full-colour-light.eps"
  },
  {
   "variant": "symbol",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--black.eps"
+  "svg": "./SVG/sanzeed-symbol--black.svg",
+  "pdf": "./PDF/sanzeed-symbol--black.pdf",
+  "eps": "./EPS/sanzeed-symbol--black.eps"
  },
  {
   "variant": "symbol",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--white.eps"
+  "svg": "./SVG/sanzeed-symbol--white.svg",
+  "pdf": "./PDF/sanzeed-symbol--white.pdf",
+  "eps": "./EPS/sanzeed-symbol--white.eps"
  },
  {
   "variant": "symbol",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--grayscale.eps"
+  "svg": "./SVG/sanzeed-symbol--grayscale.svg",
+  "pdf": "./PDF/sanzeed-symbol--grayscale.pdf",
+  "eps": "./EPS/sanzeed-symbol--grayscale.eps"
  },
  {
   "variant": "symbol",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-symbol--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-symbol--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-symbol--grayscale-inverted.eps"
  },
  {
   "variant": "symbol",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-symbol--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-symbol--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-symbol--single-colour-gold.eps"
  },
  {
   "variant": "monogram",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-monogram--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-monogram--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-monogram--full-colour-dark.eps"
  },
  {
   "variant": "monogram",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-monogram--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-monogram--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-monogram--full-colour-light.eps"
  },
  {
   "variant": "monogram",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--black.eps"
+  "svg": "./SVG/sanzeed-monogram--black.svg",
+  "pdf": "./PDF/sanzeed-monogram--black.pdf",
+  "eps": "./EPS/sanzeed-monogram--black.eps"
  },
  {
   "variant": "monogram",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--white.eps"
+  "svg": "./SVG/sanzeed-monogram--white.svg",
+  "pdf": "./PDF/sanzeed-monogram--white.pdf",
+  "eps": "./EPS/sanzeed-monogram--white.eps"
  },
  {
   "variant": "monogram",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--grayscale.eps"
+  "svg": "./SVG/sanzeed-monogram--grayscale.svg",
+  "pdf": "./PDF/sanzeed-monogram--grayscale.pdf",
+  "eps": "./EPS/sanzeed-monogram--grayscale.eps"
  },
  {
   "variant": "monogram",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-monogram--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-monogram--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-monogram--grayscale-inverted.eps"
  },
  {
   "variant": "monogram",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-monogram--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-monogram--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-monogram--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-monogram--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-monogram--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-monogram--single-colour-gold.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--full-colour-dark.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--full-colour-light.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--black.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--black.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--black.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--black.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--white.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--white.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--white.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--white.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--grayscale.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--grayscale.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--grayscale.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--grayscale.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--grayscale-inverted.eps"
  },
  {
   "variant": "secondary-symbol-wordmark",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-secondary-symbol-wordmark--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-secondary-symbol-wordmark--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-secondary-symbol-wordmark--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-secondary-symbol-wordmark--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-secondary-symbol-wordmark--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-secondary-symbol-wordmark--single-colour-gold.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--full-colour-dark.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--full-colour-light.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--black.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--black.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--black.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--black.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--white.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--white.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--white.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--white.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--grayscale.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--grayscale.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--grayscale.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--grayscale.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--grayscale-inverted.eps"
  },
  {
   "variant": "horizontal-descriptor",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-horizontal-descriptor--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-horizontal-descriptor--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-horizontal-descriptor--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-horizontal-descriptor--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-horizontal-descriptor--single-colour-gold.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--full-colour-dark.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--full-colour-light.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--black.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--black.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--black.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--black.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--white.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--white.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--white.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--white.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--grayscale.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--grayscale.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--grayscale.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--grayscale.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--grayscale-inverted.eps"
  },
  {
   "variant": "vertical-stacked",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-vertical-stacked--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-vertical-stacked--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-vertical-stacked--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-vertical-stacked--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-vertical-stacked--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-vertical-stacked--single-colour-gold.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--full-colour-dark.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--full-colour-light.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--black.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--black.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--black.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--black.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--white.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--white.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--white.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--white.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--grayscale.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--grayscale.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--grayscale.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--grayscale.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--grayscale-inverted.eps"
  },
  {
   "variant": "simplified-small-size",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-simplified-small-size--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-simplified-small-size--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-simplified-small-size--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-simplified-small-size--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-simplified-small-size--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-simplified-small-size--single-colour-gold.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "full-colour-dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--full-colour-dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--full-colour-dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--full-colour-dark.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--full-colour-dark.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--full-colour-dark.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--full-colour-dark.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "full-colour-light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--full-colour-light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--full-colour-light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--full-colour-light.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--full-colour-light.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--full-colour-light.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--full-colour-light.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "black",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--black.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--black.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--black.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--black.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--black.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--black.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "white",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--white.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--white.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--white.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--white.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--white.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--white.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "grayscale",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--grayscale.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--grayscale.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--grayscale.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--grayscale.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--grayscale.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--grayscale.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "grayscale-inverted",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--grayscale-inverted.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--grayscale-inverted.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--grayscale-inverted.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--grayscale-inverted.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--grayscale-inverted.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--grayscale-inverted.eps"
  },
  {
   "variant": "symbol-small-size",
   "colour": "single-colour-gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-small-size--single-colour-gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-small-size--single-colour-gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-small-size--single-colour-gold.eps"
+  "svg": "./SVG/sanzeed-symbol-small-size--single-colour-gold.svg",
+  "pdf": "./PDF/sanzeed-symbol-small-size--single-colour-gold.pdf",
+  "eps": "./EPS/sanzeed-symbol-small-size--single-colour-gold.eps"
  },
  {
   "variant": "symbol-tile",
   "colour": "dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile--dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile--dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile--dark.eps"
+  "svg": "./SVG/sanzeed-symbol-tile--dark.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile--dark.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile--dark.eps"
  },
  {
   "variant": "symbol-tile-square",
   "colour": "dark",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile-square--dark.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile-square--dark.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile-square--dark.eps"
+  "svg": "./SVG/sanzeed-symbol-tile-square--dark.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile-square--dark.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile-square--dark.eps"
  },
  {
   "variant": "symbol-tile",
   "colour": "light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile--light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile--light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile--light.eps"
+  "svg": "./SVG/sanzeed-symbol-tile--light.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile--light.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile--light.eps"
  },
  {
   "variant": "symbol-tile-square",
   "colour": "light",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile-square--light.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile-square--light.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile-square--light.eps"
+  "svg": "./SVG/sanzeed-symbol-tile-square--light.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile-square--light.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile-square--light.eps"
  },
  {
   "variant": "symbol-tile",
   "colour": "gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile--gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile--gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile--gold.eps"
+  "svg": "./SVG/sanzeed-symbol-tile--gold.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile--gold.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile--gold.eps"
  },
  {
   "variant": "symbol-tile-square",
   "colour": "gold",
-  "svg": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile-square--gold.svg",
-  "pdf": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/PDF/sanzeed-symbol-tile-square--gold.pdf",
-  "eps": "/home/user/claude-skills/BRAND_PACKAGE/02_LOGO_SYSTEM/EPS/sanzeed-symbol-tile-square--gold.eps"
+  "svg": "./SVG/sanzeed-symbol-tile-square--gold.svg",
+  "pdf": "./PDF/sanzeed-symbol-tile-square--gold.pdf",
+  "eps": "./EPS/sanzeed-symbol-tile-square--gold.eps"
  }
 ]
