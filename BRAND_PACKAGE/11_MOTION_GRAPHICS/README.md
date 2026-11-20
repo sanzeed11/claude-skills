@@ -47,63 +47,63 @@ All copy is confirmed brand copy (`01_BRAND_STRATEGY`): the master line, "Tell m
 ## Files
 
 <!--@files-->
-### `Logo_Animations/` — 30 files, 26.18 MB
+### `Logo_Animations/` — 30 files, 27.64 MB
 
 Logo reveal (4 s) in four formats and two pairings; logo outro (3 s); seamless symbol loop and the presentation logo with alpha.
 
 | File | Pixels | Length | Format | Size | Editable from |
 |---|---|---|---|---|---|
 | `sanzeed-logo-outro--dark-1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 44 KB | `Source_Files/logo-outro/index.html` |
-| `sanzeed-logo-outro--dark-1920x1080.gif` | 960×540 | 3.0 s · 45 f · 17 fps | GIF | 162 KB | `Source_Files/logo-outro/index.html` |
-| `sanzeed-logo-outro--dark-1920x1080.mp4` | 1920×1080 | 3.0 s · 90 f · 30 fps | H.264 · yuv420p | 102 KB | `Source_Files/logo-outro/index.html` |
-| `sanzeed-logo-outro--dark-1920x1080.webm` | 1920×1080 | 3.0 s · 90 f · 30 fps | VP9 · yuv420p | 56 KB | `Source_Files/logo-outro/index.html` |
-| `sanzeed-logo-presentation--alpha-1920x1080--poster.png` | 1920×1080 |  | PNG · alpha | 41 KB | `Source_Files/logo-presentation/index.html` |
-| `sanzeed-logo-presentation--alpha-1920x1080.gif` | 960×540 | 4.0 s · 60 f · 17 fps | GIF | 89 KB | `Source_Files/logo-presentation/index.html` |
-| `sanzeed-logo-presentation--alpha-1920x1080.mov` | 1920×1080 | 4.0 s · 120 f · 30 fps | ProRes 4444 · alpha · yuva444p12le | 10.43 MB | `Source_Files/logo-presentation/index.html` |
+| `sanzeed-logo-outro--dark-1920x1080.gif` | 960×540 | 3.0 s · 45 f · 17 fps | GIF | 163 KB | `Source_Files/logo-outro/index.html` |
+| `sanzeed-logo-outro--dark-1920x1080.mp4` | 1920×1080 | 3.0 s · 90 f · 30 fps | H.264 · yuv420p | 104 KB | `Source_Files/logo-outro/index.html` |
+| `sanzeed-logo-outro--dark-1920x1080.webm` | 1920×1080 | 3.0 s · 90 f · 30 fps | VP9 · yuv420p | 57 KB | `Source_Files/logo-outro/index.html` |
+| `sanzeed-logo-presentation--alpha-1920x1080--poster.png` | 1920×1080 |  | PNG · alpha | 51 KB | `Source_Files/logo-presentation/index.html` |
+| `sanzeed-logo-presentation--alpha-1920x1080.gif` | 960×540 | 4.0 s · 60 f · 17 fps | GIF | 99 KB | `Source_Files/logo-presentation/index.html` |
+| `sanzeed-logo-presentation--alpha-1920x1080.mov` | 1920×1080 | 4.0 s · 120 f · 30 fps | ProRes 4444 · alpha · yuva444p12le | 11.79 MB | `Source_Files/logo-presentation/index.html` |
 | `sanzeed-logo-presentation--alpha-1920x1080.mp4` | 1920×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 39 KB | `Source_Files/logo-presentation/index.html` |
-| `sanzeed-logo-presentation--alpha-1920x1080.webm` | 1920×1080 | 4.0 s · 120 f · 30 fps | VP9 · alpha · yuv420p | 166 KB | `Source_Files/logo-presentation/index.html` |
+| `sanzeed-logo-presentation--alpha-1920x1080.webm` | 1920×1080 | 4.0 s · 120 f · 30 fps | VP9 · alpha · yuv420p | 204 KB | `Source_Files/logo-presentation/index.html` |
 | `sanzeed-logo-reveal--dark-1080x1080--poster.jpg` | 1080×1080 |  | JPEG q90 | 33 KB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--dark-1080x1080.gif` | 960×960 | 4.0 s · 60 f · 17 fps | GIF | 2.84 MB | `Source_Files/logo-reveal/index.html` |
+| `sanzeed-logo-reveal--dark-1080x1080.gif` | 960×960 | 4.0 s · 60 f · 17 fps | GIF | 2.82 MB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1080x1080.mp4` | 1080×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 153 KB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--dark-1080x1080.webm` | 1080×1080 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 48 KB | `Source_Files/logo-reveal/index.html` |
+| `sanzeed-logo-reveal--dark-1080x1080.webm` | 1080×1080 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 49 KB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 46 KB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--dark-1080x1920.gif` | 406×720 | 4.0 s · 60 f · 17 fps | GIF | 736 KB | `Source_Files/logo-reveal/index.html` |
+| `sanzeed-logo-reveal--dark-1080x1920.gif` | 406×720 | 4.0 s · 60 f · 17 fps | GIF | 742 KB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1080x1920.mp4` | 1080×1920 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 239 KB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--dark-1080x1920.webm` | 1080×1920 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 55 KB | `Source_Files/logo-reveal/index.html` |
+| `sanzeed-logo-reveal--dark-1080x1920.webm` | 1080×1920 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 56 KB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 46 KB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1920x1080.gif` | 960×540 | 4.0 s · 60 f · 17 fps | GIF | 1.21 MB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--dark-1920x1080.mp4` | 1920×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 242 KB | `Source_Files/logo-reveal/index.html` |
+| `sanzeed-logo-reveal--dark-1920x1080.mp4` | 1920×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 243 KB | `Source_Files/logo-reveal/index.html` |
 | `sanzeed-logo-reveal--dark-1920x1080.webm` | 1920×1080 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 57 KB | `Source_Files/logo-reveal/index.html` |
-| `sanzeed-logo-reveal--light-1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 43 KB | `Source_Files/logo-reveal/index-light.html` |
-| `sanzeed-logo-reveal--light-1920x1080.gif` | 960×540 | 4.0 s · 60 f · 17 fps | GIF | 792 KB | `Source_Files/logo-reveal/index-light.html` |
-| `sanzeed-logo-reveal--light-1920x1080.mp4` | 1920×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 179 KB | `Source_Files/logo-reveal/index-light.html` |
-| `sanzeed-logo-reveal--light-1920x1080.webm` | 1920×1080 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 46 KB | `Source_Files/logo-reveal/index-light.html` |
-| `sanzeed-symbol-loop--alpha-1920x1080--poster.png` | 1920×1080 |  | PNG · alpha | 36 KB | `Source_Files/symbol-loop/index.html` |
+| `sanzeed-logo-reveal--light-1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 42 KB | `Source_Files/logo-reveal/index-light.html` |
+| `sanzeed-logo-reveal--light-1920x1080.gif` | 960×540 | 4.0 s · 60 f · 17 fps | GIF | 825 KB | `Source_Files/logo-reveal/index-light.html` |
+| `sanzeed-logo-reveal--light-1920x1080.mp4` | 1920×1080 | 4.0 s · 120 f · 30 fps | H.264 · yuv420p | 180 KB | `Source_Files/logo-reveal/index-light.html` |
+| `sanzeed-logo-reveal--light-1920x1080.webm` | 1920×1080 | 4.0 s · 120 f · 30 fps | VP9 · yuv420p | 47 KB | `Source_Files/logo-reveal/index-light.html` |
+| `sanzeed-symbol-loop--alpha-1920x1080--poster.png` | 1920×1080 |  | PNG · alpha | 37 KB | `Source_Files/symbol-loop/index.html` |
 | `sanzeed-symbol-loop--alpha-1920x1080.gif` | 960×540 | 3.0 s · 59 f · 20 fps | GIF | 132 KB | `Source_Files/symbol-loop/index.html` |
-| `sanzeed-symbol-loop--alpha-1920x1080.mov` | 1920×1080 | 3.0 s · 90 f · 30 fps | ProRes 4444 · alpha · yuva444p12le | 7.92 MB | `Source_Files/symbol-loop/index.html` |
+| `sanzeed-symbol-loop--alpha-1920x1080.mov` | 1920×1080 | 3.0 s · 90 f · 30 fps | ProRes 4444 · alpha · yuva444p12le | 7.96 MB | `Source_Files/symbol-loop/index.html` |
 | `sanzeed-symbol-loop--alpha-1920x1080.mp4` | 1920×1080 | 3.0 s · 90 f · 30 fps | H.264 · yuv420p | 18 KB | `Source_Files/symbol-loop/index.html` |
-| `sanzeed-symbol-loop--alpha-1920x1080.webm` | 1920×1080 | 3.0 s · 90 f · 30 fps | VP9 · alpha · yuv420p | 254 KB | `Source_Files/symbol-loop/index.html` |
+| `sanzeed-symbol-loop--alpha-1920x1080.webm` | 1920×1080 | 3.0 s · 90 f · 30 fps | VP9 · alpha · yuv420p | 244 KB | `Source_Files/symbol-loop/index.html` |
 
-### `Intros_Outros/` — 22 files, 19.75 MB
+### `Intros_Outros/` — 22 files, 19.74 MB
 
 Branded intro and end card (6 s) in 16:9 and 9:16; the beam-wipe transition with alpha and a preview of it carrying a cut.
 
 | File | Pixels | Length | Format | Size | Editable from |
 |---|---|---|---|---|---|
-| `sanzeed-intro--1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 85 KB | `Source_Files/intro/index.html` |
-| `sanzeed-intro--1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 684 KB | `Source_Files/intro/index.html` |
-| `sanzeed-intro--1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 323 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 86 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 668 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 325 KB | `Source_Files/intro/index.html` |
 | `sanzeed-intro--1080x1920.webm` | 1080×1920 | 6.0 s · 180 f · 30 fps | VP9 · yuv420p | 133 KB | `Source_Files/intro/index.html` |
-| `sanzeed-intro--1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 78 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 76 KB | `Source_Files/intro/index.html` |
 | `sanzeed-intro--1920x1080.gif` | 960×540 | 6.0 s · 72 f · 12 fps | GIF | 1.08 MB | `Source_Files/intro/index.html` |
-| `sanzeed-intro--1920x1080.mp4` | 1920×1080 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 302 KB | `Source_Files/intro/index.html` |
-| `sanzeed-intro--1920x1080.webm` | 1920×1080 | 6.0 s · 180 f · 30 fps | VP9 · yuv420p | 117 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1920x1080.mp4` | 1920×1080 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 308 KB | `Source_Files/intro/index.html` |
+| `sanzeed-intro--1920x1080.webm` | 1920×1080 | 6.0 s · 180 f · 30 fps | VP9 · yuv420p | 119 KB | `Source_Files/intro/index.html` |
 | `sanzeed-outro--1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 99 KB | `Source_Files/outro-card/index.html` |
-| `sanzeed-outro--1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 351 KB | `Source_Files/outro-card/index.html` |
+| `sanzeed-outro--1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 352 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-outro--1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 254 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-outro--1080x1920.webm` | 1080×1920 | 6.0 s · 180 f · 30 fps | VP9 · yuv420p | 161 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-outro--1920x1080--poster.jpg` | 1920×1080 |  | JPEG q90 | 89 KB | `Source_Files/outro-card/index.html` |
-| `sanzeed-outro--1920x1080.gif` | 960×540 | 6.0 s · 72 f · 12 fps | GIF | 568 KB | `Source_Files/outro-card/index.html` |
+| `sanzeed-outro--1920x1080.gif` | 960×540 | 6.0 s · 72 f · 12 fps | GIF | 569 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-outro--1920x1080.mp4` | 1920×1080 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 232 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-outro--1920x1080.webm` | 1920×1080 | 6.0 s · 180 f · 30 fps | VP9 · yuv420p | 135 KB | `Source_Files/outro-card/index.html` |
 | `sanzeed-transition--alpha-1920x1080--poster.png` | 1920×1080 |  | PNG · alpha | 10 KB | `Source_Files/transition/index.html` |
@@ -113,30 +113,30 @@ Branded intro and end card (6 s) in 16:9 and 9:16; the beam-wipe transition with
 | `sanzeed-transition--preview-1920x1080.gif` | 960×540 | 1.5 s · 23 f · 17 fps | GIF | 603 KB | `Source_Files/transition/preview.html` |
 | `sanzeed-transition--preview-1920x1080.mp4` | 1920×1080 | 1.5 s · 45 f · 30 fps | H.264 · yuv420p | 354 KB | `Source_Files/transition/preview.html` |
 
-### `Social_Animations/` — 18 files, 7.33 MB
+### `Social_Animations/` — 18 files, 7.32 MB
 
 Three stories (6 s), two posts (5 s) and the stat counter (5 s). MP4 for the platforms, GIF for previews and messaging.
 
 | File | Pixels | Length | Format | Size | Editable from |
 |---|---|---|---|---|---|
 | `sanzeed-post--method-route-1080x1080--poster.jpg` | 1080×1080 |  | JPEG q90 | 70 KB | `Source_Files/post-method/index.html` |
-| `sanzeed-post--method-route-1080x1080.gif` | 720×720 | 5.0 s · 60 f · 12 fps | GIF | 508 KB | `Source_Files/post-method/index.html` |
-| `sanzeed-post--method-route-1080x1080.mp4` | 1080×1080 | 5.0 s · 150 f · 30 fps | H.264 · yuv420p | 145 KB | `Source_Files/post-method/index.html` |
+| `sanzeed-post--method-route-1080x1080.gif` | 720×720 | 5.0 s · 60 f · 12 fps | GIF | 501 KB | `Source_Files/post-method/index.html` |
+| `sanzeed-post--method-route-1080x1080.mp4` | 1080×1080 | 5.0 s · 150 f · 30 fps | H.264 · yuv420p | 150 KB | `Source_Files/post-method/index.html` |
 | `sanzeed-post--project-1080x1080--poster.jpg` | 1080×1080 |  | JPEG q90 | 248 KB | `Source_Files/post-project/index.html` |
 | `sanzeed-post--project-1080x1080.gif` | 720×720 | 5.0 s · 60 f · 12 fps | GIF | 1.47 MB | `Source_Files/post-project/index.html` |
-| `sanzeed-post--project-1080x1080.mp4` | 1080×1080 | 5.0 s · 150 f · 30 fps | H.264 · yuv420p | 518 KB | `Source_Files/post-project/index.html` |
+| `sanzeed-post--project-1080x1080.mp4` | 1080×1080 | 5.0 s · 150 f · 30 fps | H.264 · yuv420p | 519 KB | `Source_Files/post-project/index.html` |
 | `sanzeed-post--stat-counter-1080x1080--poster.jpg` | 1080×1080 |  | JPEG q90 | 74 KB | `Source_Files/post-stats/index.html` |
-| `sanzeed-post--stat-counter-1080x1080.gif` | 720×720 | 5.0 s · 60 f · 12 fps | GIF | 578 KB | `Source_Files/post-stats/index.html` |
+| `sanzeed-post--stat-counter-1080x1080.gif` | 720×720 | 5.0 s · 60 f · 12 fps | GIF | 574 KB | `Source_Files/post-stats/index.html` |
 | `sanzeed-post--stat-counter-1080x1080.mp4` | 1080×1080 | 5.0 s · 150 f · 30 fps | H.264 · yuv420p | 192 KB | `Source_Files/post-stats/index.html` |
 | `sanzeed-story--now-showing-1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 210 KB | `Source_Files/story-now-showing/index.html` |
 | `sanzeed-story--now-showing-1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 561 KB | `Source_Files/story-now-showing/index.html` |
-| `sanzeed-story--now-showing-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 432 KB | `Source_Files/story-now-showing/index.html` |
+| `sanzeed-story--now-showing-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 428 KB | `Source_Files/story-now-showing/index.html` |
 | `sanzeed-story--project-reveal-1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 342 KB | `Source_Files/story-project/index.html` |
-| `sanzeed-story--project-reveal-1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 703 KB | `Source_Files/story-project/index.html` |
-| `sanzeed-story--project-reveal-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 709 KB | `Source_Files/story-project/index.html` |
-| `sanzeed-story--quote-light-wipe-1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 122 KB | `Source_Files/story-quote/index.html` |
-| `sanzeed-story--quote-light-wipe-1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 334 KB | `Source_Files/story-quote/index.html` |
-| `sanzeed-story--quote-light-wipe-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 258 KB | `Source_Files/story-quote/index.html` |
+| `sanzeed-story--project-reveal-1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 702 KB | `Source_Files/story-project/index.html` |
+| `sanzeed-story--project-reveal-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 706 KB | `Source_Files/story-project/index.html` |
+| `sanzeed-story--quote-light-wipe-1080x1920--poster.jpg` | 1080×1920 |  | JPEG q90 | 121 KB | `Source_Files/story-quote/index.html` |
+| `sanzeed-story--quote-light-wipe-1080x1920.gif` | 406×720 | 6.0 s · 72 f · 12 fps | GIF | 335 KB | `Source_Files/story-quote/index.html` |
+| `sanzeed-story--quote-light-wipe-1080x1920.mp4` | 1080×1920 | 6.0 s · 180 f · 30 fps | H.264 · yuv420p | 256 KB | `Source_Files/story-quote/index.html` |
 
 ### `Lower_Thirds/` — 15 files, 31.90 MB
 
@@ -180,14 +180,14 @@ The loader as CSS, SVG + SMIL, Lottie, GIF and MP4; the reveal-on-scroll snippet
 
 | Folder | Contents | Files | Size | Produced by |
 |---|---|---|---|---|
-| `Exports/Key_Frames/` | six key frames per rendered animation (960 px JPG q90, PNG with alpha for transparent pieces), one folder per animation | 156 | 7.12 MB | `Source_Files/render.sh` |
+| `Exports/Key_Frames/` | six key frames per rendered animation (960 px JPG q90, PNG with alpha for transparent pieces), one folder per animation | 156 | 7.14 MB | `Source_Files/render.sh` |
 | `Exports/Contact_Sheets/` | one contact sheet per deliverable folder and one master sheet of every animation | 6 | 3.97 MB | `Source_Files/build_contact_sheets.py` |
-| `Exports/Lottie_Proofs/` | frames of the two Lottie files rendered by lottie-web in Chromium, with a labelled proof strip each | 14 | 1.61 MB | `Source_Files/lottie/validate_lottie.js` |
+| `Exports/Lottie_Proofs/` | frames of the two Lottie files rendered by lottie-web in Chromium, with a labelled proof strip each | 14 | 1.62 MB | `Source_Files/lottie/validate_lottie.js` |
 | `Exports/Motion_Principles/` | the easing-curve and timing-scale diagram used in Motion_Principles.md (3200×2000 PNG) | 1 | 278 KB | `Source_Files/motion-principles/easing-curves.html` via render.js |
 
-`Source_Files/`: 42 files, 602 KB (of which lottie.min.js is 298 KB).
+`Source_Files/`: 44 files, 729 KB (of which lottie.min.js is 298 KB).
 
-**Whole folder: 315 files, 98.79 MB.**
+**Whole folder: 317 files, 100.40 MB.**
 <!--@/files-->
 
 ## Limitations
