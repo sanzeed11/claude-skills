@@ -113,20 +113,27 @@ async function settledSignature(page, wait) {
     return { theme: document.documentElement.getAttribute('data-theme'), box: [Math.round(b.width), Math.round(b.height)], clip: getComputedStyle(s.querySelector('.sig-ink')).clipPath,
       imgs: [...s.querySelectorAll('img')].map(i => { const r = i.getBoundingClientRect(); return { src: i.getAttribute('src').replace(/^.*\//, ''), shown: getComputedStyle(i).display !== 'none', loaded: i.complete && i.naturalWidth > 0, box: [Math.round(r.width), Math.round(r.height)] }; }) }; });
 }
+/* element capture that does not hang on a box that never reports "stable" (the header carries GSAP/CSS motion):
+   try Playwright's element screenshot briefly, then fall back to a page capture clipped to the element's box */
+async function shot(page, sel, file) {
+  const loc = page.locator(sel).first();
+  try { await loc.screenshot({ path: path.join(SHOTS, file), timeout: 6000 }); }
+  catch (e) { const b = await loc.boundingBox(); await page.screenshot({ path: path.join(SHOTS, file), clip: b, fullPage: true }); console.log('clip capture', file); }
+}
 async function headerShots(browser, base, name, url, label, footers) {
   for (const [vn, w, h] of VIEWPORTS) {
     const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 2, colorScheme: 'dark' });
     const page = await ctx.newPage(); await page.goto(base + url, { waitUntil: 'load' }); await settle(page); await page.waitForTimeout(600);
-    await page.locator('header.nav').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-header-2x.png`) });
+    await shot(page, 'header.nav', `${label}-${name}-${vn}-header-2x.png`);
     await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 1500 : 700);   // index cross-fades via View Transitions
-    await page.locator('header.nav').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-header-2x-light.png`) });
+    await shot(page, 'header.nav', `${label}-${name}-${vn}-header-2x-light.png`);
     if (label === 'after') {                              // footer: lockup + signature, light then dark, signature settled
       await scrollThrough(page);
       const light = await settledSignature(page, true);
-      await page.locator('.foot2').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-footer-2x-light.png`) });
+      await shot(page, '.foot2', `${label}-${name}-${vn}-footer-2x-light.png`);
       await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 2600 : 900);
       const dark = await settledSignature(page, false);
-      await page.locator('.foot2').screenshot({ path: path.join(SHOTS, `${label}-${name}-${vn}-footer-2x.png`) });
+      await shot(page, '.foot2', `${label}-${name}-${vn}-footer-2x.png`);
       if (footers) footers.push({ page: name, viewport: vn, light, dark });
       console.log('footer', name, vn, 'light', JSON.stringify(light), 'dark', JSON.stringify(dark));
     }

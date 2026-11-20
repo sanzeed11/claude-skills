@@ -32,7 +32,7 @@ Staggers: words 160 ms apart; lines 150 ms apart; the four steps of the route ar
 
 In Lottie the same curves are written as keyframe handles: `--ease` is `o: {x: .22, y: .8}`, `i: {x: .2, y: 1}`; `--ease-io` is `o: {x: .65, y: 0}`, `i: {x: .2, y: 1}`. In GSAP use `CustomEase.create("sz", ".22,.8,.2,1")`; `power3.out` is the nearest built-in. In After Effects: keyframe velocity influence 22 % / 80 % out, 20 % / 100 % in.
 
-**Why the reveal is quick and the settle is long.** On the light curve the point crosses the wordmark S → E in about 0.45 s and spends the remaining 0.65 s arriving in the counter of the D. The letters bloom behind the light over 400 ms each, so the eye reads a wave of light followed by a calm. That is the brand: the arrival is the event, not the journey.
+**Why the reveal is quick and the settle is long.** On the light curve the point crosses the wordmark S → E in about 0.5 s — leaving the A's point as it passes and dropping the Z's point into its ring — and spends the remaining 0.6 s arriving at the D's point. The letters bloom behind the light over 400 ms each, so the eye reads a wave of light followed by a calm. That is the brand: the arrival is the event, not the journey.
 
 ## 3. Transitions
 
@@ -62,12 +62,13 @@ The wordmark is the only thing in the identity that is never transformed. It may
 | **Never spin** | No rotation of any letter, dot or lockup, on any axis, including the "3D flip" and the "card turn". |
 | **Never bounce** | No overshoot, elastic or spring easing on the logo. The points settle from 1.6× to 1× on `--ease`; they never spring back. |
 | **Never stretch** | No non-uniform scaling, skew, perspective, liquid or morph. The uniform scale in the outro (S. growing to 2×) is the only scale permitted, and only of the symbol. |
-| **The dot may glow** | The two points of light and the symbol's point may carry the gold halo, pulse once (800 ms, `--ease-io`) and, in the symbol loop, breathe. Letters never glow. |
-| **The beam always travels left → right** | The travelling point leaves the S and arrives in the counter of the D. It never runs backwards; the outro removes letters by fading, not by reversing the light. Top → down is permitted for the lamp and for vertical reveals of the stacked logo. |
+| **The dot may glow** | The three points of light (A, Z, D) and the symbol's point may carry the gold halo, pulse once (800 ms, `--ease-io`) and, in the symbol loop, breathe. Letters never glow. |
+| **The Z's ring stays open** | The Z's point sits inside a thin open ring that shows whatever is behind the logo. No halo, glow, fill or travelling point is ever drawn inside it: every CSS source masks the glow layers with `#zring` (r 45.5 → 58.9 units around the Z point) and the Lottie reveal carries the same layer mask. |
+| **The beam always travels left → right** | The travelling point leaves the S, passes through the Z's ring and arrives at the D's point. It never runs backwards; the outro removes letters by fading, not by reversing the light. Top → down is permitted for the lamp and for vertical reveals of the stacked logo. |
 | **Letters are revealed, not drawn** | Letters bloom (opacity, 400 ms) behind the passing light. The wordmark is never stroke-drawn, typed, split into particles or masked with anything but a straight edge. (The hand-lettered signature, which is personal, may be stroke-drawn.) |
 | **One reveal per piece** | The logo appears once. An intro reveals it; an outro collapses it to the symbol. It never loops, flashes or re-enters. |
 | **Pairing and clear space hold in motion** | `full-colour-dark` on Gallery Black / Night / dark photography; `full-colour-light` on Plaster. Clear space of half the cap height is kept at every frame, including the glow. Minimum sizes as in 02_LOGO_SYSTEM. |
-| **The travelling point exists only in motion** | It is the brand's "beam dot": r = 45 units (0.7 × stroke), Lamp Gold, with a 230-unit halo. It never appears in a still. |
+| **The travelling point exists only in motion** | It is the brand's "beam dot": r = 45 units (the size of the logo's own points), Lamp Gold, with a 230-unit halo, travelling at the height of the Z and D points. It never appears in a still. |
 
 Approved pieces: logo reveal (4 s), logo outro (3 s), symbol loop (3 s), presentation logo (4 s, alpha). New logo animation must be one of these or derived from `Source_Files/logo-reveal/index.html` with only timing changed.
 

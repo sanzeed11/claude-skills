@@ -257,7 +257,7 @@ p_print = page(page_head("08 · Print specifications", "Ink, foil and <span clas
   <table class="doc compact mt-3" style="font-size:8pt"><tbody>
    <tr><td><strong>Process</strong></td><td>Old Gold C0 M27 Y68 K28 for text-sized gold on light; Gold Ink C0 M30 Y74 K46 where gold must read as text.</td></tr>
    <tr><td><strong>Spot</strong></td><td>Nearest Pantone 7510 C (ΔE 5.4) for Old Gold; verify. Metallic alternative Pantone 871 C or 872 C — verify with a swatch.</td></tr>
-   <tr><td><strong>Foil</strong></td><td>Optional satin gold foil for the two dots of the wordmark and the point on business cards and covers. Never foil the letters.</td></tr>
+   <tr><td><strong>Foil</strong></td><td>Optional satin gold foil for the three points of the wordmark and the point on business cards and covers. Never foil the letters.</td></tr>
   </tbody></table>
  </div>
 </div>
