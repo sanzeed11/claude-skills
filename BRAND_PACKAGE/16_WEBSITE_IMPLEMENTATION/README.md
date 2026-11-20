@@ -1,6 +1,6 @@
 # 16_WEBSITE_IMPLEMENTATION — sanzeed.com with the refined identity
 
-A deployable static site: the live site (backed up untouched in `00_ORIGINAL_ASSETS_BACKUP/site_source/`) with the new wordmark, favicon set, token-aligned colours, served web fonts, vector signature, footer lockup and new share images. Nothing else changed — copy, layout, JavaScript, forms and analytics are the originals. See `CHANGES.md` for the file-by-file diff, the verification results and the deploy steps.
+A deployable static site: the live site (backed up untouched in `00_ORIGINAL_ASSETS_BACKUP/site_source/`) with the approved logo (the refined original wordmark, option B, 20 Nov 2026: three gold points A, Z, D, the Z point in its ring), favicon set, token-aligned colours, served web fonts, vector signature, footer lockup and new share images. Nothing else changed — copy, layout, JavaScript, forms and analytics are the originals. See `CHANGES.md` for the file-by-file diff, the verification results and the deploy steps.
 
 Folder size ≈ 32 MB: 10.1 MB deployable site (145 files incl. 117 WebP images), 41 KB sources, the rest verification screenshots.
 
@@ -10,22 +10,22 @@ Folder size ≈ 32 MB: 10.1 MB deployable site (145 files incl. 117 WebP images)
 
 | File | Spec | Edit via |
 |---|---|---|
-| `index.html` | 1,031 KB; inline CSS + JS (GSAP, Lenis, three.js hero module), new inline wordmark SVG (viewBox 0 0 3590 500) in loader + header, inline horizontal-descriptor lockup in the footer | `src/build_site.py` (re-run it; it rebuilds from the backup) |
-| `work/prime-minister-museum.html` · `work/ram-katha-show.html` · `work/buddha-park.html` | ≈ 93 KB each, same treatment, paths relative to `../` | `src/build_site.py` |
-| `og.jpg` | 1200×630 JPG q90, 65 KB — home share image (dark lamp, master line, descriptor, wordmark) | `src/og/og-home.html` + `src/og/og.css`, then `python3 src/build_og.py` |
+| `index.html` | 1,061 KB; inline CSS + JS (GSAP, Lenis, three.js hero module), the refined original wordmark inline (viewBox 0 0 3729 561, one path per letter in `g.wm-letters`, three `circle.wm-dot`) in loader + header, inline horizontal-descriptor lockup (three points) in the footer | `src/build_site.py` (re-run it; it rebuilds from the backup) |
+| `work/prime-minister-museum.html` · `work/ram-katha-show.html` · `work/buddha-park.html` | ≈ 115 KB each, same treatment, paths relative to `../` | `src/build_site.py` |
+| `og.jpg` | 1200×630 JPG q90, 63 KB — home share image (dark lamp, master line, descriptor, wordmark) | `src/og/og-home.html` + `src/og/og.css`, then `python3 src/build_og.py` |
 | `img/og/<slug>-1200x630.jpg` ×3 | 1200×630 JPG q90 — case-study share images (hero image, veil, title · place · idea line, wordmark corner) | `src/og/og-work--template.html` + the `WORK` table in `src/build_og.py` |
 | `img/*.webp` (93) | gallery images as served live (nominal 960×540; the backup files vary between 904–960 px wide, 9 small thumbnails at ≈236×121), `portrait.webp` 1100×1574, `poster-dark.webp` / `poster-light.webp` 1600×900 | copied from `00_ORIGINAL_ASSETS_BACKUP/images/img/` |
 | `img/case/*.webp` (24) | 1600×900 case-study galleries | copied from the backup |
 | `img/sanzeed-signature--white.svg` · `img/sanzeed-signature--ink.svg` | vector signature, 1215×498 viewBox, 56 KB each (dark theme / light theme) | `02_LOGO_SYSTEM/Signature/` |
 | `assets/fonts/Fraunces-variable.woff2` (147 KB) · `Fraunces-Italic-variable.woff2` (178 KB) · `Inter-variable.woff2` (109 KB) · `InterTight-variable.woff2` (60 KB) · `OFL-*.txt` | variable woff2, SIL OFL 1.1 | `04_TYPOGRAPHY/Font_Files/` |
-| `favicon.ico` (16/32/48/64 layers, 6.5 KB) · `favicon.svg` · `apple-touch-icon.png` (180) · `android-chrome-192x192.png` · `android-chrome-512x512.png` · `maskable-icon-512x512.png` · `safari-pinned-tab.svg` · `site.webmanifest` | favicon + PWA set | `02_LOGO_SYSTEM/Favicon/` |
+| `favicon.ico` (16/32/48/64 layers, 6.5 KB) · `favicon.svg` · `apple-touch-icon.png` (180) · `android-chrome-192x192.png` · `android-chrome-512x512.png` · `maskable-icon-512x512.png` · `safari-pinned-tab.svg` · `site.webmanifest` | favicon + PWA set (the refined S + point) | copied from `02_LOGO_SYSTEM/Favicon/` by `src/build_site.py` |
 | `robots.txt` · `sitemap.xml` · `sanzeed-mirza.vcf` | as live (sitemap `lastmod` 2026-11-05) | `src/build_site.py` (sitemap) |
 
 ### Sources and tooling (`src/`)
 
 | File | What it does |
 |---|---|
-| `src/build_site.py` | Reads the backup HTML, applies every change with targeted replacements (favicons, fonts, wordmark, tokens, signature, lockup, OG meta, `.lit/.dim`, Fraunces axes) and writes the four pages + sitemap. Reads the artwork live from `02_LOGO_SYSTEM/SVG/` and the tokens from `03_COLOUR_SYSTEM/colour-variables.css`. `python3 src/build_site.py` |
+| `src/build_site.py` | Reads the backup HTML, applies every change with targeted replacements (favicons, fonts, wordmark, tokens, signature, lockup, OG meta, `.lit/.dim`, Fraunces axes) and writes the four pages + sitemap. Reads the artwork live — header/loader wordmark from `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg`, lockup from `02_LOGO_SYSTEM/SVG/` — copies the favicon set from `02_LOGO_SYSTEM/Favicon/`, and reads the tokens from `03_COLOUR_SYSTEM/colour-variables.css`. `python3 src/build_site.py` |
 | `src/build_og.py` | Fills the OG templates, renders them with `15_SOURCE_FILES/Project_Files/brand-kit/render.js` (Playwright) and writes the JPGs. `python3 src/build_og.py` |
 | `src/og/og-home.html` · `src/og/og-work--template.html` · `src/og/og.css` | Editable OG card sources (brand.css linked relatively; `{{WM}}`, `{{TITLE}}`… filled by the builder). `src/og/build/` holds the last filled copies. |
 | `src/verify.js` | Playwright check: console errors, failed requests, `document.fonts`, wordmark geometry, theme toggle, gallery filter/search, favicon/manifest/OG files → `screenshots/` + `screenshots/verify-report.json`. `node src/verify.js [--before <dir>]` |
@@ -37,7 +37,7 @@ Folder size ≈ 32 MB: 10.1 MB deployable site (145 files incl. 117 WebP images)
 ## How to edit
 
 - **Copy or layout** — do not hand-edit the generated pages. If the live site's copy or layout changes, update the source pages in `00_ORIGINAL_ASSETS_BACKUP/site_source/` and re-run `src/build_site.py`. For brand-level changes (another logo variant, a token tweak, the lockup size), change the constants at the top of `src/build_site.py` or its `CSS_ADDENDUM` block and rebuild.
-- **Logo** — the wordmark path is read from `02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg` (unioned production artwork; the editable master is `02_LOGO_SYSTEM/Source_Files/`). Rebuild after any logo update; the loader/beam JS only needs `const W` to equal the viewBox width (3590).
+- **Logo** — the header and loader wordmark is read from the raw master `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg` (per-letter paths `wm-S` … `wm-D`, three `wm-dot` circles in the order A, D, Z, viewBox 0 0 3729 561 — the live site's own frame, so the loader's `const W = 3729` is unchanged); the footer lockup and the share images use the unioned production SVGs in `02_LOGO_SYSTEM/SVG/`. Rebuild (`python3 src/build_site.py && python3 src/build_og.py`) after any logo update. Keep the dot order: the site JS lands the loader dot on the first point (A) and flies the first two (A, D) into the services stage. The beam dot runs at the D-point height (= the Z point).
 - **Share images** — edit the HTML/CSS in `src/og/`, run `python3 src/build_og.py`. Work cards take their title, place and idea line from the `WORK` table in the builder (all copy is from the case-study pages).
 - **Fonts** — replace the woff2 files in `assets/fonts/` with the ones from `04_TYPOGRAPHY/Font_Files/`; the `@font-face` names must stay `Fraunces`, `Inter`, `Inter Tight`.
 - **Verify** — `node src/verify.js --before /path/to/served/backup` (needs node + playwright; serve the backup with its `img/` folder next to it for before-shots).
