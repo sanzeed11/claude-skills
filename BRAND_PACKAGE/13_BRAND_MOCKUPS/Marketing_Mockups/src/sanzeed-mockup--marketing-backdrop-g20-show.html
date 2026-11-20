@@ -21,6 +21,8 @@
 .led::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.08) 0 1px, transparent 1px 3px), linear-gradient(90deg, rgba(255,255,255,.05), rgba(0,0,0,0) 50%, rgba(0,0,0,.2)); }
 .ledframe { inset: -8px; border: 8px solid #0d0d0f; box-shadow: 0 0 0 1px #2a2a2d; }
 .glow { background: radial-gradient(50% 50% at 50% 50%, rgba(233,178,90,.14), transparent 70%); }
+.ground { background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,.92), transparent 74%); filter: blur(4px); }
+.plinth { left: -10px; right: -10px; bottom: -24px; height: 16px; background: linear-gradient(180deg, #2a2a2d, #0d0d0f 60%, #050506); box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 6px 10px rgba(0,0,0,.7); }
 .label { left: 48px; top: 60px; font: 400 13px/1.5 var(--font-text); color: #A1A1A6; }
 .label b { display: block; font: 600 14px/1.4 var(--font-heading); color: #F5F5F7; }
 </style>
@@ -28,16 +30,18 @@
 <body>
 <div class="stage">
 <div class="abs" style="inset:0;background:#000"></div>
-<img class="abs" src="../../_build/plates/photo-g20-led-show.jpg" alt="G20 LED Show hall" style="left:-280px;top:0;width:1780px;height:1000px;object-fit:cover">
+<img class="abs" src="../../_build/plates/photo-g20-led-show.jpg" alt="G20 LED Show hall" style="left:-280px;top:0;width:1780px;height:1000px;max-width:none;object-fit:cover">
 <div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(0,0,0,.1) 40%,rgba(0,0,0,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,0) 35%,rgba(0,0,0,.5) 100%)"></div>
 <div class="abs persp" style="inset:0;perspective:1800px;perspective-origin:45% 50%">
-  <div class="abs p3d wallwrap" style="left:900px;top:200px;width:560px;height:448px;transform:rotateY(28deg)">
+  <div class="abs p3d wallwrap" style="left:880px;top:290px;width:520px;height:416px;transform:rotateY(8deg)">
     <div class="abs led" style="inset:0;background-image:url(../../../10_MARKETING_COLLATERAL/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png)"></div>
     <div class="abs ledframe"></div>
+    <div class="abs plinth"></div>
   </div>
 </div>
-<div class="abs refl" style="left:860px;top:690px;width:620px;height:260px;background:url(../../../10_MARKETING_COLLATERAL/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png) center bottom / 100% auto no-repeat;transform:scaleY(-1) skewX(24deg) rotate(-3deg);opacity:.16;filter:blur(3px);-webkit-mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%);mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%)"></div>
-<div class="abs glow" style="left:780px;top:600px;width:800px;height:300px"></div>
+<div class="abs ground" style="left:850px;top:704px;width:560px;height:30px"></div>
+<div class="abs refl" style="left:876px;top:724px;width:500px;height:190px;background:url(../../../10_MARKETING_COLLATERAL/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png) center bottom / 100% auto no-repeat;transform:scaleY(-1) skewY(-1.2deg);opacity:.24;filter:blur(3px);-webkit-mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%);mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%)"></div>
+<div class="abs glow" style="left:740px;top:640px;width:800px;height:260px"></div>
 <div class="abs label"><b>G20 LED Show</b><span>Gujarat</span></div>
 <div class="abs vig soft"></div>
 <div class="cap"><b>Event backdrop</b>3000 × 2400 mm LED backdrop, wordmark 1800 mm wide · composite into the approved image · <span class="pt"></span>10_MARKETING_COLLATERAL / Events</div>

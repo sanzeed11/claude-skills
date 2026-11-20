@@ -269,7 +269,7 @@ scene('logo-brass-plaque-symbol', L, 'Engraved brass plaque · the symbol', ['02
 # 05 — frosted glass door with the window vinyl
 scene('logo-frosted-glass-door', L, 'Window vinyl · wordmark on a frosted glass door', ['02 primary-wordmark--white.svg (cut vinyl)', '10 Signage window-vinyl spec (600 mm band, 1200 mm wordmark)', '00/06 Prime Minister Museum lobby (behind the glass)'], f'''
 <div class="abs" style="inset:0;background:#0a0a0b"></div>
-<img class="abs" src="{P}/photo-prime-minister-museum-lobby.jpg" alt="" style="left:-140px;top:-40px;width:1780px;filter:blur(9px) brightness(.55) saturate(.8)">
+<img class="abs" src="{P}/photo-prime-minister-museum-lobby.jpg" alt="" style="left:-140px;top:-40px;width:1780px;max-width:none;filter:blur(9px) brightness(.55) saturate(.8)">
 <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.1) 40%,rgba(0,0,0,.55))"></div>
 <div class="abs frame" style="left:170px;top:-20px;width:1160px;height:1040px"></div>
 <div class="abs glass" style="left:200px;top:0;width:548px;height:1000px"></div>
@@ -857,7 +857,7 @@ SCENES[-1]['body'] = SCENES[-1]['body'].replace(f'{P}/sanzeed-exhibition-rollup-
 # 29 — door plate + wayfinding on a museum wall (composite)
 scene('marketing-door-plate-wayfinding-museum-wall', M, 'Signage · door plate and wayfinding on a museum wall', ['10 Signage door plate 300 × 100 + arrow plate (trim crop)', '06 Prime Minister Museum corridor (approved image)'], f'''
 <div class="abs" style="inset:0;background:#000"></div>
-<img class="abs" src="{P}/photo-prime-minister-museum-corridor.jpg" alt="Prime Minister Museum corridor" style="left:-120px;top:0;width:1780px;height:1000px;object-fit:cover">
+<img class="abs" src="{P}/photo-prime-minister-museum-corridor.jpg" alt="Prime Minister Museum corridor" style="left:-258px;top:0;width:1780px;height:1000px;max-width:none;object-fit:cover">
 <div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.05) 100%),linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,.45) 100%)"></div>
 <div class="abs persp" style="inset:0;perspective:1500px;perspective-origin:62% 50%">
   <div class="abs p3d wall" style="left:-80px;top:-300px;width:760px;height:1600px;transform:rotateY(46deg)">
@@ -881,7 +881,7 @@ scene('marketing-door-plate-wayfinding-museum-wall', M, 'Signage · door plate a
 # 30 — totem in a lobby (composite)
 scene('marketing-totem-lobby', M, 'Signage · totem in a museum lobby', ['10 Signage totem 600 × 1800 mm (1:10)', '00/06 Prime Minister Museum lobby (case image)'], f'''
 <div class="abs" style="inset:0;background:#000"></div>
-<img class="abs" src="{P}/photo-prime-minister-museum-lobby.jpg" alt="Prime Minister Museum lobby" style="left:-140px;top:0;width:1780px;height:1000px;object-fit:cover">
+<img class="abs" src="{P}/photo-prime-minister-museum-lobby.jpg" alt="Prime Minister Museum lobby" style="left:-278px;top:0;width:1780px;height:1000px;max-width:none;object-fit:cover">
 <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.1) 40%,rgba(0,0,0,.5) 100%),radial-gradient(40% 60% at 68% 60%,rgba(0,0,0,.45),transparent 70%)"></div>
 <div class="abs persp" style="inset:0;perspective:2000px;perspective-origin:50% 45%">
   <div class="abs p3d totemwrap" style="left:880px;top:200px;width:246px;height:738px;transform:rotateY(-16deg)">
@@ -906,16 +906,18 @@ scene('marketing-totem-lobby', M, 'Signage · totem in a museum lobby', ['10 Sig
 # 31 — backdrop at the G20-style show (composite)
 scene('marketing-backdrop-g20-show', M, 'Event backdrop · LED wall at the G20-style show', ['10 Events backdrop 3000 × 2400 mm (1:10)', '06 G20 LED Show (approved image)'], f'''
 <div class="abs" style="inset:0;background:#000"></div>
-<img class="abs" src="{P}/photo-g20-led-show.jpg" alt="G20 LED Show hall" style="left:-280px;top:0;width:1780px;height:1000px;object-fit:cover">
+<img class="abs" src="{P}/photo-g20-led-show.jpg" alt="G20 LED Show hall" style="left:-280px;top:0;width:1780px;height:1000px;max-width:none;object-fit:cover">
 <div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(0,0,0,.1) 40%,rgba(0,0,0,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,0) 35%,rgba(0,0,0,.5) 100%)"></div>
 <div class="abs persp" style="inset:0;perspective:1800px;perspective-origin:45% 50%">
-  <div class="abs p3d wallwrap" style="left:900px;top:200px;width:560px;height:448px;transform:rotateY(28deg)">
+  <div class="abs p3d wallwrap" style="left:880px;top:290px;width:520px;height:416px;transform:rotateY(8deg)">
     <div class="abs led" style="inset:0;background-image:url({MKT}/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png)"></div>
     <div class="abs ledframe"></div>
+    <div class="abs plinth"></div>
   </div>
 </div>
-<div class="abs refl" style="left:860px;top:690px;width:620px;height:260px;background:url({MKT}/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png) center bottom / 100% auto no-repeat;transform:scaleY(-1) skewX(24deg) rotate(-3deg);opacity:.16;filter:blur(3px);-webkit-mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%);mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%)"></div>
-<div class="abs glow" style="left:780px;top:600px;width:800px;height:300px"></div>
+<div class="abs ground" style="left:850px;top:704px;width:560px;height:30px"></div>
+<div class="abs refl" style="left:876px;top:724px;width:500px;height:190px;background:url({MKT}/Events/sanzeed-event-backdrop--3000x2400mm-1-10.png) center bottom / 100% auto no-repeat;transform:scaleY(-1) skewY(-1.2deg);opacity:.24;filter:blur(3px);-webkit-mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%);mask-image:linear-gradient(0deg,rgba(0,0,0,.9),transparent 80%)"></div>
+<div class="abs glow" style="left:740px;top:640px;width:800px;height:260px"></div>
 <div class="abs label"><b>G20 LED Show</b><span>Gujarat</span></div>
 <div class="abs vig soft"></div>
 {cap('Event backdrop', '3000 × 2400 mm LED backdrop, wordmark 1800 mm wide · composite into the approved image · <span class="pt"></span>10_MARKETING_COLLATERAL / Events')}
@@ -925,6 +927,8 @@ scene('marketing-backdrop-g20-show', M, 'Event backdrop · LED wall at the G20-s
 .led::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,.08) 0 1px, transparent 1px 3px), linear-gradient(90deg, rgba(255,255,255,.05), rgba(0,0,0,0) 50%, rgba(0,0,0,.2)); }
 .ledframe { inset: -8px; border: 8px solid #0d0d0f; box-shadow: 0 0 0 1px #2a2a2d; }
 .glow { background: radial-gradient(50% 50% at 50% 50%, rgba(233,178,90,.14), transparent 70%); }
+.ground { background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,.92), transparent 74%); filter: blur(4px); }
+.plinth { left: -10px; right: -10px; bottom: -24px; height: 16px; background: linear-gradient(180deg, #2a2a2d, #0d0d0f 60%, #050506); box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 6px 10px rgba(0,0,0,.7); }
 .label { left: 48px; top: 60px; font: 400 13px/1.5 var(--font-text); color: #A1A1A6; }
 .label b { display: block; font: 600 14px/1.4 var(--font-heading); color: #F5F5F7; }
 ''')
@@ -1200,9 +1204,10 @@ no invented statistics (the Instagram and YouTube mock profiles show no follower
   upscaled 1.9–3.1× and are deliberately softened under the veil; for press use, re-run `make_plates.py` with higher-resolution originals.
 * The scenes are rendered raster scenes, not layered PSD/Figma mockup files; the HTML sources are the layered, editable equivalent
   (every object is a positioned element with its own transform and shadow).
-* `brand.css` sets `img {{ max-width: 100% }}`, so the 1780 px photographs in the door-plate, totem and event-backdrop composites are
-  capped at the 1500 px stage and stop short of the right edge (a dark band there). This predates the logo swap and was left as is;
-  adding `max-width:none` to those `<img>` styles would restore the intended framing (re-check the sign perspective afterwards).
+* `brand.css` sets `img {{ max-width: 100% }}`; the full-bleed photographs (door plate, totem, event backdrop, frosted-door lobby) carry
+  `max-width:none` so they cover the stage edge to edge. Door plate and totem keep their earlier photo registration (offset by the
+  138 px the old capped `object-fit: cover` cropped), so their signs sit exactly as tuned; the event backdrop was re-staged as a
+  near-frontal (8°) freestanding LED wall on a plinth, standing on the hall floor, with a contact shadow and floor reflection.
 * Chromium paints very large CSS background images from a low-resolution decode, so plates are kept ≤ 3400 px on the long edge
   (the A2 poster plate is 1600 px wide, 1.5× what the scene shows).
 """
