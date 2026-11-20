@@ -34,7 +34,7 @@ def A(rel, maxw=1600, maxh=None, quality=86, name=None, crop=None, bg=None):
     has_alpha = im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info)
     ext = '.png' if has_alpha else '.jpg'
     out = os.path.join(ASSETS, base + ext)
-    if not os.path.exists(out):
+    if not os.path.exists(out) or os.path.getmtime(out) < os.path.getmtime(p):   # refresh stale copies
         w, h = im.size
         s = min(1.0, maxw / w, (maxh / h) if maxh else 1.0)
         if s < 1: im = im.resize((max(1, round(w * s)), max(1, round(h * s))), Image.LANCZOS)

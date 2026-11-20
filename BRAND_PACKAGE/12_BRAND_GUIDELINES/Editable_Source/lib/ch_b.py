@@ -101,7 +101,7 @@ def ch12():
         ('Lamp Gold', '0 24 61 9', '7407 C (approximate)', 'Screen only; in print it becomes Old Gold')], widths=['24mm', '52mm', '52mm', 'auto'])
     notes = rules(['<b>CMYK values are process conversions from sRGB</b> and must be proofed with the printer; the kit’s print_pdf.py converts with Ghostscript.',
                    '<b>Pantone references are nearest matches by colour distance</b> against published sRGB approximations, not a Pantone library. Verify against a physical swatch book before specifying a spot colour. ΔE and reliability are carried in colour-tokens.json.',
-                   '<b>Foil.</b> The dots of the wordmark may be hot-foiled in gold on business cards and covers; the letters stay in ink or blind-debossed.',
+                   '<b>Foil.</b> The three points of the wordmark (A, Z, D) may be hot-foiled in gold on business cards and covers; the letters stay in ink or blind-debossed, and the Z’s ring stays open to the stock.',
                    '<b>Stock.</b> 350 gsm uncoated natural white for cards; uncoated or silk for documents; matt laminate for anything black.',
                    '<b>Never</b> tints of gold, gradients, glow effects or gloss on black panels in print.'], cls='tight')
     foil = A('13_BRAND_MOCKUPS/Logo_Mockups/sanzeed-mockup--logo-gold-foil-black-1600w.jpg', 1200)
@@ -205,7 +205,7 @@ def ch14():
     glyphs = ['01-experiential-design', '02-museum-planning', '03-storytelling', '04-spatial-branding', '05-event-production', '06-digital-physical', '07-leadership']
     names = ['Experiential Design &amp; Creative Direction', 'Museum &amp; Cultural Exhibition Planning', 'Immersive Storytelling &amp; Narrative Architecture', 'Spatial Experience &amp; Environmental Branding', 'Event Production &amp; Brand Activation', 'Digital ↔ Physical Experience Integration', 'Cross-Functional Leadership &amp; Mentorship']
     g += '<div class="doc-h3 mt-3">Seven service glyphs · 128 grid, stroke 6, point r 4.2</div><div class="g7 gap-xs">' + ''.join(f'<figure class="fig"><div class="plate plaster h26 pad"><img src="{A(f"05_GRAPHIC_ASSETS/Illustrations/png/sanzeed-illustration-service-glyph-{s}--light.png", 500)}" alt="{n}"></div><figcaption class="wall-label"><span class="title">{s[:2]}</span><span class="line">{n}</span></figcaption></figure>' for s, n in zip(glyphs, names)) + '</div>'
-    P.append(page('14 · Graphic elements', head('14.4 · Illustrations', 'The monoline construction <span class="lit">language</span>.', 'Every drawing uses the logo’s construction: 500-unit module, 64-unit stroke, round caps, 45-unit gold points; labels outlined from the brand fonts. 05_GRAPHIC_ASSETS/Illustrations, master build_illustrations.py.') + body(g)))
+    P.append(page('14 · Graphic elements', head('14.4 · Illustrations', 'The monoline drawing <span class="lit">language</span>.', 'Every drawing speaks one line language: one even stroke on the drawing grid, round caps and joins, gold points sized to the stroke (r = 0.7 × stroke); labels outlined from the brand fonts. 05_GRAPHIC_ASSETS/Illustrations, master build_illustrations.py.') + body(g)))
     D = '05_GRAPHIC_ASSETS/Decorative_Elements/png/'
     dec = [('dividers/sanzeed-divider-beam-point--960--dark.png', 'dark pad-sm', 'Divider · beam with point', 'h22'), ('dividers/sanzeed-divider-beam-point--960--light.png', 'plaster pad-sm', 'Divider · light', 'h22'),
            ('counters/sanzeed-counter-badges--001-010--dark.png', 'dark pad-sm', 'Counter badges 001–010', 'h22'), ('eyebrows/sanzeed-eyebrow--now-showing--dark.png', 'dark pad', 'Eyebrow lockup · dark', 'h22'),
@@ -230,7 +230,7 @@ def ch14():
 ICONS = ['mail', 'phone', 'whatsapp', 'linkedin', 'location', 'calendar', 'clock', 'globe', 'arrow-right', 'chevron-down', 'close', 'menu', 'search', 'filter', 'grid', 'list', 'play', 'sun', 'moon', 'external-link', 'download', 'check', 'info', 'warning', 'museum', 'pavilion', 'projection', 'light-beam', 'route', 'doorway', 'stage', 'screen', 'ar-vr', 'team', 'script', 'film']
 def ch15():
     P = []
-    P.append(divider('15', '<span class="lit">Iconography</span>.', 'Fifty-four icons on the 24 grid, drawn in the same monoline grammar as the logo. One line, round caps, no fills — except the brand point.',
+    P.append(divider('15', '<span class="lit">Iconography</span>.', 'Fifty-four icons on the 24 grid, drawn in the same line grammar as the illustrations. One line, round caps, no fills — except the brand point.',
         [('15.1', 'The icon set'), ('15.2', 'Grid, construction and rules')], '15 · Iconography'))
     sheet = A('05_GRAPHIC_ASSETS/Icons/sanzeed-icons-sheet.png', 1920)
     P.append(page('15 · Iconography', head('15.1 · The icon set', 'Fifty-four icons, one <span class="lit">line</span>.', 'Contact (8) · UI (31) · domain (15). SVG per icon with stroke="currentColor", a sprite, and PNG at 48 / 96 px in both inks. 05_GRAPHIC_ASSETS/Icons, master build_icons.py.') + body(fig(sheet, 'Icon sheet', '05_GRAPHIC_ASSETS/Icons/sanzeed-icons-sheet.png · both inks', None, plate='night cover', h='h128'))))

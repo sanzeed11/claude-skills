@@ -11,11 +11,11 @@ The idea: **Carry the light across.** A brief on one side, a visitor on the othe
 
 | # | Rule | Chapter |
 |---|---|---|
-| 01 | **Use the delivered logo files; never redraw or typeset the name.** Eleven variants × seven colourways in `02_LOGO_SYSTEM/SVG` (PDF, EPS, PNG, JPG, WebP beside them). | 05–06 |
+| 01 | **Use the delivered logo files; never redraw or typeset the name.** The approved logo is the refined original wordmark (option B, 20 Nov 2026) with **three gold points — A, Z, D**. Eleven variants × seven colourways in `02_LOGO_SYSTEM/SVG` (PDF, EPS, PNG, JPG, WebP beside them). | 05–06 |
 | 02 | **Dark on dark, light on light.** `full-colour-dark` (Gallery White + Lamp Gold) on Gallery Black / Night / Charcoal / dark photography; `full-colour-light` (Soot + Old Gold) on Plaster / Paper / Stone / white. Never the reverse. Never on gold (except the black logo on the gold tile), never on busy imagery without the veil. | 07 |
 | 03 | **Clear space = x = ½ the cap height** of the logo in use, all round (symbol alone: ¼ of its height). Nothing enters it. | 08 |
 | 04 | **Minimum sizes:** wordmark 120 px / 28 mm · horizontal-descriptor 220 px / 50 mm · vertical stack 90 px / 22 mm · symbol 16 px / 6 mm · signature 160 px / 32 mm. Below them switch variant (simplified wordmark, small-size symbol); never shrink. | 09 |
-| 05 | **Never** stretch, rotate, outline, add shadows / bevels / glows, recolour the points, letter-space, crop the S, or fill with gradients. The points may glow in motion only. | 10 |
+| 05 | **Never** stretch, rotate, outline, add shadows / bevels / glows, recolour the points, drop or move a point, fill or close the ring around the Z point, letter-space, crop the S, or fill with gradients. The points may glow in motion only; no glow ever enters the Z ring. | 10, 23 |
 | 06 | **One gold accent per composition.** Lamp Gold `#E9B25A` on dark, Old Gold `#B8863B` on light; gold as *text* on light only as Gold Ink `#8A6124`. No tints of gold. Functional colours mark states only. | 12 |
 | 07 | **Dark is the gallery, Plaster is the label.** Screens, social, video and covers are dark (`#000000` / `#0D0D0F`); documents and print are Plaster `#F5F0E7` / Paper `#FBF8F2`. Text on dark is Gallery White `#F5F5F7`, never `#FFFFFF`. | 12 |
 | 08 | **Fraunces 300 for display** (opsz 144 ≥ 48 px, 72 for 24–48, 36 below; italic for quotes), **Inter Tight 600** for H3 / H4 / eyebrows / labels (500 + tabular numerals for data), **Inter 400** for body (500 for UI). Headlines in sentence case ending with a full stop; the last word may be `.lit` (gold) or `.dim` (mist), never both. Never letter-space Fraunces; never set it below 16 px / 9 pt. | 13 |
@@ -32,13 +32,21 @@ The idea: **Carry the light across.** A brief on one side, a visitor on the othe
 | Stationery header, document covers, signage, press | Horizontal descriptor (or secondary symbol + wordmark) | `horizontal-descriptor--…` · `secondary-symbol-wordmark--…` | 220 px / 50 mm |
 | Square or centred layouts, end cards, stamps, ID cards | Vertical stacked | `vertical-stacked--…` | 90 px / 22 mm |
 | Avatars, favicons, app icons, watermarks | Symbol / symbol tile | `symbol--…` · `symbol-tile--{dark,light,gold}` · `symbol-tile-square--…` | 16 px / 6 mm |
-| Seals, embossing, ID-card reverse, pattern | Monogram SM. | `monogram--…` | 16 px / 6 mm |
-| Engraving, embroidery, single-tool cutting | Plain wordmark | `wordmark-plain--…` | 28 mm |
-| 24–120 px / 6–28 mm | Simplified small-size | `simplified-small-size--…` | 24 px / 6 mm |
+| Seals, embossing, ID-card reverse, pattern | Monogram SM. (the M built from two of the wordmark's N) | `monogram--…` | 16 px / 6 mm |
+| Engraving, embroidery, single-tool cutting | Plain wordmark (no points; Z ring and D stem closed) | `wordmark-plain--…` | 28 mm |
+| 24–120 px / 6–28 mm | Simplified small-size (heavier strokes, larger points, Z ring re-opened) | `simplified-small-size--…` | 24 px / 6 mm |
 | Below 24 px | Small-size symbol | `symbol-small-size--…` | 12 px |
 | Letters, thank-you cards, personal sign-offs | Signature mark | `02_LOGO_SYSTEM/Signature/sanzeed-signature--{ink,white,gold,gold-light,black}.svg` | 160 px / 32 mm |
 
 Colourways (`<colour>`): `full-colour-dark` · `full-colour-light` · `black` · `white` · `grayscale` · `grayscale-inverted` · `single-colour-gold`. Favicons: `02_LOGO_SYSTEM/Favicon/`; social tiles: `02_LOGO_SYSTEM/Social_Profile/`; construction sheets: `02_LOGO_SYSTEM/Guidelines/`.
+
+### The logo: three points and the Z ring
+
+- **The mark.** The client's own hand-drawn SANZEED from sanzeed.com, cleaned letter by letter (S, A, N, D keep their shapes; the E bars are exact rectangles), with one new letter: a **Z** with straight bars and a diagonal that swoops like the N's right leg. Symbol = the refined, hooked S + full stop. Box 3692.52 × 519.33 units (7.11 : 1) — never stretch it into an older layout box.
+- **Three points, never two.** A (88 units above the baseline), **Z** and **D** (the Z point sits at the D-point height). All r 45. Gold in full colour; the ink colour in single-colour versions; none in the plain wordmark.
+- **The 14-unit ring rule.** Every point keeps 14 units of clear ground from any stroke. At the Z the diagonal runs through the point, so it is cut by a ring 14 units wide. The ring is part of the mark and is **always open**: on paper, black, photography or colour it shows the background — never fill it, outline it, close it or let a glow (or the travelling point) enter it.
+- **Clear space** is half the cap height: the capitals stand 500 units tall, so x = 250; the S overshoots the cap line by 19 units and is ignored for x.
+- **Master:** `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg` (paths `wm-S` … `wm-D`, three `wm-dot` circles) → `build_logo_refined.py` → `export_logo.py`. Construction sheet: `02_LOGO_SYSTEM/Guidelines/logo-construction.png`.
 
 ---
 

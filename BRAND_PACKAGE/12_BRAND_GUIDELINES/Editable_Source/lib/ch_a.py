@@ -164,30 +164,30 @@ def ch04():
 
 # ------------------------------------------------------------------ 05 Logo system
 FAMILY = [
-    ('1', 'Primary logo', 'primary-wordmark', 'Wordmark with the two points of light. Default everywhere: website header, covers, social banners, signage.'),
+    ('1', 'Primary logo', 'primary-wordmark', 'The refined original wordmark with its three points of light — A, Z, D. Default everywhere: website header, covers, social banners, signage.'),
     ('2', 'Secondary logo', 'secondary-symbol-wordmark', 'Symbol + wordmark, horizontal. Partner lockups, document footers, when the symbol needs introducing.'),
     ('3', 'Horizontal logo', 'horizontal-descriptor', 'Wordmark with the descriptor justified beneath. Stationery, proposals, invoices, press, anything formal.'),
     ('4', 'Vertical / stacked', 'vertical-stacked', 'Symbol, wordmark, descriptor centred. Square and centred layouts, end cards, stamps, ID cards.'),
-    ('5', 'Symbol / icon', 'symbol', 'The S with its full stop (“S.”). Avatars, favicons, app icons, watermarks, pattern.'),
-    ('6', 'Monogram', 'monogram', '“SM.” (Sanzeed Mirza). Seals, embossing, ID-card reverse, cufflink-scale uses.'),
-    ('7', 'Wordmark (plain)', 'wordmark-plain', 'Letters without dots. Engraving, embroidery, single-tool cutting where a dot cannot be produced.'),
-    ('8', 'Simplified / small-size', 'simplified-small-size', 'Heavier stroke (84), larger dots. 24–120 px on screen, 6–28 mm in print.'),
+    ('5', 'Symbol / icon', 'symbol', 'The refined S — hooked and tapered — with its full stop (“S.”). Avatars, favicons, app icons, watermarks, pattern.'),
+    ('6', 'Monogram', 'monogram', '“SM.” (Sanzeed Mirza), the M built from two of the wordmark’s N. Seals, embossing, ID-card reverse, cufflink-scale uses.'),
+    ('7', 'Wordmark (plain)', 'wordmark-plain', 'Letters without points; the Z ring and the D stem are closed. Engraving, embroidery, single-tool cutting where a dot cannot be produced.'),
+    ('8', 'Simplified / small-size', 'simplified-small-size', 'Strokes thickened 10 units per side, larger points with their rings re-opened. 24–120 px on screen, 6–28 mm in print.'),
     ('9', 'Small-size symbol', 'symbol-small-size', 'Under 24 px / 6 mm.'),
 ]
 def ch05():
     P = []
-    P.append(divider('05', 'Logo <span class="lit">system</span>.', 'Eleven variants generated from one parametric master: a 500-unit cap height, a 64-unit monoline stroke and two 45-unit points of light.',
+    P.append(divider('05', 'Logo <span class="lit">system</span>.', 'Eleven variants derived from one master: the client’s own hand-drawn wordmark, refined letter by letter, with three points of light — in the A, the Z and the D.',
         [('5.1', 'The family · primary lockups'), ('5.2', 'The family · marks and small sizes'), ('5.3', 'Which logo where')], '05 · Logo system'))
     def tile(n, name, stem, use, h='h48', pad='pad'):
         return (f'<figure class="fig"><div class="plate dark {h} {pad}"><img src="{logo(stem, "full-colour-dark")}" alt="{esc(name)}"><span class="lbl">{n} · {esc(name)}</span></div>'
                 f'<figcaption class="wall-label"><span class="title">{esc(name)}</span><span class="place">sanzeed-{stem}</span><span class="line">{esc(use)}</span></figcaption></figure>')
-    top = '<div class="g2 gap-md">' + ''.join(tile(*FAMILY[i], h='h52') for i in range(4)) + '</div>'
+    top = '<div class="g2 gap-md">' + ''.join(tile(*FAMILY[i], h='h52', pad='pad-lg' if FAMILY[i][2] == 'vertical-stacked' else 'pad') for i in range(4)) + '</div>'
     P.append(page('05 · Logo system', head('5.1 · The family — primary lockups', 'Four lockups for every <span class="lit">context</span>.', 'Shown in the full-colour-dark version on Gallery Black. Files: 02_LOGO_SYSTEM/SVG/sanzeed-&lt;variant&gt;--&lt;colour&gt;.svg, with PDF, EPS, PNG, JPG and WebP beside them.') + body(top)))
-    marks = '<div class="g3 gap-md">' + ''.join(tile(*FAMILY[i], h='h38', pad='pad-lg' if FAMILY[i][2] in ('symbol', 'monogram', 'symbol-small-size') else 'pad') for i in range(4, 9)) + (
-        f'<figure class="fig"><div class="plate dark h44" style="gap:4mm"><img src="{L(SVG+"sanzeed-symbol-tile--dark.svg")}" alt="Symbol tile dark" style="width:24%;height:auto"><img src="{L(SVG+"sanzeed-symbol-tile--light.svg")}" alt="Symbol tile light" style="width:24%;height:auto"><img src="{L(SVG+"sanzeed-symbol-tile--gold.svg")}" alt="Symbol tile gold" style="width:24%;height:auto"><span class="lbl">10 · Symbol tiles</span></div>'
+    marks = '<div class="g3 gap-md">' + ''.join(tile(*FAMILY[i], h='h28', pad='pad-lg' if FAMILY[i][2] in ('symbol', 'monogram', 'symbol-small-size') else 'pad') for i in range(4, 9)) + (
+        f'<figure class="fig"><div class="plate dark h34" style="gap:4mm"><img src="{L(SVG+"sanzeed-symbol-tile--dark.svg")}" alt="Symbol tile dark" style="width:24%;height:auto"><img src="{L(SVG+"sanzeed-symbol-tile--light.svg")}" alt="Symbol tile light" style="width:24%;height:auto"><img src="{L(SVG+"sanzeed-symbol-tile--gold.svg")}" alt="Symbol tile gold" style="width:24%;height:auto"><span class="lbl">10 · Symbol tiles</span></div>'
         f'<figcaption class="wall-label"><span class="title">Symbol tile</span><span class="place">sanzeed-symbol-tile--dark / --light / --gold (+ -square)</span><span class="line">Rounded square and square tiles. Favicon, app icon, social profile image. The black symbol on the gold tile is the one permitted use of a logo on gold.</span></figcaption></figure>') + '</div>'
-    sig = fig(L('02_LOGO_SYSTEM/Signature/sanzeed-signature--white.svg'), 'Signature mark', 'Signature/sanzeed-signature--{ink, white, gold, gold-light, black}', 'The personal layer: letters, thank-you cards, sign-offs. Never in place of the wordmark. See chapter 11.', plate='dark pad', h='h24')
-    P.append(page('05 · Logo system', head('5.2 · The family — marks and small sizes', 'The symbol, the monogram and the small <span class="lit">sizes</span>.', 'Variants 5–11. Below 120 px / 28 mm the simplified wordmark replaces the primary; below 24 px / 6 mm the small-size symbol replaces the symbol.') + body(marks + '<div class="g3 gap-md mt-3">' + sig + '<div class="c2 callout" style="align-self:center"><b class="k">The gold dots are part of the logo.</b> In single-colour versions they take the ink colour. The travelling “beam dot” exists only in motion (chapter 23). The plain wordmark is for processes that cannot produce a dot — engraving, embroidery, single-tool cutting — and nowhere else.</div></div>')))
+    sig = fig(L('02_LOGO_SYSTEM/Signature/sanzeed-signature--white.svg'), 'Signature mark', 'Signature/sanzeed-signature--{ink, white, gold, gold-light, black}', 'The personal layer: letters, thank-you cards, sign-offs. Never in place of the wordmark. See chapter 11.', plate='dark pad', h='h20')
+    P.append(page('05 · Logo system', head('5.2 · The family — marks and small sizes', 'The symbol, the monogram and the small <span class="lit">sizes</span>.', 'Variants 5–11. Below 120 px / 28 mm the simplified wordmark replaces the primary; below 24 px / 6 mm the small-size symbol replaces the symbol.') + body(marks + '<div class="g3 gap-md mt-3">' + sig + '<div class="c2 callout" style="align-self:center"><b class="k">The three gold points are part of the logo.</b> In single-colour versions they take the ink colour. The ring around the Z point is part of the mark and always shows the background through it. The travelling “beam dot” exists only in motion (chapter 23). The plain wordmark is for processes that cannot produce a dot — engraving, embroidery, single-tool cutting — and nowhere else.</div></div>')))
     where = table(['Context', 'Use this variant', 'Colour version', 'Minimum'], [
         ('Website header, social covers, presentation title', '<b>primary-wordmark</b>', 'full-colour-dark on dark · full-colour-light on light', '120 px / 28 mm'),
         ('Stationery header, document covers, signage, press', '<b>horizontal-descriptor</b> (or secondary-symbol-wordmark)', 'full-colour-light on Plaster · full-colour-dark on black', '220 px / 50 mm'),
@@ -199,9 +199,9 @@ def ch05():
         ('Below 24 px', '<b>symbol-small-size</b>', 'per background', '12 px'),
         ('Letters, thank-you cards, personal sign-offs', '<b>signature</b>', 'ink on light · white on dark · gold for foil', '160 px / 32 mm')], widths=['auto', '56mm', '70mm', '26mm'])
     ex = '<div class="g4 gap-sm mt-3">' + ''.join(fig(A(s, 1000), t, p, None, plate=pl, h='h30') for s, t, p, pl in [
-        ('16_WEBSITE_IMPLEMENTATION/screenshots/after-index-desktop-header-2x.png', 'Website header', 'primary-wordmark, 129 px wide', 'dark pad-sm'),
+        ('16_WEBSITE_IMPLEMENTATION/screenshots/after-index-desktop-header-2x.png', 'Website header', 'primary-wordmark, ≈ 122 px wide', 'dark pad-sm'),
         ('09_PRINT_STATIONERY/Letterheads/sanzeed-letterhead--a4-first.png', 'Letterhead', 'horizontal-descriptor, 56 mm, top-left', 'plaster top'),
-        ('09_PRINT_STATIONERY/ID_Card/sanzeed-id-card--back.png', 'ID card reverse', 'monogram, 16 mm', 'night cover'),
+        ('09_PRINT_STATIONERY/ID_Card/sanzeed-id-card--back.png', 'ID card reverse', 'monogram, 16 mm', 'night cover top'),
         ('02_LOGO_SYSTEM/Social_Profile/universal-profile-1024--dark-circle-preview.png', 'Profile image', 'symbol tile, circle-cropped by the platform', 'charcoal pad-sm')]).replace('h30', 'h26') + '</div>'
     P.append(page('05 · Logo system', head('5.3 · Which logo where', 'The right variant for the <span class="lit">surface</span>.', 'Brand kit rule 1. When in doubt: primary wordmark on screens, horizontal-descriptor on paper, the symbol wherever the space is square.') + body(where + ex)))
     return P
@@ -209,22 +209,38 @@ def ch05():
 # ------------------------------------------------------------------ 06 Construction
 def ch06():
     P = []
-    P.append(divider('06', 'Logo <span class="lit">construction</span>.', 'The wordmark is not typeset; it is drawn. Every stroke is generated from a handful of parameters in one Python master, so the geometry is exact in every export.',
-        [('6.1', 'Geometry on the 64-unit grid'), ('6.2', 'Parameters and the master file')], '06 · Logo construction'))
-    cons = A('02_LOGO_SYSTEM/Guidelines/logo-construction.png', 2400)
-    params = table(['Parameter', 'Value', 'What it sets'], [
-        ('CAP', '<span class="tnum">500</span>', 'Cap height; the unit everything else is measured against'),
-        ('W', '<span class="tnum">64</span>', 'Monoline stroke weight (the grid shown)'),
-        ('DOT_R', '<span class="tnum">45</span>', 'Radius of the points of light (0.7 × stroke)'),
-        ('S_R · S_D', '<span class="tnum">96 · 192</span>', 'S hook centreline radius; offset between the two hooks (they pass with a 20-unit gap)'),
-        ('A_W · N_W · Z_W', '<span class="tnum">560 · 460 · 470</span>', 'A outer width (apex pointed) · N arch width (half-circle) · Z width (vertical-cut diagonal)'),
-        ('E_W · D_W', '<span class="tnum">324 · 380</span>', 'E as three detached beams · D built on a half-circle, stem broken 14 units around the point'),
-        ('Gaps', '<span class="tnum">S–A 88 · A–N 64 · N–Z 104 · Z–E 118 · E–E 132 · E–D 118</span>', 'Letter spacing in units; never altered'),
-        ('Points', '<span class="tnum">A: 88 above baseline · D: mid-height</span>', 'The two points sit on the baseline grid, inside the A and in the stem of the D'),
+    P.append(divider('06', 'Logo <span class="lit">construction</span>.', 'The wordmark is not typeset and not redrawn: it is the client’s own hand-drawn SANZEED from sanzeed.com, cleaned letter by letter, with one new letter — the Z — and three points of light.',
+        [('6.1', 'The refined original wordmark'), ('6.2', 'The points, the ring and the master file')], '06 · Logo construction'))
+    cons = A('02_LOGO_SYSTEM/Guidelines/logo-construction.png', 2400, crop=(0, 280, 2400, 790))   # the drawing band: intro line, wordmark on its grid, guide note
+    letters = table(['Letter', 'Construction'], [
+        ('<b>S</b>', 'The original hooked, tapered S, edges smoothed. It overshoots the cap line by 19 units, as in the original, and is the letter the symbol is made from.'),
+        ('<b>A</b>', 'Pointed apex, no crossbar. The first point of light sits in its counter, 88 units above the baseline.'),
+        ('<b>N</b>', 'A straight stem and an arch that swoops down into the right leg — the arch the doorway motif is drawn from.'),
+        ('<b>Z</b>', '<b>The new letter.</b> Straight top and bottom bars; a diagonal that swoops like the N’s right leg; the third point sits on the diagonal at the D-point height, inside a thin open ring.'),
+        ('<b>E E</b>', 'Three detached bars each, exact rectangles at their original sizes.'),
+        ('<b>D</b>', 'The original bowl; the stem is broken around the point of light on the point line.')], cls='xs', widths=['14mm', 'auto'])
+    note = ('<div class="callout"><b class="k">Cleaned, not redrawn.</b> S, A, N and D keep their original shapes with smooth edges and truly straight lines; the E bars are exact; the A and D points keep their original size and position. Only the Z is new. Three guides govern the mark: the <b>cap line</b>, the <b>point line</b> (the Z and D points share one height) and the <b>baseline</b>; the S alone crosses the cap line.</div>'
+            '<p class="sm mt-2 muted">Stroke weight ≈ 64 units throughout — it is a hand-drawn stroke, cleaned, not a fixed monoline. Letter spacing is the original’s and is never altered.</p>')
+    P.append(page('06 · Logo construction', head('6.1 · The refined original wordmark', 'The original hand, <span class="lit">refined</span>.', 'The construction sheet from 02_LOGO_SYSTEM/Guidelines: the wordmark on a 20-unit grid with its cap line, point line and baseline, and the clear ring around each point (dashed).') + body(fig(cons, 'Construction', 'The refined original wordmark on a 20-unit grid (02_LOGO_SYSTEM/Guidelines/logo-construction.svg / .png)', None, plate='night', h='h62') + f'<div class="split mt-2" style="grid-template-columns:1fr 92mm">{letters}<div>{note}</div></div>')))
+    wm = '02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-3000w.png'
+    det = '<div class="g3 gap-sm">' + ''.join(fig(A(wm, 900, crop=c), t, d, None, plate='plaster pad-sm', h='h34') for c, t, d in [
+        ((390, 0, 900, 422), 'A · the first point', '88 units above the baseline, in the counter'),
+        ((1335, 0, 1790, 422), 'Z · the ringed third point', 'on the point line, cut into the diagonal by a 14-unit ring'),
+        ((2650, 0, 3000, 422), 'D · the second point', 'on the point line, in the broken stem')]) + '</div>'
+    meas = table(['Measure', 'Value', 'Notes'], [
+        ('Wordmark box', '<span class="tnum">3692.52 × 519.33</span>', 'ratio 7.11 : 1 — never stretch to an older box'),
+        ('Cap height', '<span class="tnum">500</span>', 'A, Z, E, D; the S overshoots the cap line by 19'),
+        ('Points of light', '<span class="tnum">3 · r 45</span>', 'A: 88 above the baseline · Z and D: on the point line, ≈ 248 above the baseline'),
+        ('Ring', '<span class="tnum">14</span>', 'clear ground between every point and any stroke; at the Z, a ring r 45 → 59 cut through the diagonal'),
+        ('Letter widths', '<span class="tnum">S 454 · A 590 · N 458 · Z 480 · E 324 · D 377</span>', 'measured on the master'),
+        ('Spacing', '<span class="tnum">S–A 65 · A–N 43 · N–Z 71 · Z–E 153 · E–E 178 · E–D 177</span>', 'the original’s; never altered'),
         ('Descriptor', 'Inter Tight 600, outlined', '“EXPERIENTIAL DESIGN CONSULTANT”, justified to the wordmark width in the lockups'),
-        ('Simplified', '<span class="tnum">stroke 84</span>', 'Small-size variant: heavier stroke, larger dots, same construction')], cls='xs', widths=['30mm', '46mm', 'auto'])
-    src = ('<div class="callout mt-3"><b class="k">The master.</b> <span class="mono">15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py</span> writes the per-stroke construction SVGs (<span class="mono">02_LOGO_SYSTEM/Source_Files/</span>, every stroke a named sub-path); <span class="mono">export_logo.py</span> unions them with Inkscape and writes SVG, PDF, EPS, PNG, JPG, WebP, favicons and social tiles. Change a parameter, re-run, and the whole family regenerates. Never redraw a letter by hand.</div>')
-    P.append(page('06 · Logo construction', head('6.1 · Geometry', 'Drawn on a 64-unit <span class="lit">grid</span>.', 'The construction sheet from 02_LOGO_SYSTEM/Guidelines. Cap height 500; stroke 64; point of light r 45; S hooks r 96; N and D on half-circles; E as three detached beams; Z with a vertical-cut diagonal.') + body(fig(cons, 'Construction', 'Geometry of the wordmark on the 64-unit stroke grid', None, plate='night cover', h='h46') + f'<div class="split mt-2" style="grid-template-columns:1fr 92mm">{params}{src}</div>')))
+        ('Simplified', '<span class="tnum">+10 per side · points r 50</span>', 'small-size variant: strokes thickened, rings re-opened (12 units), fitted back to the mark height')], cls='xs', widths=['26mm', '50mm', 'auto'])
+    ring = rules(['<b>Three points, never two.</b> A, Z and D, in that order. In single-colour versions they take the ink colour; the plain wordmark drops all three and closes the Z ring and the D stem.',
+                  '<b>The 14-unit ring rule.</b> Every point keeps 14 units of clear ground from any stroke. At the A and the D the letter already leaves that room; at the Z the diagonal runs through the point, so it is cut by a ring 14 units wide.',
+                  '<b>The ring is always open.</b> It shows whatever is behind the logo — paper, black, photography or colour. Never fill it, outline it, close it or let a glow enter it.'], cls='tight')
+    src = ('<div class="callout mt-3"><b class="k">The master.</b> <span class="mono">15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg</span> holds the outlines (paths <span class="mono">wm-S</span> … <span class="mono">wm-D</span>, three <span class="mono">wm-dot</span> circles). <span class="mono">build_logo_refined.py</span> derives the symbol, monogram, plain wordmark, lockups, small sizes and tiles and writes the construction SVGs (<span class="mono">02_LOGO_SYSTEM/Source_Files/</span>, every letter a named path <span class="mono">wordmark-S</span> … <span class="mono">wordmark-D</span>); <span class="mono">export_logo.py</span> unions them with Inkscape and writes every format. To change a letter, edit its path in the master and re-run — never retouch an export.</div>')
+    P.append(page('06 · Logo construction', head('6.2 · The points, the ring and the master file', 'Three points of <span class="lit">light</span>.', 'Measurements in master units on the primary wordmark. Details below from 02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-3000w.png.') + body(det + f'<div class="split mt-3" style="grid-template-columns:1fr 100mm">{meas}<div>{ring}{src}</div></div>')))
     return P
 
 # ------------------------------------------------------------------ 07 Colour versions
@@ -239,7 +255,7 @@ COLOURWAYS = [
 ]
 def ch07():
     P = []
-    P.append(divider('07', 'Logo variations &amp; colour <span class="lit">versions</span>.', 'Seven colourways of every variant, each with the background it belongs on. The pairing is a rule, not a preference.',
+    P.append(divider('07', 'Logo variations &amp; colour <span class="lit">versions</span>.', 'Seven colourways of every variant, each with the background it belongs on. The three points take gold — or the ink of a single-colour version. The pairing is a rule, not a preference.',
         [('7.1', 'The seven colourways'), ('7.2', 'Pairing matrix and the tiles')], '07 · Colour versions'))
     tiles = '<div class="g4 gap-md">' + ''.join(
         f'<figure class="fig"><div class="plate {pl} h40 pad"><img src="{logo("primary-wordmark", stem)}" alt="{esc(name)}"><span class="lbl">--{stem}</span></div><figcaption class="wall-label"><span class="title">{esc(name)}</span><span class="line">{esc(use)}</span></figcaption></figure>'
@@ -254,7 +270,7 @@ def ch07():
         ('Photography', 'full-colour-dark on the veil (≥ 80 % black) or white', 'any logo on busy or light imagery; never on gold or on gradients other than dusk / lamp')], widths=['auto', '64mm', '60mm'])
     tl = '<div class="g3 gap-sm">' + ''.join(fig(L(SVG + f'sanzeed-symbol-tile--{c}.svg'), f'Symbol tile · {c}', 'sanzeed-symbol-tile--' + c, None, plate=pl + ' pad-sm', h='h34') for c, pl in [('dark', 'charcoal'), ('light', 'stone'), ('gold', 'plaster')]) + '</div>'
     tl += '<div class="g3 gap-sm mt-3">' + ''.join(fig(L(SVG + f'sanzeed-symbol-tile-square--{c}.svg'), f'Square tile · {c}', 'sanzeed-symbol-tile-square--' + c, None, plate=pl + ' pad-sm', h='h30') for c, pl in [('dark', 'charcoal'), ('light', 'stone'), ('gold', 'plaster')]) + '</div>'
-    P.append(page('07 · Colour versions', head('7.2 · Pairing matrix and the tiles', 'Dark on dark, light on <span class="lit">light</span>.', 'Brand kit rule 2. The tiles carry their own background and are used as delivered: dark by default, light for light interfaces, gold only where a single gold object is wanted.') + body(f'<div class="split even"><div>{matrix}<p class="sm mt-3 muted">Hairlines next to the logo are white at 10 % on dark and Soot at 10 % on light. Nothing else sits inside the clear space (chapter 08).</p></div><div>{tl}</div></div>')))
+    P.append(page('07 · Colour versions', head('7.2 · Pairing matrix and the tiles', 'Dark on dark, light on <span class="lit">light</span>.', 'Brand kit rule 2. The tiles carry their own background and are used as delivered: dark by default, light for light interfaces, gold only where a single gold object is wanted.') + body(f'<div class="split even"><div>{matrix}<p class="sm mt-3 muted">The ring around the Z point is cut out, not drawn: in every colourway it shows the ground behind the logo — on photography or colour it is never filled with the letter colour or a background. Hairlines next to the logo are white at 10 % on dark and Soot at 10 % on light. Nothing else sits inside the clear space (chapter 08).</p></div><div>{tl}</div></div>')))
     return P
 
 # ------------------------------------------------------------------ 08 Clear space & placement
@@ -263,11 +279,11 @@ def ch08():
     P.append(divider('08', 'Clear space &amp; <span class="lit">placement</span>.', 'x = half the cap height of the logo in use, on all sides. Nothing enters it: no text, no edge, no other logo, no photographic detail.',
         [('8.1', 'Clear space'), ('8.2', 'Placement')], '08 · Clear space & placement'))
     cs = A('02_LOGO_SYSTEM/Guidelines/logo-clear-space.png', 2000)
-    txt = ('<p><b class="k">The measure.</b> x is half the height of the wordmark’s capitals in the lockup you are using. For the symbol on its own, x is a quarter of its height. For the stacked lockup, x is measured from the wordmark inside it.</p>'
+    txt = ('<p><b class="k">The measure.</b> x is half the height of the wordmark’s capitals in the lockup you are using — on the primary wordmark, whose capitals stand 500 units tall, x = 250 units (the S overshoot is ignored). For the symbol on its own, x is a quarter of its height. For the stacked lockup, x is measured from the wordmark inside it.</p>'
            '<p class="mt-2"><b class="k">What may not enter.</b> Text, rules, edges of the page or screen, other logos, partner marks, photographic detail, pattern above 12 %.</p>'
-           '<p class="mt-2"><b class="k">What may.</b> Flat brand colour, the lamp glow, the veil, grain. The glow in motion stays inside the clear space.</p>'
+           '<p class="mt-2"><b class="k">What may.</b> Flat brand colour, the lamp glow, the veil, grain. The glow in motion stays inside the clear space.</p><p class="mt-2"><b class="k">Inside the mark.</b> The ring around the Z point belongs to the logo, not to the clear space: it stays open to the ground behind, and nothing — text, a rule, a glow — is placed in it.</p>'
            '<p class="mt-2"><b class="k">Margins.</b> On documents the lockup sits at the 20 mm margin; the clear space is then automatically satisfied for a 56 mm lockup. On screens the nav wordmark at 18 px cap height carries 9 px of clear space built into its padding.</p>')
-    P.append(page('08 · Clear space & placement', head('8.1 · Clear space', 'Half the cap height, all <span class="lit">round</span>.', 'The clear-space sheet from 02_LOGO_SYSTEM/Guidelines, drawn for the primary wordmark, the horizontal-descriptor lockup, the vertical stack and the symbol.') + body(f'<div class="split">{"<div>"+txt+"</div>"}{fig(cs, "Clear space", "02_LOGO_SYSTEM/Guidelines/logo-clear-space.svg / .png", None, plate="night cover", h="h118")}</div>')))
+    P.append(page('08 · Clear space & placement', head('8.1 · Clear space', 'Half the cap height, all <span class="lit">round</span>.', 'The clear-space sheet from 02_LOGO_SYSTEM/Guidelines, drawn for the primary wordmark, the horizontal-descriptor lockup, the vertical stack and the symbol.') + body(f'<div class="split">{"<div>"+txt+"</div>"}{fig(cs, "Clear space", "02_LOGO_SYSTEM/Guidelines/logo-clear-space.svg / .png", None, plate="night", h="h118")}</div>')))
     pl = A('02_LOGO_SYSTEM/Guidelines/logo-placement.png', 2400)
     txt = rules(['<b>Top-left or centred.</b> The logo anchors a composition from the top-left (documents, website, social banners) or from the centre (covers, end cards, square tiles). Never bottom-right unless it is the sign-off on a cover, where it may sit bottom-left or centred with the lamp behind.',
                  '<b>Documents.</b> The horizontal-descriptor lockup sits top-left at the 20 mm margin, 56 mm wide on A4; continuation pages carry the primary wordmark at 30 mm.',
@@ -275,13 +291,13 @@ def ch08():
                  '<b>Photography.</b> The logo sits on the darkest third, under the veil, on ≥ 80 % black. Measure it; do not guess.',
                  '<b>With partners.</b> Equal cap height, separated by a hairline with 2x between marks; Sanzeed’s mark first when host, last when guest.',
                  '<b>Signage.</b> Centre line 1500 mm above finished floor for door plates; the wordmark centre 1700 mm on backdrops.'], cls='tight')
-    P.append(page('08 · Clear space & placement', head('8.2 · Placement', 'Top-left, or <span class="lit">centred</span>.', 'The placement sheet shows the approved positions on a document, a slide, a social post and a cover.') + body(f'<div class="split">{"<div>"+txt+"</div>"}{fig(pl, "Placement", "02_LOGO_SYSTEM/Guidelines/logo-placement.svg / .png", None, plate="night cover", h="h118")}</div>')))
+    P.append(page('08 · Clear space & placement', head('8.2 · Placement', 'Top-left, or <span class="lit">centred</span>.', 'The placement sheet shows the approved positions on a document, a slide, a social post and a cover.') + body(f'<div class="split">{"<div>"+txt+"</div>"}{fig(pl, "Placement", "02_LOGO_SYSTEM/Guidelines/logo-placement.svg / .png", None, plate="night", h="h118")}</div>')))
     return P
 
 # ------------------------------------------------------------------ 09 Minimum sizes
 def ch09():
     P = []
-    P.append(divider('09', 'Minimum <span class="lit">sizes</span>.', 'Below the minimum, switch variant rather than shrink: the simplified wordmark below 120 px / 28 mm, the small-size symbol below 24 px / 6 mm.',
+    P.append(divider('09', 'Minimum <span class="lit">sizes</span>.', 'Below the minimum, switch variant rather than shrink: the simplified wordmark below 120 px / 28 mm — heavier strokes, larger points, the Z ring re-opened so it never closes up — and the small-size symbol below 24 px / 6 mm.',
         [('9.1', 'Minimum sizes, at actual size')], '09 · Minimum sizes'))
     ms = A('02_LOGO_SYSTEM/Guidelines/logo-minimum-sizes@2x.png', 2000)
     t = table(['Variant', 'Screen', 'Print', 'Below that'], [
@@ -298,7 +314,7 @@ def ch09():
               f'<div style="display:flex;align-items:center;gap:4mm"><img src="{logo("vertical-stacked","full-colour-light")}" style="width:22mm" alt="stack 22 mm"><span class="xs faint tnum">22 mm · vertical stack</span></div>'
               f'<div style="display:flex;align-items:center;gap:4mm"><img src="{logo("symbol","full-colour-light")}" style="width:6mm" alt="symbol 6 mm"><img src="{logo("symbol-small-size","full-colour-light")}" style="width:4mm" alt="small symbol"><span class="xs faint tnum">6 mm · symbol · 4 mm small-size symbol</span></div>'
               f'<div style="display:flex;align-items:center;gap:4mm"><img src="{logo("simplified-small-size","full-colour-light")}" style="width:20mm" alt="simplified 20 mm"><span class="xs faint tnum">20 mm · simplified small-size wordmark</span></div></div>')
-    P.append(page('09 · Minimum sizes', head('9.1 · Minimum sizes', 'Switch variant, never <span class="lit">shrink</span>.', 'Brand kit rule 4. The sheet from 02_LOGO_SYSTEM/Guidelines shows each variant at its minimum with the small-size versions beside it.') + body(f'<div class="split" style="grid-template-columns:96mm 1fr">{"<div>"+t+actual+"</div>"}{fig(ms, "Minimum sizes", "02_LOGO_SYSTEM/Guidelines/logo-minimum-sizes.svg / @2x.png", None, plate="night cover", h="h130")}</div>')))
+    P.append(page('09 · Minimum sizes', head('9.1 · Minimum sizes', 'Switch variant, never <span class="lit">shrink</span>.', 'Brand kit rule 4. The sheet from 02_LOGO_SYSTEM/Guidelines shows each variant at its minimum with the small-size versions beside it.') + body(f'<div class="split" style="grid-template-columns:96mm 1fr">{"<div>"+t+actual+"</div>"}{fig(ms, "Minimum sizes", "02_LOGO_SYSTEM/Guidelines/logo-minimum-sizes.svg / @2x.png", None, plate="night", h="h130")}</div>')))
     return P
 
 # ------------------------------------------------------------------ 10 Incorrect usage
@@ -312,14 +328,14 @@ def ch10():
                     '<b>Do not recolour the points of light.</b> Gold, or the ink of a single-colour version.', '<b>Do not typeset the name</b> instead of the wordmark, in any typeface.',
                     '<b>Do not use the light version on dark</b>, or', '<b>the dark version on light.</b>', '<b>Do not place on busy photography</b> without the veil.',
                     '<b>Do not place the full-colour logo on gold.</b>', '<b>Do not fill with gradients</b>, textures or imagery.', '<b>Do not crop the wordmark</b> or the S.'], cls='tight')
-    also = '<p class="sm mt-3 muted">Also never: change the letter spacing, pair with the old raster signature, set the descriptor in another font or case, animate the letters by stroke-drawing or particles, or redraw any letter by hand.</p>'
-    P.append(page('10 · Incorrect usage', head('10.1 · The twelve', 'Twelve ways to break <span class="lit">it</span>.', 'The sheet from 02_LOGO_SYSTEM/Guidelines; each tile shows the error on the background where it is most tempting.') + body(f'<div class="split" style="grid-template-columns:86mm 1fr">{"<div>"+nevers+also+"</div>"}{fig(iu, "Incorrect usage", "02_LOGO_SYSTEM/Guidelines/logo-incorrect-usage.svg / .png", None, plate="night cover", h="h140")}</div>')))
+    also = '<p class="sm mt-3 muted">Also never: fill, outline or close the Z ring; drop or move a point; change the letter spacing; pair with the old raster signature, set the descriptor in another font or case, animate the letters by stroke-drawing or particles, or redraw any letter by hand.</p>'
+    P.append(page('10 · Incorrect usage', head('10.1 · The twelve', 'Twelve ways to break <span class="lit">it</span>.', 'The sheet from 02_LOGO_SYSTEM/Guidelines; each tile shows the error on the background where it is most tempting.') + body(f'<div class="split" style="grid-template-columns:96mm 1fr">{"<div>"+nevers+also+"</div>"}{fig(iu, "Incorrect usage", "02_LOGO_SYSTEM/Guidelines/logo-incorrect-usage.svg / .png", None, plate="night", h="h140")}</div>')))
     return P
 
 # ------------------------------------------------------------------ 11 Signature mark and monogram
 def ch11():
     P = []
-    P.append(divider('11', 'Signature mark and <span class="lit">monogram</span>.', 'The personal layer and the seal. The signature is Sanzeed’s hand; the monogram is the mark at cufflink scale.',
+    P.append(divider('11', 'Signature mark and <span class="lit">monogram</span>.', 'The personal layer and the seal. The signature is Sanzeed’s hand; the monogram — SM., its M made from two of the wordmark’s N — is the mark at cufflink scale.',
         [('11.1', 'The signature mark'), ('11.2', 'The monogram')], '11 · Signature & monogram'))
     sigs = [('ink', 'plaster', 'Ink #1A1816 · letters, thank-you cards, certificates on Plaster/Paper'), ('white', 'dark', 'White #F5F5F7 · website case-study sign-off, video end card'),
             ('gold', 'plaster', 'Gold #B8863B · foil or spot gold on light stock'), ('gold-light', 'dark', 'Gold light #E9B25A · gold on dark backgrounds'), ('black', 'white', 'Black #000000 · single-colour print')]
@@ -335,8 +351,8 @@ def ch11():
                   '<b>Pattern.</b> The monogram-repeat tile at ≤ 12 % opacity (05_GRAPHIC_ASSETS/Patterns).', '<b>Never as the primary mark.</b> The monogram does not replace the symbol on avatars or favicons; it is the mark where “SM.” is read as initials.'], cls='tight')
     idb = A('09_PRINT_STATIONERY/ID_Card/sanzeed-id-card--back.png', 900)
     pat = A('05_GRAPHIC_ASSETS/Patterns/png/sanzeed-pattern-monogram-repeat--light-2048.png', 1024)
-    ex = '<div class="g2 gap-sm">' + fig(idb, 'ID card, reverse', 'CR80 · monogram 16 mm', None, plate='night cover', h='h60') + fig(pat, 'Monogram repeat', 'Pattern tile, light ink, shown at full strength', None, plate='plaster cover', h='h60') + '</div>'
-    P.append(page('11 · Signature & monogram', head('11.2 · The monogram', 'SM<span class="lit">.</span> — the seal.', 'Sanzeed Mirza’s initials in the construction of the wordmark, with the point as the full stop. Seven colourways like every other variant.') + body(mono + f'<div class="split mt-4"><div>{uses}</div>{ex}</div>')))
+    ex = '<div class="g2 gap-sm">' + fig(idb, 'ID card, reverse', 'CR80 · monogram 16 mm', None, plate='night cover top', h='h60') + fig(pat, 'Monogram repeat', 'Pattern tile, light ink, shown at full strength', None, plate='plaster cover', h='h60') + '</div>'
+    P.append(page('11 · Signature & monogram', head('11.2 · The monogram', 'SM<span class="lit">.</span> — the seal.', 'Sanzeed Mirza’s initials drawn from the wordmark itself: the refined S, an M built from two of the wordmark’s N (the second N’s stem standing on the first N’s foot), and the point as the full stop. Seven colourways like every other variant.') + body(mono + f'<div class="split mt-4"><div>{uses}</div>{ex}</div>')))
     return P
 
 def back():
