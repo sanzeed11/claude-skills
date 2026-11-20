@@ -34,7 +34,7 @@ var DATA = {
   .room.sub .cap { text-align: center; white-space: nowrap; }
   .room.sub .cap .t { font-size: 20px; }
   .beam { position: absolute; left: 96px; right: 96px; top: 529px; z-index: 2; --dot: 10px; }
-  .beam::after { left: 50%; margin-left: -5px; }
+  .beam::after { display: none; }  /* the centre point would sit inside the open counter of the refined symbol S (a second dot in the mark) */
   .bottom { bottom: 72px; }
   .guide .zone.a { left: 96px; top: 340px; width: 672px; height: 378px; }
   .guide .zone.b { left: 1152px; top: 340px; width: 672px; height: 378px; }

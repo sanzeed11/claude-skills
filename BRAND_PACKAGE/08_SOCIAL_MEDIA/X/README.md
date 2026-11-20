@@ -16,12 +16,12 @@ Platform sizes change: check the platform's help page before uploading (brand ki
 
 | File | Format · pixels | Size | Use | Editable from |
 |---|---|---|---|---|
-| `sanzeed-x-profile--dark-400x400.png` | PNG · 400×400 px · sRGB | 5 KB | Profile image, dark — default | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
-| `sanzeed-x-profile--light-400x400.png` | PNG · 400×400 px · sRGB | 5 KB | Profile image, light tile | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
-| `sanzeed-x-header-1500x500.png` | PNG · 1500×500 px · sRGB | 906 KB | Header (PNG) | `Editable_Templates/x/x-header.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
+| `sanzeed-x-profile--dark-400x400.png` | PNG · 400×400 px · sRGB | 7 KB | Profile image, dark — default | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
+| `sanzeed-x-profile--light-400x400.png` | PNG · 400×400 px · sRGB | 7 KB | Profile image, light tile | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
+| `sanzeed-x-header-1500x500.png` | PNG · 1500×500 px · sRGB | 907 KB | Header (PNG) | `Editable_Templates/x/x-header.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
 | `sanzeed-x-header-1500x500.jpg` | JPG · 1500×500 px · sRGB | 157 KB | Header (JPG q90) | written by `post_process.py` |
 | `sanzeed-x-header--avatar-guide-1500x500.png` | PNG · 1500×500 px · sRGB | 928 KB | Header with the avatar overlap drawn (reference only) | same template with the guide class |
-| `sanzeed-x-post--project-1600x900.png` | PNG · 1600×900 px · sRGB | 818 KB | Post image — project (Albert Hall Projection Show) | `Editable_Templates/x/x-post-project.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
+| `sanzeed-x-post--project-1600x900.png` | PNG · 1600×900 px · sRGB | 819 KB | Post image — project (Albert Hall Projection Show) | `Editable_Templates/x/x-post-project.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
 | `sanzeed-x-post--quote-1600x900.png` | PNG · 1600×900 px · sRGB | 559 KB | Post image — statement ("Galleries planned as a route, not a floor plan.") | `Editable_Templates/x/x-post-quote.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
 | `sanzeed-x-post--stat-1600x900.png` | PNG · 1600×900 px · sRGB | 462 KB | Post image — stat, the four proof figures | `Editable_Templates/x/x-post-stat.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh x`. |
 

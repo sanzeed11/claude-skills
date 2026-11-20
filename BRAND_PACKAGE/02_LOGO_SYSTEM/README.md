@@ -35,7 +35,7 @@ Every file here is generated from that master: `15_SOURCE_FILES/Project_Files/lo
 
 | Folder | Format | Produced by | Notes |
 |---|---|---|---|
-| `Source_Files/` | SVG with every stroke as a separate editable sub-path (`id="wordmark-S-0"` …) | `build_logo.py` | the construction source; open in Illustrator, Figma, Affinity, Inkscape |
+| `Source_Files/` | SVG with every letter as a separate editable path (`id="wordmark-S"`, `wordmark-A` … `wordmark-D`) and the points as circles | `build_logo_refined.py` | the construction source; open in Illustrator, Figma, Affinity, Inkscape |
 | `SVG/` | SVG, one unioned outline per colour group | Inkscape path-union | production vector for web and apps |
 | `PDF/` | PDF 1.5, vector, cairo | Inkscape | print and office |
 | `EPS/` | EPS Level 2, vector, cairo | Inkscape `--export-type=eps` | legacy print workflows — a genuine EPS, not a renamed file |

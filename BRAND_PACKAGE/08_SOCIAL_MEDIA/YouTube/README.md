@@ -17,18 +17,18 @@ Platform sizes change: check the platform's help page before uploading (brand ki
 
 | File | Format · pixels | Size | Use | Editable from |
 |---|---|---|---|---|
-| `sanzeed-yt-profile--dark-800x800.png` | PNG · 800×800 px · sRGB | 11 KB | Channel profile image, dark — default | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
-| `sanzeed-yt-profile--light-800x800.png` | PNG · 800×800 px · sRGB | 11 KB | Channel profile image, light tile | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
+| `sanzeed-yt-profile--dark-800x800.png` | PNG · 800×800 px · sRGB | 14 KB | Channel profile image, dark — default | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
+| `sanzeed-yt-profile--light-800x800.png` | PNG · 800×800 px · sRGB | 14 KB | Channel profile image, light tile | Copied from `02_LOGO_SYSTEM/Social_Profile` (the symbol tile, S. centred); regenerate there with `export_logo.py`, then `bash Editable_Templates/render-all.sh post`. |
 | `sanzeed-yt-banner-2560x1440.png` | PNG · 2560×1440 px · sRGB | 3.7 MB | Channel banner (PNG) | `Editable_Templates/youtube/yt-banner.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
 | `sanzeed-yt-banner-2560x1440.jpg` | JPG · 2560×1440 px · sRGB | 513 KB | Channel banner (JPG q90) | written by `post_process.py` |
 | `sanzeed-yt-banner--safe-area-guide-2560x1440.png` | PNG · 2560×1440 px · sRGB | 3.7 MB | Channel banner with the TV / desktop / tablet / phone areas drawn (reference only) | same template with the guide class |
 | `sanzeed-yt-thumbnail--project-1280x720.png` | PNG · 1280×720 px · sRGB | 1.1 MB | Thumbnail — project film (Ram Katha Show) | `Editable_Templates/youtube/yt-thumb-project.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
 | `sanzeed-yt-thumbnail--project-1280x720.jpg` | JPG · 1280×720 px · sRGB | 223 KB | Thumbnail — project film (JPG q90) | written by `post_process.py` |
-| `sanzeed-yt-thumbnail--talk-1280x720.png` | PNG · 1280×720 px · sRGB | 830 KB | Thumbnail — talk / explainer, with the approved portrait plate | `Editable_Templates/youtube/yt-thumb-talk.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
+| `sanzeed-yt-thumbnail--talk-1280x720.png` | PNG · 1280×720 px · sRGB | 831 KB | Thumbnail — talk / explainer, with the approved portrait plate | `Editable_Templates/youtube/yt-thumb-talk.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
 | `sanzeed-yt-thumbnail--talk-1280x720.jpg` | JPG · 1280×720 px · sRGB | 123 KB | Thumbnail — talk (JPG q90) | written by `post_process.py` |
 | `sanzeed-yt-thumbnail--process-1280x720.png` | PNG · 1280×720 px · sRGB | 494 KB | Thumbnail — process ("The script comes first.") | `Editable_Templates/youtube/yt-thumb-process.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
 | `sanzeed-yt-thumbnail--process-1280x720.jpg` | JPG · 1280×720 px · sRGB | 91 KB | Thumbnail — process (JPG q90) | written by `post_process.py` |
-| `sanzeed-yt-end-screen-1920x1080.png` | PNG · 1920×1080 px · sRGB | 564 KB | End-screen background with the three rooms (PNG) | `Editable_Templates/youtube/yt-endscreen.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
+| `sanzeed-yt-end-screen-1920x1080.png` | PNG · 1920×1080 px · sRGB | 565 KB | End-screen background with the three rooms (PNG) | `Editable_Templates/youtube/yt-endscreen.html` · Edit the `DATA` block at the top of the source HTML, then run `bash Editable_Templates/render-all.sh youtube`. |
 | `sanzeed-yt-end-screen-1920x1080.jpg` | JPG · 1920×1080 px · sRGB | 80 KB | End-screen background (JPG q90) | written by `post_process.py` |
 | `sanzeed-yt-end-screen--element-zones-guide-1920x1080.png` | PNG · 1920×1080 px · sRGB | 582 KB | End screen with the element zones and their pixel boxes drawn (reference only) | same template with the guide class |
 

@@ -6,7 +6,8 @@ Pinterest — every file at the platform's exact pixels (brand kit §8), every e
 **The language.** Dark gallery by default: Gallery Black / Night ground, Gallery White type, one Lamp Gold accent (the lit
 last word of a headline, or the point on the beam). A light *label* variant (Plaster, Soot, Old Gold) for the 4:5 project
 post, the LinkedIn insight post and the Pinterest method pin. The `full-colour-dark` wordmark top-left with its clear space
-(`full-colour-light` on the light variant). Fraunces 300 headlines in sentence case ending with a full stop; Inter Tight 600
+(`full-colour-light` on the light variant) — the approved logo (20 Nov 2026), the refined original wordmark with its three gold
+points (A, ringed Z, D); the profile images carry the refined symbol S. Fraunces 300 headlines in sentence case ending with a full stop; Inter Tight 600
 eyebrows and wall-label titles; Inter 400 for places, body and the site line. The client's own project images, always with
 a wall label (Title · Place), under the veil when type sits on them or in a rounded "room" when not. The point and the beam
 are the only decoration; no gradients on type, no shadows, no second accent.
@@ -41,6 +42,11 @@ nothing clipped or overlapping; no empty boxes; story copy inside the 1080×1420
 areas and clear of the avatar overlaps (the `--guide` renders show the zones). All 94 raster exports were measured at their
 exact platform pixels; the carousel PDF has five 1080 × 1351 px pages (CSS `@page` 1080 × 1350 px; Chromium rounds the height up by one pixel — LinkedIn accepts it as 4:5); the six PPTX files open in LibreOffice with the brand
 fonts resolved (proofs in `Editable_Templates/PPTX/proofs/`).
+
+**Logo swap, 20 Nov 2026.** Every export above was regenerated with the approved logo (refined original wordmark, option B):
+profile images re-copied from `02_LOGO_SYSTEM/Social_Profile`, all templates re-rendered, the six PPTX rebuilt with the new
+wordmark PNG and their proofs re-exported. Spot-checked renders show the three gold points with the ringed Z, the hooked S and
+the swooping N, in the colourway that matches the ground, unstretched.
 
 ## Requirements
 

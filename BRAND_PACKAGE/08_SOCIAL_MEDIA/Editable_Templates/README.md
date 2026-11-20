@@ -35,7 +35,7 @@ grid-preview variants are made in `render-all.sh`). Safe-zone / crop guides: `--
 ## Rules the templates carry
 
 * **Theme.** `<html data-theme="dark">` = the gallery (Gallery Black / Night, Gallery White type, Lamp Gold); `data-theme="light"` = the label (Plaster, Soot, Old Gold, Gold Ink for gold text). Swap the wordmark file with the theme: `sanzeed-primary-wordmark--full-colour-dark.svg` on dark, `--full-colour-light.svg` on light. Never the other way round.
-* **Logo.** The production SVG from `02_LOGO_SYSTEM/SVG`, ≥ 180 px wide, clear space ≥ ½ its height on all sides (every template keeps a full gutter around it).
+* **Logo.** The approved refined original wordmark (three gold points: A, ringed Z, D) as the production SVG from `02_LOGO_SYSTEM/SVG`, linked at render time (never inlined), sized by width only (`--wm`, `height: auto`) so its 7.11 : 1 proportion is never stretched; ≥ 180 px wide, clear space ≥ ½ its height on all sides (every template keeps a full gutter around it).
 * **Type.** `.hl` Fraunces 300 (opsz 144, never letter-spaced) for headlines, stats and quotes (`.quote` italic); `.eyebrow` Inter Tight 600 caps +0.12 em in gold; `.label .t` Inter Tight 600, `.label .p` Inter 400 — the wall label (Title · Place).
 * **One accent.** Gold is used once per composition as the accent: the lit last word, the point on the beam / route, or the eyebrow — never two competing golds.
 * **Pictures** sit under the veil when type is on them (`.veil`, `.veil-left`…) or in a room (`.plate`, radius 28, hairline) when not; always with a wall label.
@@ -67,7 +67,7 @@ LinkedIn post, YouTube thumbnail, Facebook cover, X header. Built by `build_pptx
 * slide size = the platform's pixels at 96 dpi (1080 px = 11.25 in), so an exported PNG/JPG is the exact upload size;
 * fonts named **Fraunces Light** (display — the Light instance; plain "Fraunces" would open as the variable font's Black default), **Inter Tight** (eyebrows, wall-label titles, bold) and **Inter** (body, site); install `04_TYPOGRAPHY/Font_Files` on the editing machine;
 * the project image is embedded as a JPG that `build_pptx.py` has already cropped to the frame and darkened with the brand veil (`PPTX/assets/`, rebuilt every run — to change the picture, change the path in the script and re-run, or replace the picture in PowerPoint and keep it under a veil);
-* the logo is the production PNG; every line of copy is an editable text box (the gold last word is its own run).
+* the logo is the production PNG `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png`, read at build time and placed by width only (aspect kept); every line of copy is an editable text box (the gold last word is its own run).
 * `PPTX/proofs/*.png` are slide 1 of each file exported by LibreOffice (`soffice --headless --convert-to png`) — proof that the files open and that the brand fonts resolve. Export from PowerPoint with *File → Export → PNG* at the slide size.
 
 Requirements: Node 22 with Playwright (Chromium), Python 3 with Pillow, python-pptx and pypdf, LibreOffice for the proofs; the brand fonts installed system-wide (they are in this container).
