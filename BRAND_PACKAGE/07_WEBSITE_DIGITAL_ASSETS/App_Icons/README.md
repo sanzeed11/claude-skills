@@ -1,6 +1,6 @@
 # App_Icons — iOS, Android, Windows, macOS and PWA icons
 
-Built by `build_app_icons.py` from the logo system's SVGs (`02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile-square--dark.svg`, `sanzeed-symbol-tile--dark.svg`, `sanzeed-symbol--full-colour-dark.svg`) with cairosvg. The tile is Night `#0D0D0F`, the S Gallery White, the point Lamp Gold. Run `python3 build_app_icons.py` from this folder to rebuild everything, including `app-icons-preview.png`.
+Built by `build_app_icons.py` from the logo system's SVGs (`02_LOGO_SYSTEM/SVG/sanzeed-symbol-tile-square--dark.svg`, `sanzeed-symbol-tile--dark.svg`, `sanzeed-symbol--full-colour-dark.svg`) with cairosvg. The symbol is the approved refined S + full stop (the hooked, tapered S of the refined original wordmark, 20 Nov 2026); the symbol box is read from the SVG's viewBox (≈ 603.8 × 519.3). The tile is Night `#0D0D0F`, the S Gallery White, the point Lamp Gold. Run `python3 build_app_icons.py` from this folder to rebuild everything, including `app-icons-preview.png`.
 
 ## Files and the tags that use them
 
@@ -15,7 +15,7 @@ Built by `build_app_icons.py` from the logo system's SVGs (`02_LOGO_SYSTEM/SVG/s
 | `Android/android-maskable-512.png` | 512×512, full-bleed Night, symbol inside the central 60 % (20 % safe padding on every side) | adaptive / maskable icon; the launcher may crop to a circle, squircle or rounded square |
 | `Windows/mstile-70x70.png`, `-150x150.png`, `-310x310.png`, `-310x150.png` | transparent PNG, symbol at 50 % of the short side; tile colour comes from `browserconfig.xml` | `<meta name="msapplication-config" content="/browserconfig.xml">` and `<meta name="msapplication-TileColor" content="#0D0D0F">` |
 | `Windows/browserconfig.xml` | the four tiles + `<TileColor>#0D0D0F</TileColor>` | serve from the site root |
-| `macOS/safari-pinned-tab.svg` | single-colour symbol (black), Safari recolours it | `<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0D0D0F">` |
+| `macOS/safari-pinned-tab.svg` | single-colour symbol (black), Safari recolours it — copied from `02_LOGO_SYSTEM/Favicon/` by the script | `<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0D0D0F">` |
 | `PWA/pwa-icon-192.png`, `PWA/pwa-icon-512.png` | rounded tile, transparent corners | manifest `icons` (`purpose: any`) |
 | `PWA/pwa-maskable-512.png` | same construction as the Android maskable | manifest `icons` with `"purpose": "maskable"` |
 | `PWA/manifest.webmanifest` | name, short_name, description, icons, `theme_color` and `background_color` #0D0D0F, `display: standalone` | `<link rel="manifest" href="/manifest.webmanifest">` |

@@ -55,7 +55,7 @@ def a5():
 .back .m-ey {{ margin-top: 6mm; }}
 .back .steps {{ display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 6mm; }}
 .back .step span {{ font-size: 6.3pt; }}
-.back .contact {{ position: absolute; left: 14mm; bottom: 13mm; width: 70mm; font-size: 6.8pt; }}
+.back .contact {{ position: absolute; left: 14mm; bottom: 13mm; width: 64mm; font-size: 6.8pt; }}   /* stops ½ cap height short of the 52 mm lockup (clear space) */
 .back .lock {{ left: auto; top: auto; right: 14mm; bottom: 14mm; width: 52mm; }}   /* lockup minimum 50 mm */
 """
     front = f"""<section class="sheet grain front" id="front"><div class="in">
@@ -77,7 +77,7 @@ def a5():
   <h2 class="hl opsz72 m-hl">A method for the monumental<span class="pt">.</span></h2>
   <div class="steps">{steps_html(short=True)}</div>
   </div>
-  <div class="contact"><b>Tell me about the room.</b> {C.PROMISES[0]}<br>{C.EMAIL} · {C.WHATSAPP} · {C.PHONE}<br>{C.LINKEDIN} · {C.SITE} · {C.CITY}</div>
+  <div class="contact"><b>Tell me about the room.</b> {C.PROMISES[0]}<br>{C.EMAIL} · {C.WHATSAPP} · {C.PHONE.replace(' ', '&nbsp;')}<br>{C.LINKEDIN} · {C.SITE} · {C.CITY.replace(' ', '&nbsp;')}</div>
   <img class="mark lock" src="{logo('horizontal-descriptor','full-colour-light')}" alt="Sanzeed — Experiential Design Consultant">
 </div></section>"""
     return head("Sanzeed — A5 flyer, two sides (3 mm bleed)", "dark", css) + "<body>\n" + front + "\n" + back + "\n</body>\n</html>\n"

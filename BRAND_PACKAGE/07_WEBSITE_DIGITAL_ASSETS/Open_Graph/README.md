@@ -16,7 +16,7 @@ Open Graph / Twitter-card images at the platform size (1200×630, key content in
 | `sanzeed-og--contact-1200x630.png` / `.jpg`, `-1200x1200` | `/#contact` | “Tell me about the room.” + the confirmed contact details | `src/og-contact.html` |
 | `src/og-work--template.html` | the template for any new case study | fields `{{IMAGE}} {{CATEGORY}} {{TITLE}} {{PLACE}} {{LINE}} {{SLUG}}` | edit the layout here, not in the generated files |
 | `src/og.css` | shared layout, landscape + square (`@media (max-aspect-ratio: 1.3/1)`) | | |
-| `build_og.py` | fills the template, renders both sizes with `render.js`, writes the JPGs | `python3 build_og.py` (~1 min) | |
+| `build_og.py` | re-inlines the approved wordmark from `02_LOGO_SYSTEM/SVG` in every source (`../sync_logo.py`; refined original wordmark, three points), fills the template, renders both sizes with `render.js`, writes the JPGs | `python3 build_og.py` (~1 min) | |
 
 JPGs are q90, 4:4:4; use them where a platform caps file size (X, WhatsApp), PNG elsewhere.
 

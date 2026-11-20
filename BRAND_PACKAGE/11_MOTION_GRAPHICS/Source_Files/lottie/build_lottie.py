@@ -8,7 +8,10 @@ Writes:
 
 Shapes only (ellipses, rectangles, béziers); position / scale / opacity keyframes; the brand easing
 cubic-bezier(.22,.8,.2,1) written as keyframe handles o={x:.22,y:.8} i={x:.2,y:1}. No expressions, no effects.
-Letter geometry comes from ../_shared/wordmark-letters-unioned.svg (one outline per letter; M/L/H/V/A/Z) — arcs become cubic segments.
+Letter geometry comes from ../_shared/wordmark-letters-unioned.svg (one unioned outline per letter of the approved refined original
+wordmark, written by ../_shared/build_shared_logo.py from 02_LOGO_SYSTEM/Source_Files; M/L/C/Z); the points, the Z's ring radius and the
+reveal windows come from ../_shared/logo-geometry.json. Three points settle (A, Z, D); a layer mask keeps the Z's ring open (no halo or
+glow is ever drawn inside it).
 Run:  python3 build_lottie.py
 """
 import json, math, re, os
@@ -58,8 +61,8 @@ def arc_to_cubics(p0, rx, ry, phi, large, sweep, p1):
     return segs
 
 def svg_path_to_lottie(d):
-    """Absolute M/L/H/V/A/Z only (the construction SVGs use nothing else). Returns a list of closed Lottie shapes."""
-    toks = re.findall(r"[MLHVAZz]|-?\d*\.?\d+(?:e-?\d+)?", d)
+    """Absolute M/L/H/V/C/A/Z (what build_shared_logo.py writes). Returns a list of closed Lottie shapes."""
+    toks = re.findall(r"[MLHVCAZz]|-?\d*\.?\d+(?:e-?\d+)?", d)
     i = 0; cur = None; start = None; shapes = []; v = []; ins = []; outs = []
     def flush():
         nonlocal v, ins, outs
@@ -77,6 +80,10 @@ def svg_path_to_lottie(d):
             cur = (float(toks[i]), cur[1]); i += 1; add_vertex(cur)
         elif c == "V":
             cur = (cur[0], float(toks[i])); i += 1; add_vertex(cur)
+        elif c == "C":
+            c1x, c1y, c2x, c2y, x, y = [float(t) for t in toks[i:i + 6]]; i += 6
+            outs[-1] = (c1x - v[-1][0], c1y - v[-1][1])
+            cur = (x, y); add_vertex(cur, (c2x - x, c2y - y))
         elif c == "A":
             rx, ry, rot, la, sw, x, y = [float(t) for t in toks[i:i + 7]]; i += 7
             for (C1, C2, P3) in arc_to_cubics(cur, rx, ry, rot, int(la), int(sw), (x, y)):
@@ -84,7 +91,7 @@ def svg_path_to_lottie(d):
                 add_vertex(P3, (C2[0] - P3[0], C2[1] - P3[1]))
             cur = (x, y)
         elif c in "Zz":
-            if v and v[0] == v[-1]: ins[0] = ins[-1]; v.pop(); ins.pop(); outs.pop()
+            if v and len(v) > 1 and math.dist(v[0], v[-1]) < 1e-6: ins[0] = ins[-1]; v.pop(); ins.pop(); outs.pop()
             flush(); cur = start
     flush()
     return shapes
@@ -123,15 +130,35 @@ def read_letters():
     letters = {}
     for m in re.finditer(r'<path id="wordmark-([A-Z0-9]+)" d="([^"]+)"', src):
         letters[m.group(1)] = svg_path_to_lottie(m.group(2))
-    return letters   # S, A, N, Z, E, E2, D in source order — one unioned outline each
+    return letters   # S, A, N, Z, E1, E2, D in source order — one unioned outline each
+
+def read_geometry():
+    return json.load(open(os.path.join(HERE, "..", "_shared", "logo-geometry.json")))
+
+KAPPA = 0.5522847498
+def circle_path(cx, cy, r):
+    k = KAPPA * r
+    return {"c": True, "v": [[cx, cy - r], [cx + r, cy], [cx, cy + r], [cx - r, cy]],
+            "i": [[-k, 0], [0, -k], [k, 0], [0, k]], "o": [[k, 0], [0, k], [-k, 0], [0, -k]]}
+def rect_path(x0, y0, x1, y1):
+    return {"c": True, "v": [[x0, y0], [x1, y0], [x1, y1], [x0, y1]], "i": [[0, 0]] * 4, "o": [[0, 0]] * 4}
+def ring_masks(cx, cy, r_out, r_in):
+    """layer masks (layer space = logo units): everything, minus the Z's ring (r_in .. r_out) — the ring always shows the background."""
+    m = lambda nm, mode, sh: {"inv": False, "mode": mode, "pt": static(sh), "o": static(100), "x": static(0), "nm": nm}
+    return [m("all", "a", rect_path(-2000, -2000, 6000, 2600)), m("Z ring out", "s", circle_path(cx, cy, r_out)), m("Z point in", "a", circle_path(cx, cy, r_in))]
 
 # ------------------------------------------------------------ 1. logo reveal
 def build_reveal():
     W, H, OP = 1920, 1080, 120
-    scale = 720 / 3590 * 100                           # logo 720 px wide, as in logo-reveal/index.html
-    lx, ly = (W - 720) / 2, H / 2 - 250 * scale / 100   # top-left of the logo on the comp
+    g = read_geometry(); VW, VH = g["viewBox"][2], g["viewBox"][3]
+    scale = 720 / VW * 100                             # logo 720 px wide, as in logo-reveal/index.html
+    lx, ly = (W - 720) / 2, H / 2 - VH / 2 * scale / 100  # top-left of the logo on the comp (logo centred)
+    BY = g["beam_y"]                                   # the beam runs through the Z and D points
     letters = read_letters()
-    windows = {"S": .500, "A": .541, "N": .598, "Z": .654, "E": .732, "E2": .836, "D": 1.117}   # from the easing curve (see index.html)
+    T = g["reveal_timings_s"]
+    windows = {k: T[f"{k}-start"] for k in letters}    # from the easing curve (see index.html / build_shared_logo.py)
+    P = {k: (g["dots"][k]["cx"], g["dots"][k]["cy"]) for k in ("A", "Z", "D")}
+    zr = (P["Z"][0], P["Z"][1], g["z_ring_inner_r"], 45.5)
     layers = []; ind = 1
 
     # the lamp (behind everything: last in the array = lowest)
@@ -139,7 +166,7 @@ def build_reveal():
                  0, OP, p=(W / 2, H * .46), o=kf([(0, 0), (sec(.8), 100), (sec(2), 100), (sec(2.8), 70)]))
     # the beam hairline
     ind += 1
-    beam = layer(ind, "beam", [group("beam", [rect(0, 0, W, 1), fill(WHITE, 10)], transform())], 0, OP, p=(W / 2, H / 2),
+    beam = layer(ind, "beam", [group("beam", [rect(0, 0, W, 1), fill(WHITE, 10)], transform())], 0, OP, p=(W / 2, ly + BY * scale / 100),
                  o=kf([(0, 0), (sec(.6), 100), (sec(2), 100), (sec(2.8), 0)]))
     # letters: one layer, a group per letter with animated opacity
     ind += 1
@@ -148,22 +175,28 @@ def build_reveal():
         t0 = windows[name]
         groups.append(group("letter " + name, [path_shape(s) for s in shapes] + [fill(WHITE)], transform(o=kf([(sec(t0), 0), (sec(t0 + .4), 100)]))))
     word = layer(ind, "wordmark letters", groups, 0, OP, p=(lx, ly), s=scale)
-    # the logo's points and their pulses
+    # the logo's three points and their pulses (D, Z, A), masked so the Z's ring stays open
     ind += 1
     pulse = lambda cx, cy, t: group("pulse", [ellipse(0, 0, 200), radial(0, 0, 200, GOLD, .6, .2)],
                                     transform(p=(cx, cy), s=kf([(sec(t), [100, 100]), (sec(t + .36), [150, 150]), (sec(t + .8), [110, 110])], EASE_IO),
                                               o=kf([(sec(t), 0), (sec(t + .36), 90), (sec(t + .8), 28)], EASE_IO)))
+    settle = lambda nm, c, t: group(nm, [ellipse(0, 0, 45), fill(GOLD)], transform(p=c, s=kf([(sec(t), [160, 160]), (sec(t + .4), [100, 100])]), o=kf([(sec(t), 0), (sec(t + .4), 100)])))
     dots = layer(ind, "points", [
-        pulse(816, 412, 1.8), pulse(3242, 250, 1.7),
-        group("point A", [ellipse(0, 0, 45), fill(GOLD)], transform(p=(816, 412), s=kf([(sec(.574), [160, 160]), (sec(.974), [100, 100])]), o=kf([(sec(.574), 0), (sec(.974), 100)]))),
-        group("point D", [ellipse(0, 0, 45), fill(GOLD)], transform(p=(3242, 250), o=kf([(sec(1.5), 0), (sec(1.7), 100)]))),
+        pulse(*P["A"], 1.8), pulse(*P["Z"], 1.75), pulse(*P["D"], 1.7),
+        settle("point A", P["A"], T["A-dot"]),
+        settle("point Z", P["Z"], T["Z-dot"]),
+        group("point D", [ellipse(0, 0, 45), fill(GOLD)], transform(p=P["D"], o=kf([(sec(1.5), 0), (sec(1.7), 100)]))),
     ], 0, OP, p=(lx, ly), s=scale)
-    # the travelling point
+    dots["hasMask"] = True; dots["masksProperties"] = ring_masks(*zr)
+    # the travelling point: a static layer in logo units (so the ring mask stays put); the group travels x 0 -> D point
     ind += 1
     trav = layer(ind, "travelling point", [
-        group("halo", [ellipse(0, 0, 230), radial(0, 0, 230, GOLD, .6, .2)], transform(o=kf([(sec(.4), 0), (sec(.64), 95), (sec(1.6), 95), (sec(1.8), 0)]))),
-        group("point", [ellipse(0, 0, 45), fill(GOLD)], transform(o=kf([(sec(.4), 0), (sec(.56), 100), (sec(1.6), 100), (sec(1.8), 0)]))),
-    ], 0, OP, p=kf([(sec(.5), [lx, ly + 250 * scale / 100, 0]), (sec(1.6), [lx + 3242 * scale / 100, ly + 250 * scale / 100, 0])]), s=scale)
+        group("traveller", [
+            group("halo", [ellipse(0, 0, 230), radial(0, 0, 230, GOLD, .6, .2)], transform(o=kf([(sec(.4), 0), (sec(.64), 95), (sec(1.6), 95), (sec(1.8), 0)]))),
+            group("point", [ellipse(0, 0, 45), fill(GOLD)], transform(o=kf([(sec(.4), 0), (sec(.56), 100), (sec(1.6), 100), (sec(1.8), 0)]))),
+        ], transform(p=kf([(sec(.5), [0, BY]), (sec(1.6), [P["D"][0], BY])]))),
+    ], 0, OP, p=(lx, ly), s=scale)
+    trav["hasMask"] = True; trav["masksProperties"] = ring_masks(*zr)
     return {"v": "5.7.4", "fr": FPS, "ip": 0, "op": OP, "w": W, "h": H, "nm": "Sanzeed — logo reveal", "ddd": 0, "assets": [],
             "layers": [trav, dots, word, beam, lamp]}
 

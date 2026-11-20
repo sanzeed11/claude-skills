@@ -15,4 +15,4 @@ One message in three aspect ratios for posting the site itself (launch post, pro
 
 JPG for platforms that cap size; PNG otherwise. The 9:16 file is also the right asset for an Instagram highlight cover (the centre circle shows the wordmark and line).
 
-To change the copy, edit the three HTML files (they share `share.css`) and rebuild. The orbit illustration and the wordmark are the same inline SVGs used across the package; the point on the ring is the one gold accent beside the wordmark's own points.
+To change the copy, edit the three HTML files (they share `share.css`) and rebuild. The orbit illustration and the wordmark are the same inline SVGs used across the package (the wordmark — the approved refined original, three points — is re-inlined from `02_LOGO_SYSTEM/SVG` by `../sync_logo.py`, which `build_share.sh` runs first); the point on the ring is the one gold accent beside the wordmark's own points.

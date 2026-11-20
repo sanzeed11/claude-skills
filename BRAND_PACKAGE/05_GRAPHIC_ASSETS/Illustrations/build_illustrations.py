@@ -4,7 +4,7 @@ build_illustrations.py — editable master for every vector illustration in Illu
 
   python3 build_illustrations.py              # writes svg/, then png/ (2000 w, transparent) and pdf/ via export_svg.py
 
-Drawing language = the brand's monoline language: one even 64-unit stroke on the drawing grid, round caps and joins,
+Drawing language = the brand's monoline language: one even stroke (W = 64 on the drawing grid), round caps and joins,
 and 45-unit gold "points of light" (r = 0.7 x stroke). Secondary lines (beams, hairlines) are 20 units.
 Two inks: dark (Gallery White / Silver / Lamp Gold, for black) and light (Soot / Umber / Old Gold, for Plaster).
 All labels are outlined from the brand fonts with fontTools (szlib.text_path), so nothing depends on

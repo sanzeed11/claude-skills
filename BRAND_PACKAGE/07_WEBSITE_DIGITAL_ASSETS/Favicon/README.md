@@ -1,6 +1,6 @@
 # Favicon — the production set for sanzeed.com
 
-A copy of `02_LOGO_SYSTEM/Favicon/` (generated there by `15_SOURCE_FILES/Project_Files/logo-builder/export_logo.py` from the symbol tile `sanzeed-symbol-tile--dark.svg`). Edit the logo source and regenerate in the logo system, then copy here; do not edit these files by hand.
+A copy of `02_LOGO_SYSTEM/Favicon/` (generated there by the logo builder in `15_SOURCE_FILES/Project_Files/logo-builder/` from the symbol tile `sanzeed-symbol-tile--dark.svg`): the approved refined S + point (20 Nov 2026). Re-copied 20 Nov 2026 with `cp ../02_LOGO_SYSTEM/Favicon/* Favicon/` run from `07_WEBSITE_DIGITAL_ASSETS/`. Edit the logo source and regenerate in the logo system, then copy here; do not edit these files by hand.
 
 | File | Spec | Tag / use |
 |---|---|---|

@@ -9,18 +9,22 @@ SRC = HERE / 'src'; SRC.mkdir(exist_ok=True)
 sq_svg   = (LOGO / 'SVG/sanzeed-symbol-tile-square--dark.svg').read_text()
 tile_svg = (LOGO / 'SVG/sanzeed-symbol-tile--dark.svg').read_text()
 sym_svg  = (LOGO / 'SVG/sanzeed-symbol--full-colour-dark.svg').read_text()
-sym_path = re.search(r'<path[^>]*id="symbol-S-0"[^>]*d="([^"]+)"', sym_svg).group(1)   # S, 598×500 box
-dot = re.search(r'<circle[^/]*cx="553"[^/]*/>', sym_svg).group(0)
+# the approved symbol: the refined (hooked, tapered) S + the point — unioned S path and the dot, box read from the viewBox
+_sym = re.sub(r'\s+', ' ', sym_svg)
+SW, SH = map(float, re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', _sym).groups())   # ≈ 603.8 × 519.3
+sym_path = re.search(r'<g id="symbol-ink"[^>]*>.*?<path[^>]*?\sd="([^"]+)"', _sym).group(1)
+dot = re.search(r'<g id="symbol-dots"[^>]*>\s*(<circle[^>]*/>)', _sym).group(1)
 def wrap(w, h, inner, bg=None):
     rect = f'<rect width="{w}" height="{h}" fill="{bg}"/>' if bg else ''
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">{rect}{inner}</svg>'
-def symbol_at(x, y, s):  # symbol (598×500 units) translated and scaled
-    return f'<g transform="translate({x} {y}) scale({s})"><path fill="#F5F5F7" d="{sym_path}"/><g fill="#E9B25A">{dot}</g></g>'
+def symbol_at(x, y, s):  # symbol (SW×SH units) translated and scaled
+    return f'<g transform="translate({x:.2f} {y:.2f}) scale({s:.5f})"><path fill="#F5F5F7" d="{sym_path}"/><g fill="#E9B25A">{dot}</g></g>'
 # maskable: full-bleed Night, symbol inside the centre 60 % (20 % padding on every side)
-maskable = wrap(1000, 1000, symbol_at(201, 250, 1.0), bg='#0D0D0F')
+ms = 600 / max(SW, SH)
+maskable = wrap(1000, 1000, symbol_at((1000 - SW * ms) / 2, (1000 - SH * ms) / 2, ms), bg='#0D0D0F')
 # windows tiles: transparent, symbol ≈ 50 % of the short side
 def tile(w, h):
-    s = (min(w, h) * 0.5) / 598; sw, sh = 598 * s, 500 * s
+    s = (min(w, h) * 0.5) / SW; sw, sh = SW * s, SH * s
     return wrap(w, h, symbol_at((w - sw) / 2, (h - sh) / 2, s))
 (SRC / 'maskable-1000.svg').write_text(maskable)
 for name, svg in [('ios-source', sq_svg), ('android-source', tile_svg)]: (SRC / f'{name}.svg').write_text(svg)
@@ -52,7 +56,8 @@ for w, h in ((70, 70), (150, 150), (310, 310), (310, 150)):
   </msapplication>
 </browserconfig>
 ''')
-(HERE / 'macOS').mkdir(exist_ok=True); shutil.copy(LOGO / 'Favicon/safari-pinned-tab.svg', HERE / 'macOS/safari-pinned-tab.svg')
+(HERE / 'macOS').mkdir(exist_ok=True)   # copy of the logo system's pinned-tab SVG; a stale <desc> about the retired construction is dropped
+(HERE / 'macOS/safari-pinned-tab.svg').write_text(re.sub(r'\s*<desc>[^<]*(?:500-unit|64-unit)[^<]*</desc>', '', (LOGO / 'Favicon/safari-pinned-tab.svg').read_text()))
 (HERE / 'PWA').mkdir(exist_ok=True)
 for s in (192, 512): png(tile_svg, HERE / f'PWA/pwa-icon-{s}.png', s)
 png(maskable, HERE / 'PWA/pwa-maskable-512.png', 512)
