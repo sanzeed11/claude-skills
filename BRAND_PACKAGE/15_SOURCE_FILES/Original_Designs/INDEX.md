@@ -4,7 +4,7 @@ The masters from which the identity is generated. Change these, re-run the build
 
 | Master | What it defines | Regenerate with |
 |---|---|---|
-| `../Project_Files/logo-builder/refined_master.svg` + `build_logo_refined.py` | The approved refined original wordmark (option B) and every variant derived from it: symbol, monogram, lockups, small sizes, tiles, colourways | `python3 build_logo_refined.py construction && python3 export_logo.py construction ../../../02_LOGO_SYSTEM` |
+| `../Project_Files/logo-builder/build_logo.py` | Every letterform, dot, lockup and colourway of the logo family (parametric: cap 500, stroke 64, dot r 45) | `python3 build_logo.py construction && python3 export_logo.py construction ../../../02_LOGO_SYSTEM` |
 | `../Project_Files/logo-builder/construction/*.svg` | Per-stroke editable construction SVGs of every variant (also in `02_LOGO_SYSTEM/Source_Files`) | opened directly in Illustrator / Figma / Inkscape |
 | `../Project_Files/logo-builder/build_logo_guides.py` | Clear-space, minimum-size, incorrect-usage, construction and placement sheets | `python3 build_logo_guides.py` |
 | `../Project_Files/colour-builder/build_colour.py` | The palette (names, HEX, roles, usage), gradients, themes, contrast matrix, Pantone proximity, swatches | `python3 build_colour.py ../../../03_COLOUR_SYSTEM` |

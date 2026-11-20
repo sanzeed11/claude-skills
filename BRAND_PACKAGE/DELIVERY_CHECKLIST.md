@@ -48,7 +48,7 @@ Generated from the files on disk by `15_SOURCE_FILES/Project_Files/qa/build_chec
 | Format: JPG on white | ✅ complete | 69 | JPG | `02_LOGO_SYSTEM/JPG/sanzeed-horizontal-descriptor--black-3000w-on-white.jpg`<br>`02_LOGO_SYSTEM/JPG/sanzeed-horizontal-descriptor--full-colour-dark-3000w-on-dark.jpg`<br>`02_LOGO_SYSTEM/JPG/sanzeed-horizontal-descriptor--full-colour-light-3000w-on-white.jpg`<br>… +66 more |
 | Format: WebP | ✅ complete | 69 | WEBP | `02_LOGO_SYSTEM/WebP/sanzeed-horizontal-descriptor--black-3000w.webp`<br>`02_LOGO_SYSTEM/WebP/sanzeed-horizontal-descriptor--full-colour-dark-3000w.webp`<br>`02_LOGO_SYSTEM/WebP/sanzeed-horizontal-descriptor--full-colour-light-3000w.webp`<br>… +66 more |
 | Format: AI — NOT SUPPLIED (proprietary; cannot be written here — SVG/PDF open natively in Illustrator; see 02 README) | ⚠️ limitation | 0 | — | see `02_LOGO_SYSTEM/README.md` |
-| Editable construction source (parametric master + per-stroke SVGs) | ✅ complete | 70 | PY, SVG | `15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py`<br>`02_LOGO_SYSTEM/Source_Files/sanzeed-horizontal-descriptor--black.svg`<br>`02_LOGO_SYSTEM/Source_Files/sanzeed-horizontal-descriptor--full-colour-dark.svg`<br>… +67 more |
+| Editable logo master (refined original wordmark + per-letter SVGs) | ✅ complete | 71 | PY, SVG | `15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py`<br>`15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg`<br>`02_LOGO_SYSTEM/Source_Files/sanzeed-horizontal-descriptor--black.svg`<br>… +68 more |
 
 ## PHASE 2.2 — COLOUR SYSTEM
 
@@ -173,7 +173,7 @@ Generated from the files on disk by `15_SOURCE_FILES/Project_Files/qa/build_chec
 | Branded video intro | ✅ complete | 8 | GIF, JPG, MP4, WEBM | `11_MOTION_GRAPHICS/Intros_Outros/sanzeed-intro--1080x1920--poster.jpg`<br>`11_MOTION_GRAPHICS/Intros_Outros/sanzeed-intro--1080x1920.gif`<br>`11_MOTION_GRAPHICS/Intros_Outros/sanzeed-intro--1080x1920.mp4`<br>… +5 more |
 | Branded video outro | ✅ complete | 8 | GIF, JPG, MP4, WEBM | `11_MOTION_GRAPHICS/Intros_Outros/sanzeed-outro--1080x1920--poster.jpg`<br>`11_MOTION_GRAPHICS/Intros_Outros/sanzeed-outro--1080x1920.gif`<br>`11_MOTION_GRAPHICS/Intros_Outros/sanzeed-outro--1080x1920.mp4`<br>… +5 more |
 | Lower thirds | ✅ complete | 15 | JPG, MOV, MP4, PNG, WEBM | `11_MOTION_GRAPHICS/Lower_Thirds/sanzeed-lower-third--name--alpha-1920x1080--poster.png`<br>`11_MOTION_GRAPHICS/Lower_Thirds/sanzeed-lower-third--name--alpha-1920x1080.mov`<br>`11_MOTION_GRAPHICS/Lower_Thirds/sanzeed-lower-third--name--alpha-1920x1080.webm`<br>… +12 more |
-| Editable animation sources (HTML/CSS + Lottie JSON) | ✅ complete | 27 | HTML, JSON | `11_MOTION_GRAPHICS/Source_Files/intro/index.html`<br>`11_MOTION_GRAPHICS/Source_Files/loader/index.html`<br>`11_MOTION_GRAPHICS/Source_Files/logo-outro/index.html`<br>… +24 more |
+| Editable animation sources (HTML/CSS + Lottie JSON) | ✅ complete | 28 | HTML, JSON | `11_MOTION_GRAPHICS/Source_Files/intro/index.html`<br>`11_MOTION_GRAPHICS/Source_Files/loader/index.html`<br>`11_MOTION_GRAPHICS/Source_Files/logo-outro/index.html`<br>… +25 more |
 | Motion principles (timing, easing, transitions, rules) | ✅ complete | 1 | MD | `11_MOTION_GRAPHICS/Motion_Principles.md` |
 
 ## PHASE 8 — BRAND GUIDELINES
@@ -200,8 +200,8 @@ Generated from the files on disk by `15_SOURCE_FILES/Project_Files/qa/build_chec
 | Deliverable | Status | Files | Formats | Example path(s) |
 |---|---|---|---|---|
 | Original assets backup (untouched) | ✅ complete | 139 | HTML, JPG, MD, PNG, SVG, TXT, VCF, WEBP, WOFF, WOFF2, XML | `00_ORIGINAL_ASSETS_BACKUP/README.md`<br>`00_ORIGINAL_ASSETS_BACKUP/fonts/Fraunces-italic-300.woff`<br>`00_ORIGINAL_ASSETS_BACKUP/fonts/Fraunces-normal-300.woff`<br>… +136 more |
-| Brand kit (tokens CSS, render/capture/export/print helpers, production brief) | ✅ complete | 6 | CSS, JS, MD, PY | `15_SOURCE_FILES/Project_Files/brand-kit/BRAND_KIT_SPEC.md`<br>`15_SOURCE_FILES/Project_Files/brand-kit/brand.css`<br>`15_SOURCE_FILES/Project_Files/brand-kit/doc.css`<br>… +3 more |
-| Logo builder, colour builder, QA scripts | ✅ complete | 7 | PY | `15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py`<br>`15_SOURCE_FILES/Project_Files/logo-builder/build_logo_guides.py`<br>`15_SOURCE_FILES/Project_Files/logo-builder/export_logo.py`<br>… +4 more |
+| Brand kit (tokens CSS, render/capture/export/print helpers, production brief) | ✅ complete | 7 | CSS, JS, MD, PY | `15_SOURCE_FILES/Project_Files/brand-kit/BRAND_KIT_SPEC.md`<br>`15_SOURCE_FILES/Project_Files/brand-kit/LOGO_REBUILD_BRIEF.md`<br>`15_SOURCE_FILES/Project_Files/brand-kit/brand.css`<br>… +4 more |
+| Logo builder, colour builder, QA scripts | ✅ complete | 9 | PY | `15_SOURCE_FILES/Project_Files/logo-builder/build_logo_geometric_v1.py`<br>`15_SOURCE_FILES/Project_Files/logo-builder/build_logo_guides.py`<br>`15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py`<br>… +6 more |
 | Original designs / editable assets index | ✅ complete | 2 | MD | `15_SOURCE_FILES/Original_Designs/INDEX.md`<br>`15_SOURCE_FILES/Editable_Assets/INDEX.md` |
 | README.md (package guide) | ✅ complete | 1 | MD | `README.md` |
 | QA report | ✅ complete | 1 | MD | `QA_REPORT.md` |
@@ -211,21 +211,21 @@ Generated from the files on disk by `15_SOURCE_FILES/Project_Files/qa/build_chec
 | Folder | Files | Size |
 |---|---|---|
 | `00_ORIGINAL_ASSETS_BACKUP` | 139 | 16.8 MB |
-| `01_BRAND_STRATEGY` | 20 | 15.1 MB |
-| `02_LOGO_SYSTEM` | 781 | 18.7 MB |
+| `01_BRAND_STRATEGY` | 20 | 15.2 MB |
+| `02_LOGO_SYSTEM` | 815 | 24.1 MB |
 | `03_COLOUR_SYSTEM` | 63 | 4.9 MB |
-| `04_TYPOGRAPHY` | 59 | 20.4 MB |
-| `05_GRAPHIC_ASSETS` | 674 | 18.0 MB |
+| `04_TYPOGRAPHY` | 59 | 20.5 MB |
+| `05_GRAPHIC_ASSETS` | 674 | 18.1 MB |
 | `06_PHOTOGRAPHY_ART_DIRECTION` | 146 | 76.9 MB |
-| `07_WEBSITE_DIGITAL_ASSETS` | 208 | 50.2 MB |
-| `08_SOCIAL_MEDIA` | 166 | 66.8 MB |
-| `09_PRINT_STATIONERY` | 199 | 27.7 MB |
-| `10_MARKETING_COLLATERAL` | 398 | 118.6 MB |
-| `11_MOTION_GRAPHICS` | 315 | 103.6 MB |
-| `12_BRAND_GUIDELINES` | 561 | 98.5 MB |
-| `13_BRAND_MOCKUPS` | 149 | 44.8 MB |
-| `14_PRESENTATION` | 188 | 74.0 MB |
-| `15_SOURCE_FILES` | 89 | 0.5 MB |
-| `16_WEBSITE_IMPLEMENTATION` | 247 | 32.7 MB |
+| `07_WEBSITE_DIGITAL_ASSETS` | 209 | 50.5 MB |
+| `08_SOCIAL_MEDIA` | 166 | 66.9 MB |
+| `09_PRINT_STATIONERY` | 199 | 28.4 MB |
+| `10_MARKETING_COLLATERAL` | 398 | 119.0 MB |
+| `11_MOTION_GRAPHICS` | 317 | 105.3 MB |
+| `12_BRAND_GUIDELINES` | 564 | 99.5 MB |
+| `13_BRAND_MOCKUPS` | 149 | 45.7 MB |
+| `14_PRESENTATION` | 193 | 76.1 MB |
+| `15_SOURCE_FILES` | 97 | 1.1 MB |
+| `16_WEBSITE_IMPLEMENTATION` | 247 | 33.4 MB |
 
-**Deliverables complete: 133 / 134** · package size 788 MB
+**Deliverables complete: 133 / 134** · package size 802 MB

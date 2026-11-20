@@ -176,7 +176,7 @@ def ch14():
              + demo('Wall label · Title · Place · one line', '<div style="position:absolute;left:5mm;right:5mm;top:7mm;border-top:1px solid rgba(255,255,255,.14);padding-top:2mm"><div style="font:600 8pt/1.3 var(--font-heading);color:#F5F5F7">Prime Minister Museum <span style="color:#808086;font-weight:400;font-family:var(--font-text)">· New Delhi</span></div><div style="font:400 7pt/1.4 var(--font-text);color:#A1A1A6">A corridor you walk in order.</div></div>')
              + '</div>')
     t = table(['Element', 'Specification', 'Use'], [
-        ('<b>The point</b>', 'Gold dot, r = 0.7 × the stroke of its context; may glow (--glow) on dark', 'Ends headlines, marks positions on maps and timelines, sits in the counter of the D'),
+        ('<b>The point</b>', 'Gold dot, r = 0.7 × the stroke of its context; may glow (--glow) on dark', 'Ends headlines, marks positions on maps and timelines, sits in the A, the Z and the D of the wordmark'),
         ('<b>The beam</b>', '1 px hairline (white 10 % on dark, Soot 10 % on light) the point travels along', 'Horizontal rules, timelines, route lines, dividers'),
         ('<b>The room</b>', 'Rounded rectangle, radius 28 (20 small), hairline border, Charcoal on dark / Paper on light', 'Cards, frames, image plates, slides'),
         ('<b>The doorway / arch</b>', 'The arch shared by the N and the M', 'An arch window or frame motif for covers and pattern'),

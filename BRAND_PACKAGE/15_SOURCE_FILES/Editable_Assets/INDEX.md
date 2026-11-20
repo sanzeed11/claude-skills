@@ -5,23 +5,23 @@ Every export in this package has an editable source. Sources are kept **beside t
 | Folder | Editable sources | Count |
 |---|---|---|
 | `01_BRAND_STRATEGY` | 1 × .html, 1 × .py, 1 × .svg | 3 |
-| `02_LOGO_SYSTEM` | 1 × .html, 1 × .json, 211 × .svg | 213 |
+| `02_LOGO_SYSTEM` | 1 × .html, 1 × .json, 219 × .svg | 221 |
 | `03_COLOUR_SYSTEM` | 1 × .css, 1 × .html, 1 × .js, 1 × .json, 1 × .py, 28 × .svg | 33 |
 | `04_TYPOGRAPHY` | 1 × .css, 11 × .html, 1 × .json, 2 × .py, 1 × .sh | 16 |
 | `05_GRAPHIC_ASSETS` | 2 × .css, 21 × .html, 8 × .py, 209 × .svg | 240 |
 | `06_PHOTOGRAPHY_ART_DIRECTION` | 10 × .html, 1 × .json, 7 × .py, 7 × .svg | 25 |
-| `07_WEBSITE_DIGITAL_ASSETS` | 6 × .css, 26 × .html, 2 × .py, 4 × .sh, 24 × .svg | 62 |
+| `07_WEBSITE_DIGITAL_ASSETS` | 6 × .css, 26 × .html, 3 × .py, 4 × .sh, 24 × .svg | 63 |
 | `08_SOCIAL_MEDIA` | 1 × .css, 39 × .html, 1 × .js, 6 × .pptx, 3 × .py, 1 × .sh | 51 |
 | `09_PRINT_STATIONERY` | 6 × .docx, 3 × .html, 1 × .pptx, 17 × .py, 26 × .svg | 53 |
 | `10_MARKETING_COLLATERAL` | 1 × .css, 3 × .docx, 57 × .html, 1 × .js, 2 × .json, 2 × .pptx, 15 × .py, 31 × .svg | 112 |
-| `11_MOTION_GRAPHICS` | 3 × .css, 26 × .html, 5 × .js, 3 × .json, 3 × .py, 2 × .sh, 5 × .svg | 47 |
+| `11_MOTION_GRAPHICS` | 3 × .css, 26 × .html, 5 × .js, 4 × .json, 4 × .py, 2 × .sh, 5 × .svg | 49 |
 | `12_BRAND_GUIDELINES` | 1 × .css, 30 × .html, 7 × .py | 38 |
 | `13_BRAND_MOCKUPS` | 1 × .css, 36 × .html, 1 × .js, 2 × .py | 40 |
-| `14_PRESENTATION` | 1 × .html, 1 × .json, 1 × .pptx, 1 × .py | 4 |
-| `15_SOURCE_FILES` | 2 × .css, 2 × .js, 1 × .json, 9 × .py, 70 × .svg | 84 |
+| `14_PRESENTATION` | 1 × .html, 1 × .json, 1 × .pptx, 1 × .py, 1 × .svg | 5 |
+| `15_SOURCE_FILES` | 2 × .css, 2 × .js, 1 × .json, 11 × .py, 72 × .svg | 88 |
 | `16_WEBSITE_IMPLEMENTATION` | 1 × .css, 10 × .html, 1 × .js, 1 × .json, 2 × .py, 2 × .svg | 17 |
 
-Total editable source files: **1038**
+Total editable source files: **1054**
 
 ## Full listing
 
@@ -84,6 +84,14 @@ Total editable source files: **1038**
 - `02_LOGO_SYSTEM/Guidelines/logo-incorrect-usage.svg`
 - `02_LOGO_SYSTEM/Guidelines/logo-minimum-sizes.svg`
 - `02_LOGO_SYSTEM/Guidelines/logo-placement.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop--black.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop--full-colour-dark.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop--full-colour-light.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop--white.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop-ring--black.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop-ring--full-colour-dark.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop-ring--full-colour-light.svg`
+- `02_LOGO_SYSTEM/Refined_Original_Proposals/sanzeed-wordmark--refined-swoop-ring--white.svg`
 - `02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--black.svg`
 - `02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-dark.svg`
 - `02_LOGO_SYSTEM/SVG/sanzeed-horizontal-descriptor--full-colour-light.svg`
@@ -637,6 +645,7 @@ Total editable source files: **1038**
 - `07_WEBSITE_DIGITAL_ASSETS/Website_Graphics/src/orbit-lamp--dark.svg`
 - `07_WEBSITE_DIGITAL_ASSETS/Website_Graphics/src/orbit-lamp--light.svg`
 - `07_WEBSITE_DIGITAL_ASSETS/Website_Graphics/src/social-proof-strip.html`
+- `07_WEBSITE_DIGITAL_ASSETS/sync_logo.py`
 
 ### 08_SOCIAL_MEDIA
 
@@ -865,6 +874,8 @@ Total editable source files: **1038**
 
 ### 11_MOTION_GRAPHICS
 
+- `11_MOTION_GRAPHICS/Source_Files/_shared/build_shared_logo.py`
+- `11_MOTION_GRAPHICS/Source_Files/_shared/logo-geometry.json`
 - `11_MOTION_GRAPHICS/Source_Files/_shared/signature-source.svg`
 - `11_MOTION_GRAPHICS/Source_Files/_shared/symbol-source.svg`
 - `11_MOTION_GRAPHICS/Source_Files/_shared/wordmark-letters-unioned.svg`
@@ -1002,6 +1013,7 @@ Total editable source files: **1038**
 - `14_PRESENTATION/Editable_Presentation/Brand_Presentation.pptx`
 - `14_PRESENTATION/src/Brand_Presentation.html`
 - `14_PRESENTATION/src/build_presentation.py`
+- `14_PRESENTATION/src/derived/sanzeed-original-wordmark--live-site--full-colour-dark.svg`
 - `14_PRESENTATION/src/slide-index.json`
 
 ### 15_SOURCE_FILES
@@ -1013,8 +1025,9 @@ Total editable source files: **1038**
 - `15_SOURCE_FILES/Project_Files/brand-kit/print_pdf.py`
 - `15_SOURCE_FILES/Project_Files/brand-kit/render.js`
 - `15_SOURCE_FILES/Project_Files/colour-builder/build_colour.py`
-- `15_SOURCE_FILES/Project_Files/logo-builder/build_logo.py`
+- `15_SOURCE_FILES/Project_Files/logo-builder/build_logo_geometric_v1.py`
 - `15_SOURCE_FILES/Project_Files/logo-builder/build_logo_guides.py`
+- `15_SOURCE_FILES/Project_Files/logo-builder/build_logo_refined.py`
 - `15_SOURCE_FILES/Project_Files/logo-builder/construction/manifest.json`
 - `15_SOURCE_FILES/Project_Files/logo-builder/construction/sanzeed-construction-sheet.svg`
 - `15_SOURCE_FILES/Project_Files/logo-builder/construction/sanzeed-horizontal-descriptor--black.svg`
@@ -1087,6 +1100,9 @@ Total editable source files: **1038**
 - `15_SOURCE_FILES/Project_Files/logo-builder/construction/sanzeed-wordmark-plain--single-colour-gold.svg`
 - `15_SOURCE_FILES/Project_Files/logo-builder/construction/sanzeed-wordmark-plain--white.svg`
 - `15_SOURCE_FILES/Project_Files/logo-builder/export_logo.py`
+- `15_SOURCE_FILES/Project_Files/logo-builder/refined_master.svg`
+- `15_SOURCE_FILES/Project_Files/logo-builder/refined_master_plain_z.svg`
+- `15_SOURCE_FILES/Project_Files/logo-builder/retrace_lib.py`
 - `15_SOURCE_FILES/Project_Files/qa/build_checklist.py`
 - `15_SOURCE_FILES/Project_Files/qa/build_source_index.py`
 - `15_SOURCE_FILES/Project_Files/qa/qa_audit.py`
