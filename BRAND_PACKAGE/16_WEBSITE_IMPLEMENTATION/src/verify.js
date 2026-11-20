@@ -11,7 +11,7 @@ const { chromium } = require('playwright');
 const { spawn } = require('child_process');
 const http = require('http'), path = require('path'), fs = require('fs');
 const SITE = path.resolve(__dirname, '..'), SHOTS = path.join(SITE, 'screenshots');
-const argv = process.argv.slice(2); const bi = argv.indexOf('--before'); const BEFORE = bi >= 0 ? argv[bi + 1] : null;
+const argv = process.argv.slice(2); const LOADER_ONLY = argv.includes('--loader-only'); const bi = argv.indexOf('--before'); const BEFORE = bi >= 0 ? argv[bi + 1] : null;
 fs.mkdirSync(SHOTS, { recursive: true });
 const EXTERNAL = /gc\.zgo\.at|goatcounter|drive\.google|googleapis|gstatic|unpkg|cdn/;
 const PAGES = [['index', '/'], ['work-prime-minister-museum', '/work/prime-minister-museum.html'], ['work-ram-katha-show', '/work/ram-katha-show.html'], ['work-buddha-park', '/work/buddha-park.html']];
@@ -34,6 +34,14 @@ async function settle(page) {
   await page.evaluate(() => document.fonts.ready); await page.waitForTimeout(900);
 }
 
+/* the home page switches theme through a View Transitions cross-fade (≈ 2 s); wait until the body has the new
+   background (Plaster / Gallery Black) instead of a fixed delay, then let the transition paint */
+async function themeSettled(page, minWait) {
+  await page.waitForTimeout(minWait);
+  await page.waitForFunction(() => { const t = document.documentElement.getAttribute('data-theme'); const bg = getComputedStyle(document.body).backgroundColor;
+    return t === 'light' ? bg === 'rgb(245, 240, 231)' : bg === 'rgb(0, 0, 0)' || bg === 'rgb(13, 13, 15)'; }, null, { timeout: 9000, polling: 100 }).catch(() => {});
+  await page.waitForTimeout(600);
+}
 async function audit(browser, base, name, url, vp, label) {
   const [vn, w, h] = vp; const tag = `${label}-${name}-${vn}`;
   const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, colorScheme: 'dark' });
@@ -80,7 +88,7 @@ async function audit(browser, base, name, url, vp, label) {
     await page.evaluate(() => { const go = (y) => { if (window.__lenis) window.__lenis.scrollTo(y, { immediate: true }); window.scrollTo(0, y); }; go(0); }); await page.waitForTimeout(400);
   }
   // theme toggle
-  await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 2600 : 900);   // index cross-fades via View Transitions
+  await page.evaluate(() => document.querySelector('.theme').click()); await themeSettled(page, name === 'index' ? 1500 : 500);   // index cross-fades via View Transitions
   r.theme = await page.evaluate(() => ({ after: document.documentElement.getAttribute('data-theme'), bg: getComputedStyle(document.body).backgroundColor, fg: getComputedStyle(document.body).color }));
   await page.screenshot(jpg(`${tag}-light.jpg`));
   await page.screenshot({ ...jpg(`${tag}-light-full.jpg`), fullPage: true });
@@ -91,9 +99,20 @@ async function audit(browser, base, name, url, vp, label) {
 
 async function loaderFrames(browser, base, label) {   // the loader: clip-path wipe + travelling beam dot on the new artwork
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, colorScheme: 'dark' });
-  const page = await ctx.newPage(); await page.goto(base + '/', { waitUntil: 'commit' });
-  await page.waitForSelector('.loader .wm svg'); await page.waitForTimeout(420);
-  await page.screenshot(jpg(`${label}-index-desktop-loader-frame.jpg`)); await ctx.close();
+  const page = await ctx.newPage();
+  await page.addInitScript(() => { const iv = setInterval(() => { const r = document.querySelector('#ldClip rect'); if (!r || !window.gsap) return;
+    const w = +r.getAttribute('width'), W = r.closest('svg').viewBox.baseVal.width; if (w > 0 && w < W) { window.gsap.globalTimeline.pause(); window.__ldFrozen = true; clearInterval(iv); } }, 4); });
+  await page.goto(base + '/', { waitUntil: 'commit' });
+  await page.waitForSelector('.loader .wm svg');
+  // the wipe lasts 1.1 s while the three.js module is still booting, so a fixed delay is unreliable: an in-page watcher
+  // (added before the page's scripts) freezes GSAP as soon as the clip is 40–75 % open; capture, then let it run on
+  await page.waitForFunction(() => window.__ldFrozen, null, { timeout: 15000, polling: 100 }).catch(() => console.log('loader: watcher did not fire'));
+  // the main thread is busy compiling the three.js module during the wipe, so the frozen moment is early; seek the site's own
+  // loader timeline (paused) to its midpoint so the frame shows the clip half open and the beam dot mid-travel
+  console.log('loader frame', await page.evaluate(() => { const r = document.querySelector('#ldClip rect'); const tw = window.gsap && window.gsap.getTweensOf(r)[0];
+    if (tw && tw.parent) tw.parent.progress(.55); return [r.getAttribute('width'), document.querySelector('.loader .beam-dot').getAttribute('cx')]; }));
+  await page.screenshot(jpg(`${label}-index-desktop-loader-frame.jpg`));
+  await page.evaluate(() => window.gsap && window.gsap.globalTimeline.resume()); await ctx.close();
 }
 /* The footer signature writes itself when it arrives (`.sig.on` → sigWrite 2.2 s) and the site's JS restarts the write
    every 5 s while it stays on screen, so a capture taken at a fixed delay can catch it mid-stroke (pen line + a few
@@ -125,13 +144,13 @@ async function headerShots(browser, base, name, url, label, footers) {
     const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 2, colorScheme: 'dark' });
     const page = await ctx.newPage(); await page.goto(base + url, { waitUntil: 'load' }); await settle(page); await page.waitForTimeout(600);
     await shot(page, 'header.nav', `${label}-${name}-${vn}-header-2x.png`);
-    await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 1500 : 700);   // index cross-fades via View Transitions
+    await page.evaluate(() => document.querySelector('.theme').click()); await themeSettled(page, name === 'index' ? 1500 : 500);   // index cross-fades via View Transitions
     await shot(page, 'header.nav', `${label}-${name}-${vn}-header-2x-light.png`);
     if (label === 'after') {                              // footer: lockup + signature, light then dark, signature settled
       await scrollThrough(page);
       const light = await settledSignature(page, true);
       await shot(page, '.foot2', `${label}-${name}-${vn}-footer-2x-light.png`);
-      await page.evaluate(() => document.querySelector('.theme').click()); await page.waitForTimeout(name === 'index' ? 2600 : 900);
+      await page.evaluate(() => document.querySelector('.theme').click()); await themeSettled(page, name === 'index' ? 1500 : 500);   // index cross-fades via View Transitions
       const dark = await settledSignature(page, false);
       await shot(page, '.foot2', `${label}-${name}-${vn}-footer-2x.png`);
       if (footers) footers.push({ page: name, viewport: vn, light, dark });
@@ -157,6 +176,7 @@ async function files(browser, base) {
   let bsrv = null, bbase = null; if (BEFORE) { bsrv = serve(BEFORE, 8766); await ready(8766); bbase = 'http://127.0.0.1:8766'; }
   const browser = await chromium.launch(); const report = { after: [], before: [], footers: [], files: {} };
   try {
+    if (LOADER_ONLY) { await loaderFrames(browser, base, 'after'); console.log('loader frame only'); return; }
     for (const [name, url] of PAGES) { for (const vp of VIEWPORTS) { const r = await audit(browser, base, name, url, vp, 'after'); report.after.push(r); console.log('after', name, vp[0], 'errors', r.localErrors.length, 'failed', r.localFailures.length, 'fonts', r.fonts.fraunces, r.fonts.inter, r.fonts.tight, 'wm', JSON.stringify(r.wordmark && [r.wordmark.width, r.wordmark.height]), 'theme', r.theme.after, r.gallery ? JSON.stringify(r.gallery) : ''); } }
     await loaderFrames(browser, base, 'after');
     for (const [name, url] of PAGES) await headerShots(browser, base, name, url, 'after', report.footers);

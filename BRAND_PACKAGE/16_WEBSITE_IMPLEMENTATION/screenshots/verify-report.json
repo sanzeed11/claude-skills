@@ -19,24 +19,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": true
+        "loaderClip": true,
+        "loaderClipWidth": "3729",
+        "beamDotCy": "291.60"
       },
       "signature": [
         {
           "src": "img/sanzeed-signature--ink.svg",
-          "ok": true
+          "shown": false,
+          "ok": false
         },
         {
           "src": "img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -44,7 +63,9 @@
         "visibleDefault": 12,
         "visibleProjection": 12,
         "pressed": "projection",
-        "visibleSearchAyodhya": 2
+        "countLabelProjection": "15 projects",
+        "visibleSearchAyodhya": 2,
+        "countLabelSearch": "2 projects"
       },
       "theme": {
         "after": "light",
@@ -79,24 +100,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": true
+        "loaderClip": true,
+        "loaderClipWidth": "3729",
+        "beamDotCy": "291.60"
       },
       "signature": [
         {
           "src": "img/sanzeed-signature--ink.svg",
-          "ok": false
+          "shown": false,
+          "ok": true
         },
         {
           "src": "img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -104,7 +144,9 @@
         "visibleDefault": 12,
         "visibleProjection": 12,
         "pressed": "projection",
-        "visibleSearchAyodhya": 2
+        "countLabelProjection": "15 projects",
+        "visibleSearchAyodhya": 2,
+        "countLabelSearch": "2 projects"
       },
       "theme": {
         "after": "light",
@@ -138,24 +180,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
+          "shown": false,
           "ok": true
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -191,24 +252,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
+          "shown": false,
           "ok": false
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -244,24 +324,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
+          "shown": false,
           "ok": false
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -297,24 +396,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
+          "shown": false,
           "ok": false
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -350,24 +468,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
+          "shown": false,
           "ok": false
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -403,24 +540,43 @@
         "tight": true
       },
       "wordmark": {
-        "viewBox": "0 0 3590 500",
-        "width": 122,
-        "height": 17,
+        "viewBox": "0 0 3729 561",
+        "width": 123,
+        "height": 18.5,
+        "inkWidth": 121.8,
         "letters": true,
-        "pathLen": 17114,
+        "letterPaths": "S A N Z E1 E2 D",
+        "pathLen": 16854,
         "fill": "rgb(245, 245, 247)",
-        "dots": 2,
+        "dots": 3,
+        "dotCx": [
+          833.2,
+          3364.1,
+          1936.63
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": true,
+        "lockupViewBox": "0 0 3692.52 761.33",
+        "lockupDots": 3,
+        "lockupDotDelays": [
+          "0s",
+          "0.35s",
+          "0.175s"
+        ],
         "lockupDesc": 28,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/sanzeed-signature--ink.svg",
-          "ok": false
+          "shown": false,
+          "ok": true
         },
         {
           "src": "../img/sanzeed-signature--white.svg",
+          "shown": true,
           "ok": true
         }
       ],
@@ -462,29 +618,45 @@
         "viewBox": "0 0 3729 561",
         "width": 93,
         "height": 14,
+        "inkWidth": 92.2,
         "letters": true,
+        "letterPaths": "",
         "pathLen": 16701,
         "fill": "rgb(245, 245, 247)",
         "dots": 2,
+        "dotCx": [
+          833.2,
+          3364.1
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": false,
+        "lockupViewBox": null,
+        "lockupDots": 0,
+        "lockupDotDelays": [],
         "lockupDesc": 0,
-        "loaderClip": true
+        "loaderClip": true,
+        "loaderClipWidth": "3729",
+        "beamDotCy": "300"
       },
       "signature": [
         {
           "src": "img/signature-dark.png",
-          "ok": true
+          "shown": false,
+          "ok": false
         },
         {
           "src": "img/signature-light.png",
-          "ok": true
+          "shown": true,
+          "ok": false
         }
       ],
       "gallery": {
         "visibleDefault": 12,
         "visibleProjection": 12,
         "pressed": "projection",
-        "visibleSearchAyodhya": 2
+        "countLabelProjection": "15 projects",
+        "visibleSearchAyodhya": 2,
+        "countLabelSearch": "2 projects"
       },
       "theme": {
         "after": "light",
@@ -492,13 +664,31 @@
         "fg": "rgb(26, 24, 22)"
       },
       "errors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
         "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
       ],
       "failed": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
         "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
       ],
-      "localFailures": [],
-      "localErrors": []
+      "localFailures": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png"
+      ],
+      "localErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png"
+      ]
     },
     {
       "page": "index",
@@ -522,29 +712,45 @@
         "viewBox": "0 0 3729 561",
         "width": 93,
         "height": 14,
+        "inkWidth": 92.2,
         "letters": true,
+        "letterPaths": "",
         "pathLen": 16701,
         "fill": "rgb(245, 245, 247)",
         "dots": 2,
+        "dotCx": [
+          833.2,
+          3364.1
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": false,
+        "lockupViewBox": null,
+        "lockupDots": 0,
+        "lockupDotDelays": [],
         "lockupDesc": 0,
-        "loaderClip": true
+        "loaderClip": true,
+        "loaderClipWidth": "3729",
+        "beamDotCy": "300"
       },
       "signature": [
         {
           "src": "img/signature-dark.png",
-          "ok": true
+          "shown": false,
+          "ok": false
         },
         {
           "src": "img/signature-light.png",
-          "ok": true
+          "shown": true,
+          "ok": false
         }
       ],
       "gallery": {
         "visibleDefault": 12,
         "visibleProjection": 12,
         "pressed": "projection",
-        "visibleSearchAyodhya": 2
+        "countLabelProjection": "15 projects",
+        "visibleSearchAyodhya": 2,
+        "countLabelSearch": "2 projects"
       },
       "theme": {
         "after": "light",
@@ -552,13 +758,31 @@
         "fg": "rgb(26, 24, 22)"
       },
       "errors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
         "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
       ],
       "failed": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
         "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
       ],
-      "localFailures": [],
-      "localErrors": []
+      "localFailures": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png"
+      ],
+      "localErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png"
+      ]
     },
     {
       "page": "work-prime-minister-museum",
@@ -581,22 +805,36 @@
         "viewBox": "0 0 3729 561",
         "width": 93,
         "height": 14,
+        "inkWidth": 92.2,
         "letters": true,
+        "letterPaths": "",
         "pathLen": 16701,
         "fill": "rgb(245, 245, 247)",
         "dots": 2,
+        "dotCx": [
+          833.2,
+          3364.1
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": false,
+        "lockupViewBox": null,
+        "lockupDots": 0,
+        "lockupDotDelays": [],
         "lockupDesc": 0,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/signature-dark.png",
+          "shown": false,
           "ok": false
         },
         {
           "src": "../img/signature-light.png",
-          "ok": true
+          "shown": true,
+          "ok": false
         }
       ],
       "theme": {
@@ -605,13 +843,27 @@
         "fg": "rgb(26, 24, 22)"
       },
       "errors": [
-        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png"
       ],
       "failed": [
-        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED",
+        "404 http://127.0.0.1:8766/img/signature-light.png"
       ],
-      "localFailures": [],
-      "localErrors": []
+      "localFailures": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png"
+      ],
+      "localErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png"
+      ]
     },
     {
       "page": "work-prime-minister-museum",
@@ -634,22 +886,36 @@
         "viewBox": "0 0 3729 561",
         "width": 93,
         "height": 14,
+        "inkWidth": 92.2,
         "letters": true,
+        "letterPaths": "",
         "pathLen": 16701,
         "fill": "rgb(245, 245, 247)",
         "dots": 2,
+        "dotCx": [
+          833.2,
+          3364.1
+        ],
+        "dotFill": "rgb(233, 178, 90)",
         "lockup": false,
+        "lockupViewBox": null,
+        "lockupDots": 0,
+        "lockupDotDelays": [],
         "lockupDesc": 0,
-        "loaderClip": false
+        "loaderClip": false,
+        "loaderClipWidth": null,
+        "beamDotCy": null
       },
       "signature": [
         {
           "src": "../img/signature-dark.png",
-          "ok": true
+          "shown": false,
+          "ok": false
         },
         {
           "src": "../img/signature-light.png",
-          "ok": true
+          "shown": true,
+          "ok": false
         }
       ],
       "theme": {
@@ -658,13 +924,513 @@
         "fg": "rgb(26, 24, 22)"
       },
       "errors": [
-        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js"
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.zgo.at/count.js",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png"
       ],
       "failed": [
-        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED"
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "FAILED http://gc.zgo.at/count.js net::ERR_NAME_NOT_RESOLVED",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png"
       ],
-      "localFailures": [],
-      "localErrors": []
+      "localFailures": [
+        "404 http://127.0.0.1:8766/img/signature-dark.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-light.png",
+        "404 http://127.0.0.1:8766/img/signature-dark.png"
+      ],
+      "localErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-light.png",
+        "Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8766/img/signature-dark.png"
+      ]
+    }
+  ],
+  "footers": [
+    {
+      "page": "index",
+      "viewport": "desktop",
+      "light": {
+        "theme": "light",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "index",
+      "viewport": "mobile",
+      "light": {
+        "theme": "light",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "desktop",
+      "light": {
+        "theme": "light",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-prime-minister-museum",
+      "viewport": "mobile",
+      "light": {
+        "theme": "light",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-ram-katha-show",
+      "viewport": "desktop",
+      "light": {
+        "theme": "light",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-ram-katha-show",
+      "viewport": "mobile",
+      "light": {
+        "theme": "light",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-buddha-park",
+      "viewport": "desktop",
+      "light": {
+        "theme": "light",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          340,
+          139
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              340,
+              139
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": "work-buddha-park",
+      "viewport": "mobile",
+      "light": {
+        "theme": "light",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": false,
+            "loaded": false,
+            "box": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "dark": {
+        "theme": "dark",
+        "box": [
+          260,
+          107
+        ],
+        "clip": "inset(0px -2% 0px 0px)",
+        "imgs": [
+          {
+            "src": "sanzeed-signature--ink.svg",
+            "shown": false,
+            "loaded": true,
+            "box": [
+              0,
+              0
+            ]
+          },
+          {
+            "src": "sanzeed-signature--white.svg",
+            "shown": true,
+            "loaded": true,
+            "box": [
+              260,
+              107
+            ]
+          }
+        ]
+      }
     }
   ],
   "files": {

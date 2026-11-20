@@ -68,10 +68,12 @@ Run on the built folder served with `python3 -m http.server` at 1440×900 and 39
 - Console / page errors: none from the site. The only console error on every page (before and after) is `net::ERR_NAME_NOT_RESOLVED` for the external GoatCounter script `gc.zgo.at/count.js`, which this sandbox cannot reach.
 - Failed requests to local files: none. Favicons, manifest icons, fonts, OG images, sitemap, robots, vCard and signature SVGs all return 200 with the right content type.
 - Fonts: `document.fonts` reports Fraunces (normal + italic), Inter and Inter Tight loaded; `h1` computes to Fraunces 300.
-- Wordmark: `.brand svg` renders at 122×17 px (viewBox 0 0 3590 500, path length 17,114 units, 2 gold dots); the loader `#ldClip` is present; the footer lockup renders with its 28 descriptor glyph paths.
+- Wordmark (re-run 20 Nov 2026): `.brand svg` renders at 123×18.5 px (viewBox 0 0 3729 561, letters ≈ 122 px wide; seven letter paths S A N Z E1 E2 D, total path length 16,854 units; **3** gold dots, DOM order A 833.2 / D 3364.1 / Z 1936.63, fill Lamp Gold `rgb(233,178,90)`); the loader `#ldClip` rect is 3729 wide and the beam dot runs at cy 291.6; the footer lockup renders with viewBox 0 0 3692.52 761.33, three dots idling at 0 s / 0.35 s / 0.175 s (A, D, Z → left-to-right A, Z, D) and its 28 descriptor glyph paths.
 - Theme toggle: clicking `.theme` sets `html[data-theme=light]`, body background becomes Plaster `rgb(245,240,231)`; on the home page the switch runs through the View Transitions cross-fade, as before.
 - Galleries: "Projection Mapping & Shows" filter → `aria-pressed`, count reads "15 projects"; search "Ayodhya" → 2 cards; pager intact.
 - Loader: `screenshots/after-index-desktop-loader-frame.jpg` shows the clip-path wipe and the travelling beam dot on the new artwork.
+- Footer captures wait ≥ 3.6 s after the footer scrolls in (signature write-on finished) and pin the end state; theme captures wait for the body background to reach Plaster / black (the home page's View Transitions cross-fade takes ≈ 2 s).
+- "Before" captures (untouched backup): the backup's `img/` has no `signature-dark.png` / `signature-light.png`, so the backup pages log 404s for them; this is a property of the backup, not of the built site.
 
 ## Lighthouse-style note (manual, not a Lighthouse run)
 
