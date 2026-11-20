@@ -29,6 +29,7 @@ html, body { margin: 0; width: 1500px; height: 1000px; overflow: hidden; backgro
 /* ---------- paper and shadows (reset the brand.css component classes that share a name) ---------- */
 .stage .card, .stage .label, .stage .input { border: 0; padding: 0; background: none; box-shadow: none; margin: 0; }
 .paper { background-size: 100% 100%; background-repeat: no-repeat; }
+.stage .card.paper { background-size: 100% 100%; background-repeat: no-repeat; }   /* the reset above would otherwise paint card plates at native size (top-left corner only) */
 .sh-dark { box-shadow: 0 1px 1px rgba(0,0,0,.4), 0 10px 24px rgba(0,0,0,.45), 0 36px 70px rgba(0,0,0,.5); }
 .sh-light { box-shadow: 0 1px 1px rgba(40,30,10,.10), 0 8px 18px rgba(40,30,10,.12), 0 30px 60px rgba(40,30,10,.14); }
 .sh-contact { box-shadow: 0 2px 3px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); }

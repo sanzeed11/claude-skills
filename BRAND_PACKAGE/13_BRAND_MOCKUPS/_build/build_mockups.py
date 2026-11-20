@@ -74,6 +74,7 @@ html, body { margin: 0; width: 1500px; height: 1000px; overflow: hidden; backgro
 /* ---------- paper and shadows (reset the brand.css component classes that share a name) ---------- */
 .stage .card, .stage .label, .stage .input { border: 0; padding: 0; background: none; box-shadow: none; margin: 0; }
 .paper { background-size: 100% 100%; background-repeat: no-repeat; }
+.stage .card.paper { background-size: 100% 100%; background-repeat: no-repeat; }   /* the reset above would otherwise paint card plates at native size (top-left corner only) */
 .sh-dark { box-shadow: 0 1px 1px rgba(0,0,0,.4), 0 10px 24px rgba(0,0,0,.45), 0 36px 70px rgba(0,0,0,.5); }
 .sh-light { box-shadow: 0 1px 1px rgba(40,30,10,.10), 0 8px 18px rgba(40,30,10,.12), 0 30px 60px rgba(40,30,10,.14); }
 .sh-contact { box-shadow: 0 2px 3px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); }
@@ -194,7 +195,7 @@ L = 'Logo_Mockups'
 scene('logo-blind-deboss-plaster', L, 'Blind deboss · wordmark on Plaster card stock', ['02 wordmark-plain--black.svg (as the deboss mask)', '05 paper texture'], f'''
 <div class="abs surf-plaster" style="inset:0;background-size:2400px 2400px"></div>
 <div class="abs sweep" style="background:linear-gradient(122deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,0) 44%,rgba(60,40,15,0) 60%,rgba(60,40,15,.20) 100%)"></div>
-<div class="abs" style="left:150px;top:400px;width:1200px;height:167px">
+<div class="abs" style="left:150px;top:399px;width:1200px;height:169px">
   <div class="abs mask hi"></div><div class="abs mask lo"></div><div class="abs mask face"></div>
 </div>
 <div class="abs vig soft" style="background:radial-gradient(ellipse at 45% 45%,transparent 55%,rgba(60,40,15,.22) 100%)"></div>
@@ -211,7 +212,7 @@ scene('logo-gold-foil-black', L, 'Gold foil · wordmark hot-stamped on black sto
 <div class="abs" style="inset:0;background:radial-gradient(90% 70% at 40% 30%,#1a1a1c 0%,#0d0d0f 55%,#000 100%)"></div>
 <div class="abs tex-grain" style="opacity:.9;background-size:420px 420px"></div>
 <div class="abs" style="inset:0;background:linear-gradient(118deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 40%)"></div>
-<div class="abs" style="left:150px;top:400px;width:1200px;height:167px">
+<div class="abs" style="left:150px;top:399px;width:1200px;height:169px">
   <div class="abs mask foil-shadow"></div><div class="abs mask foil"></div><div class="abs mask sheen"></div><div class="abs mask brush"></div>
 </div>
 <div class="abs vig"></div>
@@ -230,7 +231,7 @@ scene('logo-backlit-signage-night', L, 'Halo-lit signage · fabricated letters o
 <div class="abs" style="inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 2px,transparent 2px 9px)"></div>
 <div class="abs tex-grain" style="opacity:.8"></div>
 <div class="abs lamp" style="left:-50px;top:-320px;width:1600px;height:1600px;opacity:.55"></div>
-<div class="abs halo-wrap" style="left:190px;top:402px;width:1120px;height:156px;filter:blur(26px)"><div class="abs halo" style="inset:0"></div></div>
+<div class="abs halo-wrap" style="left:190px;top:402px;width:1120px;height:157.5px;filter:blur(26px)"><div class="abs halo" style="inset:0"></div></div>
 <img class="abs sign" src="{LOGO}/sanzeed-primary-wordmark--full-colour-dark.svg" alt="Sanzeed wordmark, halo-lit signage" style="left:190px;top:402px;width:1120px">
 <div class="abs" style="left:0;right:0;top:820px;height:180px;background:linear-gradient(180deg,rgba(233,178,90,.05),rgba(0,0,0,.6))"></div>
 <div class="abs floor-line" style="top:820px;background:rgba(233,178,90,.10)"></div>
@@ -248,7 +249,7 @@ scene('logo-brass-plaque-symbol', L, 'Engraved brass plaque · the symbol', ['02
 <div class="abs lamp" style="left:-50px;top:-300px;opacity:.35"></div>
 <div class="abs plaque" style="left:430px;top:180px;width:640px;height:640px">
   <div class="abs screw" style="left:26px;top:26px"></div><div class="abs screw" style="right:26px;top:26px"></div><div class="abs screw" style="left:26px;bottom:26px"></div><div class="abs screw" style="right:26px;bottom:26px"></div>
-  <div class="abs" style="left:170px;top:120px;width:300px;height:400px"><div class="abs mask eng-hi"></div><div class="abs mask eng"></div></div>
+  <div class="abs" style="left:130px;top:157px;width:380px;height:327px"><div class="abs mask eng-hi"></div><div class="abs mask eng"></div></div>
   <div class="abs hairline"></div>
 </div>
 <div class="abs vig"></div>
@@ -276,7 +277,7 @@ scene('logo-frosted-glass-door', L, 'Window vinyl · wordmark on a frosted glass
 <div class="abs mullion" style="left:748px;top:0;width:4px;height:1000px"></div>
 <div class="abs band" style="left:200px;top:290px;width:1100px;height:330px"></div>
 <img class="abs vinyl" src="{LOGO}/sanzeed-primary-wordmark--white.svg" alt="Sanzeed wordmark in white cut vinyl" style="left:420px;top:409px;width:660px">
-<div class="abs handle" style="left:706px;top:380px"></div><div class="abs handle" style="left:786px;top:380px"></div>
+<div class="abs handle" style="left:706px;top:642px"></div><div class="abs handle" style="left:786px;top:642px"></div>
 <div class="abs" style="left:0;right:0;top:930px;height:70px;background:linear-gradient(180deg,#15151780,#0a0a0b);"></div>
 <div class="abs floor-line" style="top:930px;background:rgba(255,255,255,.1)"></div>
 <div class="abs vig"></div>
@@ -288,7 +289,7 @@ scene('logo-frosted-glass-door', L, 'Window vinyl · wordmark on a frosted glass
 .mullion { background: #2a2a2d; box-shadow: 0 0 0 1px #3a3a3e; }
 .band { -webkit-backdrop-filter: blur(16px) saturate(.9); backdrop-filter: blur(16px) saturate(.9); background: rgba(235,235,238,.42); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(255,255,255,.2); }
 .vinyl { filter: drop-shadow(0 1px 0 rgba(0,0,0,.25)); }
-.handle { width: 14px; height: 300px; border-radius: 7px; background: linear-gradient(90deg, #6a6a6f, #c9c9ce 40%, #8a8a90 70%, #4a4a4f); box-shadow: 0 10px 20px rgba(0,0,0,.5); }
+.handle { width: 14px; height: 270px; border-radius: 7px; background: linear-gradient(90deg, #6a6a6f, #c9c9ce 40%, #8a8a90 70%, #4a4a4f); box-shadow: 0 10px 20px rgba(0,0,0,.5); }
 .handle::before, .handle::after { content: ""; position: absolute; left: 3px; width: 8px; height: 26px; background: #55555a; border-radius: 2px; }
 .handle::before { top: 30px; } .handle::after { bottom: 30px; }
 ''')
@@ -344,7 +345,7 @@ scene('logo-favicon-browser-tab', L, 'Favicon · the symbol tile in a browser ta
 S = 'Stationery_Mockups'
 
 # 08 — cards fanned on a dark surface with a point of light
-cards = [('card-b-front', -18, -60), ('card-a-back', -9, -24), ('card-a-front', 0, 0), ('card-b-front', 9, 24), ('card-a-back', 18, 60)]
+cards = [('card-a-back', -18, -60), ('card-b-front', -9, -24), ('card-a-back', 0, 0), ('card-b-front', 9, 24), ('card-a-front', 18, 60)]   # last = top of the fan: a front, so the wordmark shows
 fan = ''.join(f'<div class="abs card sh-dark paper" style="background-image:url({P}/{c}.png);transform:rotate({a}deg) translateX({x}px)"></div>' for c, a, x in cards)
 scene('stationery-cards-fanned-dark', S, 'Business cards · fanned on a dark surface', ['09 Business_Cards concept A + B (PDF, 600 dpi)', '05 lamp glow, grain'], f'''
 <div class="abs surf-night" style="inset:0"></div>
@@ -1134,6 +1135,13 @@ and `10_MARKETING_COLLATERAL`, social from `08_SOCIAL_MEDIA`, share images / ema
 the live site from `16_WEBSITE_IMPLEMENTATION`, motion frames from `11_MOTION_GRAPHICS`, photography from `06_PHOTOGRAPHY_ART_DIRECTION`
 and `00_ORIGINAL_ASSETS_BACKUP`. Nothing is redrawn or restyled; the scenes only light, bend, reflect and place them.
 
+**Logo.** Every scene carries the approved master logo (20 Nov 2026): the **refined original wordmark, option B** — the client's own
+hand-drawn SANZEED with the hooked S, the swooping N, and a Z whose diagonal swoops like the N's right leg; **three gold points**
+(A, Z, D), the Z point inside a thin ring that shows the background through it. The symbol is the refined, hooked S with its full stop;
+the monogram is "SM." (on the ID-card reverse). All 35 scenes and their plates were regenerated from the rebuilt upstream folders on
+20 Nov 2026. The masked finishes size their boxes to the production SVGs' proportions: wordmark 3692.52 × 519.33 (≈ 7.11 : 1),
+symbol 603.82 × 519.33 (≈ 1.16 : 1).
+
 | Folder | Contents |
 |---|---|
 | `Logo_Mockups/` | 7 scenes: blind deboss, gold foil, halo-lit signage, engraved brass plaque, window vinyl on a frosted door, app icon, favicon |
@@ -1163,8 +1171,10 @@ Each scene: **editable HTML + CSS source** in the folder's `src/` (1500 × 1000 
   390 × 844 @ 3×), the real social assets, the OG image, the email signature loaded live in an iframe.
 * **Plates** (`_build/plates/`, built by `make_plates.py`): the delivered PDFs of the business cards, letterhead, envelopes, thank-you
   card, notepad, ID card, proposal, presentation and folder re-rasterised with `pdftoppm` at 160–600 dpi; previews that carry bleed
-  cropped back to trim; the trifold cut into its six panels; the stamp artwork rendered for the ink mask; the four composite photographs
-  upscaled to 3000 px (Lanczos + unsharp); the lower-third hold frame rendered from its motion source with alpha.
+  cropped back to trim; the trifold cut into its six panels; the four composite photographs upscaled to 3000 px (Lanczos + unsharp);
+  the lower-third hold frame rendered from its motion source with alpha. (The stamp impression masks with the outlined stamp SVG
+  from `09_PRINT_STATIONERY/Stamp` directly.) Delete the old plates and re-run `python3 _build/make_plates.py` whenever an upstream
+  deliverable changes, then `python3 _build/build_mockups.py`.
 * **Composites into approved imagery** (door plate / wayfinding, totem, event backdrop) place the real sign on a plane whose perspective
   matches the photograph, under a veil that keeps the plate on ≥ 80 % black, with a wall label (Title · Place) in the corner.
 * **Captions.** Every scene carries a small wall-label caption (scene · spec · source folder) at the bottom-left in the brand's caption
@@ -1172,8 +1182,8 @@ Each scene: **editable HTML + CSS source** in the folder's `src/` (1500 × 1000 
 
 ## Rules applied and verified
 
-Every render was opened and checked: the logo variant matches its background (`full-colour-dark` on black, `full-colour-light` on
-Plaster, `white` for the vinyl and backlit letters, `black` masks for the finishes, `symbol` on the plaque / avatars, `monogram`
+Every render was opened and checked: the wordmark shows the three gold points with the ringed Z and the hooked S; the logo variant matches its background (`full-colour-dark` on black, `full-colour-light` on
+Plaster, `white` for the vinyl and backlit letters, `black` masks for the finishes (`wordmark-plain` for the blind deboss, so no points), `symbol` on the plaque / avatars, `monogram`
 only on the ID-card reverse as delivered); clear space is kept; one gold accent per composition (the deliverable's own point, or the
 lamp); Fraunces 300 renders as the light serif in every caption and UI; nothing clipped, no missing fonts, no placeholder boxes;
 the only copy is confirmed copy from `01_BRAND_STRATEGY`, the deliverables themselves and the site's own `<title>` / `og:` meta;
@@ -1190,6 +1200,9 @@ no invented statistics (the Instagram and YouTube mock profiles show no follower
   upscaled 1.9–3.1× and are deliberately softened under the veil; for press use, re-run `make_plates.py` with higher-resolution originals.
 * The scenes are rendered raster scenes, not layered PSD/Figma mockup files; the HTML sources are the layered, editable equivalent
   (every object is a positioned element with its own transform and shadow).
+* `brand.css` sets `img {{ max-width: 100% }}`, so the 1780 px photographs in the door-plate, totem and event-backdrop composites are
+  capped at the 1500 px stage and stop short of the right edge (a dark band there). This predates the logo swap and was left as is;
+  adding `max-width:none` to those `<img>` styles would restore the intended framing (re-check the sign perspective afterwards).
 * Chromium paints very large CSS background images from a low-resolution decode, so plates are kept ≤ 3400 px on the long edge
   (the A2 poster plate is 1600 px wide, 1.5× what the scene shows).
 """
