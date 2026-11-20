@@ -101,6 +101,39 @@ def imsize(path):
     return _size_cache[path]
 
 
+def ar(path):
+    """Height / width of an asset (SVG viewBox or raster) — logos are never placed at a hard-coded ratio."""
+    iw, ih = imsize(path)
+    return ih / iw
+
+
+ORIG_SVG = f'{B}/00_ORIGINAL_ASSETS_BACKUP/logo/wordmark-inline-original.svg'
+DERIVED = f'{HERE}/derived'
+
+
+def original_wordmark():
+    """The live-site wordmark exactly as found (00_ORIGINAL_ASSETS_BACKUP), given the site's dark-theme colours:
+    the inline SVG carries no fills of its own (sanzeed.com colours it with CSS), so a colour style is added and the
+    site's animated beam-dot (a loader element, not part of the mark) is hidden. Geometry untouched.
+    Returns (svg for HTML, png for PPTX)."""
+    os.makedirs(DERIVED, exist_ok=True)
+    svg = f'{DERIVED}/sanzeed-original-wordmark--live-site--full-colour-dark.svg'
+    png = f'{DERIVED}/sanzeed-original-wordmark--live-site--full-colour-dark-2400w.png'
+    src = open(ORIG_SVG).read()
+    style = (f'<style>.wm-letters{{fill:{C["gwhite"]}}}.wm-dot{{fill:{C["lamp"]}}}.beam-dot{{display:none}}</style>')
+    out = re.sub(r'(<svg[^>]*>)', r'\1' + style, src, count=1)
+    open(svg, 'w').write(out)
+    # rasterise in Chromium — the browser the live site is seen in. The traced path has unclosed, overlapping
+    # sub-paths that cairo / Inkscape fill differently (the Z's bottom bar comes out tapered there).
+    pw = 2400; ph = round(pw * ar(svg))
+    wrap = f'{DERIVED}/_rasterise-original.html'
+    open(wrap, 'w').write(f'<!DOCTYPE html><html><head><style>html,body{{margin:0;background:transparent}}img{{display:block;width:{pw}px;height:{ph}px}}</style></head>'
+                          f'<body><img src="{os.path.basename(svg)}" alt=""></body></html>')
+    run(['node', f'{KIT}/render.js', '--in', wrap, '--out', png, '--width', str(pw), '--height', str(ph), '--scale', '1', '--transparent'])
+    os.remove(wrap)
+    return svg, png
+
+
 def fit(src, x, y, w, h, align='center'):
     """Contain-fit rectangle for src inside (x,y,w,h); align: center | left | top | bottom."""
     iw, ih = imsize(src)
@@ -474,19 +507,55 @@ def build_deck():
     s = content('black', 5, 'Primary logo', wordmark=False)
     s.lamp(960, 540, 1700, 1.0)
     svg, png = logo('primary-wordmark', 'full-colour-dark')
-    s.img(svg, 360, 540 - 1200 * 500 / 3590 / 2, 1200, 1200 * 500 / 3590, mode='contain', png=png)
-    s.wall_label(M, 940, '001', 'Primary logo — the wordmark', 'full-colour-dark · 500-unit cap, 64-unit stroke, two points of light · 02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg', w=1500)
+    lw = 1200; lh = lw * ar(svg)
+    s.img(svg, (W - lw) / 2, 540 - lh / 2, lw, lh, mode='contain', png=png)
+    s.wall_label(M, 940, '001', 'Primary logo — your wordmark, refined',
+                 'full-colour-dark · three points of light: A, Z, D · the Z point in its open ring · 02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg', w=1728)
+
+    # your original → refined (the client chose to keep their own logo)
+    s = content('dark', 5, 'Your original, refined')
+    s.title('Your original, refined.', size=72)
+    s.text(M + 800, 136, 1024, 60, 'You chose to keep your own logo. The hand-drawn SANZEED from sanzeed.com was cleaned letter by letter, not redrawn on a new geometry; only the Z is new.',
+           size=17, color=s.T['fg2'], line=1.5)
+    osvg, opng = original_wordmark()
+    nsvg, npng = logo('primary-wordmark', 'full-colour-dark')
+    u = 960 / imsize(osvg)[0]                         # one scale for both: units of the live site's 3729 × 561 box
+    rw, rh = 1160, 300
+    # the original is placed as its Chromium raster in both renderers: its traced path fills differently once
+    # converted to PDF vector (the Z's tapered bottom bar is straightened), and the raster is what the site shows
+    for k, (sv, pn, yy, ctr, nm, pl) in enumerate([
+            (opng, opng, 236, '001', 'Your original', 'sanzeed.com as found, 5 November 2026 · inline SVG 3729 × 561 · 00_ORIGINAL_ASSETS_BACKUP/logo/wordmark-inline-original.svg'),
+            (nsvg, npng, 610, '002', 'Refined', 'the primary wordmark, full-colour-dark · 02_LOGO_SYSTEM/SVG/sanzeed-primary-wordmark--full-colour-dark.svg')]):
+        s.rect(M, yy, rw, rh, fill=C['black'], line=LINE_D, radius=28)
+        iw, ih = imsize(osvg if k == 0 else sv); lw, lh = iw * u, ih * u
+        s.img(sv, M + (rw - lw) / 2, yy + (rh - lh) / 2, lw, lh, mode='contain', png=pn)
+        s.wall_label(M, yy + rh + 14, ctr, nm, pl, w=rw, size=14)
+    cx = M + rw + 64; cw_ = W - M - cx
+    s.eyebrow(cx, 236, 'What changed, letter by letter')
+    yy = 276
+    for i, (a, b) in enumerate([
+            ('S, A, N and D — yours', 'Your shapes re-traced with smooth edges; the lines you drew straight made exactly straight.'),
+            ('E — exact bars', 'Each bar an exact rectangle, at the size you drew it.'),
+            ('A and D points — kept', 'The two original points of light, at their original size and position.'),
+            ('Z — new', 'Straight top and bottom bars; the diagonal swoops like the right leg of your N.'),
+            ('A third point of light', 'At the height of the D point, inside a thin ring that always shows the background. Three points: A, Z, D.')]):
+        s.hline(cx, yy, cw_)
+        s.text(cx, yy + 18, 50, 24, f'{i + 1:03d}', size=14, font='head', color=s.T['accent_text'], tracking=0.08, line=1.3)
+        s.text(cx + 56, yy + 14, cw_ - 56, 30, a, size=19, font='head', line=1.3)
+        s.text(cx + 56, yy + 44, cw_ - 56, 80, b, size=15, color=s.T['fg2'], line=1.5)
+        yy += 136
+    s.hline(cx, yy, cw_)
 
     s = content('dark', 5, 'The family')
     s.title('The family.', size=72)
-    s.text(M + 420, 136, 1300, 60, 'One construction, eleven variants. Each shown here on the background it is paired with: full-colour-dark on Gallery Black, full-colour-light on Plaster.',
+    s.text(M + 420, 136, 1300, 60, 'One refined master, eleven variants. Each shown here on the background it is paired with: full-colour-dark on Gallery Black, full-colour-light on Plaster.',
            size=17, color=s.T['fg2'], line=1.5)
     fam = [
         ('secondary-symbol-wordmark', 'dark', '002', 'Secondary logo', 'symbol + wordmark · partner lockups', 0.78),
         ('horizontal-descriptor', 'light', '003', 'Horizontal logo', 'wordmark + descriptor · stationery, proposals, press', 0.78),
         ('vertical-stacked', 'dark', '004', 'Vertical / stacked logo', 'square and centred layouts, end cards, stamps', 0.62),
-        ('symbol', 'light', '005', 'Symbol', 'the S with its full stop · avatars, favicons, watermarks', 0.42),
-        ('monogram', 'dark', '006', 'Monogram', 'SM. · seals, embossing, ID-card reverse only', 0.44),
+        ('symbol', 'light', '005', 'Symbol', 'your hooked S with its full stop · avatars, favicons, watermarks', 0.42),
+        ('monogram', 'dark', '006', 'Monogram', 'SM. — the M built from two of the wordmark\'s N · seals, embossing, ID reverse', 0.44),
         ('signature', 'light', '007', 'Signature mark', 'the personal layer · letters, thank-you cards, sign-offs', 0.56),
     ]
     tw, th = 544, 296
@@ -531,8 +600,8 @@ def build_deck():
     s.eyebrow(M, sy + 20, 'Below 120 px / 28 mm')
     sv, pn = logo('simplified-small-size', 'full-colour-dark')
     s.img(sv, M, sy + 56, 120, 120 * ar(sv), mode='contain', png=pn)
-    s.text(M + 140, sy + 50, 420, 60, [('Simplified small-size logo', {'font': 'head', 'color': s.T['fg']}),
-                                       ('  heavier stroke (84), larger dots · 24–120 px, 6–28 mm', {'color': s.T['fg3']})], size=14, line=1.5)
+    s.text(M + 140, sy + 50, 540, 60, [('Simplified small-size logo', {'font': 'head', 'color': s.T['fg']}),
+                                       ('  strokes 10 units heavier per side, rings opened around larger points · 24–120 px', {'color': s.T['fg3']})], size=14, line=1.5)
     s.eyebrow(M + 700, sy + 20, 'Below 24 px / 6 mm')
     sv, pn = logo('symbol-small-size', 'full-colour-dark')
     s.img(sv, M + 700, sy + 56, 36, 36 * ar(sv), mode='contain', png=pn)
@@ -549,18 +618,22 @@ def build_deck():
     # 06 — construction and rules -----------------------------------------------------------------------------
     divider(6)
     s = content('dark', 6, 'Construction and clear space')
-    s.title('Built on a grid, kept in the clear.', size=72)
+    s.title('Refined on a grid, kept in the clear.', size=72)
     cons = f'{GUIDE}/logo-construction.png'
-    s.img(cons, M, 236, 1120, 560, mode='contain', radius=20, border=LINE_D)
-    s.wall_label(M, 812, '001', 'Construction', 'cap height 500 · stroke 64 · point r 45 · 02_LOGO_SYSTEM/Guidelines/logo-construction.svg', w=1120)
+    ccrop = (0, 0, 1, 0.66)                              # the sheet's drawing; its lower third is empty
+    cw_ = 1160; chh = cw_ * imsize(cons)[1] * ccrop[3] / imsize(cons)[0]
+    s.img(cons, M, 236, cw_, chh, mode='contain', radius=20, border=LINE_D, crop=ccrop)
+    s.wall_label(M, 236 + chh + 14, '001', 'Construction', 'the refined original wordmark on a 20-unit grid · cap line, point line, baseline · 02_LOGO_SYSTEM/Guidelines/logo-construction.png', w=cw_)
     clear = f'{GUIDE}/logo-clear-space.png'
-    s.img(clear, 1264, 236, 560, 350, mode='contain', radius=20, border=LINE_D)
-    s.wall_label(1264, 602, '002', 'Clear space', 'x = ½ cap height on all sides; symbol alone ¼ of its height', w=560)
-    for j, (n, l) in enumerate([('500', 'unit cap height'), ('64', 'unit monoline stroke'), ('45', 'unit points of light')]):
-        x = 1264 + j * 190
-        s.text(x, 660, 180, 80, n, size=64, font='display', line=1.0)
-        s.text(x, 740, 180, 50, l, size=14, color=s.T['fg3'], line=1.4)
-    s.text(M, 860, 1120, 100, 'Minimum sizes: wordmark 120 px / 28 mm · horizontal lockup 220 px / 50 mm · vertical stack 90 px / 22 mm · symbol 16 px / 6 mm · signature 160 px / 32 mm. Below those, the simplified and small-size versions take over.',
+    s.img(clear, 1304, 236, 520, 325, mode='contain', radius=20, border=LINE_D)
+    s.wall_label(1304, 575, '002', 'Clear space', 'x = ½ cap height on all sides; symbol alone ¼ of its height', w=520, size=14)
+    s.text(1304, 640, 520, 200, 'The ring around the Z point is part of the mark. On photography or colour it shows the background through it, never a fill. The Z and D points share one height; the S overshoots the cap line, as in your original.',
+           size=15, color=s.T['fg2'], line=1.55)
+    for j, (n, l) in enumerate([('3', 'points of light — A, Z, D'), ('45', 'unit point radius'), ('14', 'unit clear ring around each point'), ('20', 'unit construction grid')]):
+        x = M + j * 290
+        s.text(x, 690, 270, 80, n, size=64, font='display', line=1.0)
+        s.text(x, 770, 260, 50, l, size=14, color=s.T['fg3'], line=1.4)
+    s.text(M, 860, 1160, 100, 'Minimum sizes: wordmark 120 px / 28 mm · horizontal lockup 220 px / 50 mm · vertical stack 90 px / 22 mm · symbol 16 px / 6 mm · signature 160 px / 32 mm. Below those, the simplified and small-size versions take over.',
            size=15, color=s.T['fg2'], line=1.55)
 
     s = content('dark', 6, 'Minimum sizes, placement and misuse')
@@ -900,7 +973,7 @@ def build_deck():
     divider(16)
     s = content('dark', 16, 'Key frames')
     s.title('Light, not bounce.', size=72)
-    s.text(M + 600, 136, 1224, 60, 'The logo reveal, 4 s, 1920 × 1080: the point travels the beam left to right and whatever it passes is revealed. Ease-out cubic-bezier(.22,.8,.2,1); durations 200 / 400 / 800 / 1100 ms; the logo is never spun, bounced or stretched.',
+    s.text(M + 600, 136, 1224, 60, 'The logo reveal, 4 s, 1920 × 1080: the point travels the beam S → D at the height of the Z and D points and the letters bloom as it passes. The A\'s point settles, the Z\'s point settles into its open ring, and the travelling point becomes the D\'s point — three points, A, Z, D. Ease-out cubic-bezier(.22,.8,.2,1); never spun, bounced or stretched.',
            size=16, color=s.T['fg2'], line=1.5)
     kf = f'{B}/11_MOTION_GRAPHICS/Exports/Key_Frames/Logo_Animations/sanzeed-logo-reveal--dark-1920x1080'
     for j, t in enumerate(['0.00', '0.77', '1.57', '2.37', '3.17', '3.97']):
@@ -918,8 +991,8 @@ def build_deck():
     s.ellipse(960, 760, 44, fill=None, line=C['gwhite'], lw=1)
     s.point(960, 760, r=7)
     s.text(760, 822, 400, 24, 'Play the reveal', size=14, font='head', color=s.T['fg2'], align='center', tracking=0.12, caps=True, line=1.4)
-    s.wall_label(M, 940, '001', 'Logo reveal', '4 s · 1920 × 1080 · MP4 H.264, WebM VP9, GIF · poster frame · 11_MOTION_GRAPHICS/Logo_Animations', w=1200)
-    s.text(W - M - 600, 236, 600, 500,
+    s.wall_label(M, 940, '001', 'Logo reveal', '4 s · 1920 × 1080 · three points settle, A, Z, D; the Z ring stays open · MP4 H.264, WebM VP9, GIF · 11_MOTION_GRAPHICS/Logo_Animations', w=1200)
+    s.text(W - M - 600, 136, 600, 330,
            'Also delivered\n\n'
            'Logo reveal on Plaster, 1:1 and 9:16\n'
            'Logo outro, 3 s\n'
@@ -963,7 +1036,7 @@ def build_deck():
     folders = [
         ('00', 'Original assets backup', 'the live site untouched: HTML, images, fonts, icons, screenshots'),
         ('01', 'Brand strategy', 'audit, strategy, positioning, voice, messaging · MD + 32-page PDF'),
-        ('02', 'Logo system', '11 variants × 7 colourways · SVG PDF EPS PNG JPG WebP · favicons, tiles, signature'),
+        ('02', 'Logo system', '11 variants × 7 colours · SVG PDF EPS PNG WebP · master refined_master.svg + build_logo_refined.py'),
         ('03', 'Colour system', 'tokens JSON CSS SCSS Tailwind · swatches · 12-page palette PDF'),
         ('04', 'Typography', 'OFL fonts TTF + woff2 · scale tokens · 10 specimens · Font Reference PDF'),
         ('05', 'Graphic assets', 'patterns, textures, illustrations, 54 icons, backgrounds, decorative elements'),
@@ -976,7 +1049,7 @@ def build_deck():
         ('12', 'Brand guidelines', 'the standards manual PDF with its editable source'),
         ('13', 'Brand mockups', '35 scenes built from the real deliverables · HTML sources, JPG 3000 / 1600'),
         ('14', 'Presentation', 'this deck · PDF, slide PNGs, editable PPTX and HTML source'),
-        ('15', 'Source files', 'brand kit, logo and colour masters, render tools, index of every editable file'),
+        ('15', 'Source files', 'brand kit, logo master (refined_master.svg, build_logo_refined.py), colour masters, render tools'),
         ('16', 'Website implementation', 'deployable static site with change log and verification screenshots'),
     ]
     for i, (n, nm, d) in enumerate(folders):
@@ -1351,13 +1424,34 @@ def run(cmd, **kw):
     print('$', ' '.join(cmd)); subprocess.run(cmd, check=True, **kw)
 
 
+def write_manifest():
+    """Every prepared copy → its source in the package; anything not used by this build is removed."""
+    used = set(PREP_LOG)
+    for f in os.listdir(ASSETS):
+        if f not in used and f != 'MANIFEST.md':
+            os.remove(f'{ASSETS}/{f}')
+    with open(f'{ASSETS}/MANIFEST.md', 'w') as mf:
+        mf.write('# Prepared image copies\n\nEvery file here is a copy of a package asset, pre-cropped and downsized by '
+                 '`src/build_presentation.py` (`prep_image`) to at most 1.5 × its placed size, so the PPTX and the HTML stay small. '
+                 'Nothing is redrawn or restyled; edit the source named below and rebuild. The folder is emptied at the start of '
+                 'every build, so every copy comes from the current file in the package.\n\n'
+                 '| Prepared file | Source (relative to BRAND_PACKAGE) | Crop (l, t, r, b fractions) | Placed at (px) |\n|---|---|---|---|\n')
+        for f in sorted(PREP_LOG):
+            src, (l, tt, r, b), w, h = PREP_LOG[f]
+            mf.write(f'| `{f}` | `{src}` | {l:.3f}, {tt:.3f}, {r:.3f}, {b:.3f} | {w} × {h} |\n')
+
+
 if __name__ == '__main__':
+    # clear every prepared copy first so nothing stale survives from an earlier logo or mockup
+    for f in os.listdir(ASSETS):
+        os.remove(f'{ASSETS}/{f}')
     S = build_deck()
     print(len(S), 'slides')
     html_path = f'{HERE}/Brand_Presentation.html'
     render_html(S, html_path)
     json.dump([{'n': i + 1, 'name': s.name} for i, s in enumerate(S)], open(f'{HERE}/slide-index.json', 'w'), indent=1)
     if '--html-only' in sys.argv:
+        write_manifest()
         sys.exit(0)
     pdf = f'{OUT}/Brand_Presentation.pdf'
     run(['node', f'{KIT}/render.js', '--in', html_path, '--out', pdf, '--pdf', '--size', '508x285.75', '--wait', '1200'])
@@ -1372,21 +1466,9 @@ if __name__ == '__main__':
     if '--no-pptx' not in sys.argv:
         pptx_path = f'{EP}/Brand_Presentation.pptx'
         render_pptx(S, pptx_path)
-        # manifest: every prepared copy → its source in the package
-        used = set(PREP_LOG)
-        for f in os.listdir(ASSETS):
-            if f not in used and f != 'MANIFEST.md':
-                os.remove(f'{ASSETS}/{f}')
-        with open(f'{ASSETS}/MANIFEST.md', 'w') as mf:
-            mf.write('# Prepared image copies\n\nEvery file here is a copy of a package asset, pre-cropped and downsized by '
-                     '`src/build_presentation.py` (`prep_image`) to at most 1.5 × its placed size, so the PPTX and the HTML stay small. '
-                     'Nothing is redrawn or restyled; edit the source named below and rebuild.\n\n'
-                     '| Prepared file | Source (relative to BRAND_PACKAGE) | Crop (l, t, r, b fractions) | Placed at (px) |\n|---|---|---|---|\n')
-            for f in sorted(PREP_LOG):
-                src, (l, tt, r, b), w, h = PREP_LOG[f]
-                mf.write(f'| `{f}` | `{src}` | {l:.3f}, {tt:.3f}, {r:.3f}, {b:.3f} | {w} × {h} |\n')
         tmp = f'{EP}/_soffice'; os.makedirs(tmp, exist_ok=True)
         run(['soffice', '--headless', '--convert-to', 'pdf', '--outdir', tmp, pptx_path])
         shutil.move(f'{tmp}/Brand_Presentation.pdf', f'{OUT}/Brand_Presentation--pptx-export.pdf')
         shutil.rmtree(tmp)
+    write_manifest()
     print('done')

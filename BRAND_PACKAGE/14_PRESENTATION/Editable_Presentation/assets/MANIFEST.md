@@ -1,6 +1,6 @@
 # Prepared image copies
 
-Every file here is a copy of a package asset, pre-cropped and downsized by `src/build_presentation.py` (`prep_image`) to at most 1.5 × its placed size, so the PPTX and the HTML stay small. Nothing is redrawn or restyled; edit the source named below and rebuild.
+Every file here is a copy of a package asset, pre-cropped and downsized by `src/build_presentation.py` (`prep_image`) to at most 1.5 × its placed size, so the PPTX and the HTML stay small. Nothing is redrawn or restyled; edit the source named below and rebuild. The folder is emptied at the start of every build, so every copy comes from the current file in the package.
 
 | Prepared file | Source (relative to BRAND_PACKAGE) | Crop (l, t, r, b fractions) | Placed at (px) |
 |---|---|---|---|
@@ -15,8 +15,8 @@ Every file here is a copy of a package asset, pre-cropped and downsized by `src/
 | `favicon-48--4002e2f4.png` | `07_WEBSITE_DIGITAL_ASSETS/Favicon/favicon-48.png` | 0.000, 0.000, 1.000, 1.000 | 48 × 48 |
 | `favicon-64--fb2c09d8.png` | `07_WEBSITE_DIGITAL_ASSETS/Favicon/favicon-64.png` | 0.000, 0.000, 1.000, 1.000 | 64 × 64 |
 | `favicon-96--44704a48.png` | `07_WEBSITE_DIGITAL_ASSETS/Favicon/favicon-96.png` | 0.000, 0.000, 1.000, 1.000 | 96 × 96 |
-| `logo-clear-space--764155fc.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-clear-space.png` | 0.000, 0.000, 1.000, 1.000 | 560 × 350 |
-| `logo-construction--f954fe92.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-construction.png` | 0.000, 0.000, 1.000, 1.000 | 1120 × 560 |
+| `logo-clear-space--47ce800c.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-clear-space.png` | 0.000, 0.000, 1.000, 1.000 | 520 × 325 |
+| `logo-construction--da00c1f1.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-construction.png` | 0.000, 0.000, 1.000, 0.660 | 1160 × 382 |
 | `logo-incorrect-usage--3624f0a5.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-incorrect-usage.png` | 0.000, 0.000, 1.000, 1.000 | 760 × 697 |
 | `logo-minimum-sizes@2x--6fb0f1d4.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-minimum-sizes@2x.png` | 0.000, 0.000, 1.000, 1.000 | 440 × 314 |
 | `logo-placement--bbe72681.jpg` | `02_LOGO_SYSTEM/Guidelines/logo-placement.png` | 0.000, 0.000, 1.000, 1.000 | 448 × 243 |
@@ -78,33 +78,35 @@ Every file here is a copy of a package asset, pre-cropped and downsized by `src/
 | `sanzeed-mockup--stationery-cards-flat-lay-plaster-1600w--16ca9df3.jpg` | `13_BRAND_MOCKUPS/Stationery_Mockups/sanzeed-mockup--stationery-cards-flat-lay-plaster-1600w.jpg` | 0.000, 0.132, 1.000, 0.808 | 688 × 310 |
 | `sanzeed-mockup--stationery-letterhead-envelope-card-1600w--5908b1d8.jpg` | `13_BRAND_MOCKUPS/Stationery_Mockups/sanzeed-mockup--stationery-letterhead-envelope-card-1600w.jpg` | 0.030, 0.000, 0.970, 0.940 | 1000 × 667 |
 | `sanzeed-mockup--stationery-thank-you-card-open-1600w--d0a53610.jpg` | `13_BRAND_MOCKUPS/Stationery_Mockups/sanzeed-mockup--stationery-thank-you-card-open-1600w.jpg` | 0.000, 0.132, 1.000, 0.808 | 688 × 310 |
-| `sanzeed-monogram--full-colour-dark-800w--eea06c7b.png` | `02_LOGO_SYSTEM/PNG/sanzeed-monogram--full-colour-dark-800w.png` | 0.000, 0.000, 1.000, 1.000 | 239 × 92 |
+| `sanzeed-monogram--full-colour-dark-800w--44ecb94d.png` | `02_LOGO_SYSTEM/PNG/sanzeed-monogram--full-colour-dark-800w.png` | 0.000, 0.000, 1.000, 1.000 | 239 × 78 |
 | `sanzeed-moodboard--p01-overview--8006f26c.jpg` | `06_PHOTOGRAPHY_ART_DIRECTION/Moodboard_Pages/sanzeed-moodboard--p01-overview.png` | 0.000, 0.000, 1.000, 1.000 | 848 × 600 |
 | `sanzeed-moodboard--p02-museums-experience-centres--6b640dae.jpg` | `06_PHOTOGRAPHY_ART_DIRECTION/Moodboard_Pages/sanzeed-moodboard--p02-museums-experience-centres.png` | 0.000, 0.000, 1.000, 1.000 | 848 × 600 |
 | `sanzeed-og--home-1200x630--e4a0ee22.jpg` | `07_WEBSITE_DIGITAL_ASSETS/Open_Graph/sanzeed-og--home-1200x630.png` | 0.000, 0.000, 1.000, 1.000 | 544 × 286 |
 | `sanzeed-og--work--prime-minister-museum-1200x630--fad442d1.jpg` | `07_WEBSITE_DIGITAL_ASSETS/Open_Graph/sanzeed-og--work--prime-minister-museum-1200x630.png` | 0.000, 0.000, 1.000, 1.000 | 544 × 286 |
+| `sanzeed-original-wordmark--live-site--full-colour-dark-2400w--e57436d6.png` | `14_PRESENTATION/src/derived/sanzeed-original-wordmark--live-site--full-colour-dark-2400w.png` | 0.000, 0.000, 1.000, 1.000 | 960 × 144 |
 | `sanzeed-patterns-contact-sheet--e624f251.jpg` | `05_GRAPHIC_ASSETS/Patterns/sanzeed-patterns-contact-sheet.png` | 0.000, 0.000, 1.000, 1.000 | 760 × 475 |
 | `sanzeed-poster--campaign-a2-preview--90fe3a01.jpg` | `10_MARKETING_COLLATERAL/Posters/sanzeed-poster--campaign-a2-preview.png` | 0.000, 0.000, 1.000, 1.000 | 455 × 640 |
 | `sanzeed-poster--method-a2-preview--cbebb90c.jpg` | `10_MARKETING_COLLATERAL/Posters/sanzeed-poster--method-a2-preview.png` | 0.000, 0.000, 1.000, 1.000 | 455 × 640 |
-| `sanzeed-primary-wordmark--black-1200w--f8db20e9.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--black-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--full-colour-dark-1200w--1e5a98ef.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 200 × 27 |
-| `sanzeed-primary-wordmark--full-colour-dark-1200w--83680b89.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--full-colour-dark-1200w--dcb22929.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 1200 × 167 |
-| `sanzeed-primary-wordmark--full-colour-dark-1200w--f21c52f1.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 560 × 77 |
+| `sanzeed-primary-wordmark--black-1200w--5040df44.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--black-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--full-colour-dark-1200w--5d0b553d.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 950 × 133 |
+| `sanzeed-primary-wordmark--full-colour-dark-1200w--79fdcda4.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 560 × 78 |
+| `sanzeed-primary-wordmark--full-colour-dark-1200w--8be409ee.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--full-colour-dark-1200w--8f053bde.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 1200 × 168 |
+| `sanzeed-primary-wordmark--full-colour-dark-1200w--c7a2a756.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 200 × 28 |
+| `sanzeed-primary-wordmark--full-colour-light-1200w--03772b22.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 200 × 28 |
 | `sanzeed-primary-wordmark--full-colour-light-1200w--78919a9d.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 216 × 30 |
-| `sanzeed-primary-wordmark--full-colour-light-1200w--b8e1d02a.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 200 × 27 |
-| `sanzeed-primary-wordmark--full-colour-light-1200w--bf63bb7f.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--grayscale-1200w--77245a25.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--grayscale-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--grayscale-inverted-1200w--b684809a.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--grayscale-inverted-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--single-colour-gold-1200w--1a38fa61.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--single-colour-gold-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-primary-wordmark--white-1200w--2a17682f.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--white-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 40 |
-| `sanzeed-secondary-symbol-wordmark--full-colour-dark-1200w--4f013b4e.png` | `02_LOGO_SYSTEM/PNG/sanzeed-secondary-symbol-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 424 × 48 |
+| `sanzeed-primary-wordmark--full-colour-light-1200w--fc3ee378.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--full-colour-light-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--grayscale-1200w--6106afae.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--grayscale-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--grayscale-inverted-1200w--4260a10f.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--grayscale-inverted-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--single-colour-gold-1200w--72ad4d44.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--single-colour-gold-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-primary-wordmark--white-1200w--013b38d7.png` | `02_LOGO_SYSTEM/PNG/sanzeed-primary-wordmark--white-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 293 × 41 |
+| `sanzeed-secondary-symbol-wordmark--full-colour-dark-1200w--2087e329.png` | `02_LOGO_SYSTEM/PNG/sanzeed-secondary-symbol-wordmark--full-colour-dark-1200w.png` | 0.000, 0.000, 1.000, 1.000 | 424 × 49 |
 | `sanzeed-signature--ink-2400w--fa46fd8c.png` | `02_LOGO_SYSTEM/Signature/sanzeed-signature--ink-2400w.png` | 0.000, 0.000, 1.000, 1.000 | 304 × 124 |
 | `sanzeed-signature--white-2400w--5a8943dc.png` | `02_LOGO_SYSTEM/Signature/sanzeed-signature--white-2400w.png` | 0.000, 0.000, 1.000, 1.000 | 260 × 106 |
-| `sanzeed-simplified-small-size--full-colour-dark-400w--e7a8184f.png` | `02_LOGO_SYSTEM/PNG/sanzeed-simplified-small-size--full-colour-dark-400w.png` | 0.000, 0.000, 1.000, 1.000 | 120 × 16 |
-| `sanzeed-symbol--full-colour-light-512w--75fff2bd.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol--full-colour-light-512w.png` | 0.000, 0.000, 1.000, 1.000 | 219 × 183 |
-| `sanzeed-symbol-small-size--full-colour-dark-128w--1dcc7f0a.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-small-size--full-colour-dark-128w.png` | 0.000, 0.000, 1.000, 1.000 | 36 × 28 |
-| `sanzeed-symbol-small-size--full-colour-dark-128w--ada5af6c.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-small-size--full-colour-dark-128w.png` | 0.000, 0.000, 1.000, 1.000 | 20 × 15 |
+| `sanzeed-simplified-small-size--full-colour-dark-400w--084f4c3a.png` | `02_LOGO_SYSTEM/PNG/sanzeed-simplified-small-size--full-colour-dark-400w.png` | 0.000, 0.000, 1.000, 1.000 | 120 × 17 |
+| `sanzeed-symbol--full-colour-light-512w--dfc4a67e.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol--full-colour-light-512w.png` | 0.000, 0.000, 1.000, 1.000 | 213 × 183 |
+| `sanzeed-symbol-small-size--full-colour-dark-128w--71746750.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-small-size--full-colour-dark-128w.png` | 0.000, 0.000, 1.000, 1.000 | 20 × 16 |
+| `sanzeed-symbol-small-size--full-colour-dark-128w--dfb9ba8b.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-small-size--full-colour-dark-128w.png` | 0.000, 0.000, 1.000, 1.000 | 36 × 30 |
 | `sanzeed-symbol-tile--dark-1024w--68bbb9df.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-tile--dark-1024w.png` | 0.000, 0.000, 1.000, 1.000 | 64 × 64 |
 | `sanzeed-symbol-tile--gold-1024w--21027f81.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-tile--gold-1024w.png` | 0.000, 0.000, 1.000, 1.000 | 64 × 64 |
 | `sanzeed-symbol-tile--light-1024w--cc119c46.png` | `02_LOGO_SYSTEM/PNG/sanzeed-symbol-tile--light-1024w.png` | 0.000, 0.000, 1.000, 1.000 | 64 × 64 |
